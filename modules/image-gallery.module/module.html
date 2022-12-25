@@ -1,0 +1,157 @@
+{% if module.hubdbtable != '' %}
+	{% set image_gallery = hubdb_table_rows(module.hubdbtable) %}
+		<div class="w-full h-full">
+			<div class="image-gallery-container columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-3">
+				{% for image in image_gallery %}
+					<img src="{{ image.image.url }}" loading="lazy" alt="{{ image.image_alt }}" width="500px" class="w-full object-cover block h-[auto] mb-3 rounded-[4px] hover:cursor-pointer">
+				{% endfor %}
+			</div>
+			<div class="flex items-center justify-center mt-10">
+				<button class="view-more-images-button hidden text-white font-cd">View More</button>
+			</div>
+		</div>
+		<div class="w-full h-full">
+			<div class="image-gallery-modal hidden fixed top-0 left-0 w-screen h-screen"></div>
+			<div class="swiper image-gallery-swiper flex flex-col lg:flex-row lg:rounded-[6px] bg-white overflow-scroll lg:overflow-visible hidden fixed top-[50%]
+			left-[50%] w-full lg:w-4/5 xl:w-2/3 2xl:w-3/5 max-w-[1030px]" data-image-gallery-module-name="{{name}}">
+				<div class="image-gallery-close-btn flex lg:hidden justify-end relative py-3 px-3 hover:cursor-pointer">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20.121" height="20.121" viewBox="0 0 20.121 20.121">
+					  <g transform="translate(1.061 1.061)">
+					    <line data-name="Line 693" x2="18" y2="18" fill="none" stroke="#000" stroke-width="3"/>
+					    <line data-name="Line 694" x1="18" y2="18" fill="none" stroke="#000" stroke-width="3"/>
+					  </g>
+					</svg>
+				</div>
+	  		<div class="swiper-wrapper image-gallery-swiper-wrapper">
+	  			{% for image in image_gallery %}
+	  				<div class="swiper-slide image-gallery-swiper-slide lg:rounded-[6px] px-0 pb-2 pt-0 lg:px-2 lg:pt-2 bg-white ">
+		  				<img src="{{ image.image.url }}" loading="lazy" alt="{{ image.image.alt }}" width="500" class="w-full object-cover rounded-0 lg:rounded-[6px] max-h-[250px] sm:max-h-[500px]">
+		  				<p class="mt-2 font-sans text-[#4A5B6E] text-2xs px-2 lg:px-0">{{ image.description }}</p>
+		  			</div>
+	  			{% endfor %}
+	  		</div>
+	  		<div class="image-gallery-button-wrapper relative">
+	        <div class="image-gallery-arrow image-gallery-arrow-left fixed left-[20px] sm:left-[30px] lg:left-[-55px] top-[40%] sm:top-[50%] w-[25px] h-[25px]"></div>
+	        <div class="image-gallery-arrow image-gallery-arrow-right fixed right-[20px] sm:right-[30px] lg:right-[-55px] top-[40%] sm:top-[50%] w-[25px] h-[25px]"></div>
+    		</div>
+	    	<div class="relative hidden visible lg:block ml-3 ">
+	    		<div class="image-gallery-close-modal-btn hover:cursor-pointer">
+		  			<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
+						  <g id="Group_164269" data-name="Group 164269" transform="translate(-1307.462 -165)">
+						    <circle id="Ellipse_588" data-name="Ellipse 588" cx="20.5" cy="20.5" r="20.5" transform="translate(1307.462 165)"/>
+						    <g id="icon_Lg-close-x" transform="translate(1319.462 177)">
+						      <line id="Line_693" data-name="Line 693" x2="18" y2="18" fill="none" stroke="#fff" stroke-width="3"/>
+						      <line id="Line_694" data-name="Line 694" x1="18" y2="18" fill="none" stroke="#fff" stroke-width="3"/>
+						    </g>
+						  </g>
+						</svg>
+		  		</div>
+	    	</div>
+		  </div>
+		</div>
+{% else %}
+  	<p class="font-ex text-3xl py-2 text-center text-slate-400">Click here to choose a HubDb Table...</p>
+{% endif %}
+
+
+{% require_js %}
+<script>
+  let imageGalleryContainer = document.getElementsByClassName("image-gallery-container ");
+  let imageGalleryModalContainer = document.getElementsByClassName("image-gallery-modal");
+  let imageGalleryCloseBtn = document.getElementsByClassName("image-gallery-close-btn");
+  let imageGalleryCloseModalBtn = document.getElementsByClassName("image-gallery-close-modal-btn");
+  let imageGallerySwiperContainer = document.getElementsByClassName("image-gallery-swiper");
+  let imageGallerySwiperWrapper = document.getElementsByClassName("image-gallery-swiper-wrapper");
+  let imageGalleryNavigationContainer = document.getElementsByClassName("image-gallery-button-wrapper");
+  let viewMoreImagesButton = document.getElementsByClassName("view-more-images-button")
+  let imageGallerySwipers = [];
+  let imageGallerySwiperItems = [];
+  let imageGalleryItems = [];
+
+  for(let i = 0; i < imageGalleryContainer.length; i++){
+  	let currentModuleId = imageGallerySwiperContainer[i].dataset.imageGalleryModuleName;
+  	imageGallerySwiperContainer[i].className += " image-gallery-swiper_" + currentModuleId;
+  	imageGalleryNavigationContainer[i].children[0].className += " image-gallery-arrow-left_" + currentModuleId;
+    imageGalleryNavigationContainer[i].children[1].className += " image-gallery-arrow-right_" + currentModuleId;
+
+		imageGalleryModalContainer[i].addEventListener("click", function() {
+		  toggleImageGalleryModal(i);
+		});
+
+		imageGalleryCloseBtn[i].addEventListener("click", function() {
+			toggleImageGalleryModal(i);
+		});
+
+		imageGalleryCloseModalBtn[i].addEventListener("click", function() {
+			toggleImageGalleryModal(i);
+		});
+
+		viewMoreImagesButton[i].addEventListener("click", function(){
+			viewMoreImages(i);
+		});
+
+		imageGalleryItems[i] = imageGalleryContainer[i].children;
+		imageGallerySwiperItems[i] = imageGallerySwiperWrapper[i].children;
+		if(imageGalleryItems[i].length > 16) {
+			viewMoreImagesButton[i].style.display = "block";
+			for(let j = 16; j < imageGalleryItems[i].length; j++) {
+				imageGalleryItems[i][j].style.display = 'none';
+				imageGallerySwiperItems[i][j].style.display = 'none';
+			}
+		}
+
+	  for(let k = 0; k < imageGalleryItems[i].length; k++){
+	  	imageGalleryItems[i][k].addEventListener("click", function() {
+			  toggleImageGalleryModal(i);
+			  swipeToImage(i, k)
+			});
+	  }
+
+	  imageGallerySwipers[i] = new Swiper(".image-gallery-swiper_" + currentModuleId, {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      effect: "fade",
+      navigation: {
+        nextEl: ".image-gallery-arrow-right_" + currentModuleId,
+        prevEl: ".image-gallery-arrow-left_" + currentModuleId,
+      },
+    });
+  }
+
+	function toggleImageGalleryModal(index){
+		if(imageGalleryModalContainer[index].classList.contains('hidden')){
+			imageGalleryModalContainer[index].classList.remove("hidden")
+			imageGalleryModalContainer[index].classList.add("flex")
+			imageGallerySwiperContainer[index].classList.remove("hidden")
+			imageGallerySwiperContainer[index].classList.add("flex")
+		}else{
+			imageGalleryModalContainer[index].classList.remove("flex")
+			imageGalleryModalContainer[index].classList.add("hidden")
+			imageGallerySwiperContainer[index].classList.remove("flex")
+			imageGallerySwiperContainer[index].classList.add("hidden")
+		}
+	}
+
+	function swipeToImage(swiperIndex, slideIndex){
+		imageGallerySwipers[swiperIndex].slideTo(slideIndex);
+	}
+
+	function viewMoreImages(index) {
+		if(viewMoreImagesButton[index].innerHTML === 'View More'){
+			for(let i = 16; i < imageGalleryItems[index].length; i++) {
+				imageGalleryItems[index][i].style.display = 'block';
+				imageGallerySwiperItems[index][i].style.display = 'block';
+			}
+			viewMoreImagesButton[index].innerHTML = 'View Less'
+		}else{
+			for(let i = 16; i < imageGalleryItems[index].length; i++) {
+				imageGalleryItems[index][i].style.display = 'none';
+				imageGallerySwiperItems[index][i].style.display = 'none';
+			}
+			viewMoreImagesButton[index].innerHTML = 'View More'
+		}
+
+	}
+
+</script>
+{% end_require_js %}

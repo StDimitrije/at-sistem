@@ -1,0 +1,16 @@
+<div class="header-hat-wrapper">
+	<a class="header-hat-link" href="{{ module.url_1.url.href }}"
+		{% if module.url_1.open_link_in_new_tab == true %} 
+			target="_blank" 
+		{% endif %}
+	>
+		{{ module.url_1.url_label }}
+	</a>
+	<a class="header-hat-link border-link" href="{{ module.url_2.url.href }}" 
+		{% if module.url_2.open_link_in_new_tab == true %} 
+			target="_blank" 
+		{% endif %}
+	>
+		{{ module.url_2.url_label }}
+	</a>
+</div>

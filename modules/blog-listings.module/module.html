@@ -1,0 +1,81 @@
+
+{# Blog author listing header #}
+
+{% if blog_author %}
+  <h2 class="blog-author-heading mt-8">Posts by {{ blog_author.display_name }}:</h2>
+{% endif %}
+
+{# Blog tag listing header #}
+
+{% if tag %}
+  <h2 class="blog-tag-heading mt-2">Posts about {{ page_meta.html_title|split(' | ')|last }}:</h2>
+{% endif %}
+
+{# Blog listing #}
+
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 px-2 py-8">
+
+  {% for content in contents %}
+
+    {# Blog listing article #}
+
+    <article class="blog-index__post blog-index__post--{{ list_type }} flex flex-col h-full" aria-label="Blog post summary: {{ content.name }}">
+
+      {# Featured image #}
+
+      {% if content.featured_image and module.featured_image %}
+        <a class="blog-index__post-image-wrapper blog-index__post-image-wrapper--{{ list_type }}" href="{{ content.absolute_url }}" aria-label="{% if content.featured_image_alt_text %}Featured image: {{ content.featured_image_alt_text }} - {% endif %}Read full post: {{ content.name }}">
+          <img class="blog-index__post-image blog-index__post-image--{{ list_type }} rounded-t-[6px] m-0 object-cover object-center min-h-[250px] max-h-[250px]" width="480px" src="{{ content.featured_image }}" loading="lazy" alt="{{ content.featured_image_alt_text }}">
+        </a>
+      {% endif %}
+
+      {# Article content #}
+
+      <div class="blog-index__post-content  blog-index__post-content--{{ list_type }} flex flex-col justify-between h-full border-t-[3px] border-t-solid border-t-[#6E43FF] bg-white px-[25px] pt-1 pb-2 rounded-b-[6px]">
+
+        <div>
+          {# Publish date #}
+
+            {% if module.publish_date %}
+              <time class="blog-index__post-timestamp my-0.5 font-sans text-medium text-[#4A5B6E] text-2xs" datetime="{{ content.publish_date }}">
+                {{ content.publish_date|datetimeformat("%B %e, %Y") }}
+              </time>
+            {% endif %}
+
+          {# Title #}
+
+            {% if module.title %}
+              <p class="blog-index__post-title font-sans text-medium text-black text-lg mb-0.5 hover:underline"><a class="blog-index__post-title-link" href="{{ content.absolute_url }}">{{ content.name }}</a></p>
+            {% endif %}
+
+          {# Author #}
+
+            {% if module.author and content.blog_author %}
+              <div class="blog-index__post-author mb-2">
+                {# {% if content.blog_author.avatar %}
+                      <img class="blog-index__post-author-image" src="{{ content.blog_author.avatar }}" width="20px" loading="lazy" alt="Picture of {{ content.blog_author.display_name }}">
+                    {% endif %} #}
+                <a class="blog-index__post-author-name text-xs text-sans italic" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">Posted by {{ content.blog_author.display_name }}</a>
+              </div>
+            {% endif %}
+
+          {# Summary #}
+
+            {% if module.description %}
+              <div class="blog-index__post-summary text-xs mb-2">
+                {{ content.post_list_content|truncatehtml(120) }}
+              </div>
+            {% endif %}
+        </div>
+
+        {# Read more button #}
+
+          {% if module.button %}
+             <div class="blog-index__post-button-wrapper group hover:text-[#6E43FF] text-black font-ex text-base">
+               <a class="blog-index__post-button button text-white whitespace-nowrap bg-[#6E43FF]" href="{{ content.absolute_url }}">{{ module.button_text }}</a>
+             </div>
+          {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>

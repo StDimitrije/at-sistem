@@ -1,0 +1,109 @@
+[
+ {
+  "type": "richtext",
+  "id": "c4d95e22-5929-efa9-4bb3-ce547b8eec8a",
+  "label": "Title",
+  "name": "title",
+  "default": "Our Trusted <strong>Partners</strong>"
+ },
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "alt": "imageedit_31_2841620365-1",
+     "loading": "lazy",
+     "width": 222,
+     "height": 77,
+     "max_width": 222,
+     "max_height": 77
+    },
+    "display_width": null,
+    "id": "220d3434-0f49-21e7-e229-343ed73f664b",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   }
+  ],
+  "default": [
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "alt": "imageedit_31_2841620365-1",
+     "loading": "lazy",
+     "width": 222,
+     "height": 77,
+     "max_width": 222,
+     "max_height": 77
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "alt": "imageedit_31_2841620365-1",
+     "loading": "lazy",
+     "width": 222,
+     "height": 77,
+     "max_width": 222,
+     "max_height": 77
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "alt": "imageedit_31_2841620365-1",
+     "loading": "lazy",
+     "width": 222,
+     "height": 77,
+     "max_width": 222,
+     "max_height": 77
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "alt": "imageedit_31_2841620365-1",
+     "loading": "lazy",
+     "width": 222,
+     "height": 77,
+     "max_width": 222,
+     "max_height": 77
+    }
+   }
+  ],
+  "display_width": null,
+  "expanded": false,
+  "id": "7b1996d6-e56f-a681-6704-3afc808c9d36",
+  "label": "Image group",
+  "locked": false,
+  "name": "image_group",
+  "occurrence": {
+   "default": 4,
+   "min": 1
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ },
+ {
+  "default": false,
+  "display": "toggle",
+  "display_width": null,
+  "id": "7efcf5af-2252-4a58-f561-b16b76043c9e",
+  "label": "Variant",
+  "locked": false,
+  "name": "variant",
+  "required": false,
+  "type": "boolean"
+ }
+]

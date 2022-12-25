@@ -1,0 +1,60 @@
+{# Menu items #}
+
+{% macro menu_items() %}
+
+  {% set menu = menu(module.menu, 'site_root').children %}
+
+  {% macro render_link_item(link) %}
+    <li class="menu__item {{ 'menu__item--has-submenu' if link.children }}">
+      {% if link.children == [] %}
+        <a class="menu__link" href="{{ link.url }}">{{ link.label }}</a>
+      {% endif %}
+      {% if link.children != [] %}
+        <div class="menu__link-wrapper">
+          <span class="menu__child-toggle-icon toggle-icon-spacer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" viewBox="0 0 11.414 7.121">
+              <g id="icon-small-arrow-left" transform="translate(10.707 0.707) rotate(90)">
+                <path id="icon-small-arrow-2" data-name="icon-small-arrow" d="M119.62,6l5,5-5,5" transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2"/>
+              </g>
+            </svg>
+          </span>
+          <a class="menu__link" href="{{ link.url }}">{{ link.label }}</a>
+          <span class="menu__child-toggle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" viewBox="0 0 11.414 7.121">
+              <g id="icon-small-arrow" transform="translate(10.707 0.707) rotate(90)">
+                <path id="icon-small-arrow-2" data-name="icon-small-arrow" d="M119.62,6l5,5-5,5" transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2"/>
+              </g>
+            </svg>
+          </span>
+        </div>
+        <ul class="menu__submenu no-list">
+          {% for sublink in link.children %}
+            {{ render_link_item(sublink) }}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endmacro %}
+
+  {% for link in menu %}
+    {{ render_link_item(link) }}
+  {% endfor %}
+
+{% endmacro %}
+
+{# Desktop menu #}
+
+<nav class="menu menu--desktop" aria-label="Main menu">
+  <ul class="menu__wrapper no-list">
+    {{ menu_items() }}
+  </ul>
+
+</nav>
+
+{# Mobile menu #}
+
+<nav class="menu menu--mobile" aria-label="Main menu">
+  <ul class="menu__wrapper no-list">
+    {{ menu_items() }}
+  </ul>
+</nav>

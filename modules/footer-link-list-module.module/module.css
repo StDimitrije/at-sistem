@@ -1,0 +1,15 @@
+.footer-link-container{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.footer-link-container ul{
+  list-style-type: none;
+}
+.footer-link-container li{
+  padding: 5px 0 5px 0;
+}
+.footer-link-container a{
+  text-decoration:none
+}

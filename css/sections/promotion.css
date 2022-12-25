@@ -1,0 +1,23 @@
+.promotion-section > .row-fluid{
+  display: flex !important;
+}
+
+.promotion-section .row-fluid [class*="span"] {
+  margin-left: 0;
+}
+
+.promotion-section .row-fluid .span6 {
+  width: 50%;
+}
+
+@media (max-width: 1139px) {
+  .promotion-section .row-fluid .span6 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .promotion-section .row-fluid .span6 {
+    width: 50%;
+  }
+}

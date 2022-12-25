@@ -1,0 +1,53 @@
+[
+  {
+    "default":"default",
+    "display_width":null,
+    "id":"menu",
+    "label":"Menu",
+    "locked":false,
+    "name":"menu",
+    "required":false,
+    "type":"menu"
+  },
+  {
+    "type":"group",
+    "id":"34eeb359-2d65-a500-7796-fe67fc08447e",
+    "label":"Additional Button",
+    "children":[
+      {
+        "type":"text",
+        "id":"c69913ca-259c-0514-3bc7-6a7edb228e92",
+        "validation_regex":"",
+        "label":"Additional Button Label",
+        "name":"additional_button_label",
+        "default":"join the community"
+      },
+      {
+        "type":"url",
+        "id":"6ee2270b-c3ae-4666-357b-140b7869c9d7",
+        "default":{
+          "content_id":null,
+          "href":"/",
+          "type":"EXTERNAL"
+        },
+        "supported_types":[
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "label":"Additional Button Link",
+        "name":"additional_button_link"
+      }
+    ],
+    "name":"additional_button",
+    "default":{
+      "additional_button_link":{
+        "content_id":null,
+        "href":"/",
+        "type":"EXTERNAL"
+      }
+    }
+  }
+]

@@ -1,0 +1,9 @@
+.cover-promo-title {
+	font-weight: var(--font-weight-light) !important;
+}
+
+@media (max-width: 767px) {
+  .cover-promo-title{
+  	font-size: 32px !important;
+  }
+}

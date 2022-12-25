@@ -1,0 +1,129 @@
+[ {
+  "id" : "menu",
+  "name" : "menu",
+  "label" : "Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu",
+  "default" : "default"
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "label" : "Styles",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "styles.text",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.text.color",
+      "name" : "color",
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_value_regex" : null,
+        "operator" : null,
+        "access" : null,
+        "hidden_subfields" : {
+          "opacity" : true
+        }
+      },
+      "type" : "color",
+      "default" : {
+        "color" : null,
+        "opacity" : null
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group"
+  }, {
+    "id" : "styles.drop_downs",
+    "name" : "drop_downs",
+    "label" : "Drop downs",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.drop_downs.text",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.drop_downs.text.color",
+        "name" : "color",
+        "label" : "Color",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_value_regex" : null,
+          "operator" : null,
+          "access" : null,
+          "hidden_subfields" : {
+            "opacity" : true
+          }
+        },
+        "type" : "color",
+        "default" : {
+          "color" : null,
+          "opacity" : null
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group"
+    }, {
+      "id" : "styles.drop_downs.background",
+      "name" : "background",
+      "label" : "Background",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.drop_downs.background.color",
+        "name" : "color",
+        "label" : "Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : null,
+          "opacity" : null
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group"
+    }, {
+      "id" : "styles.drop_downs.border",
+      "name" : "border",
+      "label" : "Border",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.drop_downs.border.border",
+        "name" : "border",
+        "label" : "Border",
+        "required" : false,
+        "locked" : false,
+        "allow_custom_border_sides" : false,
+        "type" : "border",
+        "default" : { }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group"
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group"
+} ]

@@ -1,0 +1,100 @@
+[
+ {
+  "default": {
+   "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
+   "alt": "pexels-max-vakhtbovych-7587466 1",
+   "size_type": null,
+   "width": 725,
+   "height": 500,
+   "loading": "lazy",
+   "max_width": 725,
+   "max_height": 500
+  },
+  "display_width": null,
+  "id": "64e82e39-0b22-0148-1a75-aee2e14a3079",
+  "label": "Image field",
+  "locked": false,
+  "name": "image_field",
+  "required": false,
+  "resizable": true,
+  "responsive": true,
+  "show_loading": false,
+  "type": "image"
+ },
+ {
+  "allow_new_line": false,
+  "default": "Branded tech in motion copy",
+  "display_width": null,
+  "id": "03450b4c-81a7-6bc8-e4a6-743948fd64fa",
+  "label": "Title",
+  "locked": false,
+  "name": "title",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
+  "allow_new_line": false,
+  "default": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  "display_width": null,
+  "id": "693fc802-5094-36fc-db09-7e5409c918aa",
+  "label": "Description",
+  "locked": false,
+  "name": "description",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
+  "default": {
+   "url": {
+    "type": "EXTERNAL",
+    "href": "https://www.google.com/ncr",
+    "content_id": null
+   },
+   "open_in_new_tab": true,
+   "no_follow": false
+  },
+  "display_width": null,
+  "id": "89964e80-39f4-a034-78af-c286080c052f",
+  "label": "Link",
+  "locked": false,
+  "name": "link",
+  "required": false,
+  "show_advanced_rel_options": false,
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT",
+   "FILE",
+   "EMAIL_ADDRESS",
+   "BLOG"
+  ],
+  "type": "link"
+ },
+ {
+  "allow_new_line": false,
+  "default": "Learn more",
+  "display_width": null,
+  "id": "8c838ded-8cf5-c6cb-99d7-c63e0831c443",
+  "label": "Link label",
+  "locked": false,
+  "name": "link_label",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
+  "default": false,
+  "display": "toggle",
+  "display_width": null,
+  "id": "ef3d58ed-a565-6e37-f939-efb766b2c5cf",
+  "label": "Reverse Content Direction",
+  "locked": false,
+  "name": "reverse_content_direction",
+  "required": false,
+  "type": "boolean"
+ }
+]

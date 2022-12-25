@@ -1,0 +1,68 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+
+<header class="header fixed w-full text-white">
+
+  {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+
+  <a href="#main-content" class="header__skip">Skip to content</a>
+
+  {# Main header #}
+
+
+  <div class="h-full w-full sticky top-0">
+    <div class="header__container content-wrapper border-b">
+
+      {# Header logo column #}
+
+       <div class="header-logo-wrapper">
+          <div class="header__logo header__logo--main flex">
+            {% module 'site_logo' path='@hubspot/logo' src='../../images/logos/logo_dark.png' alt="AT Sistem"%}
+          </div>
+          <div class="header__logo header__logo--secondary hidden">
+            {% module 'site_logo_mobile_menu' path='@hubspot/logo' src='../../images/logos/Logo_White.png' alt="AT Sistem"%}
+          </div>
+          <div class="header--toggle header__navigation--toggle">
+            <span class="burger-bar burger-bar-top bg-grey"></span>
+            <span class="burger-bar burger-bar-middle bg-grey"></span>
+            <span class="burger-bar burger-bar-bottom bg-grey"></span>
+          </div>
+       </div>
+
+      {# Header navigation column #}
+
+      <div class="flex items-center">
+        <div class="header__navigation header--element">
+        {% module 'navigation-primary'
+          path='../../modules/menu',
+          label='Primary navigation'
+        %}
+      </div>
+
+     {#<div class="header__language-switcher header--element">
+        <div class="header__language-switcher--label">
+          {% module 'language-switcher'
+            path='@hubspot/language_switcher',
+            label='Language switcher',
+            display_mode='localized'
+          %}
+          <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
+        </div>
+      </div>
+      </div>#}
+
+    </div>
+
+   {#
+     <div class="header-secondary-navigation-wrapper">
+        {% module 'navigation-secondary'
+           path='../../modules/secondary-menu',
+           label='Secondary navigation'
+         %}
+       </div>
+
+    #}
+  </div>
+</header>

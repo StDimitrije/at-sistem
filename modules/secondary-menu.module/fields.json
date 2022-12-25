@@ -1,0 +1,17 @@
+[
+  {
+    "display_width":null,
+    "id":"9851b042-036e-f4e1-e09e-c6fdfdce7831",
+    "label":"Menu",
+    "locked":false,
+    "name":"menu",
+    "required":false,
+    "type":"menu",
+    "occurrence":{
+      "min":1
+    },
+    "default":[
+      45418600689
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Water Treatment
+  screenshotPath: ../images/template-previews/water-treatment.jpg
+ -->
+ 
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+	{% dnd_area 'dnd_area'
+	  label='Main section',
+	  class='body-container body-container--home'
+	%}
+
+	  {% include_dnd_partial
+	    path='../sections/header-1.html',
+	    context={
+	      'title': '<h1 class="font-normal mb-2 text-6xl">Water Treatment</h1>'
+	    }
+	  %}
+
+		{% include_dnd_partial
+			path='../sections/image-with-text.html'
+		%}
+
+		{% include_dnd_partial
+			path='../sections/image-with-text.html'
+		%}
+
+		{% include_dnd_partial
+			path='../sections/image-with-text.html'
+		%}
+		
+		{% include_dnd_partial
+			path='../sections/image-with-text.html'
+		%}
+		
+		{% include_dnd_partial
+			path='../sections/image-with-text.html'
+		%}
+		
+		{% include_dnd_partial
+			path='../sections/image-with-text.html'
+		%}
+
+	{% end_dnd_area %}
+{% endblock body %}

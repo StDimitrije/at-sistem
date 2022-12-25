@@ -1,0 +1,11 @@
+.sponsorship-images-pagination-container .swiper-pagination-bullet {
+  width: 50px;
+  height: 4px;
+  margin-right: 20px;
+  background-color: #EBEBEB;
+  border-radius: 0;
+}
+
+.sponsorship-images-pagination-container .swiper-pagination-bullet-active {
+  background-color: #B8D0FC;
+}

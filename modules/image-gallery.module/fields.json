@@ -1,0 +1,9 @@
+[
+  {
+  	"default":"",
+    "type":"hubdbtable",
+    "id":"3d7c654a-2827-76f2-85fd-4ded8dd21694",
+    "label":"HubDB table",
+    "name":"hubdbtable"
+  }
+]

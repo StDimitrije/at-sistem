@@ -1,0 +1,35 @@
+<!--
+  templateType: section
+  label: Cover Promo 2
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/cover-promo.jpg
+  description: "Cover photo promo section without a title and a button"
+-->
+
+{% dnd_section
+	class="container-alt px-4 pt-10 pb-[310px] md:pt-[125px] md:pb-[370px] text-white text-left",
+	offset=0,
+	width=12,
+	background_image={
+		'imageUrl': resize_image_url(get_asset_url('../images/cover-promo.jpg'), 0, 0, 1920),
+    'backgroundSize': 'cover',
+    'backgroundPosition': 'MIDDLE_CENTER'
+	}
+%}
+  {% dnd_column offset=0, width=12 %}
+    {% dnd_row offset=0, width=12%}
+      {% dnd_module
+        path='@hubspot/rich_text',
+        html={{ context.content || '<p class="text-3xl md:text-5xl font-bold leading-none mb-4"><span class="font-light">Our</span> Storageroom</p>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row offset=0, width=12%}
+      {% dnd_module
+        path='@hubspot/rich_text',
+        html={{ context.content || '<p class="text-lg md:text-xl font-normal max-w-[750px]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.</p>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

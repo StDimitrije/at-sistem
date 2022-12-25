@@ -1,0 +1,40 @@
+{% set menu = [] %}
+{% set isVisible = {"visible": false} %}
+
+
+  {% for item in module.menu %}
+    {% do menu.append(menu(item, 'site_root').children) %}
+  {% endfor %}
+
+{% macro secondary_menu_items() %}
+
+  {% macro render_link_item(link) %}
+    <li>
+      <a href="{{ link.url }}" {{ 'class="secondary-link-item-active"' if link.activeNode }} >{{ link.label }}</a>
+    </li>
+  {% endmacro %}
+
+  {% for menuItems in menu %}
+    {% for links in menuItems %}
+      {% if links.pageId == content_id %}
+        {% do isVisible.update({"visible": true}) %}
+      {% endif %}
+    {% endfor %}
+    {% if isVisible.visible %}
+      <nav class="secondary-menu">
+        <ul class="no-list">
+          {% for linkItem in menuItems %}
+            {{ render_link_item(linkItem) }}
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+    {% do isVisible.update({"visible": false}) %}
+  {% endfor %}
+
+{% endmacro %}
+
+{{ secondary_menu_items() }}
+  
+
+

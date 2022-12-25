@@ -1,0 +1,131 @@
+[
+  {
+    "children":[
+      {
+        "default":{
+          "type":"EXTERNAL",
+          "href":"home",
+          "content_id":null
+        },
+        "display_width":null,
+        "id":"8aae2302-482a-9172-4c3b-c5c6cd615e54",
+        "label":"URL",
+        "locked":false,
+        "name":"url",
+        "required":false,
+        "supported_types":[
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "type":"url"
+      },
+      {
+        "allow_new_line":false,
+        "default":"Motion Recruitment",
+        "display_width":null,
+        "id":"63721fd0-3f11-69ab-b859-1342e3f645f1",
+        "label":"URL Label",
+        "locked":false,
+        "name":"url_label",
+        "required":false,
+        "show_emoji_picker":false,
+        "type":"text",
+        "validation_regex":""
+      },
+      {
+        "type":"boolean",
+        "id":"00d496e3-cb66-c3d5-c80c-ae686f19d2be",
+        "default":true,
+        "display":"toggle",
+        "label":"Open link in new tab",
+        "name":"open_link_in_new_tab"
+      }
+    ],
+    "default":{
+      "url":{
+        "type":"EXTERNAL",
+        "href":"home",
+        "content_id":null
+      },
+      "url_label":"Motion Recruitment",
+      "open_link_in_new_tab":true
+    },
+    "display_width":null,
+    "expanded":false,
+    "id":"b38a92d0-621c-2a53-14a3-aa3bf2f6d2f8",
+    "label":"URL 1",
+    "locked":false,
+    "name":"url_1",
+    "required":false,
+    "tab":"CONTENT",
+    "type":"group"
+  },
+  {
+    "children":[
+      {
+        "default":{
+          "type":"EXTERNAL",
+          "href":"home",
+          "content_id":null
+        },
+        "display_width":null,
+        "id":"e368d124-223e-388f-22cd-f180a5fadd67",
+        "label":"URL",
+        "locked":false,
+        "name":"url",
+        "required":false,
+        "supported_types":[
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "type":"url"
+      },
+      {
+        "allow_new_line":false,
+        "default":"Join the Community",
+        "display_width":null,
+        "id":"00e26905-db81-504f-8611-a8cb36c51f91",
+        "label":"URL Label",
+        "locked":false,
+        "name":"url_label",
+        "required":false,
+        "show_emoji_picker":false,
+        "type":"text",
+        "validation_regex":""
+      },
+      {
+        "type":"boolean",
+        "default":true,
+        "display":"toggle",
+        "label":"Open link in new tab",
+        "name":"open_link_in_new_tab",
+        "oldId":"00d496e3-cb66-c3d5-c80c-ae686f19d2be",
+        "id":"8177499c-31ae-146f-8f00-b21a7536adfd"
+      }
+    ],
+    "default":{
+      "url":{
+        "type":"EXTERNAL",
+        "href":"home",
+        "content_id":null
+      },
+      "url_label":"Join the Community",
+      "open_link_in_new_tab":true
+    },
+    "display_width":null,
+    "expanded":false,
+    "id":"ee0f0e69-8a7b-f1ff-8ee7-0852ee2f83ac",
+    "label":"URL 2",
+    "locked":false,
+    "name":"url_2",
+    "required":false,
+    "tab":"CONTENT",
+    "type":"group"
+  }
+]

@@ -1,0 +1,138 @@
+[
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/image%2019.png",
+     "alt": "image 19",
+     "loading": "lazy",
+     "width": 350,
+     "height": 363,
+     "max_width": 350,
+     "max_height": 363
+    },
+    "display_width": null,
+    "id": "0e2eeb6e-6c11-03b1-6361-e2ab3c0d3d70",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   }
+  ],
+  "default": [
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/image%2019.png",
+     "alt": "image 19",
+     "loading": "lazy",
+     "width": 350,
+     "height": 363,
+     "max_width": 350,
+     "max_height": 363
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/image%2019.png",
+     "alt": "image 19",
+     "loading": "lazy",
+     "width": 350,
+     "height": 363,
+     "max_width": 350,
+     "max_height": 363
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/image%2019.png",
+     "alt": "image 19",
+     "loading": "lazy",
+     "width": 350,
+     "height": 363,
+     "max_width": 350,
+     "max_height": 363
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/image%2019.png",
+     "alt": "image 19",
+     "loading": "lazy",
+     "width": 350,
+     "height": 363,
+     "max_width": 350,
+     "max_height": 363
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/image%2019.png",
+     "alt": "image 19",
+     "loading": "lazy",
+     "width": 350,
+     "height": 363,
+     "max_width": 350,
+     "max_height": 363
+    }
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/image%2019.png",
+     "alt": "image 19",
+     "loading": "lazy",
+     "width": 350,
+     "height": 363,
+     "max_width": 350,
+     "max_height": 363
+    }
+   }
+  ],
+  "display_width": null,
+  "expanded": false,
+  "id": "05684c82-1049-f410-5dab-3ccdcf39f6d3",
+  "label": "Field group",
+  "locked": false,
+  "name": "field_group",
+  "occurrence": {
+   "default": 6,
+   "min": 1
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ },
+ {
+  "type": "link",
+  "id": "d463b200-605e-20a7-ab96-b0cab13f1211",
+  "default": {
+   "url": {
+    "content_id": null,
+    "type": "EXTERNAL",
+    "href": ""
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  },
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT",
+   "FILE",
+   "EMAIL_ADDRESS",
+   "BLOG",
+   "CALL_TO_ACTION"
+  ],
+  "label": "Link",
+  "name": "link_field"
+ }
+]

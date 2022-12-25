@@ -1,0 +1,397 @@
+[
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+     "alt": "pools-card",
+     "loading": "lazy",
+     "width": 401,
+     "height": 358,
+     "max_width": 401,
+     "max_height": 358
+    },
+    "display_width": null,
+    "id": "fd4f5efe-d064-cae7-e48d-cf73278f7664",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "allow_new_line": false,
+    "default": "Title 1",
+    "display_width": null,
+    "id": "e25985f1-c178-7690-bc88-858742c7493f",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "default": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "https://google.com",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "display_width": null,
+    "id": "c0421797-e4dd-bf0d-73e6-eb9f012da2f0",
+    "label": "Link",
+    "locked": false,
+    "name": "link_field",
+    "required": false,
+    "show_advanced_rel_options": false,
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG"
+    ],
+    "type": "link"
+   }
+  ],
+  "default": {
+   "image_field": {
+    "size_type": "auto",
+    "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+    "alt": "pools-card",
+    "loading": "lazy",
+    "width": 401,
+    "height": 358,
+    "max_width": 401,
+    "max_height": 358
+   },
+   "title": "Title 1",
+   "link_field": {
+    "url": {
+     "type": "EXTERNAL",
+     "href": "https://google.com",
+     "content_id": null
+    },
+    "open_in_new_tab": false,
+    "no_follow": false
+   }
+  },
+  "display_width": null,
+  "expanded": false,
+  "id": "8615ba3d-7e42-426f-0381-1a188e1be6d6",
+  "label": "Card 1",
+  "locked": false,
+  "name": "card_1",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ },
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+     "alt": "pools-card",
+     "loading": "lazy",
+     "width": 401,
+     "height": 358,
+     "max_width": 401,
+     "max_height": 358
+    },
+    "display_width": null,
+    "id": "521e2365-0e60-dffc-a517-08af0f4e8a0c",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "allow_new_line": false,
+    "default": "Title 2",
+    "display_width": null,
+    "id": "124a24c7-a1d4-6a67-1467-9ee73cb3c491",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "default": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "https://google.com",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "display_width": null,
+    "id": "4b90ad50-f724-b436-c305-5552fb612df6",
+    "label": "Link copy",
+    "locked": false,
+    "name": "link_field",
+    "required": false,
+    "show_advanced_rel_options": false,
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG"
+    ],
+    "type": "link"
+   }
+  ],
+  "default": {
+   "image_field": {
+    "size_type": "auto",
+    "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+    "alt": "pools-card",
+    "loading": "lazy",
+    "width": 401,
+    "height": 358,
+    "max_width": 401,
+    "max_height": 358
+   },
+   "title": "Title 2",
+   "link_field": {
+    "url": {
+     "type": "EXTERNAL",
+     "href": "https://google.com",
+     "content_id": null
+    },
+    "open_in_new_tab": false,
+    "no_follow": false
+   }
+  },
+  "display_width": null,
+  "expanded": false,
+  "id": "ea83f598-448b-d6bf-3951-00cb20772395",
+  "label": "Card 2",
+  "locked": false,
+  "name": "card_2",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ },
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+     "alt": "pools-card",
+     "loading": "lazy",
+     "width": 401,
+     "height": 358,
+     "max_width": 401,
+     "max_height": 358
+    },
+    "display_width": null,
+    "id": "10d251d1-c1c3-b3b2-6307-a753aca99129",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "allow_new_line": false,
+    "default": "Title 3",
+    "display_width": null,
+    "id": "222e3f1a-de20-85aa-9008-f8fa545245fa",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "default": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "https://google.com",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "display_width": null,
+    "id": "de31d287-ea9c-278b-f64a-4a0321a273b6",
+    "label": "Link copy",
+    "locked": false,
+    "name": "link_field",
+    "required": false,
+    "show_advanced_rel_options": false,
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG"
+    ],
+    "type": "link"
+   }
+  ],
+  "default": {
+   "image_field": {
+    "size_type": "auto",
+    "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+    "alt": "pools-card",
+    "loading": "lazy",
+    "width": 401,
+    "height": 358,
+    "max_width": 401,
+    "max_height": 358
+   },
+   "title": "Title 3",
+   "link_field": {
+    "url": {
+     "type": "EXTERNAL",
+     "href": "https://google.com",
+     "content_id": null
+    },
+    "open_in_new_tab": false,
+    "no_follow": false
+   }
+  },
+  "display_width": null,
+  "expanded": false,
+  "id": "b98bad36-9777-3b11-965c-b273fca1b2f7",
+  "label": "Card 3",
+  "locked": false,
+  "name": "card_3",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ },
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+     "alt": "pools-card",
+     "loading": "lazy",
+     "width": 401,
+     "height": 358,
+     "max_width": 401,
+     "max_height": 358
+    },
+    "display_width": null,
+    "id": "76c2d0c7-1e95-2510-7805-5b199421b283",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "allow_new_line": false,
+    "default": "Title 4",
+    "display_width": null,
+    "id": "ff0e458f-1544-f396-d804-547819378b7d",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "default": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "https://google.com",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "display_width": null,
+    "id": "4b4ec9b4-9070-5bcc-85c0-7a1097fbce28",
+    "label": "Link",
+    "locked": false,
+    "name": "link_field",
+    "required": false,
+    "show_advanced_rel_options": false,
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG"
+    ],
+    "type": "link"
+   }
+  ],
+  "default": {
+   "image_field": {
+    "size_type": "auto",
+    "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
+    "alt": "pools-card",
+    "loading": "lazy",
+    "width": 401,
+    "height": 358,
+    "max_width": 401,
+    "max_height": 358
+   },
+   "title": "Title 4",
+   "link_field": {
+    "url": {
+     "type": "EXTERNAL",
+     "href": "https://google.com",
+     "content_id": null
+    },
+    "open_in_new_tab": false,
+    "no_follow": false
+   }
+  },
+  "display_width": null,
+  "expanded": false,
+  "id": "d0def7b6-c365-affc-7b08-b05106c51183",
+  "label": "Card 4",
+  "locked": false,
+  "name": "card_4",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ },
+ {
+  "default": false,
+  "display": "toggle",
+  "display_width": null,
+  "id": "f50bf0e5-6e12-4bcd-1012-111f38c5d7fa",
+  "label": "Variant",
+  "locked": false,
+  "name": "variant",
+  "required": false,
+  "type": "boolean"
+ }
+]

@@ -1,0 +1,66 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+<footer class="footer text-white py-10 px-4 relative">
+
+  <div class="footer__container m-[0_auto] max-w-[1520px]">
+
+    <div class="footer-title-container">
+      {% module 'Footer Logo'
+        path='@hubspot/image',
+        img={
+          'src': get_asset_url('../../images/logos/Logo_White.png')
+        }
+        label="Logo"
+      %}
+
+      {% module 'Footer subtitle'
+        path='@hubspot/rich_text',
+        html={{ context.content || '<p class="h6 my-2 footer-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna Lorem ipsum dolor sit.</p>' }}
+        label='Subtitle'
+      %}
+
+    </div>
+
+    <div class="footer-social-icons">
+      {% module 'Social Icon 1'
+        path='@hubspot/image',
+        img={
+          'src': get_asset_url('../../images/icons/facebook.png')
+        }
+        label="Social Icon 1"
+      %}
+      {% module 'Social Icon 2'
+        path='@hubspot/image',
+        img={
+          'src': get_asset_url('../../images/icons/instagram.png')
+        }
+        label="Social Icon 2"
+      %}
+    </div>
+
+    <div class="footer-spacer"></div>
+
+    <div class="footer-navigation">
+      {% module 'Footer navigation'
+        path='../../modules/footer-menu.module',
+        label='Footer navigation'
+      %}
+    </div>
+
+    <div class="footer-description">
+      {% module 'About 1'
+        path='@hubspot/rich_text',
+        html='<div class="mt-2 mb-5"><small class="paragraph-small">We strive to have our business and services be accessible to all individuals, regardless of ability. If you experience any issues with our website, please do not hesitate to contact us</small></div>'
+        label='About 1'
+      %}
+      {% module 'About 2'
+        path='@hubspot/rich_text',
+        html='<div class="mt-2 mb-5"><small class="paragraph-small">We strive to have our business and services be accessible to all individuals, regardless of ability. If you experience any issues with our website, please do not hesitate to contact us</small></div>'
+        label='About 2'
+      %}
+    </div>
+
+  </div>
+</footer>

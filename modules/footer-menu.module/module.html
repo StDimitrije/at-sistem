@@ -1,0 +1,21 @@
+{% macro menu_items() %}
+
+  {% set menu = menu(module.menu, 'site_root').children %}
+
+  {% macro render_link_item(link) %}
+    <li class="mb-2">
+      <a class="footer-menu-link" href="{{ link.url }}" {{ 'aria-haspopup="true" aria-expanded="false"' if link.children && depth < module.max_levels }} {{ 'aria-current="page"' if link.activeNode }} {{ 'target="_blank" rel="noopener"' if link.linkTarget }}>{{ link.label }}</a>
+    </li>
+  {% endmacro %}
+
+  {% for link in menu %}
+    {{ render_link_item(link) }}
+  {% endfor %}
+
+{% endmacro %}
+
+<nav class="footer-menu" aria-label="Main menu">
+  <ul class="no-list">
+    {{ menu_items() }}
+  </ul>
+</nav>

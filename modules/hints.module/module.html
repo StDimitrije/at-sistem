@@ -1,0 +1,41 @@
+<div class="w-full h-[calc(100vh-160px)] border-b border-b-white border-b-1 relative">
+	<div class="hint absolute rounded-lg border border-white p-1 backdrop-blur-lg bg-pink/[.3] flex flex-col gap-[5px] items-start cursor-pointer transition-all">
+		<img src="{{ get_asset_url("../../images/icons/sun.svg") }}" width="30px" height="30px">
+		<p class="hidden">oiaijsdoijiajsdjoaj</p>
+	</div>
+	<div class="hint absolute rounded-lg border border-white p-1 backdrop-blur-lg bg-pink/[.3] flex flex-col gap-[5px] items-start cursor-pointer transition-all">
+		<img src="{{ get_asset_url("../../images/icons/sun.svg") }}" width="30px" height="30px">
+		<p class="hidden">oiaijsdoijiajsdjoaj</p>
+	</div>
+		<div class="hint absolute rounded-lg border border-white p-1 backdrop-blur-lg bg-pink/[.3] flex flex-col gap-[5px] items-start cursor-pointer transition-all">
+		<img src="{{ get_asset_url("../../images/icons/sun.svg") }}" width="30px" height="30px">
+		<p class="hidden">oiaijsdoijiajsdjoaj</p>
+	</div>
+		<div class="hint absolute rounded-lg border border-white p-1 backdrop-blur-lg bg-pink/[.3] flex flex-col gap-[5px] items-start cursor-pointer transition-all">
+		<img src="{{ get_asset_url("../../images/icons/sun.svg") }}" width="30px" height="30px">
+		<p class="hidden">oiaijsdoijiajsdjoaj</p>
+	</div>
+		<div class="hint absolute rounded-lg border border-white p-1 backdrop-blur-lg bg-pink/[.3] flex flex-col gap-[5px] items-start cursor-pointer transition-all">
+		<img src="{{ get_asset_url("../../images/icons/sun.svg") }}" width="30px" height="30px">
+		<p class="hidden">oiaijsdoijiajsdjoaj</p>
+	</div>
+</div>
+
+{% require_js %}
+
+<script>
+	const hints = document.getElementsByClassName("hint")
+
+	for(let hint of hints) {
+		let coordinatesY = Math.floor(Math.random() * (90 - 30) + 30)
+		let coordinatesX = Math.floor(Math.random() * 90);
+		hint.style.top = coordinatesY + '%';
+		hint.style.left = coordinatesX + '%';
+		hint.addEventListener('click', () => {
+			hint.children[1].classList.toggle('hidden')
+		})
+	}
+
+</script>
+
+{% end_require_js %}

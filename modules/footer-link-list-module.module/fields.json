@@ -1,0 +1,233 @@
+[ {
+  "id" : "a16e09fa-8fad-17c2-60d5-feb5de276c64",
+  "name" : "event_link",
+  "label" : "Event Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "home",
+      "type" : "CONTENT"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "615fff65-177e-2f45-344b-c3803e87ef7c",
+  "name" : "techhub_link",
+  "label" : "TechHub Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "home"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "f28ccb46-4013-a5f3-3781-1cd32605059c",
+  "name" : "jobs_link",
+  "label" : "Jobs Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "home"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "aba5e8d3-6e2d-cbce-a4f4-c0f2cda53ace",
+  "name" : "timmyawards_link",
+  "label" : "TimmyAwards Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "home"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "5ea1913b-9d9e-9eed-0947-17b9f9413caa",
+  "name" : "getinvolved_link",
+  "label" : "GetInvolved Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "home"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "008a3aa5-b75f-213f-66ca-4a293ea9e8b9",
+  "name" : "aboutus_link",
+  "label" : "AboutUs Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "home"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "54ca36b8-eca0-bb4b-5fe5-b01e919aff5d",
+  "name" : "contactus",
+  "label" : "ContactUs",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "home"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "c2099c63-4c54-0a32-de07-0886e60c5aed",
+  "name" : "motionreq_link",
+  "label" : "MotionReq Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "home"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "e067f27d-c6c4-8d0f-f502-92be76626968",
+  "name" : "event_text",
+  "label" : "Event Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Event"
+}, {
+  "id" : "19b5ba56-b3ee-4943-edae-41a025ce8c6e",
+  "name" : "techhub_text",
+  "label" : "TechHub Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Tech Hub"
+}, {
+  "id" : "d01d779b-e0cb-0ed6-7437-d9a609de0657",
+  "name" : "jobs_text",
+  "label" : "Jobs Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Jobs"
+}, {
+  "id" : "a11a3e8c-2015-ef21-58ad-d2013a04fb94",
+  "name" : "timmy_awards_text",
+  "label" : "Timmy Awards Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Timmy Awards"
+}, {
+  "id" : "d9dcc3af-aa98-308c-aa01-0117616d0e10",
+  "name" : "get_involved_text",
+  "label" : "Get Involved Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Get Involved"
+}, {
+  "id" : "11cb705c-2ff3-9d9f-9f8e-886bce72ee50",
+  "name" : "about_us_text",
+  "label" : "About Us Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "About Us"
+}, {
+  "id" : "3db1682e-0ed9-c230-10fd-a537b588f029",
+  "name" : "contact_us_text",
+  "label" : "Contact Us Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Contact Us"
+}, {
+  "id" : "5e36d45d-cc59-eeb6-74eb-0bd9ff23420a",
+  "name" : "motion_req_text",
+  "label" : "Motion Req Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Motion Requirement"
+} ]
