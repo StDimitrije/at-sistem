@@ -12,7 +12,7 @@
     <img src="{{ get_asset_url("../../images/icons/large-dots.svg") }}" class="absolute right-0 top-[-75px] hidden lg:block max-w-[150px]">
     <img src="{{ get_asset_url("../../images/icons/small-dots.svg") }}" class="absolute left-0 bottom-[-85px] hidden lg:block">
   {% endif %}
-	<p class="mb-4 text-2xl leading-tight lg:text-7xl lg:leading-1">{{ module.title }}</p>
+	<p class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1">{{ module.title }}</p>
   <div class="sponsorship-images swiper max-w-[1000px]" data-sponsorship-module-name="{{ name }}">
 		<div class="flex items-center swiper-wrapper">
 			{% for item in module.image_group %}
@@ -21,6 +21,12 @@
 		</div>
   </div>
   <div class="sponsorship-images-pagination-container swiper-pagination relative mt-4 bottom-0"></div>
+
+  {% if module.show_button == true %}
+    <div class="flex justify-center w-full">
+      <a href="{{ module.button.link_field.url.href }}" class="button w-fit mt-5 uppercase">{{module.button.link_label}}</a>
+    </div>
+  {% endif %}
 </div>
 
 {% require_js %}

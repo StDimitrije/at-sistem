@@ -1,10 +1,13 @@
 [
  {
-  "type": "richtext",
+  "default": "Our Trusted <strong>Partners</strong>",
+  "display_width": null,
   "id": "c4d95e22-5929-efa9-4bb3-ce547b8eec8a",
   "label": "Title",
+  "locked": false,
   "name": "title",
-  "default": "Our Trusted <strong>Partners</strong>"
+  "required": false,
+  "type": "richtext"
  },
  {
   "children": [
@@ -100,10 +103,76 @@
   "display": "toggle",
   "display_width": null,
   "id": "7efcf5af-2252-4a58-f561-b16b76043c9e",
-  "label": "Variant",
+  "label": "Toggle Variant",
   "locked": false,
   "name": "variant",
   "required": false,
   "type": "boolean"
+ },
+ {
+  "type": "boolean",
+  "id": "26aff7aa-1578-994a-21a4-29f357238d0e",
+  "default": false,
+  "display": "toggle",
+  "label": "Show Button",
+  "name": "show_button"
+ },
+ {
+  "type": "group",
+  "id": "ce76ca08-1389-1300-72ef-2dfa45e66ddf",
+  "label": "Button",
+  "children": [
+   {
+    "type": "link",
+    "id": "c6e35048-9400-8b48-1f4b-fed199e63801",
+    "default": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG",
+     "CALL_TO_ACTION"
+    ],
+    "label": "Link",
+    "name": "link_field",
+    "visibility": null
+   },
+   {
+    "type": "text",
+    "id": "41a32c52-59a2-a48d-9f79-d4a5f433522a",
+    "validation_regex": "",
+    "label": "Link Label",
+    "name": "link_label",
+    "default": "Get a Catalogue",
+    "visibility": null
+   }
+  ],
+  "name": "button",
+  "default": {
+   "link_field": {
+    "url": {
+     "content_id": null,
+     "type": "EXTERNAL",
+     "href": ""
+    },
+    "open_in_new_tab": false,
+    "no_follow": false
+   },
+   "link_label": "Get a Catalogue"
+  },
+  "visibility": {
+   "operator": "EQUAL",
+   "controlling_field": "26aff7aa-1578-994a-21a4-29f357238d0e",
+   "controlling_value_regex": "true"
+  }
  }
 ]
