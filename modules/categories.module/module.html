@@ -1,11 +1,11 @@
-<div class="flex flex-col sm:flex-row gap-5 flex-wrap justify-between items-center px-6 text-white text-center font-light text-2xl relative py-[130px]">
+<div class="flex flex-col sm:flex-row gap-5 flex-wrap justify-between items-center px-4 md:px-6 text-white text-center font-light text-2xl relative py-[130px]">
 	{% if module.variant == 'true' %}
 		<div class="absolute top-0 right-0 bg-blue w-1/5 h-[10px]"></div>
 	  <div class="absolute top-0 right-0 bg-blue w-[10px] max-h-[300px] h-full"></div>
 	  <div class="absolute bottom-0 left-0 bg-pink w-[10px] max-h-[300px] h-full"></div>
 	  <div class="absolute bottom-0 left-0 bg-pink w-1/12 h-[10px]"></div>
 	{% endif %}
-		<a href="{{ module.card_1.link_field.url.href }}" class="relative h-full group">
+		<a href="{{ module.card_1.link_field.url.href }}" class="relative h-full group translate-x-[-25px] translate-y-[-25px]">
 			<div class="relative w-[250px] h-[250px] group-hover:translate-x-[25px] group-hover:translate-y-[25px] transition-all">
 				<div class="bg-blue/[.85] w-full h-full z-10 flex justify-center items-center absolute"></div>
 				<img src="{{ module.card_1.image_field.src }}" class="object-cover w-full h-full" alt="{{ module.card_1.image_field.alt }}">
@@ -17,7 +17,7 @@
 				<img src="{{ module.card_1.image_field.src }}" class="object-cover w-full h-full" alt="{{ module.card_1.image_field.alt }}">
 			</div>
 		</a>
-		<a href="{{ module.card_2.link_field.url.href }}" class="relative h-full group">
+		<a href="{{ module.card_2.link_field.url.href }}" class="relative h-full group translate-x-[-25px] translate-y-[-25px]">
 			<div class="relative w-[250px] h-[250px] group-hover:translate-x-[25px] group-hover:translate-y-[25px] transition-all">
 				<div class="bg-pink/[.85] w-full h-full z-10 flex justify-center items-center absolute"></div>
 				<img src="{{ module.card_2.image_field.src }}" class="object-cover w-full h-full" alt="{{ module.card_2.image_field.alt }}">
@@ -29,7 +29,7 @@
 				<img src="{{ module.card_2.image_field.src }}" class="object-cover w-full h-full" alt="{{ module.card_2.image_field.alt }}">
 			</div>
 		</a>
-		<a href="{{ module.card_3.link_field.url.href }}" class="relative h-full group">
+		<a href="{{ module.card_3.link_field.url.href }}" class="relative h-full group translate-x-[-25px] translate-y-[-25px]">
 			<div class="relative w-[250px] h-[250px] group-hover:translate-x-[25px] group-hover:translate-y-[25px] transition-all">
 				<div class="bg-blue/[.85] w-full h-full z-10 flex justify-center items-center absolute"></div>
 				<img src="{{ module.card_3.image_field.src }}" class="object-cover w-full h-full" alt="{{ module.card_3.image_field.alt }}">
@@ -41,7 +41,7 @@
 				<img src="{{ module.card_3.image_field.src }}" class="object-cover w-full h-full" alt="{{ module.card_3.image_field.alt }}">
 			</div>
 		</a>
-		<a href="{{ module.card_4.link_field.url.href }}" class="relative h-full group">
+		<a href="{{ module.card_4.link_field.url.href }}" class="relative h-full group translate-x-[-25px] translate-y-[-25px]">
 			<div class="relative w-[250px] h-[250px] group-hover:translate-x-[25px] group-hover:translate-y-[25px] transition-all">
 				<div class="bg-pink/[.85] w-full h-full z-10 flex justify-center items-center absolute"></div>
 				<img src="{{ module.card_4.image_field.src }}" class="object-cover w-full h-full" alt="{{ module.card_4.image_field.alt }}">
