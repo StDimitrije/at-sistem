@@ -1,13 +1,11 @@
 [
  {
-  "default": "Our Trusted <strong>Partners</strong>",
-  "display_width": null,
-  "id": "c4d95e22-5929-efa9-4bb3-ce547b8eec8a",
+  "type": "text",
+  "id": "feb1a47b-eb0b-23a6-92bf-e55575c416d2",
+  "validation_regex": "",
   "label": "Title",
-  "locked": false,
   "name": "title",
-  "required": false,
-  "type": "richtext"
+  "default": "Title"
  },
  {
   "children": [
@@ -32,6 +30,33 @@
     "responsive": true,
     "show_loading": false,
     "type": "image"
+   },
+   {
+    "default": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "display_width": null,
+    "id": "ab7415bd-f53d-3997-a305-32f929ad251d",
+    "label": "Image Link",
+    "locked": false,
+    "name": "image_link",
+    "required": false,
+    "show_advanced_rel_options": false,
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG",
+     "CALL_TO_ACTION"
+    ],
+    "type": "link"
    }
   ],
   "default": [
@@ -45,6 +70,15 @@
      "height": 77,
      "max_width": 222,
      "max_height": 77
+    },
+    "link_field_1": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
     }
    },
    {
@@ -57,6 +91,15 @@
      "height": 77,
      "max_width": 222,
      "max_height": 77
+    },
+    "link_field_1": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
     }
    },
    {
@@ -69,6 +112,15 @@
      "height": 77,
      "max_width": 222,
      "max_height": 77
+    },
+    "link_field_1": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
     }
    },
    {
@@ -81,6 +133,15 @@
      "height": 77,
      "max_width": 222,
      "max_height": 77
+    },
+    "link_field_1": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
     }
    }
   ],
@@ -110,21 +171,19 @@
   "type": "boolean"
  },
  {
-  "type": "boolean",
-  "id": "26aff7aa-1578-994a-21a4-29f357238d0e",
   "default": false,
   "display": "toggle",
+  "display_width": null,
+  "id": "26aff7aa-1578-994a-21a4-29f357238d0e",
   "label": "Show Button",
-  "name": "show_button"
+  "locked": false,
+  "name": "show_button",
+  "required": false,
+  "type": "boolean"
  },
  {
-  "type": "group",
-  "id": "ce76ca08-1389-1300-72ef-2dfa45e66ddf",
-  "label": "Button",
   "children": [
    {
-    "type": "link",
-    "id": "c6e35048-9400-8b48-1f4b-fed199e63801",
     "default": {
      "url": {
       "content_id": null,
@@ -134,6 +193,13 @@
      "open_in_new_tab": false,
      "no_follow": false
     },
+    "display_width": null,
+    "id": "c6e35048-9400-8b48-1f4b-fed199e63801",
+    "label": "Link",
+    "locked": false,
+    "name": "link_field",
+    "required": false,
+    "show_advanced_rel_options": false,
     "supported_types": [
      "EXTERNAL",
      "CONTENT",
@@ -142,21 +208,22 @@
      "BLOG",
      "CALL_TO_ACTION"
     ],
-    "label": "Link",
-    "name": "link_field",
-    "visibility": null
+    "type": "link"
    },
    {
-    "type": "text",
-    "id": "41a32c52-59a2-a48d-9f79-d4a5f433522a",
-    "validation_regex": "",
-    "label": "Link Label",
-    "name": "link_label",
+    "allow_new_line": false,
     "default": "Get a Catalogue",
-    "visibility": null
+    "display_width": null,
+    "id": "41a32c52-59a2-a48d-9f79-d4a5f433522a",
+    "label": "Link Label",
+    "locked": false,
+    "name": "link_label",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
    }
   ],
-  "name": "button",
   "default": {
    "link_field": {
     "url": {
@@ -169,10 +236,19 @@
    },
    "link_label": "Get a Catalogue"
   },
+  "display_width": null,
+  "expanded": false,
+  "id": "ce76ca08-1389-1300-72ef-2dfa45e66ddf",
+  "label": "Button",
+  "locked": false,
+  "name": "button",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group",
   "visibility": {
-   "operator": "EQUAL",
    "controlling_field": "26aff7aa-1578-994a-21a4-29f357238d0e",
-   "controlling_value_regex": "true"
+   "controlling_value_regex": "true",
+   "operator": "EQUAL"
   }
  }
 ]

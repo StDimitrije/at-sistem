@@ -1,1 +1,187 @@
-[ ]
+[
+ {
+  "allow_new_line": false,
+  "default": "<span class=\"font-light\">Featured</span> Services",
+  "display_width": null,
+  "id": "d096943a-ebfc-1a54-be02-2644255409ec",
+  "label": "Title",
+  "locked": false,
+  "name": "title",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
+  "allow_new_line": false,
+  "default": "Contrary to popular belief, Lorem Ipsum is not simplyrandom text. If you are going to use a passage of Lorem Ipsum, you need to be sure there.",
+  "display_width": null,
+  "id": "ecd17480-1ff6-d49e-c171-114e6d4b124b",
+  "label": "Description",
+  "locked": false,
+  "name": "description",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
+  "allow_new_line": false,
+  "default": "Some Link",
+  "display_width": null,
+  "id": "7dab7c91-dea7-ca43-9b63-020b53af9232",
+  "label": "Link Label",
+  "locked": false,
+  "name": "link_label",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
+  "default": {
+   "url": {
+    "content_id": null,
+    "type": "EXTERNAL",
+    "href": ""
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  },
+  "display_width": null,
+  "id": "02111280-aa38-8e70-347d-6d1a2030c606",
+  "label": "Link",
+  "locked": false,
+  "name": "link_field",
+  "required": false,
+  "show_advanced_rel_options": false,
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT",
+   "FILE",
+   "EMAIL_ADDRESS",
+   "BLOG",
+   "CALL_TO_ACTION"
+  ],
+  "type": "link"
+ },
+ {
+  "type": "group",
+  "id": "7e42966e-a19a-d163-ca7d-2e72b0a5106c",
+  "label": "Cards",
+  "children": [
+   {
+    "type": "text",
+    "id": "128a26cf-223a-5768-61ff-6b8885bca5a6",
+    "validation_regex": "",
+    "label": "Card Title",
+    "name": "card_title",
+    "default": "Card Title"
+   },
+   {
+    "type": "link",
+    "id": "f6797e06-e487-7c5f-0df2-eccfe646f326",
+    "default": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG",
+     "CALL_TO_ACTION"
+    ],
+    "label": "Card Link",
+    "name": "card_link"
+   },
+   {
+    "type": "color",
+    "id": "9e57c5d7-d6df-91b4-3478-dcaa3cb0f90e",
+    "default": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "label": "Card Color",
+    "name": "card_color"
+   }
+  ],
+  "name": "cards",
+  "default": [
+   {
+    "card_title": "Card Title",
+    "card_link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "card_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    }
+   },
+   {
+    "card_title": "Card Title",
+    "card_link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "card_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    }
+   },
+   {
+    "card_title": "Card Title",
+    "card_link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "card_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    }
+   },
+   {
+    "card_title": "Card Title",
+    "card_link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "",
+      "content_id": null
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "card_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    }
+   }
+  ],
+  "occurrence": {
+   "min": 1,
+   "default": 4
+  }
+ }
+]

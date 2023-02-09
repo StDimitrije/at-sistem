@@ -2,105 +2,116 @@
   <div class="flex flex-col w-full xl:w-1/2 px-4 pt-10 pb-4 xl:pb-9 m-0 justify-start align-start">
     <p class="mb-2 h3">{{ module.text.title }}</p>
     <p class="mb-4 paragraph-1">{{ module.text.description }}</p>
-    <button class="watch-now-button bg-pink uppercase w-fit leading-[1.28] text-white text-xs">{{ module.button_label }}</button>
+    <button class="watch-now-button bg-pink uppercase w-fit leading-[1.28] text-white text-xs">{{ module.button_label
+      }}</button>
   </div>
-  <div class="simple-video-player-container xl:w-1/2 w-full h-auto" data-video-src="{{ module.video.url_field.href }}" data-additional-watch-now-button-id="{{ module.video.additional_watch_button_id }}" data-player-module-name="{{ name }}">
+  <div class="simple-video-player-container xl:w-1/2 w-full h-auto" data-video-src="{{ module.video.url_field.href }}"
+    data-additional-watch-now-button-id="{{ module.video.additional_watch_button_id }}"
+    data-player-module-name="{{ name }}">
     {% if module.video.has_overlay_and_aspect_ratio %}
-      <div class="cursor-pointer relative shadow-[0_0_40px_#1B004E28] h-full" >
-        <div class="absolute top-0 w-full h-full z-[2] flex">
-          <img class="m-auto max-h-[70%]" src="{{ get_asset_url('../../images/icons/play-button.svg') }}" width="140px" loading="lazy" alt="Play button image"/>
+    <div class="cursor-pointer relative shadow-[0_0_40px_#1B004E28] h-full">
+      <div class="absolute top-0 w-full h-full z-[2] flex">
+        <img class="m-auto max-h-[70%]" src="{{ get_asset_url('../../images/icons/play-button.svg') }}" width="140px"
+          loading="lazy" alt="Play button image" />
+      </div>
+      <div class="relative top-0 z-0 w-full h-full pt-[56.25%] overflow-hidden rounded">
+        <div
+          class="bg-gradient-to-t from-[#6E43FF] to-[#6E43FF00] opacity-50 mix-blend-hard-light absolute top-0 w-full h-full origin-center z-10">
         </div>
-        <div class="relative top-0 z-0 w-full h-full pt-[56.25%] overflow-hidden rounded">
-          <div class="bg-gradient-to-t from-[#6E43FF] to-[#6E43FF00] opacity-50 mix-blend-hard-light absolute top-0 w-full h-full origin-center z-10"></div>
-          <div class="w-full h-full min-w-full min-h-full flex absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-            <img class="object-cover w-full min-w-full rounded" src="{{ module.video.image_field.src }}" loading="lazy" width="700px" alt="{{ module.video.image_field.alt }}"/>
-          </div>
+        <div
+          class="w-full h-full min-w-full min-h-full flex absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+          <img class="object-cover w-full min-w-full rounded" src="{{ module.video.image_field.src }}" loading="lazy"
+            width="700px" alt="{{ module.video.image_field.alt }}" />
         </div>
       </div>
+    </div>
     {% else %}
-      <div class="cursor-pointer flex m-auto" >
-        <div class="align-center justify-center flex" >
-          <img src="{{ get_asset_url('../../images/icons/play-button.svg') }}" width="140px" loading="lazy" alt="Play button"/>
-        </div>
+    <div class="cursor-pointer flex m-auto">
+      <div class="align-center justify-center flex">
+        <img src="{{ get_asset_url('../../images/icons/play-button.svg') }}" width="140px" loading="lazy"
+          alt="Play button" />
       </div>
+    </div>
     {% endif %}
   </div>
   <div class="simple-video-player-modal z-40">
-      <div class="simple-video-player-modal-content">
-        <img class="simple-video-player-close-icon" src="{{ get_asset_url('../../images/icons/icon-close-x.svg') }}" width="30px" loading="lazy" alt="Close button"/>
-        <iframe class="simple-video-player-iframe rounded-lg" width="100%" height="100%" src="" hidden></iframe>
-        <video class="simple-video-player-default-player w-full h-full" controls width="100%" height="100%" hidden>
-          <source src="{{ module.video.url_field.href }}" type="video/mp4">
-          <source src="{{ module.video.url_field.href }}" type="video/ogg">
-        </video>
-      </div>
+    <div class="simple-video-player-modal-content">
+      <img class="simple-video-player-close-icon" src="{{ get_asset_url('../../images/icons/icon-close-x.svg') }}"
+        width="30px" loading="lazy" alt="Close button" />
+      <iframe class="simple-video-player-iframe rounded-lg" width="100%" height="100%" src="" hidden></iframe>
+      <video class="simple-video-player-default-player w-full h-full" controls width="100%" height="100%" hidden
+        onclick="event.stopImmediatePropagation()">
+        <source src="{{ module.video.url_field.href }}" type="video/mp4">
+        <source src="{{ module.video.url_field.href }}" type="video/ogg">
+      </video>
     </div>
+  </div>
 </div>
 
 
 {% require_js %}
-  <script>
-    const watchNowButton = document.getElementsByClassName("watch-now-button");
-    const simple_video_players = document.getElementsByClassName("simple-video-player-container");
-    const simple_player_modals = document.getElementsByClassName("simple-video-player-modal");
-    const simple_player_iframes = document.getElementsByClassName("simple-video-player-iframe");
-    const simple_player_close_icons = document.getElementsByClassName("simple-video-player-close-icon");
-    const default_simple_video_players = document.getElementsByClassName("simple-video-player-default-player");
+<script>
+  const watchNowButton = document.getElementsByClassName("watch-now-button");
+  const simple_video_players = document.getElementsByClassName("simple-video-player-container");
+  const simple_player_modals = document.getElementsByClassName("simple-video-player-modal");
+  const simple_player_iframes = document.getElementsByClassName("simple-video-player-iframe");
+  const simple_player_close_icons = document.getElementsByClassName("simple-video-player-close-icon");
+  const default_simple_video_players = document.getElementsByClassName("simple-video-player-default-player");
 
-    for(let i = 0; i < simple_video_players.length; i++) {
-      const currentModuleId = simple_video_players[i].dataset.playerModuleName;
+  for (let i = 0; i < simple_video_players.length; i++) {
+    const currentModuleId = simple_video_players[i].dataset.playerModuleName;
 
-      watchNowButton[i].id = "watch-now-button_" + currentModuleId;
-      simple_video_players[i].id = "simple-video-player-container_" + currentModuleId;
-      simple_player_modals[i].id = "simple-video-player-modal_" + currentModuleId;
-      simple_player_iframes[i].id = "simple-video-player-iframe_" + currentModuleId;
-      simple_player_close_icons[i].id = "simple-video-player-close-icon_" + currentModuleId;
-      default_simple_video_players[i].id = "simple-video-player-default-player_" + currentModuleId;
+    watchNowButton[i].id = "watch-now-button_" + currentModuleId;
+    simple_video_players[i].id = "simple-video-player-container_" + currentModuleId;
+    simple_player_modals[i].id = "simple-video-player-modal_" + currentModuleId;
+    simple_player_iframes[i].id = "simple-video-player-iframe_" + currentModuleId;
+    simple_player_close_icons[i].id = "simple-video-player-close-icon_" + currentModuleId;
+    default_simple_video_players[i].id = "simple-video-player-default-player_" + currentModuleId;
 
-      watchNowButton[i].index = i;
-      watchNowButton[i].addEventListener('click', function (event) {openModal(event)});
-      simple_video_players[i].index = i;
-      simple_video_players[i].addEventListener('click', function (event) {openModal(event)});
-      simple_player_modals[i].addEventListener('click', function (event) {closeModal(event)});
-      let data = document.getElementById("simple-video-player-container_" + currentModuleId).dataset;
-      const additional_watch_now_button_id = data.additionalWatchNowButtonId ? document.getElementById(data.additionalWatchNowButtonId) : undefined;
-      simple_player_modals[i].ytUrl = "";
-      simple_player_modals[i].val_url = data.videoSrc;
-      simple_player_modals[i].isYoutubeLink = false;
+    watchNowButton[i].index = i;
+    watchNowButton[i].addEventListener('click', function (event) { openModal(event) });
+    simple_video_players[i].index = i;
+    simple_video_players[i].addEventListener('click', function (event) { openModal(event) });
+    simple_player_modals[i].addEventListener('click', function (event) { closeModal(event) });
+    let data = document.getElementById("simple-video-player-container_" + currentModuleId).dataset;
+    const additional_watch_now_button_id = data.additionalWatchNowButtonId ? document.getElementById(data.additionalWatchNowButtonId) : undefined;
+    simple_player_modals[i].ytUrl = "";
+    simple_player_modals[i].val_url = data.videoSrc;
+    simple_player_modals[i].isYoutubeLink = false;
 
-      if ( additional_watch_now_button_id ) {
-        additional_watch_now_button_id.index = i;
-        additional_watch_now_button_id.addEventListener("click", function (event) {openModal(event)})
-      }
+    if (additional_watch_now_button_id) {
+      additional_watch_now_button_id.index = i;
+      additional_watch_now_button_id.addEventListener("click", function (event) { openModal(event) })
     }
+  }
 
-    function openModal(event) {
-      let ytUrl = "";
-      if(event) {
-        simple_player_modals[event.currentTarget.index].style.display = "block";
-        const videoSrc = simple_video_players[event.currentTarget.index].dataset.videoSrc;
-        if (videoSrc !== undefined || videoSrc !== '') {
-          const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
-          const match = videoSrc.match(regExp);
-          if (match && match[2].length === 11) {
-            ytUrl = 'https://www.youtube.com/embed/' + match[2] + '?autoplay=0';
-            simple_player_iframes[event.currentTarget.index].setAttribute("src", ytUrl);
-            simple_player_iframes[event.currentTarget.index].removeAttribute("hidden");
-          }
-          else {
-            default_simple_video_players[event.currentTarget.index].removeAttribute("hidden");
-          }
+  function openModal(event) {
+    let ytUrl = "";
+    if (event) {
+      simple_player_modals[event.currentTarget.index].style.display = "block";
+      const videoSrc = simple_video_players[event.currentTarget.index].dataset.videoSrc;
+      if (videoSrc !== undefined || videoSrc !== '') {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
+        const match = videoSrc.match(regExp);
+        if (match && match[2].length === 11) {
+          ytUrl = 'https://www.youtube.com/embed/' + match[2] + '?autoplay=0';
+          simple_player_iframes[event.currentTarget.index].setAttribute("src", ytUrl);
+          simple_player_iframes[event.currentTarget.index].removeAttribute("hidden");
+        }
+        else {
+          default_simple_video_players[event.currentTarget.index].removeAttribute("hidden");
         }
       }
     }
+  }
 
-    function closeModal(event) {
-      for(let i = 0; i < simple_player_modals.length; i++) {
-        simple_player_modals[i].style.display = "none";
-        simple_player_iframes[i].setAttribute("src", simple_player_iframes[i].getAttribute("src"));
-        default_simple_video_players[i].pause();
-      }
+  function closeModal(event) {
+    for (let i = 0; i < simple_player_modals.length; i++) {
+      simple_player_modals[i].style.display = "none";
+      simple_player_iframes[i].setAttribute("src", simple_player_iframes[i].getAttribute("src"));
+      default_simple_video_players[i].pause();
     }
+  }
     // window.onclick = function (event) {
     //   if (event.target.className.includes("simple-video-player-modal ") || event.target.className.includes("simple-video-player-close-icon")) {
     //     for(let i = 0; i < document.getElementsByClassName("simple-video-player-modal").length; i++) {
@@ -110,5 +121,5 @@
     //     }
     //   }
     // };
-  </script>
+</script>
 {% end_require_js %}
