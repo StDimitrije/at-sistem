@@ -2,12 +2,14 @@
 	<div class="border-l-[10px] border-l-pink pl-5 max-w-[550px] h-min">
 		<p class="font-bold text-5xl">{{ module.title }}</p>
 		<p class="font-light text-sm my-1">{{ module.description }}</p>
+		{% if module.link_field.url.href != '' %}
 		<a href="{{ module.link_field.url.href }}" class="flex gap-1 items-center">
 			{{ module.link_label }}
 			<svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M0.83905 0.818481L5.00017 4.71926L0.83905 8.62004" stroke="#373738" stroke-width="2" />
 			</svg>
 		</a>
+		{% endif %}
 	</div>
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 2xl:grid-cols-3 gap-2 text-white uppercase">
 		{% for card in module.cards %}
@@ -19,23 +21,6 @@
 			</div>
 		</a>
 		{% endfor %}
-		<!-- <a href="" class="group">
-			<div
-				class="w-[260px] h-[180px] bg-pink rounded-md drop-shadow-sm flex justify-center items-center group-hover:scale-110 transition-all">
-				projektovanje
-			</div>
-		</a>
-		<a href="" class="group">
-			<div
-				class="w-[260px] h-[180px] bg-blue rounded-md drop-shadow-sm flex justify-center items-center group-hover:scale-110 transition-all">
-				izgradnja
-			</div>
-		</a>
-		<a href="" class="group">
-			<div
-				class="w-[260px] h-[180px] bg-pink rounded-md drop-shadow-sm flex justify-center items-center group-hover:scale-110 transition-all">
-				rekonstrukcija
-			</div>
-		</a> -->
+
 	</div>
 </div>

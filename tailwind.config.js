@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'montserrat',
+          'Poppins',
           'ui-sans-serif',
           'system-ui',
           '-apple-system',
@@ -28,8 +28,7 @@ module.exports = {
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
-        ],
-        serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+        ]
       },
       fontSize: {
         '2xs': ['12px', { lineHeight: '1rem' }],

@@ -7,7 +7,7 @@ form {
 
 .form-title {
   line-height: 1.2;
-  font-family: var(--font-family-ex);
+  font-family: var(--font-family);
   font-weight: var(--font-weight-normal);
   font-size: 48px;
   margin-bottom: 25px;

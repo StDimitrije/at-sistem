@@ -10,10 +10,10 @@
     class="absolute right-0 top-[-75px] hidden lg:block max-w-[150px]">
   {% endif %}
   {% if module.variant == 'false' %}
-  <img src="{{ get_asset_url(" ../../images/icons/large-dots.svg") }}"
-    class="absolute right-0 top-[-75px] hidden lg:block max-w-[150px]">
-  <img src="{{ get_asset_url(" ../../images/icons/small-dots.svg") }}"
-    class="absolute left-0 bottom-[-85px] hidden lg:block">
+  <img src="{{ get_asset_url(' ../../images/icons/large-dots.svg') }}"
+    class="absolute right-0 top-[-75px] hidden lg:block">
+  <img src="{{ get_asset_url('../../images/icons/small-dots.svg') }}"
+    class="absolute left-[-65px] bottom-[-85px] hidden lg:block">
   {% endif %}
   <p class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1">{{ module.title }}</p>
   <div class="sponsorship-images swiper max-w-[1000px]" data-sponsorship-module-name="{{ name }}">

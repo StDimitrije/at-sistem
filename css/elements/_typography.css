@@ -11,7 +11,7 @@ body {
 button,
 .button {
   padding: 10px 25px;
-  font-family: 'montserrat';
+  font-family: var(--font-family);
   font-weight: var(--font-weight-medium);
   letter-spacing: 1px;
   line-height: 1.28;
