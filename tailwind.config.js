@@ -106,7 +106,7 @@ module.exports = {
         }
       },
       animation: {
-        'fill': 'fillLine 5s forwards',
+        'fill': 'fillLine 4s forwards',
       }
     }
   },

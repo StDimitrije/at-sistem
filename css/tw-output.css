@@ -947,8 +947,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-fill {
-  -webkit-animation: fillLine 5s forwards;
-          animation: fillLine 5s forwards;
+  -webkit-animation: fillLine 4s forwards;
+          animation: fillLine 4s forwards;
 }
 
 .cursor-pointer {
