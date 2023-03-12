@@ -99,6 +99,14 @@ module.exports = {
       },
       backdropBlur: {
         'lg': '20px'
+      },
+      keyframes: {
+        fillLine: {
+          '100%': { width: '100%' }
+        }
+      },
+      animation: {
+        'fill': 'fillLine 5s forwards',
       }
     }
   },

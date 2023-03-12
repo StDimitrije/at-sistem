@@ -129,6 +129,50 @@ $(document).ready(function() {
     });
   }
 
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+
+
+  function checkCookie() {
+    let showSplashScreen = getCookie("showSplashScreen");
+    if (showSplashScreen != "false") {
+      const splashScreen = document.querySelector(".splash-screen")
+      splashScreen.classList.toggle('hidden')
+      splashScreen.classList.toggle('flex')
+      setTimeout(function() {
+        splashScreen.children[0].pause();
+        splashScreen.classList.toggle('hidden')
+        splashScreen.classList.toggle('block')
+      }, 5000);
+      setCookie("showSplashScreen", 'false', 7);
+    } else {
+      setCookie("showSplashScreen", 'false', 7);
+    }
+  }
+
+  
+
   // Execute JavaScript on document ready
   domReady(function () {
     if (!document.body) {
@@ -158,10 +202,11 @@ $(document).ready(function() {
       if (emailGlobalUnsub) {
         emailGlobalUnsub.addEventListener('change', toggleDisabled);
       }
-      // const splashScreen = document.querySelector(".splash-screen")
-      // setTimeout(function() {
-      //   splashScreen.style.display = "none";
-      // }, 2000);
+
+      checkCookie();
+    
     }
   });
+
+
 })();

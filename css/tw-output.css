@@ -573,6 +573,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 40;
 }
 
+.z-\[99999\] {
+  z-index: 99999;
+}
+
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
@@ -602,11 +606,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-1 {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.my-2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .my-5 {
@@ -666,10 +665,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 25px;
 }
 
-.mb-4 {
-  margin-bottom: 40px;
-}
-
 .mb-5 {
   margin-bottom: 50px;
 }
@@ -682,8 +677,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 70px;
 }
 
-.mt-3 {
-  margin-top: 30px;
+.mb-4 {
+  margin-bottom: 40px;
 }
 
 .block {
@@ -776,8 +771,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 100%;
 }
 
-.max-h-\[350px\] {
-  max-height: 350px;
+.max-h-\[420px\] {
+  max-height: 420px;
 }
 
 .max-h-\[70\%\] {
@@ -786,14 +781,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-h-\[200px\] {
   max-height: 200px;
-}
-
-.max-h-\[400px\] {
-  max-height: 400px;
-}
-
-.max-h-\[420px\] {
-  max-height: 420px;
 }
 
 .min-h-\[250px\] {
@@ -810,6 +797,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .min-h-\[450px\] {
   min-height: 450px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-fit {
@@ -834,10 +825,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 250px;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-\[260px\] {
   width: 260px;
 }
@@ -858,8 +845,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 33.333333%;
 }
 
-.w-1\/2 {
-  width: 50%;
+.w-\[1px\] {
+  width: 1px;
 }
 
 .min-w-full {
@@ -882,16 +869,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 1030px;
 }
 
-.max-w-\[750px\] {
-  max-width: 750px;
-}
-
 .max-w-\[1200px\] {
   max-width: 1200px;
 }
 
-.max-w-\[150px\] {
-  max-width: 150px;
+.max-w-\[170px\] {
+  max-width: 170px;
 }
 
 .max-w-\[1000px\] {
@@ -902,16 +885,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 200px;
 }
 
+.max-w-\[750px\] {
+  max-width: 750px;
+}
+
 .max-w-\[1260px\] {
   max-width: 1260px;
 }
 
 .max-w-\[1520px\] {
   max-width: 1520px;
-}
-
-.max-w-\[170px\] {
-  max-width: 170px;
 }
 
 .flex-1 {
@@ -949,6 +932,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@-webkit-keyframes fillLine {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fillLine {
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-fill {
+  -webkit-animation: fillLine 5s forwards;
+          animation: fillLine 5s forwards;
 }
 
 .cursor-pointer {
@@ -1179,10 +1179,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'https\:\/\/26015966\.fs1\.hubspotusercontent-eu1\.net\/hubfs\/26015966\/Splash\.jpg\'\)\] {
-  background-image: url('https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Splash.jpg');
 }
 
 .from-transparent {
@@ -1486,28 +1482,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25;
 }
 
+.leading-4 {
+  line-height: 1.285;
+}
+
 .leading-\[1\.28\] {
   line-height: 1.28;
 }
 
 .leading-none {
   line-height: 1;
-}
-
-.leading-1 {
-  line-height: 1.142;
-}
-
-.leading-2 {
-  line-height: 1.2;
-}
-
-.leading-3 {
-  line-height: 1.25;
-}
-
-.leading-4 {
-  line-height: 1.285;
 }
 
 .\!leading-snug {
