@@ -50,5 +50,5 @@ Specific modules of UI that are stylized for sections.
 
 {% include './sections/hero.css' %}
 {% include './sections/cover-promo.css' %}
-{% include './sections/promotion.css' %}}
-{% include './sections/splash-form.css' %}
+{% include './sections/promotion.css' %}
+{% include './sections/background-video.css' %}

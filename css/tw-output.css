@@ -609,6 +609,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 20px;
 }
 
+.my-5 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .mt-8 {
   margin-top: 80px;
 }
@@ -675,6 +680,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-7 {
   margin-top: 70px;
+}
+
+.mt-3 {
+  margin-top: 30px;
 }
 
 .block {
@@ -779,6 +788,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 200px;
 }
 
+.max-h-\[400px\] {
+  max-height: 400px;
+}
+
+.max-h-\[420px\] {
+  max-height: 420px;
+}
+
 .min-h-\[250px\] {
   min-height: 250px;
 }
@@ -841,6 +858,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 33.333333%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -887,6 +908,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[1520px\] {
   max-width: 1520px;
+}
+
+.max-w-\[170px\] {
+  max-width: 170px;
 }
 
 .flex-1 {
@@ -941,6 +966,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -1424,6 +1453,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
+.text-4xl {
+  font-size: 40px;
+  line-height: 2.5rem;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -1458,6 +1492,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-none {
   line-height: 1;
+}
+
+.leading-1 {
+  line-height: 1.142;
+}
+
+.leading-2 {
+  line-height: 1.2;
+}
+
+.leading-3 {
+  line-height: 1.25;
+}
+
+.leading-4 {
+  line-height: 1.285;
+}
+
+.\!leading-snug {
+  line-height: 1.375 !important;
 }
 
 .tracking-tight {
@@ -1739,6 +1793,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-4\/5 {
     width: 80%;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:columns-3 {

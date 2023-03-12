@@ -1,0 +1,25 @@
+[
+ {
+  "type": "link",
+  "id": "ce154ece-617b-1bec-01f9-2b4deb6aa475",
+  "default": {
+   "url": {
+    "type": "FILE",
+    "href": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Video_TRIDENT_52ec2c7ebf.mp4",
+    "content_id": null
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  },
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT",
+   "FILE",
+   "EMAIL_ADDRESS",
+   "BLOG",
+   "CALL_TO_ACTION"
+  ],
+  "label": "Link",
+  "name": "link_field"
+ }
+]

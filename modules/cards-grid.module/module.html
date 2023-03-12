@@ -1,8 +1,10 @@
 <div class="flex flex-col justify-center items-center">
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 		{% for item in module.field_group %}
-			<img src="{{ item.image_field.src }}" class="max-w-[250px]">
+		<img src="{{ item.image_field.src }}" class="max-w-[250px] object-cover w-full h-full">
 		{% endfor %}
 	</div>
+	{% if module.link_field.url.href != '' %}
 	<a href="{{ module.link_field.url.href }}" class="button w-fit mt-5 uppercase">Get a catalogue</a>
+	{% endif %}
 </div>

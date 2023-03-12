@@ -91,10 +91,6 @@
   font-size: 52px !important;
 }
 
-.footer-description {
-  font-weight: normal !important;
-}
-
 .footer-logo img {
   max-width: 100%;
 }
@@ -113,6 +109,14 @@
 
   .footer-title-container {
     padding: 0 100px;
+  }
+
+  .footer-title-container img{
+    margin: auto;
+  }
+
+  .footer-description  {
+    text-align: center;
   }
 
   .footer-navigation {
@@ -157,10 +161,9 @@
   }
 
   .footer-description {
-    font-size: 18px !important;
-    line-height: 1.55 !important;
-    letter-spacing: 0.18px !important;
-    font-weight: var(--font-weight-light) !important;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.18px;
   }
 
 
