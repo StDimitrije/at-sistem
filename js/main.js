@@ -165,9 +165,7 @@ $(document).ready(function() {
         splashScreen.classList.toggle('hidden')
         splashScreen.classList.toggle('block')
       }, 5000);
-      setCookie("showSplashScreen", 'false', 7);
-    } else {
-      setCookie("showSplashScreen", 'false', 7);
+      setCookie("showSplashScreen", 'false', 1);
     }
   }
 

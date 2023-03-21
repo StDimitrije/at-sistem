@@ -613,6 +613,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 50px;
 }
 
+.my-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .mt-8 {
   margin-top: 80px;
 }
@@ -1496,6 +1501,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!leading-snug {
   line-height: 1.375 !important;
+}
+
+.leading-normal {
+  line-height: 1.5;
 }
 
 .tracking-tight {
