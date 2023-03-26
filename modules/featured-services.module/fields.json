@@ -66,122 +66,169 @@
   "type": "link"
  },
  {
-  "type": "group",
-  "id": "7e42966e-a19a-d163-ca7d-2e72b0a5106c",
-  "label": "Cards",
   "children": [
    {
-    "type": "text",
+    "allow_new_line": false,
+    "default": "Card Title",
+    "display_width": null,
     "id": "128a26cf-223a-5768-61ff-6b8885bca5a6",
-    "validation_regex": "",
     "label": "Card Title",
+    "locked": false,
     "name": "card_title",
-    "default": "Card Title"
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
    },
    {
-    "type": "link",
-    "id": "f6797e06-e487-7c5f-0df2-eccfe646f326",
-    "default": {
-     "url": {
-      "type": "EXTERNAL",
-      "href": "",
-      "content_id": null
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
-    "supported_types": [
-     "EXTERNAL",
-     "CONTENT",
-     "FILE",
-     "EMAIL_ADDRESS",
-     "BLOG",
-     "CALL_TO_ACTION"
-    ],
-    "label": "Card Link",
-    "name": "card_link"
-   },
-   {
-    "type": "color",
-    "id": "9e57c5d7-d6df-91b4-3478-dcaa3cb0f90e",
     "default": {
      "color": "#B8D0FC",
      "opacity": 100
     },
+    "display_width": null,
+    "id": "9e57c5d7-d6df-91b4-3478-dcaa3cb0f90e",
     "label": "Card Color",
-    "name": "card_color"
+    "locked": false,
+    "name": "card_color",
+    "required": false,
+    "type": "color"
+   },
+   {
+    "type": "image",
+    "id": "f9f8d2a1-de4c-06ac-6533-921cb303f8fe",
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/planning.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "label": "Image",
+    "name": "image_field"
    }
   ],
-  "name": "cards",
   "default": [
    {
-    "card_title": "Card Title",
-    "card_link": {
-     "url": {
-      "type": "EXTERNAL",
-      "href": "",
-      "content_id": null
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
+    "card_title": "Projektovanje",
     "card_color": {
      "color": "#B8D0FC",
      "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/planning.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
     }
    },
    {
-    "card_title": "Card Title",
-    "card_link": {
-     "url": {
-      "type": "EXTERNAL",
-      "href": "",
-      "content_id": null
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
+    "card_title": "Izgradnja",
     "card_color": {
-     "color": "#B8D0FC",
+     "color": "#D7B4F3",
      "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/construction.png",
+     "alt": "construction",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
     }
    },
    {
-    "card_title": "Card Title",
-    "card_link": {
-     "url": {
-      "type": "EXTERNAL",
-      "href": "",
-      "content_id": null
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
+    "card_title": "Montaža",
     "card_color": {
      "color": "#B8D0FC",
      "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/assembly.png",
+     "alt": "assembly",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
     }
    },
    {
-    "card_title": "Card Title",
-    "card_link": {
-     "url": {
-      "type": "EXTERNAL",
-      "href": "",
-      "content_id": null
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
+    "card_title": "Servis",
+    "card_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
     },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/service.png",
+     "alt": "service",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    }
+   },
+   {
+    "card_title": "Prodaja",
     "card_color": {
      "color": "#B8D0FC",
      "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/shop.png",
+     "alt": "sales",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    }
+   },
+   {
+    "card_title": "Tehnička Podrška",
+    "card_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/tech-support.png",
+     "alt": "tech-support",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
     }
    }
   ],
+  "display_width": null,
+  "expanded": false,
+  "id": "7e42966e-a19a-d163-ca7d-2e72b0a5106c",
+  "label": "Cards",
+  "locked": false,
+  "name": "cards",
   "occurrence": {
-   "min": 1,
-   "default": 4
-  }
+   "default": 6,
+   "min": 1
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
  }
 ]
