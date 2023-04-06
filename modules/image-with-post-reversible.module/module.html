@@ -5,10 +5,14 @@
     class="object-cover object-center max-h-[420px] w-full lg:w-1/2" />
   <div class="flex w-full lg:w-1/2 items-left m-auto lg:items-center flex-1">
     <div class="flex flex-col">
+      {% if module.link.url.href != '' %}
       <a href="{{ module.link.url.href }}" {% if module.link.open_in_new_tab==true %} target="_blank" {% endif %}>
         <p class="text-xl lg:text-4xl leading-tight font-bold mb-2 lg:mb-4">{{ module.title }}</p>
       </a>
-      <p class="text-light mb-2 lg:mb-4 text-base leading-4">{{ module.description }}</p>
+      {% else %}
+      <p class="text-xl lg:text-4xl leading-tight font-bold mb-2 lg:mb-4">{{ module.title }}</p>
+      {% endif %}
+      <p class="text-light mb-2 lg:mb-4 text-base leading-5">{{ module.description }}</p>
       {% if module.link.url.href != '' %}
       <a href="{{ module.link.url.href }}" {% if module.link.open_in_new_tab==true %} target="_blank" {% endif %}
         class="button w-fit uppercase">

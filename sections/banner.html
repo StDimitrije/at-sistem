@@ -20,7 +20,8 @@
 			{% dnd_module
 				vertical_alignment="MIDDLE",
         path='@hubspot/rich_text',
-        html={{ context.content || '<p class="text-5xl lg:text-[80px] font-bold leading-none text-center md:text-left mb-2 md:mb-0"><span class="font-normal">A&T</span> SISTEM</p>' }}
+        html={{ context.title || '<p class="text-5xl lg:text-[80px] font-bold leading-none text-center mb-2 md:mb-0" style="line-height: 1.25;"><span class="font-normal">A&amp;T</span> SISTEM</p>
+<p class="text-5xl font-bold leading-none text-center mb-2 md:mb-0" style="font-size: 30px;"><span style="font-family: Arial, Helvetica, sans-serif;">Tu smo za vas već 15 godina!</span></p>' }}
       %}
       {% end_dnd_module %}
 		{% end_dnd_row %}
@@ -30,7 +31,7 @@
 			{% dnd_module
 				vertical_alignment="MIDDLE",
         path='@hubspot/rich_text',
-        html={{ context.content || '<p class="font-normal text-lg lg:text-3xl text-center !leading-snug md:text-left">It is a long established fact that a reader will bedistracted by the readable content of a page  when looking at its layout. </p>' }}
+        html={{ context.subtitle || '<p class="font-normal text-lg lg:text-3xl text-center !leading-snug md:text-left">Našim klijentima garantujemo profesionalan pristup, maksimalnu posvećenost i uslugu u skladu sa najvišim standardima.</p>' }}
       %}
       {% end_dnd_module %}
 		{% end_dnd_row %}

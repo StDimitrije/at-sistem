@@ -164,7 +164,7 @@ $(document).ready(function() {
         splashScreen.children[0].pause();
         splashScreen.classList.toggle('hidden')
         splashScreen.classList.toggle('block')
-      }, 5000);
+      }, 3000);
       setCookie("showSplashScreen", 'false', 1);
     }
   }
@@ -202,7 +202,6 @@ $(document).ready(function() {
       }
 
       checkCookie();
-    
     }
   });
 

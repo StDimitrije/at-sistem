@@ -50,6 +50,7 @@
 
     sponsorshipSwipers[i] = new Swiper(".sponsorship-images_" + currentModuleId, {
       slidesPerView: "auto",
+      spaceBetween: 60,
       freeMode: {
         enabled: true,
         sticky: true,
@@ -61,8 +62,8 @@
         el: ".sponsorship-images-pagination-container_" + currentModuleId,
         clickable: true,
       },
-      slidesOffsetAfter: 80,
-      breakpoints: {
+      {# slidesOffsetAfter: 80, #}
+      {# breakpoints: {
         100: {
           spaceBetween: 60,
           slidesOffsetBefore: 40,
@@ -71,7 +72,7 @@
         1139: {
           spaceBetween: 100,
         },
-      }
+      } #}
     });
   }
 

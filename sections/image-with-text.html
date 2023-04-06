@@ -15,7 +15,9 @@
         path='../modules/image-with-post-reversible',
         image={
           'src': resize_image_url(get_asset_url('../images/unsplash.jpg'), 0, 0, 700)
-        }
+        },
+        title={{ context.title || 'Title' }},
+        description={{ context.description || 'Description' }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

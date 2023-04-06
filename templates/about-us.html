@@ -18,16 +18,21 @@
 	  {% include_dnd_partial
 	    path='../sections/header-1.html',
 	    context={
-	      'title': '<h1 class="font-normal mb-2 text-6xl">About Us</h1>'
+	      'title': '<h1 class="font-normal mb-2 text-6xl">About Us</h1>',
+				'subtitle': '<p class="font-light text-lg md:text-3xl">Cilj nam je da idemo u korak sa savremenim trendovima, jer je to uslov za dalji razvoj i napredak.</p>'
 	    }
+	  %}
+
+		 {% include_dnd_partial
+	    path='../sections/image-with-text.html',
+			context={
+				'title': 'Stručan tim je naš najveći potencijal',
+				'description': 'AT SISTEM je firma koju čini stručan tim zaposlenih sa mnogo godina iskustva u projektovanju i izgradnji, bazena, fontana, spa i wellness centara. Mnogo lepih i interesantnih projekata je iza nas, ali naš žar ne jenjava! Maksimalno se posvećujemo svakom novom poslu, uvek motivisani da pružimo najviše što možemo.'
+			}
 	  %}
 
 	  {% include_dnd_partial
 	    path='../sections/team.html',
-	  %}
-
-	  {% include_dnd_partial
-	    path='../sections/swiper-gallery.html',
 	  %}
 
 		{% include_dnd_partial
