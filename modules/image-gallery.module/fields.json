@@ -1,9 +1,55 @@
 [
-  {
-  	"default":"",
-    "type":"hubdbtable",
-    "id":"3d7c654a-2827-76f2-85fd-4ded8dd21694",
-    "label":"HubDB table",
-    "name":"hubdbtable"
-  }
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Galerija%20Pocetna/img.12.jpg",
+     "alt": "img.12",
+     "loading": "lazy",
+     "width": 3264,
+     "height": 2448,
+     "max_width": 3264,
+     "max_height": 2448
+    },
+    "display_width": null,
+    "id": "2a4f6038-1b67-b588-a3a9-d0dcba887ba1",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   }
+  ],
+  "default": [
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Galerija%20Pocetna/img.12.jpg",
+     "alt": "img.12",
+     "loading": "lazy",
+     "width": 3264,
+     "height": 2448,
+     "max_width": 3264,
+     "max_height": 2448
+    }
+   }
+  ],
+  "display_width": null,
+  "expanded": false,
+  "id": "16a1e489-5857-d9dc-d6d8-3b28e6e21322",
+  "label": "Images",
+  "locked": false,
+  "name": "images",
+  "occurrence": {
+   "default": 1,
+   "min": 1
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ }
 ]

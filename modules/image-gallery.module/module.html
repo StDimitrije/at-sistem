@@ -1,9 +1,9 @@
-{% if module.hubdbtable != '' %}
-	{% set image_gallery = hubdb_table_rows(module.hubdbtable) %}
+
+	{% set image_gallery = module.images %}
 		<div class="w-full h-full">
 			<div class="image-gallery-container columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-3">
 				{% for image in image_gallery %}
-					<img src="{{ image.image.url }}" loading="lazy" alt="{{ image.image_alt }}" width="500px" class="w-full object-cover block h-[auto] mb-3 rounded-[4px] hover:cursor-pointer">
+					<img src="{{ image.image_field.src }}" loading="lazy" alt="{{ image.image_field.alt }}" width="500px" class="w-full object-cover block h-[auto] mb-3 rounded-[4px] hover:cursor-pointer">
 				{% endfor %}
 			</div>
 			<div class="flex items-center justify-center mt-10">
@@ -25,8 +25,7 @@
 	  		<div class="swiper-wrapper image-gallery-swiper-wrapper">
 	  			{% for image in image_gallery %}
 	  				<div class="swiper-slide image-gallery-swiper-slide lg:rounded-[6px] px-0 pb-2 pt-0 lg:px-2 lg:pt-2 bg-white ">
-		  				<img src="{{ image.image.url }}" loading="lazy" alt="{{ image.image.alt }}" width="500" class="w-full object-cover rounded-0 lg:rounded-[6px] max-h-[250px] sm:max-h-[500px]">
-		  				<p class="mt-2 font-sans text-[#4A5B6E] text-2xs px-2 lg:px-0">{{ image.description }}</p>
+		  				<img src="{{ image.image_field.src }}" loading="lazy" alt="{{ image.image_field.alt }}" width="500" class="w-full object-cover rounded-0 lg:rounded-[6px] max-h-[250px] sm:max-h-[500px]">
 		  			</div>
 	  			{% endfor %}
 	  		</div>
@@ -49,9 +48,6 @@
 	    	</div>
 		  </div>
 		</div>
-{% else %}
-  	<p class="font-ex text-3xl py-2 text-center text-slate-400">Click here to choose a HubDb Table...</p>
-{% endif %}
 
 
 {% require_js %}
