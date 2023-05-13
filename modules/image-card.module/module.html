@@ -22,9 +22,11 @@
       <div class="w-full h-[5px] bg-gradient-to-r from-blue to-pink"></div>
       <div class="p-2 sm:p-4 lg:p-3 bg-white h-full flex flex-col justify-between">
         <p class="text-xs sm:text-sm">{{ card.description }}</p>
-        <a href="{{ card.link_field.url.href }}" href="{{ card.link_field.url.href }}" {{ 'target="_blank"' if
+        {% if card.link_field.url.href != '' %}
+          <a href="{{ card.link_field.url.href }}" href="{{ card.link_field.url.href }}" {{ 'target="_blank"' if
           card.link_field.open_in_new_tab==true }}
           class="block border-2 border-pink px-3 py-1 w-fit mt-2 hover:bg-pinkDark hover:text-white hover:border-pinkDark transition-all">{{card.link_label}}</a>
+        {% endif %}
       </div>
     </div>
     {% endfor %}
