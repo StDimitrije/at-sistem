@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <div class="splash-screen fixed hidden w-screen h-screen z-[99999] top-0 left-0 items-center justify-center">
+  {# <div class="splash-screen fixed hidden w-screen h-screen z-[99999] top-0 left-0 items-center justify-center">
     <!-- The video -->
     <video playsinline autoplay loop muted id="my-video"
       class="hidden lg:block top-0 left-0 w-full h-full absolute object-cover">
@@ -38,7 +38,7 @@
       <img src="https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/splash-logo.png">
       <div class="loading-bar w-[1px] animate-fill h-[1px] bg-white mt-5"></div>
     </div>
-  </div>
+  </div> #}
   <div class="body-wrapper {{ builtin_body_classes }}">
     {% block header %}
     {% global_partial path='../partials/header.html' %}

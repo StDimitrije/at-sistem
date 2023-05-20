@@ -201,7 +201,7 @@ $(document).ready(function() {
         emailGlobalUnsub.addEventListener('change', toggleDisabled);
       }
 
-      checkCookie();
+      // checkCookie();
     }
   });
 
