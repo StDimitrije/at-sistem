@@ -11,21 +11,13 @@
 			</div>
 		</div>
 		<div class="w-full h-full">
-			<div class="image-gallery-modal hidden fixed top-0 left-0 w-screen h-screen"></div>
-			<div class="swiper image-gallery-swiper flex flex-col lg:flex-row lg:rounded-[6px] bg-white overflow-scroll lg:overflow-visible hidden fixed top-[50%]
-			left-[50%] w-full lg:w-4/5 xl:w-2/3 2xl:w-3/5 max-w-[1030px]" data-image-gallery-module-name="{{name}}">
-				<div class="image-gallery-close-btn flex lg:hidden justify-end relative py-3 px-3 hover:cursor-pointer">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20.121" height="20.121" viewBox="0 0 20.121 20.121">
-					  <g transform="translate(1.061 1.061)">
-					    <line data-name="Line 693" x2="18" y2="18" fill="none" stroke="#000" stroke-width="3"/>
-					    <line data-name="Line 694" x1="18" y2="18" fill="none" stroke="#000" stroke-width="3"/>
-					  </g>
-					</svg>
-				</div>
+			<div class="image-gallery-modal hidden fixed top-0 left-0 w-screen h-screen bg-black/70 z-[100]"></div>
+			<div class="swiper image-gallery-swiper lg:rounded-[6px] !overflow-visible !fixed top-[50%]
+				left-[50%] w-full lg:w-4/5 xl:w-2/3 2xl:w-3/5 max-w-[1030px] ml-[unset] mr-[unset] -translate-x-1/2 -translate-y-1/2 !z-[101] !hidden">
 	  		<div class="swiper-wrapper image-gallery-swiper-wrapper">
 	  			{% for image in image_gallery %}
-	  				<div class="swiper-slide image-gallery-swiper-slide lg:rounded-[6px] px-0 pb-2 pt-0 lg:px-2 lg:pt-2 bg-white ">
-		  				<img src="{{ image.image_field.src }}" loading="lazy" alt="{{ image.image_field.alt }}" width="500" class="w-full object-cover rounded-0 lg:rounded-[6px] max-h-[250px] sm:max-h-[500px]">
+	  				<div class="swiper-slide image-gallery-swiper-slide lg:rounded-[6px]">
+		  				<img src="{{ image.image_field.src }}" loading="lazy" alt="{{ image.image_field.alt }}" width="500" class="w-full object-cover rounded-0 lg:rounded-[6px] h-[300px] sm:h-[500px]">
 		  			</div>
 	  			{% endfor %}
 	  		</div>
@@ -33,118 +25,122 @@
 	        <div class="image-gallery-arrow image-gallery-arrow-left fixed left-[20px] sm:left-[30px] lg:left-[-55px] top-[50%] sm:top-[50%] w-[25px] h-[25px]"></div>
 	        <div class="image-gallery-arrow image-gallery-arrow-right fixed right-[20px] sm:right-[30px] lg:right-[-55px] top-[50%] sm:top-[50%] w-[25px] h-[25px]"></div>
     		</div>
-	    	<div class="relative hidden visible lg:block ml-3 ">
-	    		<div class="image-gallery-close-modal-btn hover:cursor-pointer">
-		  			<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
-						  <g id="Group_164269" data-name="Group 164269" transform="translate(-1307.462 -165)">
-						    <circle id="Ellipse_588" data-name="Ellipse 588" cx="20.5" cy="20.5" r="20.5" transform="translate(1307.462 165)"/>
-						    <g id="icon_Lg-close-x" transform="translate(1319.462 177)">
-						      <line id="Line_693" data-name="Line 693" x2="18" y2="18" fill="none" stroke="#fff" stroke-width="3"/>
-						      <line id="Line_694" data-name="Line 694" x1="18" y2="18" fill="none" stroke="#fff" stroke-width="3"/>
-						    </g>
-						  </g>
-						</svg>
-		  		</div>
-	    	</div>
+				<div class="image-gallery-close-modal-btn hover:cursor-pointer fixed -top-[65px] right-0 lg:top-0 lg:-right-[65px]">
+					<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
+						<g id="Group_164269" data-name="Group 164269" transform="translate(-1307.462 -165)">
+							<circle id="Ellipse_588" data-name="Ellipse 588" cx="20.5" cy="20.5" r="20.5" transform="translate(1307.462 165)"/>
+							<g id="icon_Lg-close-x" transform="translate(1319.462 177)">
+								<line id="Line_693" data-name="Line 693" x2="18" y2="18" fill="none" stroke="#fff" stroke-width="3"/>
+								<line id="Line_694" data-name="Line 694" x1="18" y2="18" fill="none" stroke="#fff" stroke-width="3"/>
+							</g>
+						</g>
+					</svg>
+				</div>
 		  </div>
 		</div>
 
-
 {% require_js %}
 <script>
-  let imageGalleryContainer = document.getElementsByClassName("image-gallery-container ");
-  let imageGalleryModalContainer = document.getElementsByClassName("image-gallery-modal");
-  let imageGalleryCloseBtn = document.getElementsByClassName("image-gallery-close-btn");
-  let imageGalleryCloseModalBtn = document.getElementsByClassName("image-gallery-close-modal-btn");
-  let imageGallerySwiperContainer = document.getElementsByClassName("image-gallery-swiper");
-  let imageGallerySwiperWrapper = document.getElementsByClassName("image-gallery-swiper-wrapper");
-  let imageGalleryNavigationContainer = document.getElementsByClassName("image-gallery-button-wrapper");
-  let viewMoreImagesButton = document.getElementsByClassName("view-more-images-button")
-  let imageGallerySwipers = [];
-  let imageGallerySwiperItems = [];
-  let imageGalleryItems = [];
 
-  for(let i = 0; i < imageGalleryContainer.length; i++){
-  	let currentModuleId = imageGallerySwiperContainer[i].dataset.imageGalleryModuleName;
-  	imageGallerySwiperContainer[i].className += " image-gallery-swiper_" + currentModuleId;
-  	imageGalleryNavigationContainer[i].children[0].className += " image-gallery-arrow-left_" + currentModuleId;
-    imageGalleryNavigationContainer[i].children[1].className += " image-gallery-arrow-right_" + currentModuleId;
+	if (!checkHeadForSwiper()) {
+		let script = document.createElement('script');
+		script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+		script.defer = true;
+		document.head.appendChild(script);
 
-		imageGalleryModalContainer[i].addEventListener("click", function() {
-		  toggleImageGalleryModal(i);
+		let link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+		document.head.appendChild(link);
+
+	}
+
+	
+  let imageGalleryContainer = document.querySelector(".image-gallery-container");
+  let imageGalleryModalContainer = document.querySelector(".image-gallery-modal");
+  let imageGalleryCloseModalBtn = document.querySelector(".image-gallery-close-modal-btn");
+  let imageGallerySwiperContainer = document.querySelector(".image-gallery-swiper");
+  let imageGallerySwiperWrapper = document.querySelector(".image-gallery-swiper-wrapper");
+  let imageGalleryNavigationContainer = document.querySelector(".image-gallery-button-wrapper");
+  let viewMoreImagesButton = document.querySelector(".view-more-images-button")
+	
+  window.addEventListener('load', () => {
+
+		const imageGallerySwipper = new Swiper(".image-gallery-swiper", {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			effect: "fade",
+			observer: true,
+			navigation: {
+				nextEl: ".image-gallery-arrow-right",
+				prevEl: ".image-gallery-arrow-left",
+			},
 		});
 
-		imageGalleryCloseBtn[i].addEventListener("click", function() {
-			toggleImageGalleryModal(i);
+		imageGalleryModalContainer.addEventListener("click", function() {
+			toggleImageGalleryModal();
 		});
 
-		imageGalleryCloseModalBtn[i].addEventListener("click", function() {
-			toggleImageGalleryModal(i);
+		imageGalleryCloseModalBtn.addEventListener("click", function() {
+			toggleImageGalleryModal();
 		});
 
-		viewMoreImagesButton[i].addEventListener("click", function(){
-			viewMoreImages(i);
+		viewMoreImagesButton.addEventListener("click", function(){
+			viewMoreImages();
 		});
 
-		imageGalleryItems[i] = imageGalleryContainer[i].children;
-		imageGallerySwiperItems[i] = imageGallerySwiperWrapper[i].children;
-		if(imageGalleryItems[i].length > 16) {
-			viewMoreImagesButton[i].style.display = "block";
-			for(let j = 16; j < imageGalleryItems[i].length; j++) {
-				imageGalleryItems[i][j].style.display = 'none';
-				imageGallerySwiperItems[i][j].style.display = 'none';
+		if(imageGalleryContainer.children.length > 16) {
+			viewMoreImagesButton.style.display = "block";
+			for(let j = 16; j < imageGalleryContainer.children.length; j++) {
+				imageGalleryContainer.children[j].classList.remove('block');
+				imageGalleryContainer.children[j].classList.add('hidden');
+				imageGallerySwiperWrapper.children[j].classList.remove('block');
+				imageGallerySwiperWrapper.children[j].classList.add('hidden');
 			}
 		}
 
-	  for(let k = 0; k < imageGalleryItems[i].length; k++){
-	  	imageGalleryItems[i][k].addEventListener("click", function() {
-			  toggleImageGalleryModal(i);
-			  swipeToImage(i, k)
+		for(let k = 0; k < imageGalleryContainer.children.length; k++){
+			imageGalleryContainer.children[k].addEventListener("click", function() {
+				toggleImageGalleryModal();
+				imageGallerySwipper.slideTo(k);
 			});
-	  }
+		}
 
-	  imageGallerySwipers[i] = new Swiper(".image-gallery-swiper_" + currentModuleId, {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      effect: "fade",
-      navigation: {
-        nextEl: ".image-gallery-arrow-right_" + currentModuleId,
-        prevEl: ".image-gallery-arrow-left_" + currentModuleId,
-      },
-    });
-  }
+	});
 
-	function toggleImageGalleryModal(index){
-		if(imageGalleryModalContainer[index].classList.contains('hidden')){
-			imageGalleryModalContainer[index].classList.remove("hidden")
-			imageGalleryModalContainer[index].classList.add("flex")
-			imageGallerySwiperContainer[index].classList.remove("hidden")
-			imageGallerySwiperContainer[index].classList.add("flex")
-		}else{
-			imageGalleryModalContainer[index].classList.remove("flex")
-			imageGalleryModalContainer[index].classList.add("hidden")
-			imageGallerySwiperContainer[index].classList.remove("flex")
-			imageGallerySwiperContainer[index].classList.add("hidden")
+	function toggleImageGalleryModal(){
+		if(imageGalleryModalContainer.classList.contains('hidden')){
+			imageGalleryModalContainer.classList.remove("hidden")
+			imageGalleryModalContainer.classList.add("block")
+			imageGallerySwiperContainer.classList.remove("!hidden")
+			imageGallerySwiperContainer.classList.add("!flex")
+		} else {
+			imageGalleryModalContainer.classList.remove("block")
+			imageGalleryModalContainer.classList.add("hidden")
+			imageGallerySwiperContainer.classList.remove("!flex")
+			imageGallerySwiperContainer.classList.add("!hidden")
 		}
 	}
 
-	function swipeToImage(swiperIndex, slideIndex){
-		imageGallerySwipers[swiperIndex].slideTo(slideIndex);
-	}
+	
 
-	function viewMoreImages(index) {
-		if(viewMoreImagesButton[index].innerHTML === 'View More'){
-			for(let i = 16; i < imageGalleryItems[index].length; i++) {
-				imageGalleryItems[index][i].style.display = 'block';
-				imageGallerySwiperItems[index][i].style.display = 'block';
+	function viewMoreImages() {
+		if(viewMoreImagesButton.innerHTML === 'View More'){
+			for(let i = 16; i < imageGalleryContainer.children.length; i++) {
+				imageGalleryContainer.children[i].classList.add('block');
+				imageGalleryContainer.children[i].classList.remove('hidden');
+				imageGallerySwiperWrapper.children[i].classList.add('block');
+				imageGallerySwiperWrapper.children[i].classList.remove('hidden');
 			}
-			viewMoreImagesButton[index].innerHTML = 'View Less'
+			viewMoreImagesButton.innerHTML = 'View Less'
 		}else{
-			for(let i = 16; i < imageGalleryItems[index].length; i++) {
-				imageGalleryItems[index][i].style.display = 'none';
-				imageGallerySwiperItems[index][i].style.display = 'none';
+			for(let i = 16; i < imageGalleryContainer.children.length; i++) {
+				imageGalleryContainer.children[i].classList.remove('block');
+				imageGalleryContainer.children[i].classList.add('hidden');
+				imageGallerySwiperWrapper.children[i].classList.remove('block');
+				imageGallerySwiperWrapper.children[i].classList.add('hidden');
 			}
-			viewMoreImagesButton[index].innerHTML = 'View More'
+			viewMoreImagesButton.innerHTML = 'View More'
 		}
 
 	}

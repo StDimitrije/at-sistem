@@ -13,7 +13,7 @@
     <div class="flex flex-col bg-white text-grey4 cursor-pointer group drop-shadow-xs">
       <div class="relative w-full h-full max-h-[300px]">
         <div class="bg-gradient-to-b from-transparent to-black/[.38] absolute w-full h-full origin-center z-10"></div>
-        <img src="{{ card.image_field.src }}" alt="{{ card.image_field.alt }}"
+        <img src="{{ card.image_field.src }}" alt="{{ card.image_field.alt }}" loading="lazy"
           class="object-cover object-center min-h-full min-w-full max-h-full max-w-full">
         <p
           class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 lg:bottom-3 lg:left-3 text-2xl sm:text-5xl text-white z-20">

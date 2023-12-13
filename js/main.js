@@ -204,6 +204,15 @@ $(document).ready(function() {
       // checkCookie();
     }
   });
-
-
 })();
+
+window.checkHeadForSwiper = () => {
+  const headChildren = document.head.children;
+  let bool = false;
+  for (let child of headChildren) {
+    if (child.nodeName == 'SCRIPT' && child.src == 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js') {
+      bool = true
+    }
+  }
+  return bool;
+}

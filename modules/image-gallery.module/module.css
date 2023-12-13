@@ -1,26 +1,16 @@
-.image-gallery-modal {
-	background-color: rgba(0, 0, 0, 0.7);
-	z-index: 100;
-}
 
-.image-gallery-swiper{
-	z-index: 101;
-	margin-left: unset;
-	margin-right: unset;
-	transform: translate(-50%, -50%);
-}
 
 .image-gallery-swiper-slide{
 	height: unset;
 }
 
 .image-gallery-button-wrapper {
-	z-index: 103;
+	z-index: 106;
 }
 
 .image-gallery-close-btn,
 .image-gallery-close-modal-btn {
-	z-index: 105;
+	z-index: 103;
 }
 
 .image-gallery-arrow {

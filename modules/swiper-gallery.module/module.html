@@ -2,20 +2,16 @@
 {{ 'bg-pink/[.08]' if module.variant == 'false' }}
 ">
   {% if module.variant == 'true' %}
-  <!-- <div class="absolute top-0 left-0 bg-blue w-1/12 h-[10px]"></div> -->
-  <!-- <div class="absolute top-0 left-0 bg-blue w-[10px] h-1/4"></div> -->
-  <!-- <div class="absolute bottom-0 left-0 bg-pink w-[10px] h-1/4"></div> -->
-  <!-- <div class="absolute bottom-0 left-0 bg-pink w-1/3 h-[10px]"></div> -->
   <img src='{{ get_asset_url("../../images/icons/large-dots.svg") }}'
-    class="absolute right-0 top-[-75px] block max-w-[170px]">
+    class="absolute right-0 top-[-75px] block max-w-[170px]" loading="lazy">
   <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
-    class="absolute left-[-65px] bottom-[-85px] block">
+    class="absolute left-[-65px] bottom-[-85px] block" loading="lazy">
   {% endif %}
   {% if module.variant == 'false' %}
   <img src='{{ get_asset_url("../../images/icons/large-dots.svg") }}'
-    class="absolute right-0 top-[-75px] block max-w-[170px]">
+    class="absolute right-0 top-[-75px] block max-w-[170px]" loading="lazy">
   <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
-    class="absolute left-[-65px] bottom-[-85px] block">
+    class="absolute left-[-65px] bottom-[-85px] block" loading="lazy">
   {% endif %}
   <p class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1">{{ module.title }}</p>
   <div class="sponsorship-images swiper max-w-[1000px]" data-sponsorship-module-name="{{ name }}">
@@ -40,41 +36,44 @@
 
 {% require_js %}
 <script>
-  let sponsorshipMainContainer = document.getElementsByClassName("sponsorship-images");
-  let sponsorshipPaginationContainer = document.getElementsByClassName("sponsorship-images-pagination-container");
-  let sponsorshipSwipers = [];
-  for (let i = 0; i < sponsorshipMainContainer.length; i++) {
-    let currentModuleId = sponsorshipMainContainer[i].dataset.sponsorshipModuleName;
-    sponsorshipMainContainer[i].className += " sponsorship-images_" + currentModuleId;
-    sponsorshipPaginationContainer[i].className += " sponsorship-images-pagination-container_" + currentModuleId;
 
-    sponsorshipSwipers[i] = new Swiper(".sponsorship-images_" + currentModuleId, {
-      slidesPerView: "auto",
-      spaceBetween: 60,
-      freeMode: {
-        enabled: true,
-        sticky: true,
-      },
-      mousewheel: {
-        forceToAxis: true,
-      },
-      pagination: {
-        el: ".sponsorship-images-pagination-container_" + currentModuleId,
-        clickable: true,
-      },
-      {# slidesOffsetAfter: 80, #}
-      {# breakpoints: {
-        100: {
-          spaceBetween: 60,
-          slidesOffsetBefore: 40,
-          slidesOffsetAfter: 40,
-        },
-        1139: {
-          spaceBetween: 100,
-        },
-      } #}
-    });
+  if (!checkHeadForSwiper()) {
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+    document.head.appendChild(link);
   }
+  
+  let sponsorshipMainContainer = document.getElementsByClassName("sponsorship-images");
+  let sponsorshipSwipers = [];
+  
+  window.addEventListener('load', () => {
+    for (let i = 0; i < sponsorshipMainContainer.length; i++) {
+      let currentModuleId = sponsorshipMainContainer[i].dataset.sponsorshipModuleName;
+      sponsorshipMainContainer[i].className += " sponsorship-images_" + currentModuleId;
+
+      sponsorshipSwipers[i] = new Swiper(".sponsorship-images_" + currentModuleId, {
+        slidesPerView: "auto",
+        spaceBetween: 60,
+        freeMode: {
+          enabled: true,
+          sticky: true,
+        },
+        mousewheel: {
+          forceToAxis: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    }
+  })
 
 </script>
 {% end_require_js %}
