@@ -52,7 +52,6 @@
 		link.rel = 'stylesheet';
 		link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
 		document.head.appendChild(link);
-
 	}
 
 	
@@ -63,10 +62,11 @@
   let imageGallerySwiperWrapper = document.querySelector(".image-gallery-swiper-wrapper");
   let imageGalleryNavigationContainer = document.querySelector(".image-gallery-button-wrapper");
   let viewMoreImagesButton = document.querySelector(".view-more-images-button")
-	
+	let imageGallerySwipper;
+
   window.addEventListener('load', () => {
 
-		const imageGallerySwipper = new Swiper(".image-gallery-swiper", {
+		imageGallerySwipper = new Swiper(".image-gallery-swiper", {
 			slidesPerView: 1,
 			spaceBetween: 30,
 			effect: "fade",
@@ -114,6 +114,9 @@
 			imageGalleryModalContainer.classList.add("block")
 			imageGallerySwiperContainer.classList.remove("!hidden")
 			imageGallerySwiperContainer.classList.add("!flex")
+
+			{# Had to add the update() method regardless of observer: true being active for mobile screens #}
+			imageGallerySwipper.update()
 		} else {
 			imageGalleryModalContainer.classList.remove("block")
 			imageGalleryModalContainer.classList.add("hidden")
