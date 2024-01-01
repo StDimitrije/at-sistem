@@ -19,7 +19,7 @@
       {% for item in module.image_group %}
       <a href="{{item.image_link.url.href}}" class="swiper-slide max-w-[200px] sm:max-w-15">
         <img class="max-w-[200px] sm:max-w-15" src="{{ item.image_field.src }}" width="200px" loading="lazy"
-          alt="{{ item.title }}">
+          alt="{{ item.image_field.alt }}">
       </a>
       {% endfor %}
     </div>
