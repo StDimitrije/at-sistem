@@ -1,0 +1,23 @@
+<div class="contact-form-container"></div>
+
+{% require_js %}
+
+<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    target: '.contact-form-container',
+    region: "eu1",
+    portalId: "26015966",
+    formId: "8e0ff026-ebe7-40f7-9b9d-b2e729b11368",
+    onFormReady: (form) => {
+      const subjectInput = form[0].querySelector('input[name="subject"]')
+      const urlParams = new URLSearchParams(window.location.search);
+      const productParam = urlParams.get('product');
+
+      subjectInput.value = productParam || ''
+
+    }
+  });
+</script>
+
+{% end_require_js %}
