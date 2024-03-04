@@ -1,0 +1,423 @@
+[
+  {
+    "default": 4,
+    "display": "text",
+    "display_width": null,
+    "id": "0e116bea-b000-5841-fdf3-9d250bf82c28",
+    "label": "Grid Columns",
+    "locked": false,
+    "max": 4,
+    "min": 3,
+    "name": "grid_columns",
+    "required": false,
+    "step": 1,
+    "type": "number"
+  },
+  {
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "344e6748-a3cb-1b7c-e9fb-58a2c02f1a44",
+    "label": "Show Image",
+    "locked": false,
+    "name": "show_image",
+    "required": false,
+    "type": "boolean"
+  },
+  {
+    "children": [
+      {
+        "allow_new_line": false,
+        "default": "Collection",
+        "display_width": null,
+        "id": "9a2bc242-566c-d2bf-6ce0-1bb0e8f9223c",
+        "label": "Collection",
+        "locked": false,
+        "name": "collection",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+      },
+      {
+        "default": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "display_width": null,
+        "id": "ced95e20-baef-d67b-cdd9-df47cd05ecaa",
+        "label": "Image",
+        "locked": false,
+        "name": "image_field",
+        "required": false,
+        "resizable": true,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image",
+        "visibility": {
+          "controlling_field_path": "show_image",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        }
+      },
+      {
+        "allow_new_line": false,
+        "default": [
+          "Test",
+          "Test",
+          "Test"
+        ],
+        "display_width": null,
+        "id": "5775a58b-181e-8256-cf17-be88caf6534c",
+        "label": "Categories",
+        "locked": false,
+        "name": "categories",
+        "occurrence": {
+          "default": 3,
+          "min": 1
+        },
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+      },
+      {
+        "children": [
+          {
+            "allow_new_line": false,
+            "default": "Link Label",
+            "display_width": null,
+            "id": "accc1b6e-1463-bad5-4667-b875bb008cdc",
+            "label": "Link Label",
+            "locked": false,
+            "name": "link_label",
+            "required": false,
+            "show_emoji_picker": false,
+            "type": "text",
+            "validation_regex": ""
+          },
+          {
+            "default": {
+              "url": {
+                "content_id": null,
+                "href": "https://google.com",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            },
+            "display_width": null,
+            "id": "09968815-824a-0059-f1d6-9c99a44a6bc0",
+            "label": "Link",
+            "locked": false,
+            "name": "link",
+            "required": false,
+            "show_advanced_rel_options": false,
+            "supported_types": [
+              "EXTERNAL",
+              "CONTENT",
+              "FILE",
+              "EMAIL_ADDRESS",
+              "BLOG",
+              "CALL_TO_ACTION",
+              "PHONE_NUMBER"
+            ],
+            "type": "link"
+          }
+        ],
+        "default": {
+          "link_label": "Link Label",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        },
+        "display_width": null,
+        "expanded": false,
+        "id": "0c9a0bd1-a72b-40f9-cf17-60994fb06b87",
+        "label": "Link Group",
+        "locked": false,
+        "name": "link_group",
+        "required": false,
+        "tab": "CONTENT",
+        "type": "group"
+      }
+    ],
+    "default": [
+      {
+        "collection": "Mehanička Filtracija",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "Filteri",
+          "Filterske Ispune",
+          "Višenamenski Ventili",
+          "Pumpe"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      },
+      {
+        "collection": "Osnovni ugradni elementi",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "Skimeri",
+          "Slivnici",
+          "Mlaznice",
+          "Prodori",
+          "Usisni Elementi"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      },
+      {
+        "collection": "Hidraulična Mreža",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "PVC Cevi",
+          "PVC Spojni Elementi",
+          "PVC Ventili",
+          "Pribor za Montažu"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      },
+      {
+        "collection": "Osnovne Elektroupravljačke Komponente",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "Elektrokomandni Ormar",
+          "Automatska Dopuna",
+          "Pribor za Montažu"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      },
+      {
+        "collection": "Podvodna Rasveta Bazena",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "Podvodni Reflektori",
+          "Razvodne Kutije",
+          "Napajanje i Transformatori",
+          "Kontroleri",
+          "Pribor za Montažu"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      },
+      {
+        "collection": "Automatski Hemijski Tretman",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "Dozirne Pumpe",
+          "Automatske Centrale za Merenje, Regulaciju i Doziranje PH i Dezinficijensa",
+          "Slana Voda - Uređaj za Elektrolizu Soli",
+          "UV Sterilizacija",
+          "Pearl Water"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      },
+      {
+        "collection": "Grejanje i Odvlaživanje",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "Toplotne Pumpe",
+          "Izmenjivači Toplote",
+          "Elektro - Grejači",
+          "Solarno Dogrevanje",
+          "Odvlaživači"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      },
+      {
+        "collection": "Čišćenje i Održavanje",
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+          "alt": "Bazensko Okruzenje",
+          "loading": "lazy",
+          "width": 514,
+          "height": 300,
+          "max_width": 514,
+          "max_height": 300
+        },
+        "categories": [
+          "Roboti",
+          "Pribor za Ručno Čišćenje",
+          "Pribor za Održavanje"
+        ],
+        "link_group": {
+          "link_label": "Vidi Više",
+          "link": {
+            "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+            },
+            "open_in_new_tab": true,
+            "no_follow": false
+          }
+        }
+      }
+    ],
+    "display_width": null,
+    "expanded": false,
+    "id": "f16d694a-9814-3d4b-3459-fe1afea48e9a",
+    "label": "Cards",
+    "locked": false,
+    "name": "cards",
+    "occurrence": {
+      "default": 8,
+      "min": 1
+    },
+    "required": false,
+    "tab": "CONTENT",
+    "type": "group"
+  }
+]

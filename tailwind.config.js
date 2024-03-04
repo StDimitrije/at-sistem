@@ -94,8 +94,11 @@ module.exports = {
       },
       dropShadow: {
         'xs': '0px 0px 15px rgba(0, 0, 0, 0.1)',
-        'sm': '0 0 25px rgba(0, 0, 0, 0.161)'
-        
+        'sm': '0 0 25px rgba(0, 0, 0, 0.161)',
+        'md': '0 0 50px rgba(0, 0, 0, 0.10)'
+      },
+      boxShadow: {
+        'custom': '0 0 50px rgba(0, 0, 0, 0.10)'
       },
       backdropBlur: {
         'lg': '20px'
@@ -107,6 +110,10 @@ module.exports = {
       },
       animation: {
         'fill': 'fillLine 4s forwards',
+      },
+      backgroundImage: {
+        purpleGradient: 'linear-gradient(47.66deg, #A5C3FA -5.18%, #D1A1F7 102.55%)',
+        textBaseGradient: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 69.25%)'
       }
     }
   },

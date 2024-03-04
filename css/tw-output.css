@@ -612,6 +612,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 20px;
 }
 
+.my-3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .my-5 {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -764,6 +769,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[25px\] {
   height: 25px;
+}
+
+.h-0\.5 {
+  height: 5px;
+}
+
+.h-0 {
+  height: 0px;
 }
 
 .h-auto {
@@ -981,6 +994,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -999,6 +1016,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-start {
   align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -1198,8 +1219,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-purpleGradient {
+  background-image: linear-gradient(47.66deg, #A5C3FA -5.18%, #D1A1F7 102.55%);
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-textBaseGradient {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 69.25%);
 }
 
 .from-transparent {
@@ -1257,6 +1286,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-2 {
   padding: 20px;
+}
+
+.p-3 {
+  padding: 30px;
 }
 
 .p-0 {
@@ -1348,6 +1381,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-5 {
   padding-left: 50px;
+}
+
+.pb-3 {
+  padding-bottom: 30px;
 }
 
 .pt-10 {
@@ -1545,6 +1582,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   mix-blend-mode: hard-light;
 }
 
+.shadow-custom {
+  --tw-shadow: 0 0 50px rgba(0, 0, 0, 0.10);
+  --tw-shadow-colored: 0 0 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-\[0_0_40px_\#1B004E28\] {
   --tw-shadow: 0 0 40px #1B004E28;
   --tw-shadow-colored: 0 0 40px var(--tw-shadow-color);
@@ -1574,14 +1617,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .transition-all {
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1952,5 +1987,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .\32xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .\32xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
