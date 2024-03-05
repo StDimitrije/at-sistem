@@ -8,12 +8,14 @@
             <p class="text-4xl text-white z-10 font-bold">{{ item.collection }}</p>
           </div>
         {% else %}
-          <p class="text-3xl text-black">{{ item.collection }}</p>
+          <div class="flex items-end">
+            <p class="text-3xl text-black leading-10">{{ item.collection }}</p>
+          </div>
         {% endif %}
         <div class="bg-purpleGradient w-full h-0.5 {{'my-3' if module.show_image eq false else 'mb-3'}}"></div>
         <ul class="flex flex-col gap-1 w-full m-0 {{ 'px-3' if module.show_image eq true }}">
           {% for category in item.categories %}
-          <li>{{ category }}</li>
+          <li class="uppercase">{{ category }}</li>
           {% endfor %}
         </ul>
       </div>
