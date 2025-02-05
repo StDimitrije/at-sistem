@@ -1,0 +1,20 @@
+<div class="grid grid-flow-row lg:grid-flow-col gap-1 align-middle text-white">
+  <div class="flex max-w-xl items-center m-auto lg:m-0">
+    <div class="relative z-0 rounded-md overflow-hidden">
+      <div class="bg-gradient-to-tr from-[#fc27479c] to-[#6630ceb8] mix-blend-hard-light absolute w-full h-full origin-center z-10"></div>
+      <img class="object-cover" src="{{ module.image.src }}" alt="{{ module.image.alt }}" loading="lazy" width="680px"/>
+    </div>
+  </div>
+  <div class="flex items-left max-w-xl m-auto mt-4 lg:items-center lg:max-w-lg lg:ml-5 lg:m-auto">
+    <div class="flex flex-col">
+      <p class="text-lg font-cd font-medium tracking-wider uppercase">{{ module.pre_title_text }}</p>
+      <a href="{{ module.link_field.url.href }}">
+        <p class="text-4xl leading-tight font-medium font-ex mt-1 mb-2">{{ module.title }}</p>
+      </a>
+      <p class="text-base mb-5">{{ module.description }}</p>
+      <a href="{{ module.link_field.url.href }}" class="font-ex font-medium flex items-baseline link-with-arrow stroke-white hover:text-primary hover:stroke-primary mt-auto">{{ module.link_label }}
+        <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" width="7.121" height="11.414" viewBox="0 0 7.121 11.414"><g transform="translate(0.707 0.707)"><path data-name="icon-small-arrow" d="M119.62,6l5,5-5,5" transform="translate(-119.62 -6)" fill="none" stroke-width="2"/></g></svg>
+      </a>
+    </div>
+  </div>
+</div>

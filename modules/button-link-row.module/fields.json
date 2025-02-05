@@ -1,0 +1,93 @@
+[ {
+  "id" : "44c86c72-f1f1-c471-1483-93eb85dc5f62",
+  "name" : "button",
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "59085e56-928d-c84c-f94f-f1d88a44acec",
+    "name" : "button_label",
+    "label" : "Button Label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "sign up"
+  }, {
+    "id" : "cb34d368-c475-a4b9-cf30-232048c49344",
+    "name" : "button_link",
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "content_id" : null,
+      "href" : "home",
+      "type" : "EXTERNAL"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "button_label" : "sign up",
+    "button_link" : {
+      "content_id" : null,
+      "href" : "home",
+      "type" : "EXTERNAL"
+    }
+  }
+}, {
+  "id" : "981b660a-b0df-63a0-b43f-5d49ae9b1b51",
+  "name" : "text_link",
+  "label" : "Text Link",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b93fada7-9e16-5732-e16a-ba01b6506bf5",
+    "name" : "link_label",
+    "label" : "Link Label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Want to be a featured speaker"
+  }, {
+    "id" : "18843557-b9bb-87d0-b200-52f3f2efb7e6",
+    "name" : "link_url",
+    "label" : "Link Url",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "content_id" : null,
+      "href" : "home",
+      "type" : "EXTERNAL"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "link_label" : "Want to be a featured speaker",
+    "link_url" : {
+      "content_id" : null,
+      "href" : "home",
+      "type" : "EXTERNAL"
+    }
+  }
+} ]

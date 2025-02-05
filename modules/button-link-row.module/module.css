@@ -1,0 +1,4 @@
+.button-link-row-text-link svg {
+	transform: rotate(-90deg);
+	margin-left: var(--spacing);
+}

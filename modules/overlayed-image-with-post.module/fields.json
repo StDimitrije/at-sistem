@@ -1,0 +1,89 @@
+[ {
+  "id" : "64e82e39-0b22-0148-1a75-aee2e14a3079",
+  "name" : "image",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent-eu1.net/hubfs/25329237/eta.jpg",
+    "alt" : "eta",
+    "loading" : "lazy",
+    "width" : 1920,
+    "height" : 1080,
+    "max_width" : 1920,
+    "max_height" : 1080
+  }
+}, {
+  "id" : "25d68fcd-4db9-abd9-3197-b90443088299",
+  "name" : "pre_title_text",
+  "label" : "Pre-title-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "POWERED BY MOTION RECRUITMENT"
+}, {
+  "id" : "03450b4c-81a7-6bc8-e4a6-743948fd64fa",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Branded tech in motion copy"
+}, {
+  "id" : "693fc802-5094-36fc-db09-7e5409c918aa",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+}, {
+  "id" : "89964e80-39f4-a034-78af-c286080c052f",
+  "name" : "link_field",
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "type" : "EXTERNAL",
+      "href" : "https://www.google.com/ncr",
+      "content_id" : null
+    },
+    "open_in_new_tab" : true,
+    "no_follow" : false
+  }
+}, {
+  "id" : "8c838ded-8cf5-c6cb-99d7-c63e0831c443",
+  "name" : "link_label",
+  "label" : "Link label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Learn more"
+} ]
