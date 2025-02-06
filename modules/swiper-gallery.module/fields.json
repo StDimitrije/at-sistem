@@ -1,11 +1,16 @@
 [
  {
-  "type": "text",
+  "allow_new_line": false,
+  "default": "Title",
+  "display_width": null,
   "id": "feb1a47b-eb0b-23a6-92bf-e55575c416d2",
-  "validation_regex": "",
   "label": "Title",
+  "locked": false,
   "name": "title",
-  "default": "Title"
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
  },
  {
   "children": [
@@ -32,6 +37,14 @@
     "type": "image"
    },
    {
+    "type": "boolean",
+    "id": "88399313-7b82-3f0a-e816-31685fd2e273",
+    "default": false,
+    "display": "checkbox",
+    "label": "Link Image",
+    "name": "link_image"
+   },
+   {
     "default": {
      "url": {
       "content_id": null,
@@ -56,7 +69,12 @@
      "BLOG",
      "CALL_TO_ACTION"
     ],
-    "type": "link"
+    "type": "link",
+    "visibility": {
+     "operator": "EQUAL",
+     "controlling_field_path": "image_group.link_image",
+     "controlling_value_regex": "true"
+    }
    }
   ],
   "default": [
@@ -71,7 +89,7 @@
      "max_width": 222,
      "max_height": 77
     },
-    "link_field_1": {
+    "image_link": {
      "url": {
       "content_id": null,
       "type": "EXTERNAL",
@@ -79,7 +97,8 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "boolean_field": false
    },
    {
     "image_field": {
@@ -92,7 +111,7 @@
      "max_width": 222,
      "max_height": 77
     },
-    "link_field_1": {
+    "image_link": {
      "url": {
       "content_id": null,
       "type": "EXTERNAL",
@@ -100,7 +119,8 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "boolean_field": false
    },
    {
     "image_field": {
@@ -113,7 +133,7 @@
      "max_width": 222,
      "max_height": 77
     },
-    "link_field_1": {
+    "image_link": {
      "url": {
       "content_id": null,
       "type": "EXTERNAL",
@@ -121,7 +141,8 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "boolean_field": false
    },
    {
     "image_field": {
@@ -134,7 +155,7 @@
      "max_width": 222,
      "max_height": 77
     },
-    "link_field_1": {
+    "image_link": {
      "url": {
       "content_id": null,
       "type": "EXTERNAL",
@@ -142,11 +163,13 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "boolean_field": false
    }
   ],
   "display_width": null,
   "expanded": false,
+  "group_occurrence_meta": null,
   "id": "7b1996d6-e56f-a681-6704-3afc808c9d36",
   "label": "Image group",
   "locked": false,
@@ -238,6 +261,7 @@
   },
   "display_width": null,
   "expanded": false,
+  "group_occurrence_meta": null,
   "id": "ce76ca08-1389-1300-72ef-2dfa45e66ddf",
   "label": "Button",
   "locked": false,

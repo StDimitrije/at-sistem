@@ -557,6 +557,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: -85px;
 }
 
+.top-\[calc\(100\%-23px\)\] {
+  top: calc(100% - 23px);
+}
+
+.\!top-\[calc\(100\%-23px\)\] {
+  top: calc(100% - 23px) !important;
+}
+
+.\!top-\[calc\(100\%-25px\)\] {
+  top: calc(100% - 25px) !important;
+}
+
+.-left-\[35px\] {
+  left: -35px;
+}
+
+.\!-left-\[35px\] {
+  left: -35px !important;
+}
+
+.\!-right-\[35px\] {
+  right: -35px !important;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -808,8 +832,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
 }
 
+.h-\[20px\] {
+  height: 20px;
+}
+
 .h-\[1px\] {
   height: 1px;
+}
+
+.h-max {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.\!h-max {
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
+.\!h-\[400px\] {
+  height: 400px !important;
 }
 
 .max-h-\[250px\] {
@@ -834,6 +882,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-h-\[200px\] {
   max-height: 200px;
+}
+
+.max-h-\[150px\] {
+  max-height: 150px;
 }
 
 .min-h-\[250px\] {
@@ -938,8 +990,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 1000px;
 }
 
-.max-w-\[200px\] {
-  max-width: 200px;
+.max-w-\[400px\] {
+  max-width: 400px;
 }
 
 .max-w-\[750px\] {
@@ -952,6 +1004,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[1520px\] {
   max-width: 1520px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
 }
 
 .flex-1 {
@@ -1927,6 +1987,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:-right-\[65px\] {
     right: -65px;
+  }
+
+  .lg\:-left-\[35px\] {
+    left: -35px;
+  }
+
+  .lg\:left-0 {
+    left: 0px;
+  }
+
+  .lg\:\!left-0 {
+    left: 0px !important;
+  }
+
+  .lg\:\!right-0 {
+    right: 0px !important;
+  }
+
+  .lg\:\!top-\[calc\(100\%-25px\)\] {
+    top: calc(100% - 25px) !important;
   }
 
   .lg\:m-0 {

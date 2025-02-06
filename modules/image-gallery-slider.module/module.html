@@ -1,0 +1,54 @@
+<div class="w-full h-full relative">
+  <div class="image-gallery-slider-{{name}} swiper">
+    <div class="flex items-center swiper-wrapper">
+      {% for item in module.images %}
+      <div class="swiper-slide max-w-xl !h-[400px]">
+        <img class="w-full h-full object-center object-cover" src="{{ item.image.src }}" width="1000px" loading="lazy"
+          alt="{{ item.alt }}">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="swiper-button-next swiper-button-next-{{name}} !-right-[35px]"></div>
+  <div class="swiper-button-prev swiper-button-prev-{{name}} !-left-[35px]"></div>
+</div>
+
+
+{% require_js %}
+<script>
+  if (!checkHeadForSwiper()) {
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+    document.head.appendChild(link);
+  }
+
+  window.addEventListener('load', () => {
+    const swiper = new Swiper(".image-gallery-slider-" + '{{name}}', {
+      slidesPerView: "auto",
+      spaceBetween: 60,
+      navigation: {
+        nextEl: ".swiper-button-next-{{name}}",
+        prevEl: ".swiper-button-prev-{{name}}",
+      },
+      freeMode: {
+        enabled: true,
+        sticky: true,
+      },
+      mousewheel: {
+        forceToAxis: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
+    });
+  })
+
+</script>
+{% end_require_js %}

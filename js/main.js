@@ -1,9 +1,3 @@
-$(document).ready(function() {
-  $(document).on("change", ".hs-fieldtype-checkbox .inputs-list li input[type=checkbox]", function () {
-    $(this).parent()[this.checked ? "addClass" : "removeClass"]("checked");
-  });
-});
-
 (function () {
   // Polyfill for NodeList.prototype.forEach() in IE
   if (window.NodeList && !NodeList.prototype.forEach) {

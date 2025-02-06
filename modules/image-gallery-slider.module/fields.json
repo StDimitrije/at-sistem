@@ -1,0 +1,51 @@
+[
+ {
+  "type": "group",
+  "id": "02035ba7-d879-14f9-40d1-f8464599c6ea",
+  "label": "Images",
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://145812822.fs1.hubspotusercontent-eu1.net/hubfs/145812822/Swiper%20Gallery%20Images/IMG-20241009-WA0018.webp",
+     "alt": "IMG-20241009-WA0018",
+     "loading": "lazy",
+     "width": 1000,
+     "height": 750,
+     "max_width": 1000,
+     "max_height": 750
+    },
+    "display_width": null,
+    "id": "edfec820-2d25-1f4b-5eba-cdf7c1128a60",
+    "label": "Image",
+    "locked": false,
+    "name": "image",
+    "occurrence": null,
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": true,
+    "type": "image"
+   }
+  ],
+  "name": "images",
+  "default": [
+   {
+    "image": {
+     "size_type": "auto",
+     "src": "https://145812822.fs1.hubspotusercontent-eu1.net/hubfs/145812822/Swiper%20Gallery%20Images/IMG-20241009-WA0018.webp",
+     "alt": "IMG-20241009-WA0018",
+     "loading": "lazy",
+     "width": 1000,
+     "height": 750,
+     "max_width": 1000,
+     "max_height": 750
+    }
+   }
+  ],
+  "occurrence": {
+   "min": 1,
+   "default": 1
+  }
+ }
+]
