@@ -32,7 +32,7 @@
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='@hubspot/button',
-				button_text="BUTTON LABEL",
+				button_text={{ context.button_text || "BUTTON LABEL"}},
 				link={ "url": { "type": "EXTERNAL", "href": "https://atsistem.rs", "content_id": null }, "open_in_new_tab": false, "no_follow": false },
 				style={
 					"override_default_style": true, 

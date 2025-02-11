@@ -1,137 +1,227 @@
-[ {
-  "id" : "05a4f4aa-b32f-c257-f1c3-dc1c3721a9b7",
-  "name" : "text",
-  "display_width" : null,
-  "label" : "Text",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "e89e80ba-689e-1fff-648e-182919f9fbf2",
-    "name" : "title",
-    "display_width" : null,
-    "label" : "Title",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Watch On Demand"
-  }, {
-    "id" : "5af43fa9-63de-91b5-eab2-3ddc681d6cc9",
-    "name" : "description",
-    "display_width" : null,
-    "label" : "Description",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo."
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group",
-  "default" : {
-    "title" : "Watch On Demand",
-    "description" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo."
-  }
-}, {
-  "id" : "5b2e92f0-ddb1-e742-471c-792dc7fb387f",
-  "name" : "button_label",
-  "display_width" : null,
-  "label" : "Button Label",
-  "required" : false,
-  "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text",
-  "default" : "Watch Now"
-}, {
-  "id" : "7aa1d3e8-7d78-a40c-c38f-ffc542df52fc",
-  "name" : "video",
-  "display_width" : null,
-  "label" : "Video",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "4e081430-7fc5-bd7b-284e-94629b7aaccb",
-    "name" : "url_field",
-    "display_width" : null,
-    "label" : "URL",
-    "required" : true,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "type" : "url",
-    "default" : {
-      "type" : "EXTERNAL",
-      "href" : "https://www.youtube.com/watch?v=Exd8K9YkjQo",
-      "content_id" : null
-    }
-  }, {
-    "id" : "af95f87d-2e13-e9e9-9a82-d266f542d447",
-    "name" : "image_field",
-    "display_width" : null,
-    "label" : "Image",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://f.hubspotusercontent-eu1.net/hubfs/25329237/large-placeholder-image.png",
-      "alt" : "large-placeholder-image",
-      "loading" : "lazy",
-      "width" : 2000,
-      "height" : 857,
-      "max_width" : 2000,
-      "max_height" : 857
-    }
-  }, {
-    "id" : "64820782-621a-d255-11f8-9b5893dead88",
-    "name" : "additional_watch_button_id",
-    "display_width" : null,
-    "label" : "additional_watch-button-id",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text"
-  }, {
-    "id" : "decc286e-ebe4-f83c-5a5c-4d1bb09638af",
-    "name" : "has_overlay_and_aspect_ratio",
-    "display_width" : null,
-    "label" : "Has Overlay and Aspect Ratio",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "default" : true
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group",
-  "default" : {
-    "url_field" : {
-      "type" : "EXTERNAL",
-      "href" : "https://www.youtube.com/watch?v=Exd8K9YkjQo",
-      "content_id" : null
+[
+ {
+  "children": [
+   {
+    "allow_new_line": false,
+    "default": "Watch On Demand",
+    "display_width": null,
+    "id": "e89e80ba-689e-1fff-648e-182919f9fbf2",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "allow_new_line": false,
+    "default": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.",
+    "display_width": null,
+    "id": "5af43fa9-63de-91b5-eab2-3ddc681d6cc9",
+    "label": "Description",
+    "locked": false,
+    "name": "description",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "choices": [
+     [
+      "h1",
+      "H1"
+     ],
+     [
+      "h2",
+      "H2"
+     ],
+     [
+      "h3",
+      "H3"
+     ],
+     [
+      "h4",
+      "H4"
+     ],
+     [
+      "h5",
+      "H5"
+     ],
+     [
+      "h6",
+      "H6"
+     ]
+    ],
+    "default": "h3",
+    "display": "select",
+    "display_width": null,
+    "id": "ba905137-a171-212b-79d4-0b79abf31adb",
+    "label": "H-tag Choice",
+    "locked": false,
+    "multiple": false,
+    "name": "h_tag_choice",
+    "preset": null,
+    "reordering_enabled": true,
+    "required": false,
+    "type": "choice"
+   }
+  ],
+  "default": {
+   "title": "Watch On Demand",
+   "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.",
+   "h_tag_choice": "h3"
+  },
+  "display_width": null,
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "id": "05a4f4aa-b32f-c257-f1c3-dc1c3721a9b7",
+  "label": "Text",
+  "locked": false,
+  "name": "text",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ },
+ {
+  "allow_new_line": false,
+  "default": "Watch Now",
+  "display_width": null,
+  "id": "5b2e92f0-ddb1-e742-471c-792dc7fb387f",
+  "label": "Button Label",
+  "locked": false,
+  "name": "button_label",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
+  "default": {
+   "url": {
+    "content_id": null,
+    "type": "EXTERNAL",
+    "href": ""
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  },
+  "display_width": null,
+  "id": "76d75e4b-b3d1-21fe-10d6-b0307783c218",
+  "label": "Button Link",
+  "locked": false,
+  "name": "button_link",
+  "required": false,
+  "show_advanced_rel_options": false,
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT",
+   "FILE",
+   "EMAIL_ADDRESS",
+   "BLOG",
+   "CALL_TO_ACTION",
+   "PHONE_NUMBER",
+   "PAYMENT"
+  ],
+  "type": "link"
+ },
+ {
+  "children": [
+   {
+    "default": {
+     "type": "EXTERNAL",
+     "href": "https://www.youtube.com/watch?v=Exd8K9YkjQo",
+     "content_id": null
     },
-    "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://f.hubspotusercontent-eu1.net/hubfs/25329237/large-placeholder-image.png",
-      "alt" : "large-placeholder-image",
-      "loading" : "lazy",
-      "width" : 2000,
-      "height" : 857,
-      "max_width" : 2000,
-      "max_height" : 857
+    "display_width": null,
+    "id": "4e081430-7fc5-bd7b-284e-94629b7aaccb",
+    "label": "URL",
+    "locked": false,
+    "name": "url_field",
+    "required": true,
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG"
+    ],
+    "type": "url"
+   },
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://f.hubspotusercontent-eu1.net/hubfs/25329237/large-placeholder-image.png",
+     "alt": "large-placeholder-image",
+     "loading": "lazy",
+     "width": 2000,
+     "height": 857,
+     "max_width": 2000,
+     "max_height": 857
     },
-    "has_overlay_and_aspect_ratio" : true
-  }
-} ]
+    "display_width": null,
+    "id": "af95f87d-2e13-e9e9-9a82-d266f542d447",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": false,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "allow_new_line": false,
+    "display_width": null,
+    "id": "64820782-621a-d255-11f8-9b5893dead88",
+    "label": "additional_watch-button-id",
+    "locked": false,
+    "name": "additional_watch_button_id",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "default": true,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "decc286e-ebe4-f83c-5a5c-4d1bb09638af",
+    "label": "Has Overlay and Aspect Ratio",
+    "locked": false,
+    "name": "has_overlay_and_aspect_ratio",
+    "required": false,
+    "type": "boolean"
+   }
+  ],
+  "default": {
+   "url_field": {
+    "type": "EXTERNAL",
+    "href": "https://www.youtube.com/watch?v=Exd8K9YkjQo",
+    "content_id": null
+   },
+   "image_field": {
+    "size_type": "auto",
+    "src": "https://f.hubspotusercontent-eu1.net/hubfs/25329237/large-placeholder-image.png",
+    "alt": "large-placeholder-image",
+    "loading": "lazy",
+    "width": 2000,
+    "height": 857,
+    "max_width": 2000,
+    "max_height": 857
+   },
+   "has_overlay_and_aspect_ratio": true
+  },
+  "display_width": null,
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "id": "7aa1d3e8-7d78-a40c-c38f-ffc542df52fc",
+  "label": "Video",
+  "locked": false,
+  "name": "video",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ }
+]

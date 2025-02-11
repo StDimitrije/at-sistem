@@ -13,7 +13,9 @@
 	{% dnd_column offset=0, width=12 %}
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
-        path='../modules/banner-small'
+        path='../modules/banner-small',
+        text_field={{ context.text_field || 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.' }},
+        link_label={{ context.link_label || 'Link Label' }}
       %}
       {% end_dnd_module %}
 		{% end_dnd_row %}

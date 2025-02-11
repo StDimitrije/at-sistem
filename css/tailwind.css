@@ -5,7 +5,7 @@
 @layer components {
   button,
   .button {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white bg-pink text-xs;
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white bg-pink text-sm;
   }
 
   button:hover,

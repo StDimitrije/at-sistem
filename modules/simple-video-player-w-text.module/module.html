@@ -1,9 +1,8 @@
 <div class="flex flex-col xl:flex-row">
   <div class="flex flex-col w-full xl:w-1/2 px-4 pt-10 pb-4 xl:pb-9 m-0 justify-start align-start">
-    <h3 class="mb-2">{{ module.text.title }}</h3>
+    <{{ module.text.h_tag_choice }} class="mb-2">{{ module.text.title }}</{{ module.text.h_tag_choice }}>
     <p class="mb-3 paragraph-1">{{ module.text.description }}</p>
-    <button class="watch-now-button bg-pink uppercase w-fit leading-[1.28] text-white text-xs">{{ module.button_label
-      }}</button>
+    <a href="{{ module.button_link.url.href }}" {{ 'target="_blank"' if module.button_link.open_in_new_tab }}  class="button w-fit">{{ module.button_label }}</a>
   </div>
   <div class="simple-video-player-container xl:w-1/2 w-full h-auto" data-video-src="{{ module.video.url_field.href }}"
     data-additional-watch-now-button-id="{{ module.video.additional_watch_button_id }}"

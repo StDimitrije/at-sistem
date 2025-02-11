@@ -476,8 +476,8 @@ button, .button {
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 14px;
-  line-height: 1rem;
+  font-size: 16px;
+  line-height: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.025em;
@@ -780,10 +780,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   height: 100%;
 }
 
-.h-\[100px\] {
-  height: 100px;
-}
-
 .h-\[10px\] {
   height: 10px;
 }
@@ -792,14 +788,14 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   height: 250px;
 }
 
+.h-\[180px\] {
+  height: 180px;
+}
+
 .h-min {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-}
-
-.h-\[180px\] {
-  height: 180px;
 }
 
 .h-screen {
@@ -928,12 +924,12 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   width: 300px;
 }
 
-.min-w-full {
-  min-width: 100%;
-}
-
 .min-w-\[260px\] {
   min-width: 260px;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-\[250px\] {
@@ -1096,8 +1092,8 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 40px;
+.gap-2 {
+  gap: 20px;
 }
 
 .gap-3 {
@@ -1114,10 +1110,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
 
 .gap-1 {
   gap: 10px;
-}
-
-.gap-2 {
-  gap: 20px;
 }
 
 .gap-\[5px\] {
@@ -1224,6 +1216,11 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(184 208 252 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1232,11 +1229,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
 .bg-\[\#6E43FF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(110 67 255 / var(--tw-bg-opacity));
-}
-
-.bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: rgb(184 208 252 / var(--tw-bg-opacity));
 }
 
 .bg-pink {
@@ -1295,10 +1287,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-blueGradient {
-  background-image: linear-gradient(86.35deg,#54eaea 5.2%,#4886ff 93.67%);
 }
 
 .from-transparent {
@@ -1363,6 +1351,10 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
      object-position: center;
 }
 
+.p-5 {
+  padding: 50px;
+}
+
 .p-1 {
   padding: 10px;
 }
@@ -1377,14 +1369,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
 
 .p-0 {
   padding: 0px;
-}
-
-.p-20 {
-  padding: 5rem;
-}
-
-.p-5 {
-  padding: 50px;
 }
 
 .px-5 {
@@ -1573,11 +1557,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   line-height: 2rem;
 }
 
-.text-5xl {
-  font-size: 48px;
-  line-height: 1;
-}
-
 .text-sm {
   font-size: 16px;
   line-height: 1.25rem;
@@ -1598,6 +1577,11 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   line-height: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 48px;
+  line-height: 1;
+}
+
 .text-6xl {
   font-size: 52px;
   line-height: 1;
@@ -1607,12 +1591,12 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   font-weight: 300;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .font-semibold {
   font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-medium {
@@ -1738,21 +1722,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   transition-duration: 150ms;
 }
 
-.odd\:bg-red-500:nth-child(odd) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.even\:bg-grey:nth-child(even) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 55 56 / var(--tw-bg-opacity));
-}
-
-.even\:bg-lightGrey:nth-child(even) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(247 247 253 / var(--tw-bg-opacity));
-}
-
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
@@ -1760,6 +1729,11 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
 .hover\:border-pinkDark:hover {
   --tw-border-opacity: 1;
   border-color: rgb(197 152 234 / var(--tw-border-opacity));
+}
+
+.hover\:bg-blueDark:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(157 188 244 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#b7babb\]:hover {
@@ -1911,24 +1885,12 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
   .md\:items-center {
     align-items: center;
   }
 
   .md\:gap-10 {
     gap: 100px;
-  }
-
-  .md\:gap-3 {
-    gap: 30px;
-  }
-
-  .md\:gap-5 {
-    gap: 50px;
   }
 
   .md\:px-6 {
@@ -2002,16 +1964,16 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
     margin: auto;
   }
 
+  .lg\:mr-5 {
+    margin-right: 50px;
+  }
+
   .lg\:mb-4 {
     margin-bottom: 40px;
   }
 
   .lg\:ml-5 {
     margin-left: 50px;
-  }
-
-  .lg\:mr-5 {
-    margin-right: 50px;
   }
 
   .lg\:w-4\/5 {
@@ -2051,16 +2013,16 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
     align-items: center;
   }
 
-  .lg\:gap-\[120px\] {
-    gap: 120px;
-  }
-
   .lg\:gap-3 {
     gap: 30px;
   }
 
   .lg\:gap-5 {
     gap: 50px;
+  }
+
+  .lg\:gap-\[120px\] {
+    gap: 120px;
   }
 
   .lg\:rounded-\[6px\] {
@@ -2071,18 +2033,9 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
     padding: 30px;
   }
 
-  .lg\:p-20 {
-    padding: 5rem;
-  }
-
   .lg\:px-10 {
     padding-left: 100px;
     padding-right: 100px;
-  }
-
-  .lg\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 
   .lg\:text-left {
@@ -2092,6 +2045,21 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   .lg\:text-xl {
     font-size: 24px;
     line-height: 1.333;
+  }
+
+  .lg\:text-lg {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .lg\:text-base {
+    font-size: 18px;
+    line-height: 1.555;
+  }
+
+  .lg\:text-5xl {
+    font-size: 48px;
+    line-height: 1;
   }
 
   .lg\:text-4xl {
@@ -2113,24 +2081,9 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
     line-height: 2.25rem;
   }
 
-  .lg\:text-5xl {
-    font-size: 48px;
-    line-height: 1;
-  }
-
   .lg\:text-2xl {
     font-size: 28px;
     line-height: 2rem;
-  }
-
-  .lg\:text-lg {
-    font-size: 20px;
-    line-height: 1.4;
-  }
-
-  .lg\:text-base {
-    font-size: 18px;
-    line-height: 1.555;
   }
 
   .lg\:leading-1 {

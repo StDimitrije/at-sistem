@@ -1,25 +1,38 @@
 [
  {
-  "default": {
-   "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
-   "alt": "pexels-max-vakhtbovych-7587466 1",
-   "size_type": null,
-   "width": 725,
-   "height": 500,
-   "loading": "lazy",
-   "max_width": 725,
-   "max_height": 500
-  },
-  "display_width": null,
-  "id": "64e82e39-0b22-0148-1a75-aee2e14a3079",
-  "label": "Image field",
-  "locked": false,
-  "name": "image_field",
-  "required": false,
-  "resizable": true,
-  "responsive": true,
-  "show_loading": false,
-  "type": "image"
+  "type": "choice",
+  "id": "5aa8be98-bdf6-b99f-ab19-e33b0c4deae6",
+  "display": "select",
+  "choices": [
+   [
+    "h1",
+    "H1"
+   ],
+   [
+    "h2",
+    "H2"
+   ],
+   [
+    "h3",
+    "H3"
+   ],
+   [
+    "h4",
+    "H4"
+   ],
+   [
+    "h5",
+    "H5"
+   ],
+   [
+    "h6",
+    "H6"
+   ]
+  ],
+  "label": "H-tag Choice",
+  "name": "h_tag_choice",
+  "default": "h3",
+  "required": true
  },
  {
   "allow_new_line": false,
@@ -46,6 +59,28 @@
   "show_emoji_picker": false,
   "type": "text",
   "validation_regex": ""
+ },
+ {
+  "default": {
+   "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
+   "alt": "pexels-max-vakhtbovych-7587466 1",
+   "size_type": null,
+   "width": 725,
+   "height": 500,
+   "loading": "lazy",
+   "max_width": 725,
+   "max_height": 500
+  },
+  "display_width": null,
+  "id": "64e82e39-0b22-0148-1a75-aee2e14a3079",
+  "label": "Image field",
+  "locked": false,
+  "name": "image_field",
+  "required": false,
+  "resizable": true,
+  "responsive": true,
+  "show_loading": false,
+  "type": "image"
  },
  {
   "default": {

@@ -3,7 +3,7 @@
   label: Image With Text
   isAvailableForNewContent: true
   screenshotPath: ../images/section-previews/image-with-post.jpg
-  description: "Grey section with post with image, positions reversible"
+  description: "Section with title, description, link and image, positions reversible"
 -->
 
 {% dnd_section
@@ -18,6 +18,9 @@
         },
         title={{ context.title || 'Title' }},
         description={{ context.description || 'Description' }}
+        reverse_content_direction={{ context.reverse_content_direction || false }},
+        h_tag_choice={{ context.h_tag_choice || 'h3' }},
+        link_label={{ context.link_label || 'Link Label' }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

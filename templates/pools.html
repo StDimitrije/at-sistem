@@ -19,70 +19,51 @@
 	    path='../sections/header-1.html',
 	    context={
 	      'title': '<h1 class="font-normal mb-2 text-6xl">Bazeni</h1>',
-				'subtitle': '<p class="font-light text-lg md:text-3xl">A&T SISTEM je firma kojoj sa punim poverenjem možete poveriti kompletne radove oko izgradnje komercijalnih i rezidencijalnih betonskih bazena, od izrade idejnog rešenja do puštanja bazenskog sistema u rad.</p>'
+				'subtitle': '<p class="font-light text-lg md:text-3xl mb-2">A&T SISTEM je firma kojoj sa punim poverenjem možete poveriti kompletne radove oko izgradnje komercijalnih i rezidencijalnih betonskih bazena, od izrade idejnog rešenja do puštanja bazenskog sistema u rad.</p>',
+				'button_text': 'KONTAKTIRAJTE NAS'
 	    }
 	  %}
 
 	  {% include_dnd_partial
-	    path='../sections/featured-services.html',
+	    path='../sections/services-expanded.html',
+			context={
+				'title': '<h2 class="text-2xl md:text-5xl lg:text-7xl mb-5">Naše <strong>Usluge</strong></h2>'
+			}
 	  %}
 
-		{% dnd_section 
-			padding={
-				'default':{
-					'top': 80,
-					'bottom':80,
-					'left':40,
-					'right':40
-				},
-				'mobile':{
-					'top': 40,
-					'bottom':40,
-					'left':40,
-					'right':40
-				}
+		{% include_dnd_partial
+	    path='../sections/banner-small.html',
+			context={
+				'text_field': 'Niste pronašli ono što Vas zanima ili Vam treba još informacija?',
+				'link_label': 'Zatražite Ponudu'
 			}
-		%}
-			{% dnd_column offset=0, width=12 %}
-				{% dnd_row %}
-					{% dnd_module 
-						path="@hubspot/rich_text",
-						html='<h2 class="font-light text-2xl leading-tight mb-2 sm:text-7xl sm:leading-1">Vrhunska oprema za <span class="font-bold">bazene</span></h2>'
-					%}
-				{% end_dnd_module %}
-				{% end_dnd_row %}
-				{% dnd_row %}
-					{% dnd_module 
-						path="../modules/image-with-post-reversible",
-					%}
-				{% end_dnd_module %}
-				{% end_dnd_row %}
-			{% end_dnd_column %}
-		{% end_dnd_section %}
+	  %}
 
 		{% include_dnd_partial
 	    path='../sections/video-player.html',
-	  %}
-	  
-	  {% include_dnd_partial
-	    path='../sections/image-cards.html',
+			context={
+				'title': 'BWT - Pouzdan Partner',
+				'description': "A&T SISTEM je Vas pouzdan partner u projektovanju i izgradnji bazena dugi niz godina, a nasa saradnja sa BWI POOL PRODUCTS, renomiranim proizvodacem bazenske opreme garantuje vrhunski kvalitet uredaja, hidraulicki optimizovana resenja lum Iskusnin struchjaka na raspolaganju.",
+				'button_label': 'Više o brendu',
+				'h_tag_choice': 'h3'
+			}
 	  %}
 
 		{% include_dnd_partial
 	    path='../sections/image-with-text.html',
-	  %}  
-
-
-		{% include_dnd_partial
-	    path='../sections/cards-grid.html',
+			context={
+				'title': 'Pokrivač za bazen',
+				'description': "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+				'link_label': 'Opširnije',
+				'h_tag_choice': 'h3'
+			}
 	  %}
 
 		{% include_dnd_partial
-	    path='../sections/image-gallery.html',
-	  %}
-
-		{% include_dnd_partial
-	    path='../sections/video-player.html',
+	    path='../sections/image-gallery-slider.html',
+			context={
+				'title': '<h2 class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1 font-bold">Galerija</h2>'
+			}
 	  %}
 
 	{% end_dnd_area %}
