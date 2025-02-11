@@ -1,10 +1,10 @@
-<div class="flex flex-col xl:flex-row">
-  <div class="flex flex-col w-full xl:w-1/2 px-4 pt-10 pb-4 xl:pb-9 m-0 justify-start align-start">
+<div class="flex flex-col lg:flex-row pb-6 lg:pb-0">
+  <div class="flex flex-col w-full lg:w-1/2 px-4 pt-6 pb-4 lg:pb-9 m-0 justify-start align-start">
     <{{ module.text.h_tag_choice }} class="mb-2">{{ module.text.title }}</{{ module.text.h_tag_choice }}>
     <p class="mb-3 paragraph-1">{{ module.text.description }}</p>
     <a href="{{ module.button_link.url.href }}" {{ 'target="_blank"' if module.button_link.open_in_new_tab }}  class="button w-fit">{{ module.button_label }}</a>
   </div>
-  <div class="simple-video-player-container xl:w-1/2 w-full h-auto" data-video-src="{{ module.video.url_field.href }}"
+  <div class="simple-video-player-container lg:w-1/2 w-full h-auto" data-video-src="{{ module.video.url_field.href }}"
     data-additional-watch-now-button-id="{{ module.video.additional_watch_button_id }}"
     data-player-module-name="{{ name }}">
     {% if module.video.has_overlay_and_aspect_ratio %}
@@ -50,7 +50,6 @@
 
 {% require_js %}
 <script>
-  const watchNowButton = document.getElementsByClassName("watch-now-button");
   const simple_video_players = document.getElementsByClassName("simple-video-player-container");
   const simple_player_modals = document.getElementsByClassName("simple-video-player-modal");
   const simple_player_iframes = document.getElementsByClassName("simple-video-player-iframe");
@@ -60,15 +59,13 @@
   for (let i = 0; i < simple_video_players.length; i++) {
     const currentModuleId = simple_video_players[i].dataset.playerModuleName;
 
-    watchNowButton[i].id = "watch-now-button_" + currentModuleId;
     simple_video_players[i].id = "simple-video-player-container_" + currentModuleId;
     simple_player_modals[i].id = "simple-video-player-modal_" + currentModuleId;
     simple_player_iframes[i].id = "simple-video-player-iframe_" + currentModuleId;
     simple_player_close_icons[i].id = "simple-video-player-close-icon_" + currentModuleId;
     default_simple_video_players[i].id = "simple-video-player-default-player_" + currentModuleId;
 
-    watchNowButton[i].index = i;
-    watchNowButton[i].addEventListener('click', function (event) { openModal(event) });
+  
     simple_video_players[i].index = i;
     simple_video_players[i].addEventListener('click', function (event) { openModal(event) });
     simple_player_modals[i].addEventListener('click', function (event) { closeModal(event) });

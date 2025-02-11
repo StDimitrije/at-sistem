@@ -60,6 +60,17 @@
 	  %}
 
 		{% include_dnd_partial
+	    path='../sections/image-with-text.html',
+			context={
+				'title': 'Drveni Bazeni',
+				'description': "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+				'link_label': 'Opširnije',
+				'h_tag_choice': 'h3',
+				'reverse_content_direction':true
+			}
+	  %}
+
+		{% include_dnd_partial
 	    path='../sections/image-gallery-slider.html',
 			context={
 				'title': '<h2 class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1 font-bold">Galerija</h2>'
