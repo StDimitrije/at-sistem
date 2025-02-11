@@ -1,0 +1,186 @@
+[
+ {
+  "children": [
+   {
+    "allow_new_line": false,
+    "default": "Card Title",
+    "display_width": null,
+    "id": "128a26cf-223a-5768-61ff-6b8885bca5a6",
+    "label": "Card Title",
+    "locked": false,
+    "name": "card_title",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "default": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "display_width": null,
+    "id": "9e57c5d7-d6df-91b4-3478-dcaa3cb0f90e",
+    "label": "Card Color",
+    "locked": false,
+    "name": "card_color",
+    "required": false,
+    "type": "color"
+   },
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/planning.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "display_width": null,
+    "id": "f9f8d2a1-de4c-06ac-6533-921cb303f8fe",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "type": "text",
+    "id": "3785f91b-839d-eaa4-5e57-6c8e5cab22b6",
+    "validation_regex": "",
+    "label": "Card Description",
+    "name": "card_description",
+    "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+   }
+  ],
+  "default": [
+   {
+    "card_title": "Projektovanje",
+    "card_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/planning.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "card_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+   },
+   {
+    "card_title": "Izgradnja",
+    "card_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/construction.png",
+     "alt": "construction",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "card_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+   },
+   {
+    "card_title": "Montaža",
+    "card_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/assembly.png",
+     "alt": "assembly",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "card_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+   },
+   {
+    "card_title": "Servis",
+    "card_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/service.png",
+     "alt": "service",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "card_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+   },
+   {
+    "card_title": "Prodaja",
+    "card_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/shop.png",
+     "alt": "sales",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "card_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+   },
+   {
+    "card_title": "Tehnička Podrška",
+    "card_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
+    },
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/tech-support.png",
+     "alt": "tech-support",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "card_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+   }
+  ],
+  "display_width": null,
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "id": "7e42966e-a19a-d163-ca7d-2e72b0a5106c",
+  "label": "Cards",
+  "locked": false,
+  "name": "cards",
+  "occurrence": {
+   "default": 6,
+   "min": 1
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ }
+]

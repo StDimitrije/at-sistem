@@ -113,7 +113,8 @@ module.exports = {
       },
       backgroundImage: {
         purpleGradient: 'linear-gradient(47.66deg, #A5C3FA -5.18%, #D1A1F7 102.55%)',
-        textBaseGradient: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 69.25%)'
+        textBaseGradient: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 69.25%)',
+        blueGradient: 'linear-gradient(86.35deg,#54eaea 5.2%,#4886ff 93.67%)'
       }
     }
   },

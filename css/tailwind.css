@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  button,
+  .button {
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white bg-pink text-xs;
+  }
+
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus,
+  button:active,
+  .button:active {
+    @apply bg-pinkDark
+  }
+}

@@ -8,30 +8,6 @@ body {
 /*************** Buttons *****************/
 /*****************************************/
 
-button,
-.button {
-  padding: 10px 25px;
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 1px;
-  line-height: 1.28;
-  text-transform: uppercase;
-  background-color: var(--color-pink);
-  color: var(--color-white);
-  font-size: 14px;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  background-color: var(--color-pink-dark);
-}
-
-button:active,
-.button:active {
-  background-color: var(--color-pink-dark);
-}
 
 body {
   line-height: 1.4;

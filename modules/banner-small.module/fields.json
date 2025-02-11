@@ -1,0 +1,43 @@
+[
+ {
+  "type": "text",
+  "id": "f0ced362-b4e0-4b51-934b-2448b30c7512",
+  "validation_regex": "",
+  "label": "Text",
+  "name": "text_field",
+  "default": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+ },
+ {
+  "type": "text",
+  "id": "c9932fa1-7b85-5b12-d47a-4ddb84bedefb",
+  "validation_regex": "",
+  "label": "Link Label",
+  "name": "link_label",
+  "default": "Link Label"
+ },
+ {
+  "type": "link",
+  "id": "5888a28c-f245-16ad-9d9a-a1c469e44ea4",
+  "default": {
+   "url": {
+    "content_id": null,
+    "type": "EXTERNAL",
+    "href": ""
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  },
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT",
+   "FILE",
+   "EMAIL_ADDRESS",
+   "BLOG",
+   "CALL_TO_ACTION",
+   "PHONE_NUMBER"
+  ],
+  "label": "Link",
+  "name": "link_field",
+  "show_advanced_rel_options": false
+ }
+]
