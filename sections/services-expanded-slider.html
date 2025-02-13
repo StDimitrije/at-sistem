@@ -1,9 +1,9 @@
 <!--
   templateType: section
-  label: Expanded Services
+  label: Expanded Services Slider
   isAvailableForNewContent: true
-  screenshotPath: ../images/section-previews/expanded-services.jpg
-  description: "Expanded Services With Details Row for Each Service"
+  screenshotPath: ../images/section-previews/expanded-services-slider.jpg
+  description: "Expanded Services Slider Section"
 -->
 
 {% dnd_section class="py-4 px-4" %}
@@ -11,13 +11,13 @@
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='@hubspot/rich_text',
-				html={{ context.title || '<h2 class="text-2xl md:text-5xl lg:text-7xl mb-5">Our <strong>Services</strong></h2>' }}
+				html={{ context.title || '<h2 class="text-2xl md:text-5xl lg:text-7xl mb-4">Nase <strong>Usluge</strong></h2>' }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
-				path='../modules/expanded-services'
+				path='../modules/expanded-services-slider'
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}

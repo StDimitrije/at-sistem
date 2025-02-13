@@ -1,0 +1,208 @@
+[
+ {
+  "children": [
+   {
+    "default": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "display_width": null,
+    "id": "c98dfe46-fb77-e6ca-5cbe-6d674705c122",
+    "label": "Icon Background Color",
+    "locked": false,
+    "name": "icon_background_color",
+    "required": true,
+    "type": "color"
+   },
+   {
+    "default": 1,
+    "display": "text",
+    "display_width": null,
+    "id": "47d48830-483e-3687-1612-306c0af20568",
+    "label": "Number",
+    "locked": false,
+    "min": 1,
+    "name": "number_field",
+    "required": true,
+    "step": 1,
+    "type": "number"
+   },
+   {
+    "allow_new_line": false,
+    "default": "Title",
+    "display_width": null,
+    "id": "38a096c7-c62e-2a69-d335-985350fd1fde",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://145812822.fs1.hubspotusercontent-eu1.net/hubfs/145812822/planning.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "display_width": null,
+    "id": "5b868cb8-0c45-6d8c-c53e-9c6cab08f168",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": true,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "default": "<p>Projektovanje bazena se radi u fazama. Polazimo od projektnog zadatka, odnosno konkretnih činjenica koje definišemo sa klijentom i na osnovu toga izrađujemo idejno rešenje.</p>\n<p>Idejno rešenje je polazna osnova svakog projekta.<span>&nbsp; </span>Kada se usvoji, pristupamo izradi idejnog projekta koji sadrži sve potrebne parametre za izgradnju objekta.</p>\n<p>Sledeća faza je izrada glavnog projekta, nakon čega se vrši tehnička kontrola i pristupa izvođenju radova. Izvođenje radova treba da kontroliše nadzorni organ, koji se stara da radovi budu usklađeni sa projektom.</p>",
+    "display_width": null,
+    "id": "30b140a6-f93d-74ca-5af0-0072839f0a1e",
+    "label": "Description",
+    "locked": false,
+    "name": "description",
+    "required": true,
+    "type": "richtext"
+   }
+  ],
+  "default": [
+   {
+    "icon_background_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "number_field": 1,
+    "title": "Projektovanje",
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hubfs/Services%20Icons/planning.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "description": "<p>Projektovanje bazena se radi u fazama. Polazimo od projektnog zadatka, odnosno konkretnih činjenica koje definišemo sa klijentom i na osnovu toga izrađujemo idejno rešenje.</p><p>Idejno rešenje je polazna osnova svakog projekta.  Kada se usvoji, pristupamo izradi idejnog projekta koji sadrži sve potrebne parametre za izgradnju objekta.</p><p>Sledeća faza je izrada glavnog projekta, nakon čega se vrši tehnička kontrola i pristupa izvođenju radova. Izvođenje radova treba da kontroliše nadzorni organ, koji se stara da radovi budu usklađeni sa projektom.</p>"
+   },
+   {
+    "icon_background_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
+    },
+    "number_field": 2,
+    "title": "Izgradnja",
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hubfs/Services%20Icons/construction.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "description": "<p>Na osnovu idejnog rešenja, arhitektonskog rešenja ili detaljnog projekta za izgradnju bazena, prvi korak je izrada armirano-betonske školjke bazena. Da bismo je izradili, potrebni su pripremni radovi na obeležavanju gradilišta, pa onda zemljani radovi, betonski, armirački, zidarski, itd. Specifikacija ovih radova treba da se nalazi u predmeru projekta građevinske konstrukcije (ukoliko je urađen detaljno).</p><p>Nakon završetka armirano-betonske školjke bazena idu završni zanatski radovi na bazenskoj školjci. Oni predstavljaju sve potrebne radnje da bi se bazen doveo do potpune funkcionalnosti. To obuhvata više segmenata zanatskih radova, počevši od popravki AB konstrukcije, specijalne hidroizolacije svih ugradnih elemenata i prodora instalacija kroz AB konstrukciju, izrade precizne geometrije (reprofilacija) specijalnim malterima, unutrašnje hidroizolacije, itd.</p><p>U dogovoru sa investitorom možemo preuzeti na sebe izvođenje svih radova, ili samo neki deo.</p>"
+   },
+   {
+    "icon_background_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "number_field": 3,
+    "title": "Montaža",
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hubfs/Services%20Icons/assembly.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "description": "<p>U našem timu se nalaze stručni i iskusni monteri bazenske, ali i ostale opreme (spa, sauna, parno kupatilo), tako da klijenti mogu da računaju na kvalitetnu i efikasnu uslugu. Dugogodišnje iskustvo i širok asortiman specifične opreme, izvođenje komplikovanih radova na različitim terenima, u privatnim i javnim objektima, doprinelo je tome da danas imamo vrhunski, dobro edukovan tim za montažu.</p>"
+   },
+   {
+    "icon_background_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
+    },
+    "number_field": 4,
+    "title": "Servis i Održavanje",
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hubfs/Services%20Icons/service.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "description": "<p>Svojim klijentima još na početku saradnje skrećemo pažnju da su pravilno održavanje i redovan servis jedan od ključnih faktora za dobro i dugo funkcionisanje sistema, odnosno uređaja.</p><p>Imamo obezbeđen servis i rezervne delove za svu svoju opremu, jer sarađujemo sa renomiranim  proizvođačima, koji znaju, jednako dobro kao i mi, da je ovo izuzetno važan deo za poslovanje i reputaciju firme.</p>"
+   },
+   {
+    "icon_background_color": {
+     "color": "#B8D0FC",
+     "opacity": 100
+    },
+    "number_field": 5,
+    "title": "Prodaja",
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hubfs/Services%20Icons/shop.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "description": "<p>Naša firma je distributer i direktan uvoznik kvalitetne opreme za bazene, fontane, spa centre. Deo našeg asortimana možete videti <a href=“https://shop.atsistem.rs”>ovde</a>.</p><p>Kako su mnogi proizvodi specifični i traže dobro razumevanje kupca prilikom izbora, pozivamo vas da nas slobodno <a href=“https://atsistem.rs/kontakt”>kontaktirate za asistenciju</a> prilikom kupovine.</p>"
+   },
+   {
+    "icon_background_color": {
+     "color": "#D7B4F3",
+     "opacity": 100
+    },
+    "number_field": 6,
+    "title": "Tehnička Podrška",
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hubfs/Services%20Icons/tech-support.png",
+     "alt": "planning",
+     "loading": "lazy",
+     "width": 64,
+     "height": 64,
+     "max_width": 64,
+     "max_height": 64
+    },
+    "description": "<p>Tehnička podrška koju obezbeđujemo svojim klijentima i profesionalnim partnerima je verovatno jedan od razloga zašto nam mnogi od njih ostaju privrženi od početka saradnje do danas.</p><p>Tehnička podrška nije samo stvar dobre volje, za to je potrebna pre svega stručnost, iskustvo, širina sagledavanja problema i analitički pristup. Ponosni smo na to što smo vremenom, edukacijom i konstantnim radom razvili upravo ovakav pristup problemima.</p><p>Naravno, nemojmo zaboraviti da tehničku podršku pružamo da pre svega otklonimo nastali problem u korišćenju proizvoda. Pored tehničke podrške imamo i  korisničku podršku koja podrazumeva savete i dodatne informacije za korišćenje proizvoda.</p>"
+   }
+  ],
+  "display_width": null,
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "id": "a986839f-343c-aa4e-6dd2-f5a8909558cf",
+  "label": "Services Content",
+  "locked": false,
+  "name": "services_content",
+  "occurrence": {
+   "default": 6,
+   "min": 1,
+   "sorting_label_field": "47d48830-483e-3687-1612-306c0af20568"
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ }
+]

@@ -1,0 +1,84 @@
+<div class="flex flex-row items-start gap-5">
+  <div class="swiper full-content-swiper-{{ name }} w-full lg:w-1/4" id="fullContentSwiper">
+    <div class="swiper-wrapper">
+      {% for service in module.services_content %}
+      <div class="swiper-slide">
+        <div
+          class="w-full py-4 px-2 rounded-md self-center justify-self-center flex flex-row items-center justify-center mb-3 lg:mb-0"
+          style="background-color: {{ service.icon_background_color.color }}">
+          <img width="70px" src="{{ service.image_field.src }}" alt="{{ service.image_field.alt }}">
+        </div>
+        <div id="slideDescription">
+          <p class="font-bold mb-1 text-xl lg:hidden">{{ '0' if service.number_field < 10 }}{{ service.number_field }}. {{ service.title }}</p>
+          <div class="lg:hidden">{{ service.description }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination-{{ name }} flex justify-center services-swiper-pagination mt-3" />
+  </div>
+
+  <div class="swiper description-swiper-{{ name }} !hidden lg:!block w-full flex-1">
+    <div class="swiper-wrapper">
+      {% for service in module.services_content %}
+      <div class="swiper-slide">
+        <p class="font-extrabold mb-1 text-xl">0{{ service.number_field }}. {{ service.title }}</p>
+        <div class="[&_a]:underline [&_a]:font-bold">{{ service.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% require_js %}
+<script>
+  if (!checkHeadForSwiper()) {
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+    document.head.appendChild(link);
+  }
+
+  window.addEventListener('load', () => {
+    const fullContentSwiper = new Swiper(".full-content-swiper-{{ name }}", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      slidesPerView: 1,
+      autoHeight: true,
+      speed: 500,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: true,
+      },
+      pagination: {
+        el: ".swiper-pagination-{{ name }}",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+        renderProgressbar: function (progressbarFillClass) {
+          return '<span class="' + progressbarFillClass + '"></span>';
+        }
+      }
+    });
+
+    const descriptionSwiper = new Swiper(".description-swiper-{{ name }}", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      }
+    });
+
+    fullContentSwiper.controller.control = descriptionSwiper;
+    descriptionSwiper.controller.control = fullContentSwiper;
+
+  });
+</script>
+{% end_require_js %}

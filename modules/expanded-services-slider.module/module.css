@@ -1,0 +1,23 @@
+.services-swiper-pagination .swiper-pagination-bullet {
+  width: 50px !important; 
+  height: 28px !important;
+  background-color: #c0c0c0 !important;
+  border-radius: 0 !important;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.services-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #B8D0FC !important;
+}
+
+#fullContentSwiper .swiper-slide:not(.swiper-slide-active) #slideDescription {
+    opacity: 0;
+}
+
+ #slideDescription {
+  display: block;
+  transition: opacity .3s ease-in-out;
+}
