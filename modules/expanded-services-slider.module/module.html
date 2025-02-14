@@ -9,8 +9,9 @@
           <img width="70px" src="{{ service.image_field.src }}" alt="{{ service.image_field.alt }}">
         </div>
         <div id="slideDescription">
-          <p class="font-bold mb-1 text-xl lg:hidden">{{ '0' if service.number_field < 10 }}{{ service.number_field }}. {{ service.title }}</p>
-          <div class="lg:hidden">{{ service.description }}</div>
+          <p class="font-bold mb-1 text-xl lg:hidden">{{ '0' if service.number_field < 10 }}{{ service.number_field }}.
+              {{ service.title }}</p>
+              <div class="lg:hidden">{{ service.description }}</div>
         </div>
       </div>
       {% endfor %}
@@ -22,8 +23,10 @@
     <div class="swiper-wrapper">
       {% for service in module.services_content %}
       <div class="swiper-slide">
-        <p class="font-extrabold mb-1 text-xl">0{{ service.number_field }}. {{ service.title }}</p>
-        <div class="[&_a]:underline [&_a]:font-bold">{{ service.description }}</div>
+        <p class="font-extrabold mb-1 text-xl leading-none">0{{ service.number_field }}. {{ service.title }}</p>
+        <div>
+          {{ service.description }}
+        </div>
       </div>
       {% endfor %}
     </div>
