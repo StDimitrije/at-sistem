@@ -49,5 +49,5 @@ Create a new module in hubspot CMS, then run `yarn run fetch` to update local pr
 
 ## Fetch a project from your account
 
-Run `yarn run fetch` or `hs fetch --account=<name> <src> <dest>`  to get an entire projects folder tree and files from your HubSpot account into your local environment. The  src  is the project path in your HubSpot Design Tools, and the  dest  is the path to the local directory you would like the files to be placed, relative to your current working directory. To fetch the project to your current working directory, you can leave out the  `dest` argument.
+Run `hs fetch --account=<name> <src> <dest>`  to get an entire projects folder tree and files from your HubSpot account into your local environment. The  src  is the project path in your HubSpot Design Tools, and the  dest  is the path to the local directory you would like the files to be placed, relative to your current working directory. To fetch the project to your current working directory, you can leave out the  `dest` argument.
 

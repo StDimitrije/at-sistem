@@ -16,4 +16,29 @@
   .button:active {
     @apply bg-pinkDark
   }
+
+  .menu__link {
+    @apply py-1 px-0 block text-[26px] text-left text-white font-bold uppercase hover:bg-[#CBA1EC];
+    @apply relative lg:font-medium lg:text-sm lg:leading-3 lg:text-grey lg:px-1 lg:py-2 lg:normal-case lg:hover:bg-transparent;
+    @apply lg:after:absolute lg:after:content-[''] lg:after:bottom-[18px] lg:after:left-1 lg:after:w-0 lg:after:h-[2px] lg:after:bg-pink lg:after:transition-all lg:after:duration-300 lg:hover:after:w-[calc(100%-20px)];
+    text-decoration: none;
+  }
+ 
+  .menu__item--open .menu__submenu{
+    @apply flex;
+  }
+
+  .menu__item--open .menu__child-toggle-icon {
+    @apply rotate-180;
+  }
+
+  .menu__submenu .menu__item {
+    @apply hover:bg-[#F0F3F5] p-0 w-full;
+  }
+
+  .menu__submenu .menu__link {
+    @apply block text-center lg:text-left py-[7px] px-1 text-[14px] lg:text-[12px] text-grey font-medium w-full uppercase lg:after:bottom-0 lg:after:left-0 lg:hover:after:w-full;
+  }
+
+
 }
