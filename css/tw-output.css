@@ -2104,11 +2104,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
     padding-bottom: 80px;
   }
 
-  .md\:py-6 {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
   .md\:pt-\[125px\] {
     padding-top: 125px;
   }
