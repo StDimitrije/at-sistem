@@ -64,7 +64,7 @@
     "name": "h_tag_choice",
     "preset": null,
     "reordering_enabled": true,
-    "required": false,
+    "required": true,
     "type": "choice"
    }
   ],

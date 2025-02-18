@@ -6,11 +6,280 @@
   description: "Three Column Section with Shop Categories List"
 -->
 
-{% dnd_section class="py-8 px-4" %}
+{% dnd_section class="py-6 px-4" %}
   {% dnd_column offset=0, width=12 %}
     {% dnd_row offset=0, width=12 %}
       {% dnd_module
-        path='../modules/products-grid'
+        path='../modules/products-grid',
+        show_image={{ context.show_image || false }},
+        cards={{ context.cards || [
+          {
+            "collection": "Mehanička Filtracija",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "Filteri",
+            "Filterske Ispune",
+            "Višenamenski Ventili",
+            "Pumpe"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          },
+          {
+            "collection": "Osnovni ugradni elementi",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "Skimeri",
+                  "Slivnici",
+                  "Mlaznice",
+                  "Prodori",
+                  "Usisni Elementi"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          },
+          {
+            "collection": "Hidraulična Mreža",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "PVC Cevi",
+                  "PVC Spojni Elementi",
+                  "PVC Ventili",
+                  "Pribor za Montažu"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          },
+          {
+            "collection": "Osnovne Elektroupravljačke Komponente",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "Elektrokomandni Ormar",
+                  "Automatska Dopuna",
+                  "Pribor za Montažu"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          },
+          {
+            "collection": "Podvodna Rasveta Bazena",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "Podvodni Reflektori",
+                  "Razvodne Kutije",
+                  "Napajanje i Transformatori",
+                  "Kontroleri",
+                  "Pribor za Montažu"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          },
+          {
+            "collection": "Automatski Hemijski Tretman",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "Dozirne Pumpe",
+                  "Automatske Centrale za Merenje, Regulaciju i Doziranje PH i Dezinficijensa",
+                  "Slana Voda - Uređaj za Elektrolizu Soli",
+                  "UV Sterilizacija",
+                  "Pearl Water"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          },
+          {
+            "collection": "Grejanje i Odvlaživanje",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "Toplotne Pumpe",
+                  "Izmenjivači Toplote",
+                  "Elektro - Grejači",
+                  "Solarno Dogrevanje",
+                  "Odvlaživači"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          },
+          {
+            "collection": "Čišćenje i Održavanje",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Bazensko%20Okruzenje.png",
+            "alt": "Bazensko Okruzenje",
+            "loading": "lazy",
+            "width": 514,
+            "height": 300,
+            "max_width": 514,
+            "max_height": 300
+            },
+            "description_type": "list",
+            "list": [
+            "Roboti",
+                  "Pribor za Ručno Čišćenje",
+                  "Pribor za Održavanje"
+            ],
+            "link_group": {
+            "link_label": "Vidi Više",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://google.com",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+            },
+            "description": "Description"
+          }
+        ] }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

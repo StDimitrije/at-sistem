@@ -790,11 +790,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   margin-bottom: 30px;
 }
 
-.my-5 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
 .mt-8 {
   margin-top: 80px;
 }
@@ -975,6 +970,10 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
 
 .h-\[6px\] {
   height: 6px;
+}
+
+.h-\[220px\] {
+  height: 220px;
 }
 
 .h-0\.5 {
@@ -1457,7 +1456,7 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
 }
 
 .bg-textBaseGradient {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 69.25%);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.45) 70.25%);
 }
 
 .bg-purpleGradient {
@@ -1827,12 +1826,12 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   line-height: 1.333;
 }
 
-.leading-10 {
-  line-height: 2.5rem;
-}
-
 .\!leading-snug {
   line-height: 1.375 !important;
+}
+
+.leading-snug {
+  line-height: 1.375;
 }
 
 .tracking-\[2\.8px\] {
@@ -2105,6 +2104,11 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
     padding-bottom: 80px;
   }
 
+  .md\:py-6 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .md\:pt-\[125px\] {
     padding-top: 125px;
   }
@@ -2349,11 +2353,6 @@ button:hover, button:focus, .button:hover, .button:focus, button:active, .button
   .lg\:text-3xl {
     font-size: 32px;
     line-height: 2.25rem;
-  }
-
-  .lg\:text-2xl {
-    font-size: 28px;
-    line-height: 2rem;
   }
 
   .lg\:leading-1 {

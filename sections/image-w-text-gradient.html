@@ -7,7 +7,7 @@
 -->
 
 {% dnd_section
-  class="px-4 py-4 md:py-8",
+  class="px-4 py-4",
   background_linear_gradient={
     "direction": "to right",
     "colors": [
@@ -22,7 +22,12 @@
         path='../modules/image-with-post-reversible',
         image={
         'src': resize_image_url(get_asset_url('../images/unsplash.jpg'), 0, 0, 700)
-        }
+        },
+        title={{ context.title || 'Title' }},
+        description={{ context.description || 'Description' }}
+        reverse_content_direction={{ context.reverse_content_direction || false }},
+        h_tag_choice={{ context.h_tag_choice || 'h3' }},
+        link_label={{ context.link_label || 'Link Label' }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

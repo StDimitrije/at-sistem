@@ -1,27 +1,35 @@
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-{{ module.grid_columns }} gap-5">
-  {% for item in module.cards  %}
-    <div class="flex flex-col justify-between shadow-custom {{ 'p-3' if module.show_image eq false }}">
-      <div class="pb-3">
-        {% if module.show_image eq true %}
-          <div style="{{'background-image: url({{item.image_field.src}})'}}" class="p-3 bg-cover bg-center  w-full h-[300px] flex items-end relative">
-            <div class="bg-textBaseGradient w-full h-full absolute top-0 left-0" />
-            <p class="text-4xl text-white z-10 font-bold">{{ item.collection }}</p>
-          </div>
-        {% else %}
-          <div class="flex items-end">
-            <p class="text-3xl text-black leading-10">{{ item.collection }}</p>
-          </div>
-        {% endif %}
-        <div class="bg-purpleGradient w-full h-0.5 {{'my-3' if module.show_image eq false else 'mb-3'}}"></div>
-        <ul class="flex flex-col gap-1 w-full m-0 {{ 'px-3' if module.show_image eq true }}">
-          {% for category in item.categories %}
-          <li class="uppercase">{{ category }}</li>
-          {% endfor %}
-        </ul>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2">
+  {% for card in module.cards %}
+  <div class="flex flex-col justify-between shadow-custom gap-3 {{ 'pb-3' if module.show_image eq true else 'p-3' }}">
+    <div class="w-full">
+      {% if module.show_image eq true %}
+      <div style="{{'background-image: url({{card.image_field.src}})'}}"
+        class="p-2 bg-cover bg-center  w-full h-[220px] flex items-end relative">
+        <div class="bg-textBaseGradient w-full h-full absolute top-0 left-0" />
+        <{{ module.h_tag_choice }} class="text-2xl text-white z-10 font-bold">{{ card.collection }}</{{
+          module.h_tag_choice }}>
       </div>
-      <div class="{{ 'px-3 pb-3' if module.show_image eq true }}">
-        <a class="button w-fit uppercase block" href="{{ item.link_group.link.url.href }}" {{ 'target="_blank"' if item.link_group.link.open_in_new_tab eq 'true' }}>{{ item.link_group.link_label }}</a>
+      {% else %}
+      <div class="flex items-end">
+        <{{ module.h_tag_choice }} class="text-3xl text-grey">{{ card.collection }}</{{ module.h_tag_choice }}>
       </div>
+      {% endif %}
+      <div class="bg-purpleGradient w-full h-0.5 {{ 'mb-3' if module.show_image eq true else 'my-3'}}"></div>
+      {% if card.description_type == 'list' %}
+      <ul class="flex flex-col gap-1 w-full m-0 {{ 'px-3' if module.show_image eq true }}">
+        {% for item in card.list %}
+        <li class="uppercase">{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if card.description_type == 'paragraph' %}
+      <p class="text-sm {{ 'px-3' if module.show_image eq true }}">{{ card.description }}</p>
+      {% endif %}
     </div>
+    <div class="{{ 'px-3' if module.show_image eq true }}">
+      <a class="button w-fit uppercase block" href="{{ card.link_group.link.url.href }}" {{ 'target="_blank"' if
+        card.link_group.link.open_in_new_tab eq true }}>{{ card.link_group.link_label }}</a>
+    </div>
+  </div>
   {% endfor %}
 </div>
