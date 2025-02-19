@@ -137,7 +137,7 @@
      "opacity": 100
     },
     "number_field": 4,
-    "title": "Servis i Održavanje",
+    "title": "Servis i održavanje",
     "image_field": {
      "size_type": "auto",
      "src": "https://atsistem.rs/hubfs/Services%20Icons/service.png",
@@ -175,7 +175,7 @@
      "opacity": 100
     },
     "number_field": 6,
-    "title": "Tehnička Podrška",
+    "title": "Tehnička podrška",
     "image_field": {
      "size_type": "auto",
      "src": "https://atsistem.rs/hubfs/Services%20Icons/tech-support.png",

@@ -7,7 +7,7 @@
 -->
 
 {% dnd_section 
-	class="py-8 px-4",
+	class="py-4 px-4",
 	background_image={
 		'backgroundPosition': 'MIDDLE_CENTER',
     'backgroundSize': 'cover',
@@ -18,7 +18,7 @@
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='@hubspot/rich_text',
-				html={{ context.title || '<h3 class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1 font-bold"><span class="font-light">Izdvajamo iz</span> Galerije</h3>' }}
+				html={{ context.title || '<h3 class="mb-2 text-2xl leading-tight lg:text-7xl lg:leading-1 font-bold"><span class="font-light">Izdvajamo iz</span> Galerije</h3>' }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}

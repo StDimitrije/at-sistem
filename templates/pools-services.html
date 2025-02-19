@@ -19,7 +19,7 @@
 	    path='../sections/header-1.html',
 	    context={
 	      'title': '<h1 class="font-normal mb-2 text-6xl">Projektovanje i izgradnja bazena</h1>',
-				'subtitle': '<p class="font-light text-lg md:text-3xl mb-2">A&T SISTEM je firma kojoj sa punim poverenjem možete poveriti kompletne radove oko izgradnje komercijalnih i rezidencijalnih betonskih bazena, od izrade idejnog rešenja do puštanja bazenskog sistema u rad.</p>',
+				'subtitle': '<p class="font-light text-lg xl:text-3xl mb-2">A&T SISTEM je firma kojoj sa punim poverenjem možete poveriti kompletne radove oko izgradnje komercijalnih i rezidencijalnih betonskih bazena, od izrade idejnog rešenja do puštanja bazenskog sistema u rad.</p>',
 				'button_text': 'KONTAKTIRAJTE NAS'
 	    }
 	  %}
@@ -27,7 +27,7 @@
 	  {% include_dnd_partial
 	    path='../sections/services-expanded-slider.html',
 			context={
-				'title': '<h2 class="text-2xl md:text-5xl lg:text-7xl mb-5">Naše usluge</h2>'
+				'title': '<h2 class="text-3xl md:text-5xl mb-2">Naše usluge</h2>'
 			}
 	  %}
 
@@ -35,25 +35,25 @@
 	    path='../sections/banner-small.html',
 			context={
 				'text_field': 'Niste pronašli ono što Vas zanima ili Vam treba još informacija?',
-				'link_label': 'Zatražite Ponudu'
+				'link_label': 'Pošaljite upit'
 			}
 	  %}
 
 		{% include_dnd_partial
-	    path='../sections/video-player.html',
-			context={
-				'title': 'BWT - Pouzdan Partner',
-				'description': "A&T SISTEM je Vas pouzdan partner u projektovanju i izgradnji bazena dugi niz godina, a nasa saradnja sa BWI POOL PRODUCTS, renomiranim proizvodacem bazenske opreme garantuje vrhunski kvalitet uredaja, hidraulicki optimizovana resenja lum Iskusnin struchjaka na raspolaganju.",
-				'button_label': 'Više o brendu',
-				'h_tag_choice': 'h3'
-			}
-	  %}
+      path='../sections/image-w-text-gradient.html',
+      context={
+        'title': 'BWT - Pouzdan Partner',
+        'description': 'A&T SISTEM je Vas pouzdan partner u projektovanju i izgradnji bazena dugi niz godina, a nasa saradnja sa BWI POOL PRODUCTS, renomiranim proizvodacem bazenske opreme garantuje vrhunski kvalitet uredaja, hidraulicki optimizovana resenja lum Iskusnin struchjaka na raspolaganju.<br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>',
+        'link_label': 'Više o brendu',
+        'reverse_content_direction': true
+      }
+    %}
 
 		{% include_dnd_partial
 	    path='../sections/image-with-text.html',
 			context={
 				'title': 'Pokrivač za bazen',
-				'description': "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+				'description': "Prekrivač za bazen štiti od prašine, lišća, insekata i nečistoće, zadržava željenu temperaturu vode, i smanjuje mogućnost stvaranja algi, a ima naročito važnu ulogu za bezbednost dece i kućnih ljubimaca. Otkrijete našu fantastičnu ponudu koja obuhvata sve tipove bazenskih pokrivača, uključujući i bazenske kupole i pokretne konstrukcije po kojima može da se hoda.",
 				'link_label': 'Opširnije',
 				'h_tag_choice': 'h3'
 			}
@@ -73,7 +73,7 @@
 		{% include_dnd_partial
 	    path='../sections/image-gallery-slider.html',
 			context={
-				'title': '<h2 class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1 font-bold">Galerija</h2>'
+				'title': '<h2 class="mb-2 text-3xl md:text-5xl leading-tight font-bold">Galerija</h2>'
 			}
 	  %}
 

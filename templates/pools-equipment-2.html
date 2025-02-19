@@ -18,15 +18,15 @@
     {% include_dnd_partial
       path='../sections/header-1.html',
       context={
-        'title': '<h1 class="font-normal mb-2 text-6xl">Oprema za Bazene</h1>',
-        'subtitle': '<p class="font-light text-lg md:text-3xl mb-2">A&T SISTEM nudi širok asortiman opreme za bazene renomeniranih proizvođača.</p>',
+        'title': '<h1 class="font-normal mb-2 text-6xl">Oprema za bazene</h1>',
+        'subtitle': '<p class="font-light text-lg xl:text-3xl mb-2">A&T SISTEM nudi širok asortiman opreme za bazene renomeniranih proizvođača.</p>',
 				'button_text': 'POGLEDAJTE PONUDU'
       }
     %}
 
     {% dnd_section
       padding={
-        'top': '60px',
+        'top': '40px',
         'bottom': '0',
         'left': '40px',
         'right': '40px'
@@ -37,12 +37,12 @@
           {% dnd_module 
             path='@hubspot/rich_text',
 				    html='
-              <h2 class="text-2xl md:text-5xl lg:text-7xl mb-2">Kompletna bazenska oprema na jednom mestu</h2>
-              <p class="text-base leading-snug">Najveću razliku za izbor bazenske opreme čini da li je bazen za privatnu ili javnu upotrebu. A što se tiče kvaliteta proizvoda, tu ne pravimo kompromis – naša ponuda sastoji se isključivo od odabranih proizvoda proverenog kvaliteta.</p>
+              <h2 class="text-4xl md:text-5xl mb-2">Kompletna bazenska oprema na jednom mestu</h2>
+              <p class="text-sm xl:text-base leading-snug">Najveću razliku za izbor bazenske opreme čini da li je bazen za privatnu ili javnu upotrebu. A što se tiče kvaliteta proizvoda, tu ne pravimo kompromis – naša ponuda sastoji se isključivo od odabranih proizvoda proverenog kvaliteta.</p>
               <br>
-              <p class="text-base leading-snug">A&T ponuda osnovne opreme za bazen obuhvata sve ugradne elemente i tehničku opremu bez kojih bazen ne bi mogao da funkcioniše, a to su: hidraulična mreža, ugradni elementi za cirkulaciju, pumpno filterski blok, elektroupravljačke komponente, osnovna oprema za održavanje.</p>
+              <p class="text-sm xl:text-base leading-snug">A&T ponuda osnovne opreme za bazen obuhvata sve ugradne elemente i tehničku opremu bez kojih bazen ne bi mogao da funkcioniše, a to su: hidraulična mreža, ugradni elementi za cirkulaciju, pumpno filterski blok, elektroupravljačke komponente, osnovna oprema za održavanje.</p>
               <br>
-              <p class="text-base leading-snug">Pored osnovne opreme postoji širok izbor dodatne bazenske opreme, u koju spada podvodna rasveta, oprema za grejanje bazenske vode (za produžetak sezone korišćenja bazena), hemijski tretman (bazenska voda treba da ima kvalitet pijaće vode), pokrivanje bazena (čuva bazen od prljanja i brzog hlađenja vode), bazenske atrakcije (za vežbanje, rekreaciju, dekoraciju...), automatsko čišćenje bazena i drugo...</p>
+              <p class="text-sm xl:text-base leading-snug">Pored osnovne opreme postoji širok izbor dodatne bazenske opreme, u koju spada podvodna rasveta, oprema za grejanje bazenske vode (za produžetak sezone korišćenja bazena), hemijski tretman (bazenska voda treba da ima kvalitet pijaće vode), pokrivanje bazena (čuva bazen od prljanja i brzog hlađenja vode), bazenske atrakcije (za vežbanje, rekreaciju, dekoraciju), automatsko čišćenje bazena i drugo.</p>
             '
           %}
           {% end_dnd_module %}
@@ -106,7 +106,7 @@
       path='../sections/image-w-text-gradient.html',
       context={
         'title': 'Pokrivač za bazen',
-        'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        'description': 'Otkrijete našu fantastičnu ponudu koja obuhvata sve tipove bazenskih pokrivača, uključujući i bazenske kupole i pokretne konstrukcije po kojima može da se hoda.',
         'h_tag_choice': 'h3',
         'link_label': 'Opširnije',
         'reverse_content_direction': true
@@ -244,18 +244,19 @@
     %}
 
     {% include_dnd_partial
-	    path='../sections/video-player.html',
-			context={
-				'title': 'BWT - Pool Products',
-				'description': "Naša saradnja sa BWT POOL PRODUCTS, renomiranim proizvođačem bazenske opreme, garantuje vrhunski kvalitet uređaja, hidraulički optimizovana rešenja i iskustvo stručnjaka.",
-				'button_label': 'Više o brendu'
-			}
-	  %}
+      path='../sections/image-w-text-gradient.html',
+      context={
+        'title': 'BWT - Pool Products',
+        'description': 'Sa ponosom predstavljamo našeg dugogodišnjeg partnera, koji proizvodi bazensku opremu vrhunskog kvalitete u čak tri svoje fabrike u Bretanji, na severu Francuske.<br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>',
+        'link_label': 'Više o brendu',
+        'reverse_content_direction': true
+      }
+    %}
 
     {% include_dnd_partial
       path='../sections/image-with-text.html',
       context={
-        'title': 'Praher cevi i ventili',
+        'title': 'IBG® - Praher® cevi i ventili',
         'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         'h_tag_choice': 'h3',
         'link_label': 'Opširnije'
