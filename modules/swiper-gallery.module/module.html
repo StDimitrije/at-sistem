@@ -13,7 +13,7 @@
   <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
     class="absolute left-[-65px] bottom-[-85px] block" loading="lazy">
   {% endif %}
-  <h3 class="mb-5 text-2xl leading-tight lg:text-7xl lg:leading-1 font-bold">{{ module.title }}</h3>
+  <h3 class="mb-5">{{ module.title }}</h3>
   <div class="swiper-gallery-{{name}} swiper max-w-[1000px]">
     <div class="flex items-center swiper-wrapper">
       {% for item in module.image_group %}

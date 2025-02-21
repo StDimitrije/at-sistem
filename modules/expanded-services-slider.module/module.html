@@ -53,11 +53,11 @@
       centeredSlides: true,
       slidesPerView: 1,
       autoHeight: true,
-      speed: 500,
       autoplay: {
-        delay: 10000,
-        disableOnInteraction: true,
+        delay: 1000,
+        disableOnInteraction: true
       },
+      speed: 500,
       pagination: {
         el: ".swiper-pagination-{{ name }}",
         clickable: true,
@@ -67,7 +67,8 @@
         renderProgressbar: function (progressbarFillClass) {
           return '<span class="' + progressbarFillClass + '"></span>';
         }
-      }
+      },
+
     });
 
     const descriptionSwiper = new Swiper(".description-swiper-{{ name }}", {

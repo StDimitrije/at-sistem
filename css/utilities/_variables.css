@@ -14,47 +14,22 @@
   --column-gutter-md: calc(var(--spacing) * 3);
   --column-gutter-sm: calc(var(--spacing) * 3);
 
-  --color-bluish-grey: #cfd8e3; /*Name subject to change xD*/
-  --color-light-grey: #f0f3f5;
-  --color-carousel-light-grey: #acb4bd;
-  --color-transparent-grey: rgba(207, 216, 227, 0.2);
-  --color-primary: #6e43ff;
-  --color-purple: #6630cf;
-  --color-light-blue: #62e1ff;
   --color-white: #fff;
   --color-dark-purple: #0f161c;
   --color-black: #000;
-  --color-pink: #D7B4F3;
-  --color-pink-dark: #C598EA;
 
-  --color-grey: #373738;
-  --color-blue: #BCD0F8;
-  --color-pink: #D7B4F3;
 
   --color-text: var(--color-black);
   --body-bg-color: var(--color-white); 
-
-  --bg-dark-grey: #1D252C;
-
-  --button-bg-hover-purple: #6630ce;
-  --button-bg-hover-grey: #b7babb;
-
-  --button-color-hover: var(--color-white);
-
-  --header-bg-color: rgba(15, 22, 28, 0.5);
-  --header-text-color: var(--color-white);
 
   --footer-bg-color: var(--color-dark-purple);
   --footer-text-color: var(--color-white);
 
   /* Fonts */
   --font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-size-h1: 56px;
 
   --font-weight-light: 300;
   --font-weight-regular: normal;
   --font-weight-medium: 500;
   --font-weight-bold: bold;
-
-  --swiper-pagination-bullet-horizontal-gap: 10px;
 }

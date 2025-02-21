@@ -18,7 +18,7 @@
 	  {% include_dnd_partial
 	    path='../sections/header-1.html',
 	    context={
-	      'title': '<h1 class="font-normal mb-2 text-6xl">Projektovanje i izgradnja bazena</h1>',
+	      'title': '<h1>Projektovanje i izgradnja bazena</h1>',
 				'subtitle': '<p class="font-light text-lg xl:text-3xl mb-2">A&T SISTEM je firma kojoj sa punim poverenjem možete poveriti kompletne radove oko izgradnje komercijalnih i rezidencijalnih betonskih bazena, od izrade idejnog rešenja do puštanja bazenskog sistema u rad.</p>',
 				'button_text': 'KONTAKTIRAJTE NAS'
 	    }
@@ -27,7 +27,7 @@
 	  {% include_dnd_partial
 	    path='../sections/services-expanded-slider.html',
 			context={
-				'title': '<h2 class="text-3xl md:text-5xl mb-2">Naše usluge</h2>'
+				'title': '<h2>Naše usluge</h2>'
 			}
 	  %}
 
@@ -35,7 +35,8 @@
 	    path='../sections/banner-small.html',
 			context={
 				'text_field': 'Niste pronašli ono što Vas zanima ili Vam treba još informacija?',
-				'link_label': 'Pošaljite upit'
+				'link_label': 'Pošaljite upit',
+				'link_field': '/kontakt'
 			}
 	  %}
 
@@ -45,7 +46,8 @@
         'title': 'BWT - Pouzdan Partner',
         'description': 'A&T SISTEM je Vas pouzdan partner u projektovanju i izgradnji bazena dugi niz godina, a nasa saradnja sa BWI POOL PRODUCTS, renomiranim proizvodacem bazenske opreme garantuje vrhunski kvalitet uredaja, hidraulicki optimizovana resenja lum Iskusnin struchjaka na raspolaganju.<br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>',
         'link_label': 'Više o brendu',
-        'reverse_content_direction': true
+        'reverse_content_direction': true,
+				'image_src': 'https://atsistem.rs/hubfs/Usluge%20Sadrzaj/BWT%20Pool%20Products.jpg'
       }
     %}
 
@@ -55,7 +57,8 @@
 				'title': 'Pokrivač za bazen',
 				'description': "Prekrivač za bazen štiti od prašine, lišća, insekata i nečistoće, zadržava željenu temperaturu vode, i smanjuje mogućnost stvaranja algi, a ima naročito važnu ulogu za bezbednost dece i kućnih ljubimaca. Otkrijete našu fantastičnu ponudu koja obuhvata sve tipove bazenskih pokrivača, uključujući i bazenske kupole i pokretne konstrukcije po kojima može da se hoda.",
 				'link_label': 'Opširnije',
-				'h_tag_choice': 'h3'
+				'h_tag_choice': 'h3',
+				'image_src': 'https://atsistem.rs/hubfs/Usluge%20Sadrzaj/pool%20cover.jpeg'
 			}
 	  %}
 
@@ -63,17 +66,128 @@
 	    path='../sections/image-with-text.html',
 			context={
 				'title': 'Drveni Bazeni',
-				'description': "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+				'description': "Drveni bazeni BWT su osmišljeni i dizajnirani tako da se uklope u prirodni ambijent, i da vlasnicima pruže sav komfor i sigurnost, uz racionalnu potrošnju energije. Proizvedeni su u Francuskoj, u strogo kontrolisanim uslovima.",
 				'link_label': 'Opširnije',
 				'h_tag_choice': 'h3',
-				'reverse_content_direction': true
+				'reverse_content_direction': true,
+				'image_src': 'https://atsistem.rs/hubfs/Usluge%20Sadrzaj/wooden%20pool.jpg'
 			}
 	  %}
 
 		{% include_dnd_partial
 	    path='../sections/image-gallery-slider.html',
 			context={
-				'title': '<h2 class="mb-2 text-3xl md:text-5xl leading-tight font-bold">Galerija</h2>'
+				'title': '<h2>Galerija</h2>',
+				'images': [
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.14.1.jpeg",
+						"alt": "img.14.1",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.17.1.jpeg",
+						"alt": "img.17.1",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.16.1.jpeg",
+						"alt": "img.16.1",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.21.1.jpeg",
+						"alt": "img.21.1",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.23.jpg",
+						"alt": "img.23",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Spa/img.s8.jpg",
+						"alt": "img.s8",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Spa/wellness.jpg",
+						"alt": "wellness",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.25.jpg",
+						"alt": "img.25",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.12.1.jpeg",
+						"alt": "img.12.1",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						}
+					}
+				]
 			}
 	  %}
 

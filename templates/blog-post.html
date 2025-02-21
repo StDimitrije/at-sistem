@@ -12,7 +12,7 @@
   <div class="text-white px-4 pt-[120px] pb-5 min-h-[450px] flex flex-col justify-end bg-no-repeat bg-center bg-cover" 
     style="background-image: url('{{get_asset_url('../images/secondary-header-dark.jpg')}}')">
     <div class="m-[0_auto] w-full max-w-[1260px]">
-      <h1 class="h2 mb-3">{{ content.name }}</h1>
+      <h1>{{ content.name }}</h1>
       <div class="blog-post__meta font-sans text-medium text-xl">
         <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
           {{ content.publish_date|datetimeformat('%b %e, %Y') }}

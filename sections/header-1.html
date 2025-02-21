@@ -18,14 +18,14 @@
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='@hubspot/rich_text',
-				html={{ context.title || '<h1 class="font-normal mb-2 text-6xl">Winners</h1>' }}
+				html={{ context.title || '<h1>Winners</h1>' }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='@hubspot/rich_text',
-				html={{ context.subtitle || '<p class="font-light text-lg md:text-3xl mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>' }}
+				html={{ context.subtitle || '<p class="font-light text-lg xl:text-3xl mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>' }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}

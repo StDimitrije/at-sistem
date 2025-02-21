@@ -86,7 +86,7 @@
   "default": {
    "url": {
     "type": "EXTERNAL",
-    "href": "https://www.google.com/ncr",
+    "href": "https://www.google.com/",
     "content_id": null
    },
    "open_in_new_tab": true,

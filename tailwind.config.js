@@ -35,9 +35,9 @@ module.exports = {
         '2xs': ['12px', { lineHeight: '1rem' }],
         xs: ['14px', { lineHeight: '1rem' }],
         sm: ['16px', { lineHeight: '1.25rem' }],
-        base: ['18px', { lineHeight: 1.555 }],
-        lg: ['20px', { lineHeight: 1.4 }],
-        xl: ['24px', { lineHeight: 1.333 }],
+        base: ['18px', { lineHeight: '1.555' }],
+        lg: ['20px', { lineHeight: '1.4' }],
+        xl: ['24px', { lineHeight: '1.333' }],
         '2xl': ['28px', { lineHeight: '2rem' }],
         '3xl': ['32px', { lineHeight: '2.25rem' }],
         '4xl': ['40px', { lineHeight: '2.5rem' }],
@@ -46,6 +46,34 @@ module.exports = {
         '7xl': ['56px', { lineHeight: '1.142' }],
         '8xl': ['6rem', { lineHeight: '1' }],
         '9xl': ['8rem', { lineHeight: '1' }],
+        'h1': ['52px', {
+          lineHeight: '1',
+          fontWeight: '500',
+        }],
+        'h2': ['48px', {
+          lineHeight: '1.25',
+          fontWeight: '700',
+        }],
+        'h3': ['40px', {
+          lineHeight: '1.25',
+          fontWeight: '700',
+        }],
+        'h4': ['32px', {
+          lineHeight: '1.25',
+          fontWeight: '300',
+        }],
+        'h5': ['24px', {
+          lineHeight: '1.333',
+          fontWeight: '500',
+        }],
+        'h6': ['20px', {
+          lineHeight: '1.4',
+          fontWeight: '500',
+        }],
+        'p': ['18px', {
+          lineHeight: '1.375',
+          fontWeight: '300',
+        }],
       },
       fontWeight: {
         thin: '100',

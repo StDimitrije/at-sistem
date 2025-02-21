@@ -1,6 +1,6 @@
 <div class="flex flex-col xl:flex-row justify-between gap-5 items-center">
 	<div class="border-l-[10px] border-l-pink pl-5 max-w-[550px] h-min">
-		<h2 class="font-bold text-2xl lg:text-5xl">{{ module.title }}</h2>
+		<h2>{{ module.title }}</h2>
 		<p class="font-light text-sm my-2 leading-normal">{{ module.description }}</p>
 		{% if module.link_field.url.href != '' %}
 		<a href="{{ module.link_field.url.href }}" class="flex gap-1 items-center">

@@ -167,7 +167,7 @@
      "max_width": 64,
      "max_height": 64
     },
-    "description": "<p>Naša firma je distributer i direktan uvoznik kvalitetne opreme za bazene, fontane, spa centre. Deo našeg asortimana možete videti <a href=“https://shop.atsistem.rs”>ovde</a>.</p><p>Kako su mnogi proizvodi specifični i traže dobro razumevanje kupca prilikom izbora, pozivamo vas da nas slobodno <a href=“https://atsistem.rs/kontakt”>kontaktirate za asistenciju</a> prilikom kupovine.</p>"
+    "description": "<p>Naša firma je distributer i direktan uvoznik kvalitetne opreme za bazene, fontane, spa centre. Deo našeg asortimana možete videti <a href='https://shop.atsistem.rs/' class='font-bold underline'>ovde</a>.</p><p>Kako su mnogi proizvodi specifični i traže dobro razumevanje kupca prilikom izbora, pozivamo vas da nas slobodno <a href='/kontakt' class='font-bold underline'>kontaktirate za asistenciju</a> prilikom kupovine.</p>"
    },
    {
     "icon_background_color": {

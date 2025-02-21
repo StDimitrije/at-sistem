@@ -18,7 +18,7 @@
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='@hubspot/rich_text',
-				html={{ context.title || '<h1 class="font-light text-2xl leading-tight mb-5 sm:text-7xl sm:leading-1">Our <span class="font-bold">Team Members</span></h1>' }}
+				html={{ context.title || '<h1>Our <span class="font-bold">Team Members</span></h1>' }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}

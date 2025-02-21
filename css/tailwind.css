@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 mb-2 font-sans;
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-h2;
+  }
+
+  h3 {
+    @apply text-xl lg:text-h3;
+  }
+
+  h4 {
+    @apply text-xl lg:text-h4;
+  }
+
+  h5 {
+    @apply text-lg lg:text-h5;
+  }
+
+  h6 {
+    @apply text-base lg:text-h6;
+  }
+
+  p {
+    @apply font-sans text-sm font-light lg:text-p leading-snug;
+  }
+}
+
 @layer components {
   button,
   .button {
@@ -39,6 +78,4 @@
   .menu__submenu .menu__link {
     @apply block text-center lg:text-left py-[7px] px-1 text-[14px] lg:text-[12px] text-grey font-medium w-full uppercase lg:after:bottom-0 lg:after:left-0 lg:hover:after:w-full;
   }
-
-
 }
