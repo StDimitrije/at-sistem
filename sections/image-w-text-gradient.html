@@ -20,9 +20,18 @@
     {% dnd_row %}
       {% dnd_module
         path='../modules/image-with-post-reversible',
-        image_field={
-          'src': '{{ context.image_src || "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg" }}'
-        },
+        image_field={{ context.image_field || 
+         {
+            "src": 'https://atsistem.rs/hubfs/Usluge%20Sadrzaj/BWT%20Pool%20Products.jpg',
+            "alt": "pexels-max-vakhtbovych-7587466 1",
+            "size_type": null,
+            "width": 725,
+            "height": 500,
+            "loading": "lazy",
+            "max_width": 725,
+            "max_height": 500
+          }
+        }},
         title={{ context.title || 'Title' }},
         description={{ context.description || 'Description' }}
         reverse_content_direction={{ context.reverse_content_direction || false }},

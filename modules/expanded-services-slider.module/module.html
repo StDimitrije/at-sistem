@@ -53,10 +53,7 @@
       centeredSlides: true,
       slidesPerView: 1,
       autoHeight: true,
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: true
-      },
+      autoplay: false,
       speed: 500,
       pagination: {
         el: ".swiper-pagination-{{ name }}",
@@ -69,6 +66,15 @@
         }
       },
 
+      breakpoints: {
+        1024: {
+          autoplay: {
+            delay: 1000,
+            disableOnInteraction: true
+          },
+        }
+
+      }
     });
 
     const descriptionSwiper = new Swiper(".description-swiper-{{ name }}", {

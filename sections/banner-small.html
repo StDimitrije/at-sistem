@@ -16,11 +16,13 @@
         path='../modules/banner-small',
         text_field={{ context.text_field || 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.' }},
         link_label={{ context.link_label || 'Link Label' }},
-        link_field={
+        link_field={{ context.link_field || 
+        {
           "url": {
-            "href": '{{ context.link_field || "https://google.com/" }}'
+            "href": 'https://google.com/'
           },
         }
+        }}
       %}
       {% end_dnd_module %}
 		{% end_dnd_row %}

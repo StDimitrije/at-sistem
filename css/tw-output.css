@@ -574,6 +574,7 @@ h1 {
 h2 {
   font-size: 32px;
   line-height: 2.25rem;
+  font-weight: 700;
 }
 
 @media (min-width: 1024px) {
@@ -587,6 +588,7 @@ h2 {
 h3 {
   font-size: 24px;
   line-height: 1.333;
+  font-weight: 700;
 }
 
 @media (min-width: 1024px) {

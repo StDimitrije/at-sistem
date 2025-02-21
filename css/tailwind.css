@@ -17,11 +17,11 @@
   }
 
   h2 {
-    @apply text-3xl lg:text-h2;
+    @apply text-3xl lg:text-h2 font-bold;
   }
 
   h3 {
-    @apply text-xl lg:text-h3;
+    @apply text-xl lg:text-h3 font-bold;
   }
 
   h4 {
