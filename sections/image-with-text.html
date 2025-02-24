@@ -29,7 +29,18 @@
         description={{ context.description || 'Description' }}
         reverse_content_direction={{ context.reverse_content_direction || false }},
         h_tag_choice={{ context.h_tag_choice || 'h3' }},
-        link_label={{ context.link_label || 'Link Label' }}
+        link_label={{ context.link_label || 'Link Label' }},
+        link={{ context.link || 
+          {
+            "url": {
+              "type": "EXTERNAL",
+              "href": "https://www.google.com/",
+              "content_id": null
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          }
+        }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}
