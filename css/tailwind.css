@@ -39,6 +39,10 @@
   p {
     @apply font-sans text-sm font-light lg:text-p leading-snug;
   }
+
+  .subheading {
+    @apply font-light text-lg xl:text-3xl mb-2;
+  }
 }
 
 @layer components {
