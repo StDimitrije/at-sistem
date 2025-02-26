@@ -12,7 +12,34 @@
   {% dnd_column offset=0, width=12 %}
     {% dnd_row %}
       {% dnd_module
-        path='../modules/image-card'
+        path='../modules/image-card',
+        show_decorators={{ context.show_decorators || true }},
+        cards={{ context.cards || [
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "title": "<strong>Steam</strong> Room",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.",
+            "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": ""
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+            },
+            "link_label": "View More"
+          }
+        ] }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

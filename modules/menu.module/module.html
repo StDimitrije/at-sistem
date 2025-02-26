@@ -10,47 +10,92 @@
     {{ 'menu__item--has-submenu' if link.children }}
     p-0 relative flex items-center flex-col justify-center cursor-pointer
     ">
-  {% if link.children == [] %}
-  <a class="menu__link" href="{{ link.url }}">{{ link.label }}</a>
-  {% endif %}
-  {% if link.children != [] %}
-  <div class="flex">
-    <span class="
-      menu__child-toggle-icon
-      flex items-center justify-center invisible
-      ml-[15px] lg:ml-0
-      ">
-      <svg class="w-[12px] h-[6px] lg:w-[10px] lg:h-[6px]" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
-        viewBox="0 0 11.414 7.121">
-        <g id="icon-small-arrow-left" transform="translate(10.707 0.707) rotate(90)">
-          <path id="icon-small-arrow-2" data-name="icon-small-arrow" d="M119.62,6l5,5-5,5"
-            transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2" />
-        </g>
-      </svg>
-    </span>
-    <a class="menu__link" href="{{ link.url }}">{{ link.label }}</a>
-    <span class="
-      menu__child-toggle-icon
-      flex items-center justify-center 
-      ml-[15px] lg:ml-0
-      ">
-      <svg class="w-[12px] h-[6px] lg:w-[10px] lg:h-[6px]" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
-        viewBox="0 0 11.414 7.121">
-        <g id="icon-small-arrow" transform="translate(10.707 0.707) rotate(90)">
-          <path class="stroke-white lg:stroke-grey" id="icon-small-arrow-2" data-name="icon-small-arrow"
-            d="M119.62,6l5,5-5,5" transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2" />
-        </g>
-      </svg>
-    </span>
-  </div>
-  <ul class="
-    menu__submenu
-    list-none flex-col bg-white lg:shadow-lg z-[99] top-full right-1 hidden border-none rounded-none shadow-none static transform-none w-full py-2 px-3
-    lg:px-1 lg:py-2 lg:rounded lg:w-max lg:absolute">
-    {% for sublink in link.children %}
-    {{ render_link_item(sublink) }}
-    {% endfor %}
-  </ul>
+  {% if link.url %}
+    {% if link.children == [] %}
+      <a class="menu__link" href="{{ link.url }}">{{ link.label }}</a>
+    {% endif %}
+    {% if link.children != [] %}
+      <div class="flex">
+        <span class="
+          menu__child-toggle-icon
+          flex items-center justify-center invisible
+          ml-[15px] lg:ml-0
+          ">
+          <svg class="w-[12px] h-[6px] lg:w-[10px] lg:h-[6px]" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+            viewBox="0 0 11.414 7.121">
+            <g id="icon-small-arrow-left" transform="translate(10.707 0.707) rotate(90)">
+              <path id="icon-small-arrow-2" data-name="icon-small-arrow" d="M119.62,6l5,5-5,5"
+                transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2" />
+            </g>
+          </svg>
+        </span>
+        <a class="menu__link" href="{{ link.url }}">{{ link.label }}</a>
+        <span class="
+          menu__child-toggle-icon
+          flex items-center justify-center 
+          ml-[15px] lg:ml-0
+          ">
+          <svg class="w-[12px] h-[6px] lg:w-[10px] lg:h-[6px]" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+            viewBox="0 0 11.414 7.121">
+            <g id="icon-small-arrow" transform="translate(10.707 0.707) rotate(90)">
+              <path class="stroke-white lg:stroke-grey" id="icon-small-arrow-2" data-name="icon-small-arrow"
+                d="M119.62,6l5,5-5,5" transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2" />
+            </g>
+          </svg>
+        </span>
+      </div>
+      <ul class="
+        menu__submenu
+        list-none flex-col bg-white lg:shadow-lg z-[99] top-full right-1 hidden border-none rounded-none shadow-none static transform-none w-full py-2 px-3
+        lg:px-1 lg:py-2 lg:rounded lg:w-max lg:absolute">
+        {% for sublink in link.children %}
+        {{ render_link_item(sublink) }}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% else %}
+    {% if link.children == [] %}
+      <span class="menu__link" href="{{ link.url }}">{{ link.label }}</span>
+    {% endif %}
+    {% if link.children != [] %}
+      <div class="flex">
+        <span class="
+          menu__child-toggle-icon
+          flex items-center justify-center invisible
+          ml-[15px] lg:ml-0
+          ">
+          <svg class="w-[12px] h-[6px] lg:w-[10px] lg:h-[6px]" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+            viewBox="0 0 11.414 7.121">
+            <g id="icon-small-arrow-left" transform="translate(10.707 0.707) rotate(90)">
+              <path id="icon-small-arrow-2" data-name="icon-small-arrow" d="M119.62,6l5,5-5,5"
+                transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2" />
+            </g>
+          </svg>
+        </span>
+        <span class="menu__link" href="{{ link.url }}">{{ link.label }}</span>
+        <span class="
+          menu__child-toggle-icon
+          flex items-center justify-center 
+          ml-[15px] lg:ml-0
+          ">
+          <svg class="w-[12px] h-[6px] lg:w-[10px] lg:h-[6px]" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+            viewBox="0 0 11.414 7.121">
+            <g id="icon-small-arrow" transform="translate(10.707 0.707) rotate(90)">
+              <path class="stroke-white lg:stroke-grey" id="icon-small-arrow-2" data-name="icon-small-arrow"
+                d="M119.62,6l5,5-5,5" transform="translate(-119.62 -6)" fill="none" stroke="#F0F3F5" stroke-width="2" />
+            </g>
+          </svg>
+        </span>
+      </div>
+      <ul class="
+        menu__submenu
+        list-none flex-col bg-white lg:shadow-lg z-[99] top-full right-1 hidden border-none rounded-none shadow-none static transform-none w-full py-2 px-3
+        lg:px-1 lg:py-2 lg:rounded lg:w-max lg:absolute">
+        {% for sublink in link.children %}
+        {{ render_link_item(sublink) }}
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endif %}
 </li>
 {% endmacro %}
@@ -67,7 +112,6 @@
   <ul class="flex no-list">
     {{ menu_items() }}
   </ul>
-
 </nav>
 
 {# Mobile menu #}

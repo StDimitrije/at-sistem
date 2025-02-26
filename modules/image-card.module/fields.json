@@ -1,20 +1,53 @@
 [
  {
-  "type": "boolean",
-  "id": "97ad5a04-44ec-07f1-8c25-87c33963aeb2",
   "default": false,
   "display": "toggle",
+  "display_width": null,
+  "id": "97ad5a04-44ec-07f1-8c25-87c33963aeb2",
   "label": "Show Decorators",
-  "name": "show_decorators"
+  "locked": false,
+  "name": "show_decorators",
+  "required": false,
+  "type": "boolean"
  },
  {
-  "type": "group",
-  "id": "3834cb05-c1a0-15f6-401c-1bf1f2d07ce1",
-  "label": "Cards",
+  "type": "choice",
+  "id": "974123a6-7832-d3da-3bcc-99fb4ee426a9",
+  "display": "select",
+  "choices": [
+   [
+    "h1",
+    "H1"
+   ],
+   [
+    "h2",
+    "H2"
+   ],
+   [
+    "h3",
+    "H3"
+   ],
+   [
+    "h4",
+    "H4"
+   ],
+   [
+    "h5",
+    "H5"
+   ],
+   [
+    "h6",
+    "H6"
+   ]
+  ],
+  "label": "H-tag Choice",
+  "name": "h_tag_choice",
+  "default": "h3",
+  "required": true
+ },
+ {
   "children": [
    {
-    "type": "image",
-    "id": "87d47ee5-aa9b-431b-b0ca-6df145d8122f",
     "default": {
      "size_type": "auto",
      "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
@@ -25,30 +58,41 @@
      "max_width": 600,
      "max_height": 416
     },
+    "display_width": null,
+    "id": "87d47ee5-aa9b-431b-b0ca-6df145d8122f",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
     "resizable": true,
     "responsive": true,
     "show_loading": false,
-    "label": "Image",
-    "name": "image_field"
+    "type": "image"
    },
    {
-    "type": "richtext",
+    "default": "<strong>Steam</strong> Room",
+    "display_width": null,
     "id": "542ae7ea-e118-b98a-58e5-8dc9a59246f6",
     "label": "Title",
+    "locked": false,
     "name": "title",
-    "default": "<strong>Steam</strong> Room"
+    "required": false,
+    "type": "richtext"
    },
    {
-    "type": "text",
+    "allow_new_line": false,
+    "default": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.",
+    "display_width": null,
     "id": "1c1e779d-2880-361a-9077-6c3cac317d3e",
-    "validation_regex": "",
     "label": "Description",
+    "locked": false,
     "name": "description",
-    "default": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing."
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
    },
    {
-    "type": "link",
-    "id": "b2dbd8fe-309d-f94b-9264-53b7aa587386",
     "default": {
      "url": {
       "content_id": null,
@@ -58,6 +102,13 @@
      "open_in_new_tab": false,
      "no_follow": false
     },
+    "display_width": null,
+    "id": "b2dbd8fe-309d-f94b-9264-53b7aa587386",
+    "label": "Link",
+    "locked": false,
+    "name": "link_field",
+    "required": false,
+    "show_advanced_rel_options": false,
     "supported_types": [
      "EXTERNAL",
      "CONTENT",
@@ -66,19 +117,22 @@
      "BLOG",
      "CALL_TO_ACTION"
     ],
-    "label": "Link",
-    "name": "link_field"
+    "type": "link"
    },
    {
-    "type": "text",
+    "allow_new_line": false,
+    "default": "View More",
+    "display_width": null,
     "id": "25681ff6-52fb-92ac-c17b-c1da79eedb82",
-    "validation_regex": "",
     "label": "Link Label",
+    "locked": false,
     "name": "link_label",
-    "default": "View More"
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
    }
   ],
-  "name": "cards",
   "default": [
    {
     "image_field": {
@@ -129,9 +183,19 @@
     "link_label": "View More"
    }
   ],
+  "display_width": null,
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "id": "3834cb05-c1a0-15f6-401c-1bf1f2d07ce1",
+  "label": "Cards",
+  "locked": false,
+  "name": "cards",
   "occurrence": {
-   "min": 1,
-   "default": 2
-  }
+   "default": 2,
+   "min": 1
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
  }
 ]
