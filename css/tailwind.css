@@ -12,32 +12,38 @@
     @apply m-0 mb-2 font-sans;
   }
 
-  h1 {
+  h1,
+  .h1 {
     @apply text-h1;
   }
 
-  h2 {
+  h2,
+  .h2 {
     @apply text-3xl lg:text-h2 font-bold;
   }
 
-  h3 {
-    @apply text-xl lg:text-h3 font-bold;
+  h3,
+  .h3 {
+    @apply text-xl lg:text-h3 font-bold leading-1 sm:leading-3;
   }
 
+  h4,
   h4 {
     @apply text-xl lg:text-h4;
   }
 
-  h5 {
+  h5,
+  .h5 {
     @apply text-lg lg:text-h5;
   }
 
-  h6 {
+  h6,
+  .h6 {
     @apply text-base lg:text-h6;
   }
 
   p {
-    @apply font-sans text-sm font-light lg:text-p leading-snug;
+    @apply font-sans text-sm font-light leading-snug;
   }
 
   .subheading {
@@ -47,8 +53,9 @@
 
 @layer components {
   button,
-  .button {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white bg-pink text-sm;
+  .button,
+  .hs-button {
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white bg-pink text-xs w-fit;
   }
 
   button:hover,

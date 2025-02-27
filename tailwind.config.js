@@ -35,7 +35,7 @@ module.exports = {
         '2xs': ['12px', { lineHeight: '1rem' }],
         xs: ['14px', { lineHeight: '1rem' }],
         sm: ['16px', { lineHeight: '1.25rem' }],
-        base: ['18px', { lineHeight: '1.555' }],
+        base: ['18px', { lineHeight: '1.333' }],
         lg: ['20px', { lineHeight: '1.4' }],
         xl: ['24px', { lineHeight: '1.333' }],
         '2xl': ['28px', { lineHeight: '2rem' }],
@@ -50,7 +50,7 @@ module.exports = {
           lineHeight: '1',
           fontWeight: '500',
         }],
-        'h2': ['48px', {
+        'h2': ['42px', {
           lineHeight: '1.25',
           fontWeight: '700',
         }],
@@ -58,9 +58,9 @@ module.exports = {
           lineHeight: '1.25',
           fontWeight: '700',
         }],
-        'h4': ['32px', {
+        'h4': ['36px', {
           lineHeight: '1.25',
-          fontWeight: '300',
+          fontWeight: '400',
         }],
         'h5': ['24px', {
           lineHeight: '1.333',
@@ -143,7 +143,9 @@ module.exports = {
       backgroundImage: {
         purpleGradient: 'linear-gradient(47.66deg, #A5C3FA -5.18%, #D1A1F7 102.55%)',
         textBaseGradient: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.45) 70.25%)',
-        blueGradient: 'linear-gradient(86.35deg,#54eaea 5.2%,#4886ff 93.67%)'
+        blueGradient: 'linear-gradient(86.35deg,#54eaea 5.2%,#4886ff 93.67%)',
+        blackGradientHorizontal: 'linear-gradient(90deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 65%)',
+        blackGradientVertical: 'linear-gradient(180deg, rgba(0, 0, 0, 0.45) 4%, rgba(0, 0, 0, 0) 63%)'
       }
     }
   },

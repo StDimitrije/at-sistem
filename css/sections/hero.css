@@ -2,9 +2,14 @@
   position: relative;
 }
 
-.hero-overlay > * {
+.hero-overlay > *,
+.hero-2 > * {
   position: relative;
   z-index: 1;
+}
+
+.hero-2 .row-fluid {
+  width: 70%;
 }
 
 .hero-overlay::after {
@@ -28,3 +33,4 @@
   right: 0;
   background: linear-gradient(rgba(15, 22, 28, 1) 35%, rgba(15, 22, 28, 0));
 }
+

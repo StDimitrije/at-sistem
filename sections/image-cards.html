@@ -3,7 +3,7 @@
   label: Image Cards
   isAvailableForNewContent: true
   screenshotPath: ../images/section-previews/image-cards.jpg
-  description: "Two Column Section with post with image"
+  description: "Two Column Section containing post with image"
 -->
 
 {% dnd_section 
@@ -13,7 +13,8 @@
     {% dnd_row %}
       {% dnd_module
         path='../modules/image-card',
-        show_decorators={{ context.show_decorators || true }},
+        h_tag_choice={{ context.h_tag_choice || 'h3' }},
+        show_decorators={{ context.show_decorators || false }},
         cards={{ context.cards || [
           {
             "image_field": {
@@ -26,6 +27,7 @@
             "max_width": 600,
             "max_height": 416
             },
+            "premium_product": false,
             "title": "<strong>Steam</strong> Room",
             "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.",
             "link_field": {

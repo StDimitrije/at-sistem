@@ -7,12 +7,7 @@
 -->
 
 {% dnd_section
-	class="container-alt text-white px-4 pt-[140px] pb-6 text-center",
-	background_image={
-		'backgroundPosition': 'MIDDLE_CENTER',
-    'backgroundSize': 'cover',
-    'imageUrl': resize_image_url(context.backgroundImage || get_asset_url('../images/overlays/header-gradient.svg'), 0, 0, 1920)
-	}
+	class="container-alt text-white {{ context.spacing || 'px-4 pt-[140px] pb-6' }} text-center bg-purpleGradient"
 %}
 	{% dnd_column offset=0, width=12,	%}
 		{% dnd_row offset=0, width=12 %}

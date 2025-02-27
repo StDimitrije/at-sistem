@@ -4,11 +4,11 @@
     class="object-cover object-center max-h-[300px] md:max-h-[420px] w-full lg:w-1/2" />
   <div class="flex w-full lg:w-1/2 items-left m-auto lg:items-center flex-1">
     <div class="flex flex-col">
-      <{{ module.h_tag_choice }}>{{ module.title }}</{{ module.h_tag_choice }}>
-      <p class="mb-4">{{ module.description }}</p>
+      <{{ module.h_tag_choice }} class="h3 mb-2">{{ module.title }}</{{ module.h_tag_choice }}>
+      <p>{{ module.description }}</p>
       {% if module.link.url.href != '' %}
       <a href="{{ module.link.url.href }}" {% if module.link.open_in_new_tab==true %} target="_blank" {% endif %}
-        class="button w-fit uppercase">
+        class="button w-fit uppercase mt-4">
         {{ module.link_label }}
       </a>
       {% endif %}

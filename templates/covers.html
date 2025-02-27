@@ -2,7 +2,7 @@
   templateType: page
   isAvailableForNewContent: true
   label: Covers
-  screenshotPath: ../images/template-previews/pool-equipment2.jpg
+  screenshotPath: ../images/template-previews/covers.jpg
  -->
 
 {% extends "./layouts/base.html" %}
@@ -16,10 +16,222 @@
   %}
 
     {% include_dnd_partial
+      path='../sections/hero-2.html'
+    %}
+
+    {% include_dnd_partial
       path='../sections/header-1.html',
       context={
-        'title': '<h1>Pokrivači za bazen</h1>',
-        'subtitle': '<p class="subheading">Bazenski pokrivači i kupole sprečavaju prljanje bazena i isparavanje vode, čuvaju temperaturu vode i predstavljaju zaštitu od upada dece i kućnih ljubimaca.</p>'
+        'spacing': 'p-4',
+        'title': '<h2 class="text-center">Bazenski pokrivači kao ekonomično i bezbedno rešenje</h2>',
+        'subtitle': '<p class="text-center font-normal lg:text-base">Korišćenjem bazenskih pokrivača smanjuje se isparavanje vode, gubitak energije, upotreba hemijskih sredstava, a skraćuje se i vreme potrebno za čišćenje bazena. Da li vam se ovo čini kao dovoljan razlog da razmislite o nabavci prekrivača za bazen? A&T SISTEM ima u ponudi sve tipove pokrivača, koji se naručuju po meri bazena i proizvode u Francuskoj. Proizvođač je BWT POOL PRODUCTS  (link ka stranici brenda) čije dugogodišnje iskustvo u proizvodnji pokrivača, uz pomoć najmodernijih alata, vrhunske tehnologije  i strogo praćenog i kontrolisanog proizvodnog procesa, garantuje jedinstven kvalitet.</p>'
+      }
+    %}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '0',
+        'left': '40px',
+        'right': '40px'
+      },
+      background_color='#F7F7FD'
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <h3>Automatski pokrivači za bazene</h3>
+              <p class="lg:w-1/2">
+                Proizvođač: BWT POOL PRODUCTS, Francuska
+                <br>
+                Automatske nadgradni ili potopljeni rolo pokrivači  predstavljaju savršen spoj elegancije, pouzdanosti i jednostavnog rukovanja. Jednim okretom ključa, lamele bešumno klize po površini vode i vaš bazen je, po želji, prekriven ili otkriven. 
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row 
+          margin={
+            'top':'50px'
+          }
+        %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='<h4 class="mb-0">Automatski nadgradni pokrivači</h4>',
+            horizontal_alignment='CENTER'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'background_color': '#F7F7FD',
+        'title': 'BWT Pearl Protect',
+        'description': '
+        BWT PEARL PROTECT je automatski nadgradni prekrivač koji vašem bazenu može dati unikatan izgled, jer pored boje lamela možete birati i boju postolja, kao i opciju da ono bude led osvetljeno.
+        <br>
+        Maksimalne dimenzije bazena koju pokriva su: 10 x 5 m
+        <br>
+        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'background_color': '#F7F7FD',
+        'title': 'BWT Aquadeck EC',
+        'description': '
+        AQUADECK EC je elegantno dizajniran automatski pokrivač koji pokriva bazene maksimalnih dimenzija 6 x 14 m. Dolazi sa elektrokomandnom jedinicom koja se instalira u tehničku prostoriju.
+        <br>
+        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': true
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'background_color': '#F7F7FD',
+        'title': 'BWT Aquamatic',
+        'description': '
+        BWT AQUAMATIC je elegantan i veoma pouzdan automatski pokrivač koji ima malo postolje (160x120 mm), što mu omogućava da se diskretno uklopi u svaki ambijent. Ako želite kvalitetan automatski pokrivač po primamljivoj ceni, ovo je dobar izbor. 
+        <br>
+        Pokriva bazene dimenzija do 12 x 5 m
+        <br>
+        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    %}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '0',
+        'left': '40px',
+        'right': '40px'
+      },
+      background_color='#F7F7FD'
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row 
+          margin={
+            'top':'20px'
+          }
+        %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='<h4 class="mb-0">Automatski potopljeni pokrivači</h4>',
+            horizontal_alignment='CENTER'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-cards.html',
+      context={
+        'show_decorators': false,
+        'h_tag_choice': 'p',
+        'cards': [
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "title": "BWT Stardeck",
+            "description": "
+              BWT STARDECK je linija automatskih bazenskih pokrivača, posebno projektovana za bazene u izgradnji. Izborom jednog od tri modela  (STARDECK CLASSIC, STARDECK HIGH LEVEL, STARDECK INEO) dobijate vrhunski dizajniran, pouzdan automatski pokrivač koji  elegantno prati linije vašeg bazena.
+              <br>
+              Za izbor željenog modela i odgovarajuće konfigurcije konsultujte se sa našim profesionalnim timom koji je specijalizovan za BWT pokrivače, i koji će vam pružiti sve potrebne informacije i savete, uz prezentaciju uzoraka za što bolji uvid u estetski izgled pokrivača.
+              <br>
+              U zavisnosti od izabranog modela STARDECK može da pokrije bazene i do 23 m dužine.
+              <br>
+              <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+            ",
+            "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://google.com/"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+            },
+            "link_label": "View More",
+            "premium_product": true
+          },
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "title": "BWT Coverdeck",
+            "description": "
+              BWT COVERDECK je elegantan i pouzdan automatski potopljeni pokrivač koji može da se ugradi u već postojeće bazene, maksimalne dužine do 14 m.
+              <br>
+              <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+            ",
+            "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://google.com/"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+            },
+            "link_label": "View More",
+            "premium_product": false
+          }
+        ]
       }
     %}
 

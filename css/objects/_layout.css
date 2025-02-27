@@ -3,7 +3,6 @@
 /*****************************************/
 
 .content-wrapper {
-  /* max-width: 1240px; */
   max-width: 100%;
 }
 
@@ -16,8 +15,6 @@
   max-width: var(--container-max-width);
 }
 
-
-.dnd-section.container-alt > .row-fluid,
 .container-alt-module  {
   max-width: var(--container-alt-max-width);
 }

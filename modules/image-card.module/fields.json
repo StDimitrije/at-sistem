@@ -11,9 +11,6 @@
   "type": "boolean"
  },
  {
-  "type": "choice",
-  "id": "974123a6-7832-d3da-3bcc-99fb4ee426a9",
-  "display": "select",
   "choices": [
    [
     "h1",
@@ -38,12 +35,24 @@
    [
     "h6",
     "H6"
+   ],
+   [
+    "p",
+    "P"
    ]
   ],
-  "label": "H-tag Choice",
-  "name": "h_tag_choice",
   "default": "h3",
-  "required": true
+  "display": "select",
+  "display_width": null,
+  "id": "974123a6-7832-d3da-3bcc-99fb4ee426a9",
+  "label": "H-tag Choice",
+  "locked": false,
+  "multiple": false,
+  "name": "h_tag_choice",
+  "preset": null,
+  "reordering_enabled": true,
+  "required": true,
+  "type": "choice"
  },
  {
   "children": [
@@ -131,6 +140,17 @@
     "show_emoji_picker": false,
     "type": "text",
     "validation_regex": ""
+   },
+   {
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "c1814a45-ffaa-4b50-0130-04eaac9fc384",
+    "label": "Premium Product",
+    "locked": false,
+    "name": "premium_product",
+    "required": false,
+    "type": "boolean"
    }
   ],
   "default": [
@@ -156,7 +176,8 @@
      "open_in_new_tab": false,
      "no_follow": false
     },
-    "link_label": "View More"
+    "link_label": "View More",
+    "premium_product": false
    },
    {
     "image_field": {
@@ -180,7 +201,8 @@
      "open_in_new_tab": false,
      "no_follow": false
     },
-    "link_label": "View More"
+    "link_label": "View More",
+    "premium_product": false
    }
   ],
   "display_width": null,
