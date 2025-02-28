@@ -55,7 +55,7 @@ module.exports = {
           fontWeight: '700',
         }],
         'h3': ['40px', {
-          lineHeight: '1.25',
+          lineHeight: '1.142',
           fontWeight: '700',
         }],
         'h4': ['36px', {
@@ -145,7 +145,9 @@ module.exports = {
         textBaseGradient: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.45) 70.25%)',
         blueGradient: 'linear-gradient(86.35deg,#54eaea 5.2%,#4886ff 93.67%)',
         blackGradientHorizontal: 'linear-gradient(90deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 65%)',
-        blackGradientVertical: 'linear-gradient(180deg, rgba(0, 0, 0, 0.45) 4%, rgba(0, 0, 0, 0) 63%)'
+        blackGradientHorizontalMobile: 'linear-gradient(90deg, rgba(0, 0, 0, .37) 16%, rgba(0, 0, 0, 0) 87%)',
+        blackGradientVertical: 'linear-gradient(180deg, rgba(0, 0, 0, 0.45) 4%, rgba(0, 0, 0, 0) 63%)',
+        blackGradientVerticalMobile: 'linear-gradient(180deg,rgba(0,0,0, .45) 35%,transparent 60%)'
       }
     }
   },

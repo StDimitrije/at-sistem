@@ -9,7 +9,19 @@
 }
 
 .hero-2 .row-fluid {
-  width: 70%;
+  width: calc(70% + 40px);
+}
+
+@media(max-width: 1024px) {
+  .hero-2 .row-fluid {
+    width: 80%;
+  }
+}
+
+@media(max-width: 768px) {
+  .hero-2 .row-fluid {
+    width: 100%;
+  }
 }
 
 .hero-overlay::after {

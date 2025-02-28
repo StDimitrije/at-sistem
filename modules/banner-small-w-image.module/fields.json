@@ -1,0 +1,34 @@
+[ {
+  "id" : "c0425dc1-0fb2-1de7-1237-0f54887bb15a",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Title"
+}, {
+  "id" : "cbfd4fdc-788c-1242-b0d9-aab493decab8",
+  "name" : "image_field",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://145812822.fs1.hubspotusercontent-eu1.net/hubfs/145812822/Imported%20images/Standard%20Compliant.png",
+    "alt" : "Standard Compliant",
+    "loading" : "lazy",
+    "width" : 138,
+    "height" : 138,
+    "max_width" : 138,
+    "max_height" : 138
+  }
+} ]

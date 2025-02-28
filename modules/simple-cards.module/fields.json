@@ -1,0 +1,32 @@
+[
+ {
+  "type": "group",
+  "id": "e170b96e-e1cf-a9c8-3acc-5746b032f60c",
+  "label": "Cards",
+  "children": [
+   {
+    "type": "richtext",
+    "id": "8ab6b82b-72e0-3f47-8fb0-f29f984a0168",
+    "label": "Content",
+    "name": "content",
+    "default": "<ul>\n<li>item 1</li>\n<li>item 2</li>\n<li>item 3</li>\n</ul>"
+   }
+  ],
+  "name": "cards",
+  "default": [
+   {
+    "content": "<ul>\n<li>item 1</li>\n<li>item 2</li>\n<li>item 3</li>\n</ul>"
+   },
+   {
+    "content": "<ul>\n<li>item 1</li>\n<li>item 2</li>\n<li>item 3</li>\n</ul>"
+   },
+   {
+    "content": "<ul>\n<li>item 1</li>\n<li>item 2</li>\n<li>item 3</li>\n</ul>"
+   }
+  ],
+  "occurrence": {
+   "min": 1,
+   "default": 3
+  }
+ }
+]

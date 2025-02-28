@@ -28,7 +28,7 @@
   }
 
   h4,
-  h4 {
+  .h4 {
     @apply text-xl lg:text-h4;
   }
 
@@ -48,6 +48,14 @@
 
   .subheading {
     @apply font-light text-lg xl:text-3xl mb-2;
+  }
+
+  .hero-title {
+    @apply font-bold text-4xl md:text-[50px] lg:text-[76px];
+  }
+
+  .hero-subtitle {
+    @apply text-sm md:text-base lg:text-lg font-normal;
   }
 }
 
@@ -88,5 +96,30 @@
 
   .menu__submenu .menu__link {
     @apply block text-center lg:text-left py-[7px] px-1 text-[14px] lg:text-[12px] text-grey font-medium w-full uppercase lg:after:bottom-0 lg:after:left-0 lg:hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  /* width */
+  #scroll-navigation::-webkit-scrollbar {
+      height: 3px;
+      width: 3px;
+  }
+
+  /* Track */
+  #scroll-navigation::-webkit-scrollbar-track {
+      /* background: #888; */
+      border-radius: 5px;
+  }
+
+  /* Handle */
+  #scroll-navigation::-webkit-scrollbar-thumb {
+      background: #D7B4F3;
+      border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  #scroll-navigation::-webkit-scrollbar-thumb:hover {
+      background: #000;
   }
 }

@@ -1,5 +1,6 @@
+{% set hasAnyPremiumProduct = false %}
+  
 <div class="relative py-3 {{ 'px-4 md:px-8' if module.show_decorators else 'px-4' }}">
-
   {% if module.show_decorators eq true %}
   <div class="absolute top-0 right-0 bg-blue w-1/5 h-[10px]"></div>
   <div class="absolute top-0 right-0 bg-blue w-[10px] max-h-[300px] h-full"></div>
@@ -9,6 +10,9 @@
 
   <div class="flex flex-col md:flex-row gap-3 lg:gap-5 xl:gap-10 justify-center relative">
     {% for card in module.cards %}
+      {% if card.premium_product == true %}
+        {% set hasAnyPremiumProduct = true %}
+      {% endif %}
     <div class="drop-shadow-xs lg:max-w-[600px] w-full lg:w-1/2 flex flex-col">
       <div class=" flex items-end relative w-full h-[250px] lg:h-[350px] p-2 sm:p-3 bg-cover bg-center"
         style="{{'background-image: url({{card.image_field.src}})'}}">
@@ -18,7 +22,7 @@
       </div>
       <div class="w-full h-[6px] bg-purpleGradient"></div>
       <div
-        class="p-2 sm:p-3 gap-3 {{ '!pb-6' if card.premium_product == false }} bg-white flex flex-col ">
+        class="p-2 sm:p-3 gap-2 sm:gap-3 {{ 'md:!pb-6' if card.premium_product == false and hasAnyPremiumProduct == true }} bg-white flex flex-col flex-1 justify-between">
         <p>{{ card.description }}</p>
         {% if card.link_field.url.href != '' %}
         <a href="{{ card.link_field.url.href }}" {{ 'target="_blank"' if card.link_field.open_in_new_tab==true }}
@@ -27,12 +31,13 @@
         </a>
         {% endif %}
       </div>
-      {% if card.premium_product == true %}
+      {% if card.premium_product %}
       <div class="w-full bg-purpleGradient">
-        <p class="text-xl text-center text-white tracking-wider">Premium</p>
+        <p class="text-xl text-center text-white tracking-wider leading-1">Premium</p>
       </div>
       {% endif %}
     </div>
     {% endfor %}
   </div>
 </div>
+

@@ -1,8 +1,5 @@
 [
  {
-  "type": "choice",
-  "id": "5aa8be98-bdf6-b99f-ab19-e33b0c4deae6",
-  "display": "select",
   "choices": [
    [
     "h1",
@@ -33,10 +30,36 @@
     "P"
    ]
   ],
-  "label": "H-tag Choice",
-  "name": "h_tag_choice",
   "default": "h3",
-  "required": true
+  "display": "select",
+  "display_width": null,
+  "id": "5aa8be98-bdf6-b99f-ab19-e33b0c4deae6",
+  "label": "H-tag Choice",
+  "locked": false,
+  "multiple": false,
+  "name": "h_tag_choice",
+  "preset": null,
+  "reordering_enabled": true,
+  "required": true,
+  "type": "choice"
+ },
+ {
+  "type": "text",
+  "id": "63e07c06-a0b6-0aef-14d6-3176665ded22",
+  "validation_regex": "",
+  "label": "Heading Id",
+  "name": "heading_id"
+ },
+ {
+  "default": false,
+  "display": "checkbox",
+  "display_width": null,
+  "id": "d0755730-2eef-0ffa-1d4a-d46fcc865d9e",
+  "label": "Premium Product",
+  "locked": false,
+  "name": "premium_product",
+  "required": false,
+  "type": "boolean"
  },
  {
   "allow_new_line": false,
@@ -87,6 +110,19 @@
   "type": "image"
  },
  {
+  "allow_new_line": false,
+  "default": "Learn more",
+  "display_width": null,
+  "id": "8c838ded-8cf5-c6cb-99d7-c63e0831c443",
+  "label": "Link label",
+  "locked": false,
+  "name": "link_label",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
+ },
+ {
   "default": {
    "url": {
     "type": "EXTERNAL",
@@ -111,19 +147,6 @@
    "BLOG"
   ],
   "type": "link"
- },
- {
-  "allow_new_line": false,
-  "default": "Learn more",
-  "display_width": null,
-  "id": "8c838ded-8cf5-c6cb-99d7-c63e0831c443",
-  "label": "Link label",
-  "locked": false,
-  "name": "link_label",
-  "required": false,
-  "show_emoji_picker": false,
-  "type": "text",
-  "validation_regex": ""
  },
  {
   "default": false,

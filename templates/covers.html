@@ -28,6 +28,63 @@
       }
     %}
 
+    {% include_dnd_partial
+      path='../sections/scroll-navigation.html',
+      context={
+        'background_color': 'bg-lightGrey',
+        'navigation': [
+          {
+            "link_label" : "Automatski",
+            "url_field" : {
+              "content_id" : null,
+              "href" : "/#automatski-pokrivaci-za-bazene",
+              "type" : "EXTERNAL"
+            }
+          },
+          {
+            "link_label" : "Univerzalni",
+            "url_field" : {
+              "content_id" : null,
+              "href" : "/#univerzalni-bazenski-pokrivaci",
+              "type" : "EXTERNAL"
+            }
+          },
+          {
+            "link_label" : "Letnji",
+            "url_field" : {
+              "content_id" : null,
+              "href" : "/#letnji-pokrivaci",
+              "type" : "EXTERNAL"
+            }
+          },
+          {
+            "link_label" : "Zimski",
+            "url_field" : {
+              "content_id" : null,
+              "href" : "/#zimski-pokrivaci",
+              "type" : "EXTERNAL"
+            }
+          },
+          {
+            "link_label" : "Kupole",
+            "url_field" : {
+              "content_id" : null,
+              "href" : "/#bazenske-kupole",
+              "type" : "EXTERNAL"
+            }
+          },
+          {
+            "link_label" : "Pool Walker",
+            "url_field" : {
+              "content_id" : null,
+              "href" : "/#pool-walker",
+              "type" : "EXTERNAL"
+            }
+          }
+        ]
+      }
+    %}
+
     {% dnd_section 
       padding={
         'top': '40px',
@@ -42,7 +99,7 @@
           {% dnd_module
             path='@hubspot/rich_text',
             html='
-              <h3>Automatski pokrivači za bazene</h3>
+              <h3 id="automatski-pokrivaci-za-bazene">Automatski pokrivači za bazene</h3>
               <p class="lg:w-1/2">
                 Proizvođač: BWT POOL PRODUCTS, Francuska
                 <br>
@@ -155,7 +212,7 @@
         %}
           {% dnd_module
             path='@hubspot/rich_text',
-            html='<h4 class="mb-0">Automatski potopljeni pokrivači</h4>',
+            html='<h4 id="id" class="mb-0">Automatski potopljeni pokrivači</h4>',
             horizontal_alignment='CENTER'
           %}
           {% end_dnd_module %}
@@ -234,6 +291,407 @@
         ]
       }
     %}
+
+     {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '0',
+        'left': '40px',
+        'right': '40px'
+      }
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <h3 id="univerzalni-bazenski-pokrivaci">Univerzalni bazenski pokrivači</h3>
+              <p class="lg:w-1/2">
+                Univerzalni prekrivači iz naše ponude izrađeni su od segmenata jake poliesterske membrane (650 g/m2) i šipki od eloksiranog aluminijuma.
+                <br>
+                Obe strane pokrivača su lakirane, tako da se lako čiste mlazom vode i imaju pojačanu otpornost.
+                <br>
+                Nazivamo ih univerzalnim pokrivačima jer se koriste i u letnjem i u zimskom periodu, tako da je nabavka ovakvog proizvoda dobra investicija, s obzirom da se eliminše potreba za sezonskom, letnjom i zimskom pokrivkom.
+                <br>
+                Jednostavno se koriste uz pomoć ručne ili automatske motalice koja ima motor na baterije i punjač.
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'title': 'Calypso',
+        'description': '
+          CALYPSO je univerzalni bazenski prekrivač izrađen od segmenata jake poliesterske membrane (650 g/m2) i šipki od eloksiranog aluminijuma u boji pokrivača.
+          <br>
+          Obe strane su lakirane, tako da se lako čiste mlazom vode i imaju pojačanu otpornost na habanje i cepanje.
+          <br>
+          CALYPSO ima plastificirano čelično uže postavljeno sa obe duže strane, koje ga dodatno učvršćuju, tako da je otporniji na vetar i teže ga je pomeriti.
+          <br>
+          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'premium_product': true
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'title': 'Mambo',
+        'description': '
+          MAMBO je univerzalni pokrivač za bazene izrađen od segmenata jake poliesterske membrane (650 g/m2) i šipki od eloksiranog aluminijuma u boji pokrivača.
+          <br>
+          Obe strane su lakirane, tako da se lako čiste mlazom vode i imaju pojačanu otpornost na habanje i cepanje.
+          <br>
+          MAMBO može da se dodatno pričvrsti trakama po dužini, ukoliko se bazen nalazi na mestu koje je izloženo vetru.
+          <br>
+          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': true
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'title': 'CBE-650',
+        'description': '
+          CBE-650 je univerzalan pokrivač izrađen od segmenata jake poliesterske membrane (650 g/m2) i šipki od eloksiranog aluminijuma.
+          <br>
+          Obe strane pokrivača su lakirane, tako da se lako čiste mlazom vode i imaju pojačanu otpornost na habanje i cepanje.
+          <br>
+          CBE-650 je kvalitetan univerzalni pokrivač koji ima najekonomičniju cenu.
+          <br>
+          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    %}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '0',
+        'left': '40px',
+        'right': '40px'
+      },
+      background_color='#F7F7FD'
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <h3 id="letnji-pokrivaci">Letnji pokrivači</h3>
+              <p class="lg:w-1/2">
+                Izrađeni od UV stabilizovanog polietilena, sa mehurovima koji predstavljaju odličnu izolaciju i dobro prianjaju na površinu vode.
+                <br>
+                Mogu biti opšiveni i ojačani sa svih strana, ili samo sečeni na željenu dimenziju.
+                <br>
+                Najlakše se manipuliše njima tako što su namotani na mobilnu ručnu motalicu koja stoji pored bazena i po potrebi se uklanja.
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'title': 'Super 500',
+        'description': '
+          • GeoBubble tehnologija
+          <br>
+          • sa mrežicom za skupljanje lišća
+          <br>
+          • UV rezistentan
+          <br>
+          • zatezne trake
+          <br>
+          • OMEGA motalica
+        ',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'background_color': '#F7F7FD'
+      }
+    %}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '0',
+        'left': '40px',
+        'right': '40px'
+      }
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <h3 id="zimski-pokrivaci">Zimski pokrivači</h3>
+              <p class="lg:w-1/2">
+                Naši zimski prekrivači pravljeni su od ojačanog tkanog poliestera impregniranog PVC-om.
+                <br>
+                Oni se fiksiraju u plažu oko bazena i štite bazen u zimskom periodu. Imaju mikro perforaciju po celoj površini ili delimično, kako bi se vršila drenaža atmosferskih padavina.
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'title': 'Epervier',
+        'description': '
+          EPERVIER je kvalitetni pokrivač od impregniranog ojačanog poliestera, opšiven sa svih strana.
+          <br>
+          Ima drenažne mikro pererforacije kako se ne bi sakupljala voda.
+          <br>
+          Boje: plava i siva  /poleđina je uvek bež boje/
+          <br>
+          <strong>U skladu sa standardom  NF P 90-308.</strong>
+        ',
+        'h_tag_choice': 'p',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'premium_product': true
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/banner-small-w-image.html',
+      context={
+        'title': 'Automatski, univerzalni i zimski BWT pokrivači u skladu su sa francuskim standardom za bezbednost NF P 90-308.'
+      }
+    %}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '40px',
+        'left': '40px',
+        'right': '40px'
+      }
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <h2 class="h3" id="bazenske-kupole">Bazenske kupole</h2>
+              <p>
+                Za najefiksniju zaštitu bazena i produženu sezonu kupanja kod nas možete naručiti i jedan od brojnih modela pomične bazenske kupole koje uvozimo od renomiranog evropskog proizvođača AQUACOMET.
+                <br>
+                Kupole za bazene iz naše ponude izrađene su od punog polikarbonata koji ima UV zaštitu i sa spoljašnje i sa unutrašnje strane i aluminijumskih profila. U zavisnosti od modela sklopivi segmenti zaštitnih kupola se kreću po šinama ili bez njih.
+                <br>
+                Razlikujemo niskoprofilne kupole koje se savršeno uklapaju u okolinu, ili veće kupole koje i u hladnijim danima omogućavaju prijatno kupanje kao i odmor na suncu, koje je ispod transparentne ili providne kupole prijatno toplo i u hladnijim kasnojesenjim ili ranim prolećnim danima.
+                <br>
+                Pomična kupola je takođe i najsigurnija zaštita protiv nesrećnih slučajeva, pošto zatvorena kupola u potpunosti sprečava malu decu i kućne ljubimce da priđu bazenu.
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row 
+          margin={
+            'top':'50px'
+          }
+        %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='<h3 class="h4">Naši modeli kupola za bazen</h3>',
+            horizontal_alignment='CENTER'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path='../modules/simple-cards',
+            cards=[
+              {
+                "content": '
+                  <ul class="list-disc list-outside ml-0.5 flex flex-col gap-0.5">
+                    <li>RONDO – BEZ ŠINA, ZA SPA KADE</li>
+                    <li>SKY</li>
+                    <li>STAR</li>
+                    <li>STAR PLUS</li>
+                    <li>ZENIT STANDARD</li>
+                    <li>ZENIT FLAT</li>
+                  </ul>
+                '
+              },
+              {
+                "content": '
+                  <ul class="list-disc list-outside ml-0.5 flex flex-col gap-0.5">
+                    <li>VISUAL</li>
+                    <li>VISUAL FLAT</li>
+                    <li>HORIZON</li>
+                    <li>HORIZON HIGH</li>
+                    <li>HARMONIE</li>
+                    <li>HAMRONIE PLUS</li>
+                  </ul>
+                '
+              },
+              {
+                "content": '
+                  <ul class="list-disc list-outside ml-0.5 flex flex-col gap-0.5">
+                    <li>LOK</li>
+                    <li>PROFESSIONAL</li>
+                    <li>PRACTIC</li>
+                    <li>CREATIVE</li>
+                    <li>GALAXY</li>
+                    <li>ORION</li>
+                  </ul>
+                '
+              }
+            ]
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-cards.html',
+      context={
+        'backgroundColor': '#FFFFFF',
+        'show_decorators': true,
+        'h_tag_choice': 'p',
+        'cards': [
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "title": "Horizon",
+            "description": "
+              HORIZON je niskoprofilna kupola projektovana da zadovolji sve veću potražnju za savremenim dizajnom.
+              <br>
+              Ravni bočni profili omogućavaju elegantnu integraciju sa okruženjem.
+            ",
+            "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://google.com/"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+            },
+            "link_label": "View More",
+            "premium_product": false
+          },
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "title": "Harmonie",
+            "description": '
+              HARMONIE je bazenska kupola koja uprkos veličini, ima izgled prozračne, lagane konstrukcije, zahvaljujući velikim staklenim površinama.
+              <br>
+              Uz sav komfor koji pruža, odajući utisak zatvorenog bazenskog prostora, HARMONIE je ipak pokretna kupola, tako da u trenu otvara bazen i "nestaje" u prostoru.
+            ',
+            "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://google.com/"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+            },
+            "link_label": "View More",
+            "premium_product": false
+          }
+        ]
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/image-w-text-gradient.html',
+      context={
+        'heading_id': 'pool-walker',
+        'title': 'Pool Walker konstrukcija za pokrivanje bazena',
+        'description': 'POOL WALKER konstrukcija za pokrivanje bazena ima dvostruku namenu: kada je zatvorena, štiti bazen od prljanja, a predstavlja i platformu po kojoj se može hodati, sedeti na garnituri ili se koristiti za druge namene.',
+        'h_tag_choice': 'h3',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'background_color': '#F7F7FD'
+      }
+    %}
+
 
   {% end_dnd_area %}
 {% endblock body %}

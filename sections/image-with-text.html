@@ -26,6 +26,7 @@
             "max_height": 500
           }
         }}
+        heading_id={{ context.heading_id || '' }},
         title={{ context.title || 'Title' }},
         description={{ context.description || 'Description' }}
         reverse_content_direction={{ context.reverse_content_direction || false }},
@@ -41,7 +42,8 @@
             "open_in_new_tab": false,
             "no_follow": false
           }
-        }}
+        }},
+        premium_product={{ context.premium_product || false }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

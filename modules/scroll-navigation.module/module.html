@@ -1,0 +1,66 @@
+<div id="scroll-navigation-placeholder" class="w-full h-5 hidden" />
+<nav id="scroll-navigation" class="flex md:justify-center items-center overflow-auto px-2 h-5">
+  {% for link in module.navigation %}
+  <a class="scrollToLinks py-[15px] w-max px-2 whitespace-nowrap" href="{{ link.url_field.href }}">
+    {{link.link_label }}
+  </a>
+  {% endfor %}
+</nav>
+
+<!-- TODO placeholder showing when not supposed to -->
+
+{% require_js %}
+<script>
+
+  let links, scrollNavigation, scrollNavigationPosition, placeholder;
+
+  window.addEventListener('load', () => {
+    links = document.querySelectorAll('.scrollToLinks');
+    scrollNavigation = document.querySelector('#scroll-navigation');
+    scrollNavigationPosition = getElementsAbsolutePosition(scrollNavigation);
+    placeholder = document.querySelector('#scroll-navigation-placeholder');
+
+    createLinks(links);
+    transformNavigation(scrollNavigation, scrollNavigationPosition, placeholder);
+  });
+
+  window.addEventListener('scroll', () => transformNavigation(scrollNavigation, scrollNavigationPosition, placeholder));
+
+
+  const getElementsAbsolutePosition = (element) => {
+    const rect = element.getBoundingClientRect();
+    return rect.top + window.scrollY - 80;
+  };
+
+  const transformNavigation = (element, position, placeholder) => {
+    console.log('window.scrollY: ', window.scrollY, 'position: ', position);
+
+    if (window.scrollY >= position) {
+      element.classList.add('fixed', 'top-8', 'w-full', 'bg-lightGrey/70', 'left-0', 'backdrop-blur-3xl', 'z-20');
+      placeholder.classList.add('hidden');
+    } else {
+      element.classList.remove('fixed', 'top-8', 'w-full', 'bg-lightGrey/70', 'left-0', 'backdrop-blur-3xl', 'z-20');
+      placeholder.classList.remove('hidden');
+    }
+  };
+
+  const createLinks = (links) => {
+    links.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        links.forEach((link) => {
+          link.classList.remove('font-semibold');
+        })
+        e.target.classList.add('font-semibold');
+        const element = document.querySelector(e.target.hash);
+        if (element) {
+          element.classList.add('scroll-mt-[140px]')
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  }
+
+
+</script>
+{% end_require_js %}
