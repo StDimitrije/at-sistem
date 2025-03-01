@@ -43,7 +43,7 @@
 </div>
 
 {% require_js %}
-<script>
+<script defer>
 
   if (!checkHeadForSwiper()) {
     let script = document.createElement('script');
@@ -61,10 +61,6 @@
     const swiper = new Swiper(".swiper-gallery-" + '{{name}}', {
       slidesPerView: "auto",
       spaceBetween: 60,
-      {# pagination: {
-        el: ".swiper-pagination-{{name}}",
-        clickable: true,
-      }, #}
       freeMode: {
         enabled: true,
         sticky: true,

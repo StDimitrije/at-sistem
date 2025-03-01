@@ -51,7 +51,7 @@
   }
 
   .hero-title {
-    @apply font-bold text-4xl md:text-[50px] lg:text-[76px];
+    @apply font-bold text-4xl md:text-[50px] md:leading-none lg:text-[76px] ;
   }
 
   .hero-subtitle {
@@ -100,26 +100,27 @@
 }
 
 @layer utilities {
+  /* 
+    From Safari 13, only display: none works with this pseudo-element. Other styles have no effect. 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar#browser_compatibility
+  */
+  
   /* width */
   #scroll-navigation::-webkit-scrollbar {
       height: 3px;
-      width: 3px;
+      width: 0;
   }
 
   /* Track */
+  /* Bed of the slider */
   #scroll-navigation::-webkit-scrollbar-track {
-      /* background: #888; */
-      border-radius: 5px;
+      background: transparent;
   }
 
   /* Handle */
+  /* Slider */
   #scroll-navigation::-webkit-scrollbar-thumb {
       background: #D7B4F3;
       border-radius: 5px;
-  }
-
-  /* Handle on hover */
-  #scroll-navigation::-webkit-scrollbar-thumb:hover {
-      background: #000;
   }
 }

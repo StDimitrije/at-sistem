@@ -1,47 +1,72 @@
 <div id="scroll-navigation-placeholder" class="w-full h-5 hidden" />
-<nav id="scroll-navigation" class="flex md:justify-center items-center overflow-auto px-2 h-5">
+<nav id="scroll-navigation" class="flex md:justify-center items-center overflow-x-scroll px-2 h-5">
   {% for link in module.navigation %}
-  <a class="scrollToLinks py-[15px] w-max px-2 whitespace-nowrap" href="{{ link.url_field.href }}">
+  <a class="scrollToLinks py-[15px] w-max px-2 whitespace-nowrap relative font-normal after:absolute after:left-0 after:w-full after:h-[3px] md:after:bottom-0 after:top-0 after:bg-pink after:hidden"
+    href="{{ link.url_field.href }}">
     {{link.link_label }}
   </a>
   {% endfor %}
 </nav>
 
-<!-- TODO placeholder showing when not supposed to -->
+<div id="scroll-to-top" class="fixed bottom-1 right-1 z-20 hidden">
+  <button onclick="scrollToTop()" class="bg-blueDark hover:bg-blueDark py-0.5 px-1">
+    <span class="material-symbols-outlined">
+      arrow_upward
+    </span>
+  </button>
+</div>
+
 
 {% require_js %}
-<script>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward" />
 
-  let links, scrollNavigation, scrollNavigationPosition, placeholder;
+<script defer>
+
+  let links, scrollNavigation, scrollToTopButton, scrollNavigationPosition, placeholder;
 
   window.addEventListener('load', () => {
     links = document.querySelectorAll('.scrollToLinks');
     scrollNavigation = document.querySelector('#scroll-navigation');
+    scrollToTopButton = document.querySelector('#scroll-to-top');
     scrollNavigationPosition = getElementsAbsolutePosition(scrollNavigation);
     placeholder = document.querySelector('#scroll-navigation-placeholder');
 
     createLinks(links);
-    transformNavigation(scrollNavigation, scrollNavigationPosition, placeholder);
+    transformNavigation(scrollNavigation, scrollNavigationPosition, placeholder, scrollToTopButton);
   });
 
-  window.addEventListener('scroll', () => transformNavigation(scrollNavigation, scrollNavigationPosition, placeholder));
+  window.addEventListener('scroll', () => transformNavigation(scrollNavigation, scrollNavigationPosition, placeholder, scrollToTopButton));
 
+  const transformNavigation = (element, position, placeholder, scrollToTopButton) => {
+    if (window.scrollY >= position) {
+      element.classList.add('fixed', 'top-8', 'w-full', 'bg-lightGrey/70', 'left-0', 'backdrop-blur-3xl', 'z-20');
+      placeholder.classList.remove('hidden');
+      scrollToTopButton.classList.remove('hidden');
+    }
+    if (window.scrollY < position) {
+      element.classList.remove('fixed', 'top-8', 'w-full', 'bg-lightGrey/70', 'left-0', 'backdrop-blur-3xl', 'z-20');
+      placeholder.classList.add('hidden');
+      scrollToTopButton.classList.add('hidden');
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  };
 
   const getElementsAbsolutePosition = (element) => {
     const rect = element.getBoundingClientRect();
+    console.log({
+      element,
+      rectTop: rect.top,
+      offset: window.scrollY,
+      return: rect.top + window.scrollY - 80
+    });
     return rect.top + window.scrollY - 80;
-  };
-
-  const transformNavigation = (element, position, placeholder) => {
-    console.log('window.scrollY: ', window.scrollY, 'position: ', position);
-
-    if (window.scrollY >= position) {
-      element.classList.add('fixed', 'top-8', 'w-full', 'bg-lightGrey/70', 'left-0', 'backdrop-blur-3xl', 'z-20');
-      placeholder.classList.add('hidden');
-    } else {
-      element.classList.remove('fixed', 'top-8', 'w-full', 'bg-lightGrey/70', 'left-0', 'backdrop-blur-3xl', 'z-20');
-      placeholder.classList.remove('hidden');
-    }
   };
 
   const createLinks = (links) => {
@@ -49,17 +74,18 @@
       link.addEventListener('click', (e) => {
         e.preventDefault();
         links.forEach((link) => {
-          link.classList.remove('font-semibold');
+          link.classList.add('after:hidden');
         })
-        e.target.classList.add('font-semibold');
+        e.target.classList.remove('after:hidden');
         const element = document.querySelector(e.target.hash);
-        if (element) {
-          element.classList.add('scroll-mt-[140px]')
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        element && window.scrollTo({
+          top: getElementsAbsolutePosition(element) - 60,
+          behavior: 'smooth'
+        });
       });
     });
   }
+
 
 
 </script>
