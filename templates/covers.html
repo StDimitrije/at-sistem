@@ -16,15 +16,30 @@
   %}
 
     {% include_dnd_partial
-      path='../sections/hero-2.html'
+      path='../sections/hero-2.html',
+      context={
+        html: '
+          <h1 class="hero-title">Pokrivači za bazen</h1>
+          <p class="hero-subtitle">Bazenski pokrivači i kupole sprečavaju prljanje bazena i isparavanje vode, čuvaju temperaturu vode i predstavljaju zaštitu od upada dece i kućnih ljubimaca.</p>
+        '
+      }
     %}
 
     {% include_dnd_partial
       path='../sections/header-1.html',
       context={
-        'spacing': 'p-4',
-        'title': '<h2 class="text-center">Bazenski pokrivači kao ekonomično i bezbedno rešenje</h2>',
-        'subtitle': '<p class="text-center font-normal lg:text-base">Korišćenjem bazenskih pokrivača smanjuje se isparavanje vode, gubitak energije, upotreba hemijskih sredstava, a skraćuje se i vreme potrebno za čišćenje bazena. Da li vam se ovo čini kao dovoljan razlog da razmislite o nabavci prekrivača za bazen? A&T SISTEM ima u ponudi sve tipove pokrivača, koji se naručuju po meri bazena i proizvode u Francuskoj. Proizvođač je BWT POOL PRODUCTS  (link ka stranici brenda) čije dugogodišnje iskustvo u proizvodnji pokrivača, uz pomoć najmodernijih alata, vrhunske tehnologije  i strogo praćenog i kontrolisanog proizvodnog procesa, garantuje jedinstven kvalitet.</p>'
+        'custom_section_classes': 'p-4',
+        'title': '<h2>Bazenski pokrivači kao ekonomično i bezbedno rešenje</h2>',
+        'subtitle': '
+        <p class="font-normal lg:text-base">
+          Korišćenjem bazenskih pokrivača smanjuje se isparavanje vode, gubitak energije, upotreba hemijskih sredstava, a skraćuje se i vreme potrebno za čišćenje bazena.
+          Da li vam se ovo čini kao dovoljan razlog da razmislite o nabavci prekrivača za bazen? 
+          <br>
+          <br>
+          A&T SISTEM ima u ponudi sve tipove pokrivača, koji se naručuju po meri bazena i proizvode u Francuskoj. 
+          <br>
+          Proizvođač je <a class="font-bold underline" href="https://shop.atsistem.rs/sr/collections/all?sort_by=title-ascending&filter.p.vendor=BWT+POOL+PRODUCTS">BWT POOL PRODUCTS</a> čije dugogodišnje iskustvo u proizvodnji pokrivača, uz pomoć najmodernijih alata, vrhunske tehnologije  i strogo praćenog i kontrolisanog proizvodnog procesa, garantuje jedinstven kvalitet.
+          </p>'
       }
     %}
 
@@ -37,7 +52,7 @@
             "link_label" : "Automatski",
             "url_field" : {
               "content_id" : null,
-              "href" : "/#automatski-pokrivaci-za-bazene",
+              "href" : "#automatski-pokrivaci-za-bazene",
               "type" : "EXTERNAL"
             }
           },
@@ -45,7 +60,7 @@
             "link_label" : "Univerzalni",
             "url_field" : {
               "content_id" : null,
-              "href" : "/#univerzalni-bazenski-pokrivaci",
+              "href" : "#univerzalni-bazenski-pokrivaci",
               "type" : "EXTERNAL"
             }
           },
@@ -53,7 +68,7 @@
             "link_label" : "Letnji",
             "url_field" : {
               "content_id" : null,
-              "href" : "/#letnji-pokrivaci",
+              "href" : "#letnji-pokrivaci",
               "type" : "EXTERNAL"
             }
           },
@@ -61,7 +76,7 @@
             "link_label" : "Zimski",
             "url_field" : {
               "content_id" : null,
-              "href" : "/#zimski-pokrivaci",
+              "href" : "#zimski-pokrivaci",
               "type" : "EXTERNAL"
             }
           },
@@ -69,7 +84,7 @@
             "link_label" : "Kupole",
             "url_field" : {
               "content_id" : null,
-              "href" : "/#bazenske-kupole",
+              "href" : "#bazenske-kupole",
               "type" : "EXTERNAL"
             }
           },
@@ -77,7 +92,7 @@
             "link_label" : "Pool Walker",
             "url_field" : {
               "content_id" : null,
-              "href" : "/#pool-walker",
+              "href" : "#pool-walker",
               "type" : "EXTERNAL"
             }
           }
@@ -99,8 +114,8 @@
           {% dnd_module
             path='@hubspot/rich_text',
             html='
-              <h3 id="automatski-pokrivaci-za-bazene">Automatski pokrivači za bazene</h3>
-              <p class="lg:w-1/2">
+              <h3 class="automatski-pokrivaci-za-bazene">Automatski pokrivači za bazene</h3>
+              <p class="lg:w-3/5 xl:w-1/2">
                 Proizvođač: BWT POOL PRODUCTS, Francuska
                 <br>
                 Automatske nadgradni ili potopljeni rolo pokrivači  predstavljaju savršen spoj elegancije, pouzdanosti i jednostavnog rukovanja. Jednim okretom ključa, lamele bešumno klize po površini vode i vaš bazen je, po želji, prekriven ili otkriven. 
@@ -111,7 +126,7 @@
         {% end_dnd_row %}
         {% dnd_row 
           margin={
-            'top':'50px'
+            'top':'40px'
           }
         %}
           {% dnd_module
@@ -127,23 +142,38 @@
     {% include_dnd_partial
       path='../sections/image-with-text.html',
       context={
+        'custom_classes': 'px-4 pb-3 pt-2',
         'background_color': '#F7F7FD',
         'title': 'BWT Pearl Protect',
         'description': '
-        BWT PEARL PROTECT je automatski nadgradni prekrivač koji vašem bazenu može dati unikatan izgled, jer pored boje lamela možete birati i boju postolja, kao i opciju da ono bude led osvetljeno.
-        <br>
-        Maksimalne dimenzije bazena koju pokriva su: 10 x 5 m
-        <br>
-        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+          BWT PEARL PROTECT je automatski nadgradni prekrivač koji vašem bazenu može dati unikatan izgled, jer pored boje lamela možete birati i boju postolja, kao i opciju da ono bude led osvetljeno.
+          <br>
+          Maksimalne dimenzije bazena koju pokriva su: 10 x 5 m
+          <br>
+          <br>
+          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+          <br><small>©photo creadit : BWT POOL PRODUCTS</small>
+          ',
         'h_tag_choice': 'p',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/BWT%20Pearl%20Protect.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Pearl%20Protect.jpg",
+          "alt": "BWT Pearl Protect pokrivac",
+          "size_type": "auto",
+          "width": 760,
+          "height": 300,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
         }
       }
     %}
@@ -156,16 +186,30 @@
         'description': '
         AQUADECK EC je elegantno dizajniran automatski pokrivač koji pokriva bazene maksimalnih dimenzija 6 x 14 m. Dolazi sa elektrokomandnom jedinicom koja se instalira u tehničku prostoriju.
         <br>
-        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        <br>
+        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+        <br><small>©photo creadit : BWT POOL PRODUCTS</small>
+        ',
         'h_tag_choice': 'p',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Aquadeck.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Aquadeck.jpg",
+          "alt": "BWT Aquadeck pokrivac",
+          "size_type": "auto",
+          "width": 760,
+          "height": 300,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
         },
         'reverse_content_direction': true
       }
@@ -181,38 +225,56 @@
         <br>
         Pokriva bazene dimenzija do 12 x 5 m
         <br>
-        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+        <br>
+        <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+        <br><small>©photo creadit : BWT POOL PRODUCTS</small>
+        ',
         'h_tag_choice': 'p',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Aquamatic.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
-        }
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Aquamatic.jpg",
+          "alt": "BWT Aquamatic pokrivac",
+          "size_type": "auto",
+          "width": 760,
+          "height": 300,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
+        },
       }
     %}
 
     {% dnd_section 
       padding={
-        'top': '40px',
-        'bottom': '0',
-        'left': '40px',
-        'right': '40px'
+        'default': {
+          'top': '50px',
+          'bottom': '0',
+          'left': '40px',
+          'right': '40px'
+        },
+        'mobile': {
+          'top': '40px',
+          'bottom': '0',
+          'left': '40px',
+          'right': '40px'
+        }
       },
       background_color='#F7F7FD'
     %}
       {% dnd_column width=12, offset=0 %}
-        {% dnd_row 
-          margin={
-            'top':'20px'
-          }
-        %}
+        {% dnd_row %}
           {% dnd_module
             path='@hubspot/rich_text',
-            html='<h4 id="id" class="mb-0">Automatski potopljeni pokrivači</h4>',
+            html='<h4 class="-mb-0.5">Automatski potopljeni pokrivači</h4>',
             horizontal_alignment='CENTER'
           %}
           {% end_dnd_module %}
@@ -223,69 +285,78 @@
     {% include_dnd_partial
       path='../sections/image-cards.html',
       context={
+        'custom_classes': 'pb-1',
         'show_decorators': false,
         'h_tag_choice': 'p',
         'cards': [
           {
             "image_field": {
             "size_type": "auto",
-            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
-            "alt": "salt-room",
-            "loading": "lazy",
-            "width": 600,
-            "height": 416,
-            "max_width": 600,
-            "max_height": 416
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/Stardeck.jpeg",
+            "alt": "BWT Stardeck pokrivac",
+            "loading": "eager",
+            "width": 760,
+            "height": 300,
+            "max_width": 700,
+            "max_height": 420
             },
             "title": "BWT Stardeck",
-            "description": "
+            "description": '
               BWT STARDECK je linija automatskih bazenskih pokrivača, posebno projektovana za bazene u izgradnji. Izborom jednog od tri modela  (STARDECK CLASSIC, STARDECK HIGH LEVEL, STARDECK INEO) dobijate vrhunski dizajniran, pouzdan automatski pokrivač koji  elegantno prati linije vašeg bazena.
               <br>
               Za izbor željenog modela i odgovarajuće konfigurcije konsultujte se sa našim profesionalnim timom koji je specijalizovan za BWT pokrivače, i koji će vam pružiti sve potrebne informacije i savete, uz prezentaciju uzoraka za što bolji uvid u estetski izgled pokrivača.
               <br>
               U zavisnosti od izabranog modela STARDECK može da pokrije bazene i do 23 m dužine.
               <br>
+              <br>
               <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
-            ",
+              <br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
+            ',
             "link_field": {
             "url": {
               "content_id": null,
               "type": "EXTERNAL",
-              "href": "https://google.com/"
+              "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Stardeck.pdf"
             },
-            "open_in_new_tab": false,
+            "open_in_new_tab": true,
             "no_follow": false
             },
-            "link_label": "View More",
+            "link_label": "Preuzmite brošuru",
             "premium_product": true
           },
           {
             "image_field": {
             "size_type": "auto",
-            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
-            "alt": "salt-room",
-            "loading": "lazy",
-            "width": 600,
-            "height": 416,
-            "max_width": 600,
-            "max_height": 416
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Coverdeck.jpg",
+            "alt": "BWT Coverdeck pokrivac",
+            "loading": "eager",
+            "width": 760,
+            "height": 300,
+            "max_width": 700,
+            "max_height": 300
             },
             "title": "BWT Coverdeck",
-            "description": "
-              BWT COVERDECK je elegantan i pouzdan automatski potopljeni pokrivač koji može da se ugradi u već postojeće bazene, maksimalne dužine do 14 m.
+            "description": '
+              BWT COVERDECK i COVERDECK HIGH LEVEL su modeli elegantnog i pouzdanog automatskog potopljenog pokrivača koji može da se ugradi u već postojeće bazene, maksimalne dužine do 14 m.
+              <br>
+              Ovaj pokrivač ne zahteva suvi šaht za motor i instalira se bez oštećenja hidroizolacije bazena. Motor je zaštićen, iznad nivoa vode i lako je dostupan za demontažu.
+              <br>
+              Za više informacija konsultujte se sa našim profesionalnim timom koji je specijalizovan za BWT proizvode, i koji će vam pružiti sve potrebne informacije i savete, uz prezentaciju uzoraka za što bolji uvid u estetski izgled.
+              <br>
               <br>
               <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
-            ",
+              <br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
+            ',
             "link_field": {
             "url": {
               "content_id": null,
               "type": "EXTERNAL",
-              "href": "https://google.com/"
+              "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Coverdeck.pdf"
             },
-            "open_in_new_tab": false,
+            "open_in_new_tab": true,
             "no_follow": false
             },
-            "link_label": "View More",
+            "link_label": "Preuzmite brošuru",
             "premium_product": false
           }
         ]
@@ -305,8 +376,8 @@
           {% dnd_module
             path='@hubspot/rich_text',
             html='
-              <h3 id="univerzalni-bazenski-pokrivaci">Univerzalni bazenski pokrivači</h3>
-              <p class="lg:w-1/2">
+              <h3 class="univerzalni-bazenski-pokrivaci">Univerzalni bazenski pokrivači</h3>
+              <p class="xl:w-1/2">
                 Univerzalni prekrivači iz naše ponude izrađeni su od segmenata jake poliesterske membrane (650 g/m2) i šipki od eloksiranog aluminijuma.
                 <br>
                 Obe strane pokrivača su lakirane, tako da se lako čiste mlazom vode i imaju pojačanu otpornost.
@@ -333,17 +404,31 @@
           <br>
           CALYPSO ima plastificirano čelično uže postavljeno sa obe duže strane, koje ga dodatno učvršćuju, tako da je otporniji na vetar i teže ga je pomeriti.
           <br>
-          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+          <br>
+          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+          <br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
+          ',
         'h_tag_choice': 'p',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Calypso.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
         },
+        'image_field': {
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Calypso.jpg",
+            "alt": "BWT Calypso pokrivac",
+            "size_type": "auto",
+            "width": 725,
+            "height": 300,
+            "loading": "eager",
+            "max_width": 725,
+            "max_height": 300
+          },
         'premium_product': true
       }
     %}
@@ -359,17 +444,31 @@
           <br>
           MAMBO može da se dodatno pričvrsti trakama po dužini, ukoliko se bazen nalazi na mestu koje je izloženo vetru.
           <br>
-          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
+          <br>
+          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+          <br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
+          ',
         'h_tag_choice': 'p',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Mambo.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
         },
+        'image_field': {
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Mambo.jpg",
+            "alt": "BWT Mambo pokrivac",
+            "size_type": "auto",
+            "width": 725,
+            "height": 300,
+            "loading": "eager",
+            "max_width": 725,
+            "max_height": 300
+          },
         'reverse_content_direction': true
       }
     %}
@@ -385,17 +484,30 @@
           <br>
           CBE-650 je kvalitetan univerzalni pokrivač koji ima najekonomičniju cenu.
           <br>
-          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>',
-        'h_tag_choice': 'p',
+          <br>
+          <strong>U skladu su sa francuskim standardom za bezbednost NF P 90-308.</strong>
+          <br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
+          ',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/CBE-650.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
-        }
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20CBE-650.jpg",
+          "alt": "BWT CBE-650 pokrivac",
+          "size_type": "auto",
+          "width": 725,
+          "height": 300,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 300
+        },
       }
     %}
 
@@ -413,8 +525,8 @@
           {% dnd_module
             path='@hubspot/rich_text',
             html='
-              <h3 id="letnji-pokrivaci">Letnji pokrivači</h3>
-              <p class="lg:w-1/2">
+              <h3 class="letnji-pokrivaci">Letnji pokrivači</h3>
+              <p class="lg:w-3/5 xl:w-1/2">
                 Izrađeni od UV stabilizovanog polietilena, sa mehurovima koji predstavljaju odličnu izolaciju i dobro prianjaju na površinu vode.
                 <br>
                 Mogu biti opšiveni i ojačani sa svih strana, ili samo sečeni na željenu dimenziju.
@@ -431,6 +543,7 @@
     {% include_dnd_partial
       path='../sections/image-with-text.html',
       context={
+        'custom_classes': 'px-4 pt-3 pb-4',
         'title': 'Super 500',
         'description': '
           • GeoBubble tehnologija
@@ -442,16 +555,29 @@
           • zatezne trake
           <br>
           • OMEGA motalica
+          <br>
+          <br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
         ',
         'h_tag_choice': 'p',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Super%20500.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Super%20500.jpg",
+          "alt": "BWT Super 500 pokrivac",
+          "size_type": "auto",
+          "width": 725,
+          "height": 300,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 300
         },
         'background_color': '#F7F7FD'
       }
@@ -470,8 +596,8 @@
           {% dnd_module
             path='@hubspot/rich_text',
             html='
-              <h3 id="zimski-pokrivaci">Zimski pokrivači</h3>
-              <p class="lg:w-1/2">
+              <h3 class="zimski-pokrivaci">Zimski pokrivači</h3>
+              <p class="lg:w-3/5 xl:w-1/2">
                 Naši zimski prekrivači pravljeni su od ojačanog tkanog poliestera impregniranog PVC-om.
                 <br>
                 Oni se fiksiraju u plažu oko bazena i štite bazen u zimskom periodu. Imaju mikro perforaciju po celoj površini ili delimično, kako bi se vršila drenaža atmosferskih padavina.
@@ -486,6 +612,7 @@
     {% include_dnd_partial
       path='../sections/image-with-text.html',
       context={
+        'custom_classes': 'px-4 pt-3 pb-4',
         'title': 'Epervier',
         'description': '
           EPERVIER je kvalitetni pokrivač od impregniranog ojačanog poliestera, opšiven sa svih strana.
@@ -494,21 +621,35 @@
           <br>
           Boje: plava i siva  /poleđina je uvek bež boje/
           <br>
+          <br>
           <strong>U skladu sa standardom  NF P 90-308.</strong>
+          <br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
         ',
         'h_tag_choice': 'p',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Epervier.pdf",
             "content_id": null
           },
-          "open_in_new_tab": false,
+          "open_in_new_tab": true,
           "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pokrivaci/BWT%20Epervier.jpg",
+          "alt": "BWT Epervier pokrivac",
+          "size_type": "auto",
+          "width": 725,
+          "height": 300,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 300
         },
         'premium_product': true
       }
     %}
+
 
     {% include_dnd_partial
       path='../sections/banner-small-w-image.html',
@@ -530,7 +671,7 @@
           {% dnd_module
             path='@hubspot/rich_text',
             html='
-              <h2 class="h3" id="bazenske-kupole">Bazenske kupole</h2>
+              <h2 class="h3 bazenske-kupole">Bazenske kupole</h2>
               <p>
                 Za najefiksniju zaštitu bazena i produženu sezonu kupanja kod nas možete naručiti i jedan od brojnih modela pomične bazenske kupole koje uvozimo od renomiranog evropskog proizvođača AQUACOMET.
                 <br>
@@ -546,12 +687,12 @@
         {% end_dnd_row %}
         {% dnd_row 
           margin={
-            'top':'50px'
+            'top':'40px'
           }
         %}
           {% dnd_module
             path='@hubspot/rich_text',
-            html='<h3 class="h4">Naši modeli kupola za bazen</h3>',
+            html='<h3 class="h4 mb-2">Naši modeli kupola za bazen</h3>',
             horizontal_alignment='CENTER'
           %}
           {% end_dnd_module %}
@@ -615,28 +756,31 @@
             "size_type": "auto",
             "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
             "alt": "salt-room",
-            "loading": "lazy",
-            "width": 600,
-            "height": 416,
-            "max_width": 600,
-            "max_height": 416
+            "loading": "eager",
+            "width": 700,
+            "height": 420,
+            "max_width": 700,
+            "max_height": 420
             },
             "title": "Horizon",
-            "description": "
+            "description": '
               HORIZON je niskoprofilna kupola projektovana da zadovolji sve veću potražnju za savremenim dizajnom.
               <br>
               Ravni bočni profili omogućavaju elegantnu integraciju sa okruženjem.
-            ",
+              <br>
+              <br>
+              <small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
+            ',
             "link_field": {
             "url": {
               "content_id": null,
               "type": "EXTERNAL",
               "href": "https://google.com/"
             },
-            "open_in_new_tab": false,
+            "open_in_new_tab": true,
             "no_follow": false
             },
-            "link_label": "View More",
+            "link_label": "Preuzmite brošuru",
             "premium_product": false
           },
           {
@@ -644,17 +788,20 @@
             "size_type": "auto",
             "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
             "alt": "salt-room",
-            "loading": "lazy",
-            "width": 600,
-            "height": 416,
-            "max_width": 600,
-            "max_height": 416
+            "loading": "eager",
+            "width": 700,
+            "height": 420,
+            "max_width": 700,
+            "max_height": 420
             },
             "title": "Harmonie",
             "description": '
               HARMONIE je bazenska kupola koja uprkos veličini, ima izgled prozračne, lagane konstrukcije, zahvaljujući velikim staklenim površinama.
               <br>
               Uz sav komfor koji pruža, odajući utisak zatvorenog bazenskog prostora, HARMONIE je ipak pokretna kupola, tako da u trenu otvara bazen i "nestaje" u prostoru.
+              <br>
+              <br>
+              <small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>
             ',
             "link_field": {
             "url": {
@@ -665,7 +812,7 @@
             "open_in_new_tab": false,
             "no_follow": false
             },
-            "link_label": "View More",
+            "link_label": "Preuzmite brošuru",
             "premium_product": false
           }
         ]
@@ -675,10 +822,11 @@
     {% include_dnd_partial
       path='../sections/image-w-text-gradient.html',
       context={
-        'heading_id': 'pool-walker',
+        'custom_classes': 'pool-walker px-4 py-3',
         'title': 'Pool Walker konstrukcija za pokrivanje bazena',
-        'description': 'POOL WALKER konstrukcija za pokrivanje bazena ima dvostruku namenu: kada je zatvorena, štiti bazen od prljanja, a predstavlja i platformu po kojoj se može hodati, sedeti na garnituri ili se koristiti za druge namene.',
+        'description': 'POOL WALKER konstrukcija za pokrivanje bazena ima dvostruku namenu: kada je zatvorena, štiti bazen od prljanja, a predstavlja i platformu po kojoj se može hodati, sedeti na garnituri ili se koristiti za druge namene.<br><br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>',
         'h_tag_choice': 'h3',
+        'link_label': 'Preuzmite brošuru',
         'link': {
           "url": {
             "type": "EXTERNAL",

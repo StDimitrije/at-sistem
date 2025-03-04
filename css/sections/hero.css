@@ -8,18 +8,24 @@
   z-index: 1;
 }
 
-.hero-2 .row-fluid {
-  width: calc(70% + 40px);
+.hero-2 .row-fluid-wrapper {
+  width: calc(50% + 40px);
+}
+
+@media(max-width: 1280px) {
+  .hero-2 .row-fluid-wrapper {
+    width: calc(75% + 40px);
+  }
 }
 
 @media(max-width: 1024px) {
-  .hero-2 .row-fluid {
-    width: 80%;
+  .hero-2 .row-fluid-wrapper {
+    width: calc(65% + 40px);
   }
 }
 
 @media(max-width: 768px) {
-  .hero-2 .row-fluid {
+  .hero-2 .row-fluid-wrapper {
     width: 100%;
   }
 }

@@ -7,7 +7,7 @@
 {% macro render_link_item(link) %}
 <li class="
     menu__item 
-    {{ 'menu__item--has-submenu' if link.children }}
+    {{ 'menu__item--has-submenu mr-0.5' if link.children }}
     p-0 relative flex items-center flex-col justify-center cursor-pointer
     ">
   {% if link.url %}

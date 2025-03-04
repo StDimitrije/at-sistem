@@ -18,6 +18,7 @@
     {% include_dnd_partial
       path='../sections/header-1.html',
       context={
+        'custom_section_classes': 'px-4 pt-[140px] pb-6 text-center',
         'title': '<h1>Oprema za bazene</h1>',
         'subtitle': '<p class="font-light text-lg xl:text-3xl mb-2">A&T SISTEM nudi širok asortiman opreme za bazene renomeniranih proizvođača.</p>',
 				'button_text': 'POGLEDAJTE PONUDU',
@@ -328,7 +329,8 @@
           "loading": "lazy",
           "max_width": 725,
           "max_height": 500
-        }
+        },
+        'image_fit': 'contain'
       }
     %}
 
@@ -338,7 +340,18 @@
         'title': 'IBG® - Praher® cevi i ventili',
         'description': 'Veleprodaja PVC-U cevi, ventila i fitinga, sa radnim pritiskom 10 - 16 bara, proizvedenih u skladu sa standardima kvaliteta za pijaću vodu, prehrambenu industriju i industriju pića.',
         'h_tag_choice': 'h3',
-        'link_label': 'Pogledajte ponudu'
+        'link_label': 'Pogledajte ponudu',
+        'image_field': {
+          "src": 'https://atsistem.rs/hubfs/Sadrzaj%20Oprema/logo_praher-plastics.svg',
+          "alt": "IBG Praher cevi i ventili",
+          "size_type": null,
+          "width": 725,
+          "height": 500,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain'
       }
     %}
 

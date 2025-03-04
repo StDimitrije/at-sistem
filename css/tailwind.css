@@ -9,12 +9,12 @@
   h4,
   h5,
   h6 {
-    @apply m-0 mb-2 font-sans;
+    @apply m-0 mb-1 lg:mb-2 font-sans;
   }
 
   h1,
   .h1 {
-    @apply text-h1;
+    @apply text-[40px] lg:text-h1;
   }
 
   h2,
@@ -24,12 +24,12 @@
 
   h3,
   .h3 {
-    @apply text-xl lg:text-h3 font-bold leading-1 sm:leading-3;
+    @apply text-[26px] lg:text-h3 font-bold leading-1 sm:leading-3;
   }
 
   h4,
   .h4 {
-    @apply text-xl lg:text-h4;
+    @apply font-normal text-xl leading-3 lg:text-h4;
   }
 
   h5,
@@ -43,7 +43,7 @@
   }
 
   p {
-    @apply font-sans text-sm font-light leading-snug;
+    @apply font-sans text-xs font-light leading-snug lg:text-p;
   }
 
   .subheading {
@@ -51,7 +51,7 @@
   }
 
   .hero-title {
-    @apply font-bold text-4xl md:text-[50px] md:leading-none lg:text-[76px] ;
+    @apply font-bold text-4xl md:text-[50px] md:leading-none lg:text-[56px] 2xl:text-[68px];
   }
 
   .hero-subtitle {
@@ -82,7 +82,7 @@
     text-decoration: none;
   }
  
-  .menu__item--open .menu__submenu{
+  .menu__item--open .menu__submenu {
     @apply flex;
   }
 

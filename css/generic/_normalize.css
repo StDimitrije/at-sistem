@@ -11,6 +11,9 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+   -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
 }
 
 /* Sections
@@ -104,7 +107,7 @@ samp {
  */
 
 small {
-  font-size: 60%;
+  font-size: 80%;
 }
 
 /**

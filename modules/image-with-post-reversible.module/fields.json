@@ -44,11 +44,16 @@
   "type": "choice"
  },
  {
-  "type": "text",
+  "allow_new_line": false,
+  "display_width": null,
   "id": "63e07c06-a0b6-0aef-14d6-3176665ded22",
-  "validation_regex": "",
   "label": "Heading Id",
-  "name": "heading_id"
+  "locked": false,
+  "name": "heading_id",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": ""
  },
  {
   "default": false,
@@ -108,6 +113,24 @@
   "responsive": true,
   "show_loading": false,
   "type": "image"
+ },
+ {
+  "type": "choice",
+  "id": "564d553d-84ae-7d46-738f-c932209a4748",
+  "display": "select",
+  "choices": [
+   [
+    "cover",
+    "Cover"
+   ],
+   [
+    "contain",
+    "Contain"
+   ]
+  ],
+  "label": "Image Fit",
+  "name": "image_fit",
+  "default": "cover"
  },
  {
   "allow_new_line": false,

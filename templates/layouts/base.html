@@ -12,6 +12,9 @@
   {% endif %}
   {{ require_css(get_asset_url("../../css/tw-output.css")) }}
   {{ require_css(get_asset_url("../../css/main.css")) }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   {% if page_meta.html_title || pageTitle %}<title>{{ page_meta.html_title || pageTitle }}</title>{% endif %}
   {% if site_settings.favicon_src %}
   <link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
@@ -39,7 +42,7 @@
     {% global_partial path='../partials/footer.html' %}
     {% endblock footer %}
   </div>
-  {{ require_js(get_asset_url('../../js/main.js'), { position: "footer", async: true }) }}
+  {{ require_js(get_asset_url('../../js/main.js'), { position: "footer" }) }}
   {# To see a full list of what is included via standard_footer_includes please reference this article:
   https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
   {{ standard_footer_includes }}

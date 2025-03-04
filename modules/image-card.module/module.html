@@ -13,16 +13,21 @@
       {% if card.premium_product == true %}
         {% set hasAnyPremiumProduct = true %}
       {% endif %}
-    <div class="drop-shadow-xs lg:max-w-[600px] w-full lg:w-1/2 flex flex-col">
-      <div class=" flex items-end relative w-full h-[250px] lg:h-[350px] p-2 sm:p-3 bg-cover bg-center"
+    <div class="drop-shadow-xs lg:max-w-[600px] w-full lg:w-1/2 flex flex-col relative">
+      {% if card.premium_product %}
+        <div class="w-full bg-purpleGradient absolute top-0 left-0 z-10 py-[3px]">
+          <p class="text-xl text-center text-white tracking-wider leading-1">Premium</p>
+        </div>
+      {% endif %}
+      <div class=" flex items-end relative w-full h-[220px] sm:h-[250px] lg:h-[300px] p-2 sm:p-3 bg-cover bg-center"
         style="{{'background-image: url({{card.image_field.src}})'}}">
         <div class="bg-textBaseGradient absolute size-full top-0 left-0" />
-        <{{ module.h_tag_choice }} class="text-2xl text-white z-10 font-bold mb-0">
+        <{{ module.h_tag_choice }} class="text-lg md:text-xl lg:text-2xl text-white z-10 font-bold mb-0">
           {{ card.title }}</{{ module.h_tag_choice }}>
       </div>
       <div class="w-full h-[6px] bg-purpleGradient"></div>
       <div
-        class="p-2 sm:p-3 gap-2 sm:gap-3 {{ 'md:!pb-6' if card.premium_product == false and hasAnyPremiumProduct == true }} bg-white flex flex-col flex-1 justify-between">
+        class="p-2 sm:p-3 gap-2 sm:gap-3 bg-white flex flex-col flex-1 justify-between">
         <p>{{ card.description }}</p>
         {% if card.link_field.url.href != '' %}
         <a href="{{ card.link_field.url.href }}" {{ 'target="_blank"' if card.link_field.open_in_new_tab==true }}
@@ -31,11 +36,7 @@
         </a>
         {% endif %}
       </div>
-      {% if card.premium_product %}
-      <div class="w-full bg-purpleGradient">
-        <p class="text-xl text-center text-white tracking-wider leading-1">Premium</p>
-      </div>
-      {% endif %}
+      
     </div>
     {% endfor %}
   </div>

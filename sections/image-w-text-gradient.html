@@ -7,7 +7,7 @@
 -->
 
 {% dnd_section
-  class="px-4 py-4",
+  class=" {{ context.custom_classes || 'px-4 py-4' }}",
   background_linear_gradient={
     "direction": "to right",
     "colors": [
@@ -27,11 +27,12 @@
             "size_type": null,
             "width": 725,
             "height": 500,
-            "loading": "lazy",
+            "loading": "eager",
             "max_width": 725,
             "max_height": 500
           }
         }},
+        image_fit={{ context.image_fit || 'cover' }},
         heading_id={{ context.heading_id || '' }},
         title={{ context.title || 'Title' }},
         description={{ context.description || 'Description' }}

@@ -92,6 +92,7 @@ body .submenu.level-2 > li:first-child.focus:before {
 .header__container {
   position: relative;
   display: flex;
+  max-width: var(--container-max-width);
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--color-white);

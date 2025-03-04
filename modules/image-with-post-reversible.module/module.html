@@ -1,19 +1,36 @@
 <div
-  class="flex flex-wrap {{ 'flex-row-reverse' if module.reverse_content_direction }} gap-3 lg:gap-[120px] xl:gap-[160px]">
-  <img src="{{ module.image_field.src }}" loading="lazy" alt="{{ module.image.alt }}" height="420" width="760"
-    class="object-cover object-center max-h-[300px] md:max-h-[420px] w-full lg:w-1/2" />
+  class="flex flex-wrap {{ 'flex-row-reverse' if module.reverse_content_direction }} gap-1 lg:gap-[120px] 2xl:gap-[160px]">
+  <div class="w-full lg:w-1/2">
+    {% if module.premium_product %}
+    <div class="w-full bg-purpleGradient block lg:hidden">
+      <p class="text-xl text-center text-white tracking-wider leading-2">Premium</p>
+    </div>
+    {% endif %}
+    <img src="{{ module.image_field.src }}" loading="{{ module.image_field.loading }}" alt="{{ module.image.alt }}"
+      height="{{ module.image.height }}" width="{{ module.image.width }}"
+      class="object-{{ module.image_fit }} object-center h-[200px] sm:h-[250px] md:h-[280px] lg:h-[360px] w-full" />
+  </div>
   <div class="flex w-full lg:w-1/2 items-left m-auto lg:items-center flex-1">
     <div class="flex flex-col w-full">
-      <{{ module.h_tag_choice }} class="h3 {{ 'mb-1' if module.premium_product else 'mb-0' }}" id="{{ module.heading_id }}">{{ module.title }}</{{ module.h_tag_choice }}>
       {% if module.premium_product %}
-      <div class="w-full bg-purpleGradient">
-        <p class="text-xl text-center text-white tracking-wider leading-1">Premium</p>
+      <div class="w-full flex justify-between mb-1" id="{{ module.heading_id }}">
+        <{{ module.h_tag_choice }} class="text-lg font-bold lg:text-3xl">
+          {{ module.title }}
+        </{{ module.h_tag_choice }}>
+        <p
+          class="text-xl bg-purpleGradient text-center px-5 text-white tracking-wider leading-2 hidden lg:flex items-center">
+          Premium</p>
       </div>
+      {% else %}
+      <{{ module.h_tag_choice }} class="text-lg font-bold lg:text-3xl mb-1" id="{{ module.heading_id }}">
+        {{ module.title }}
+      </{{ module.h_tag_choice }}>
       {% endif %}
-      <p class="mt-2">{{ module.description }}</p>
+
+      <p class="text-xs leading-5 lg:text-p">{{ module.description }}</p>
       {% if module.link.url.href != '' %}
       <a href="{{ module.link.url.href }}" {{ 'target="_blank"' if module.link.open_in_new_tab }}
-        class="button w-fit uppercase mt-4">
+        class="button w-fit uppercase mt-2">
         {{ module.link_label }}
       </a>
       {% endif %}

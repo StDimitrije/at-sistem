@@ -7,7 +7,7 @@
 -->
 
 {% dnd_section
-  class="px-4 py-3",
+  class="{{ context.custom_classes || 'px-4 py-3' }}",
   background_color={{ context.background_color || '#FFFFFF' }}
 %}
   {% dnd_column offset=0, width=12 %}
@@ -21,11 +21,12 @@
             "size_type": null,
             "width": 725,
             "height": 500,
-            "loading": "lazy",
+            "loading": "eager",
             "max_width": 725,
             "max_height": 500
           }
         }}
+        image_fit={{ context.image_fit || 'cover' }},
         heading_id={{ context.heading_id || '' }},
         title={{ context.title || 'Title' }},
         description={{ context.description || 'Description' }}

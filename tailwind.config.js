@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   content: ['./modules/**/*.{html,js}', './sections/**/*.html', './templates/**/*.html', './js/**/*.js'],
@@ -13,23 +15,7 @@ module.exports = {
         lightGrey: '#F7F7FD'
       },
       fontFamily: {
-        sans: [
-          'Poppins',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          '"Noto Sans"',
-          'sans-serif',
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ]
+        sans: [ 'Poppins', ...defaultTheme.fontFamily.sans]
       },
       fontSize: {
         '2xs': ['12px', { lineHeight: '1rem' }],
@@ -70,7 +56,7 @@ module.exports = {
           lineHeight: '1.4',
           fontWeight: '500',
         }],
-        'p': ['18px', {
+        'p': ['16px', {
           lineHeight: '1.375',
           fontWeight: '300',
         }],
