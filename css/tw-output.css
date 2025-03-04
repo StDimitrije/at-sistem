@@ -1947,8 +1947,7 @@ button:hover,
   padding-bottom: 8px;
 }
 
-.py-1 {
-  padding-top: 10px;
+.pb-1 {
   padding-bottom: 10px;
 }
 
@@ -2030,10 +2029,6 @@ button:hover,
 
 .pt-\[56\.25\%\] {
   padding-top: 56.25%;
-}
-
-.pb-1 {
-  padding-bottom: 10px;
 }
 
 .text-left {
@@ -2501,10 +2496,6 @@ button:hover,
     height: 280px;
   }
 
-  .md\:min-h-\[80svh\] {
-    min-height: 80svh;
-  }
-
   .md\:min-h-\[70svh\] {
     min-height: 70svh;
   }
@@ -2652,10 +2643,6 @@ button:hover,
 
   .lg\:h-\[6px\] {
     height: 6px;
-  }
-
-  .lg\:min-h-\[80sch\] {
-    min-height: 80sch;
   }
 
   .lg\:min-h-\[80svh\] {
@@ -2870,6 +2857,11 @@ button:hover,
   .xl\:text-3xl {
     font-size: 32px;
     line-height: 2.25rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 24px;
+    line-height: 1.333;
   }
 }
 
