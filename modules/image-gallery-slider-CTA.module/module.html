@@ -1,10 +1,18 @@
 <div class="w-full h-full relative">
   <div class="image-gallery-slider-{{name}} swiper">
-    <div class="flex items-center swiper-wrapper">
+    <div class="flex items-start swiper-wrapper">
       {% for item in module.images %}
-      <div class="swiper-slide max-w-xl !h-[400px]">
-        <img class="w-full h-full object-center object-cover" src="{{ item.image.src }}" width="{{item.image.width}}"
-          height="{{item.image.height}}" loading="{{item.image.loading}}" alt="{{ item.image.alt }}">
+      <div class="swiper-slide max-w-xl">
+        <img class="w-full h-[300px] lg:h-[350px] object-center object-cover" src="{{ item.image.src }}"
+          width="{{item.image.width}}" height="{{item.image.height}}" loading="{{item.image.loading}}"
+          alt="{{ item.image.alt }}">
+        {% if item.show_title && item.show_link %}
+        <p class="font-bold text-sm lg:text-base my-1 text-center">{{ item.image_title }}</p>
+        <a class="button block w-full text-center" href="{{ item.link_field.url.href }}" {{ 'target="_blank"' if
+          item.link_field.open_in_new_tab }}>
+          {{ item.link_label }}
+        </a>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
@@ -43,10 +51,10 @@
       mousewheel: {
         forceToAxis: true,
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-      },
+      {# autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    }, #}
     });
   })
 

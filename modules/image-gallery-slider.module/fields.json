@@ -1,8 +1,5 @@
 [
  {
-  "type": "group",
-  "id": "02035ba7-d879-14f9-40d1-f8464599c6ea",
-  "label": "Images",
   "children": [
    {
     "default": {
@@ -20,7 +17,6 @@
     "label": "Image",
     "locked": false,
     "name": "image",
-    "occurrence": null,
     "required": false,
     "resizable": true,
     "responsive": true,
@@ -28,7 +24,6 @@
     "type": "image"
    }
   ],
-  "name": "images",
   "default": [
    {
     "image": {
@@ -43,9 +38,19 @@
     }
    }
   ],
+  "display_width": null,
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "id": "02035ba7-d879-14f9-40d1-f8464599c6ea",
+  "label": "Images",
+  "locked": false,
+  "name": "images",
   "occurrence": {
-   "min": 1,
-   "default": 1
-  }
+   "default": 1,
+   "min": 1
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
  }
 ]

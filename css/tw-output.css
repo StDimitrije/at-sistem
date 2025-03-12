@@ -1056,6 +1056,11 @@ button:hover,
   margin-bottom: 20px;
 }
 
+.my-1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .-mb-0\.5 {
   margin-bottom: -5px;
 }
@@ -1292,6 +1297,10 @@ button:hover,
 
 .max-h-\[70\%\] {
   max-height: 70%;
+}
+
+.max-h-\[400px\] {
+  max-height: 400px;
 }
 
 .min-h-\[100svh\] {
@@ -2551,6 +2560,10 @@ button:hover,
     text-align: left;
   }
 
+  .md\:text-center {
+    text-align: center;
+  }
+
   .md\:text-3xl {
     font-size: 32px;
     line-height: 2.25rem;
@@ -2617,6 +2630,18 @@ button:hover,
     margin-right: 50px;
   }
 
+  .lg\:mb-\[24px\] {
+    margin-bottom: 24px;
+  }
+
+  .lg\:mt-\[24px\] {
+    margin-top: 24px;
+  }
+
+  .lg\:mt-\[30px\] {
+    margin-top: 30px;
+  }
+
   .lg\:\!block {
     display: block !important;
   }
@@ -2643,6 +2668,14 @@ button:hover,
 
   .lg\:h-\[6px\] {
     height: 6px;
+  }
+
+  .lg\:h-\[450px\] {
+    height: 450px;
+  }
+
+  .lg\:h-\[350px\] {
+    height: 350px;
   }
 
   .lg\:min-h-\[80svh\] {
@@ -2713,6 +2746,10 @@ button:hover,
 
   .lg\:gap-\[120px\] {
     gap: 120px;
+  }
+
+  .lg\:gap-\[50px\] {
+    gap: 50px;
   }
 
   .lg\:rounded {

@@ -7,7 +7,7 @@
 -->
 
 {% dnd_section 
-	class="py-4 px-4",
+	class="{{ context.custom_section_classes || 'py-4 px-4' }}",
 	background_image={
 		'backgroundPosition': 'MIDDLE_CENTER',
     'backgroundSize': 'cover',
@@ -36,9 +36,25 @@
 						"height": 750,
 						"max_width": 1000,
 						"max_height": 750
-						}
+						},
+						"image_description": "Image Description",
+						"boolean_field": false
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://145812822.fs1.hubspotusercontent-eu1.net/hubfs/145812822/Swiper%20Gallery%20Images/IMG-20241009-WA0018.webp",
+						"alt": "IMG-20241009-WA0018",
+						"loading": "lazy",
+						"width": 1000,
+						"height": 750,
+						"max_width": 1000,
+						"max_height": 750
+						},
+						"image_description": "Image Description",
+						"boolean_field": false
 					}
-				]}}
+				] }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}

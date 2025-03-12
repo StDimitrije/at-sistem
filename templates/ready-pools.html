@@ -1,0 +1,356 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Ready Pools
+  screenshotPath: ../images/template-previews/ready-pools.jpg
+ -->
+
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+  {% dnd_area 'dnd_area'
+    label='Main section',
+    class='body-container body-container--home'
+  %}
+
+    {% include_dnd_partial
+      path='../sections/hero-2.html',
+      context={
+        'backgroundImage': 'https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/weva_m2.jpeg',
+        'html': '
+          <h1 class="hero-title">Gotovi bazeni</h1>
+          <p class="hero-subtitle">Ukoliko ste razmišljali o ugradnji kvalitetnog gotovog bazena, imamo dve odlične opcije u ponudi: kompozitne bazene sa keramičkim jezgrom koji plene svojom izgledom i elegancijom, i drvene bazene koji se savršeno uklapaju u prirodni ambijent.</p>
+        '
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/header-2.html',
+      context={
+        'custom_section_classes': 'p-4',
+        'title': '<h2 class="leading-none">Prednost gotovih bazena</h2>',
+        'subtitle': '
+          <p class="font-normal lg:text-base">
+            Ugradnja prefabrikovanih bazena svakako nosi sa sobom određene prednosti. Pre svega izbegavate obimne građevinske radove koji se podrazumevaju prilikom izgradnje betonskih bazena. Nema ni završnih radova kao sto je hidroizolacija, postavljanje pločica ili fugovanje. U kraćem vremenskom roku dobijate bazen koji će biti jedno od vaših najomiljenijih mesta za uživanje i druženje sa decom, porodicom i prijateljima.<br>Uz gotove bazene možete birati raznovrsnu dodatnu opremu koju imamo u ponudi, kao što su automatski uređaji za održavanje kvaliteta vode, toplotne pumpe, uređaji za čišćenje, bazenske atrakcije, pokrivači, itd. Takođe, uz bazen možete uživati u raznolikom sadržaju za odmor i uživanje, atraktivnim ležaljkama, foteljama stočićima, solarnim tuševima.<br><br>Pogledajte našu ponudu za bazensku opremu i pozovite nas za konsultacije. Pored kompozitnih i drvenih bazena imamo u ponudi SWIM SPA – hidromasažne bazene sa turbo džetom. Bez ikakve ugradnje, dovoljna je betonska ploča!<br><a class="font-bold underline" target="_blank" href="https://poseidon-spa.com/en">Pogledajte!</a>
+          </p>'
+      }
+    %}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '20px',
+        'left': '40px',
+        'right': '40px'
+      },
+      background_color = '#F7F7FD'
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='<h3 class="h4 text-left md:text-center">Drveni bazeni BWT</h3>'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_column width=12, offset=0 %}
+            {% dnd_row %}
+              {% dnd_module
+                path='@hubspot/rich_text',
+                horizontal_alignment='CENTER'
+              %}
+              {% module_attribute 'html' %}
+                <div class="flex flex-col md:flex-row  gap-2 items-center">
+                  
+                  <div class="w-full flex flex-col gap-1 w-full flex-1">
+                    <p>Gotovi drveni bazeni BWT su osmišljeni i dizajnirani tako da se uklope u prirodni ambijent, i da vlasnicima pruže sav komfor i sigurnost, uz racionalnu potrošnju energije. Proizvedeni su u Francuskoj, u strogo kontrolisanim uslovima.</p>
+                    <p>Drvo je PEFC™ sertifikovano, što znači da potiče iz šumskih resursa kojima se upravlja u skladu sa standardima održivosti, uz garantovano poštovanje unapred definisane životne sredine, socijalno-ekonomskih i etičkih standarda</p>
+                  </div>
+                  <div class="flex gap-2  justify-center">
+                    <img src="https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/PEFC.png"  height="150">
+                    <img src="https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/Origine%20France.png" width="150" height="150">
+                  </div>
+                </div>
+              {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section 
+      padding={
+        'top': 20,
+        'bottom': 40,
+        'left': 40,
+        'right': 40
+      },
+      background_color='#F7F7FD'
+    %}
+      {% dnd_column offset=0, width=12 %}
+        {% dnd_row offset=0, width=12 %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <p class="text-lg font-normal lg:text-3xl mb-1">Urban Pools<p>
+              <p class="mb-2">
+                Ovi bazeni su prava revolucija na tržištu: omogućavaju vlasnicima malih dvorišta da uživaju u luksuzno opremljenom bazenu, koji se prirodnim materijalom i dimenzijama lepo uklapa u okolinu.
+                <br>
+                Mogu biti pravougaonog ili kvadratnog oblika, nadzemni, poluukopani ili potpuno ukopani. Nadzemni bazeni su građevinski najmanje zahtevni. Pristup bazenu je preko drvenih spoljnih i aluminijumskih unutrašnjih merdevina.
+                <br>
+                Svi URBAN POOLS bazeni imaju integrisan podvodni automatski pokrivač. Jednostavnim okretanjem ključa pokrivač će u roku od nekoliko sekundi klizi preko vode i bazen je spreman za kupanje. Ovo je optimalna zaštita za malu decu i kućne ljubimce i u skladu je sa standardom NF P 90-308. Pokrivač štiti bazena od prljanja i čuva temperature vode. Održavanje je lakše i troši se manje hemikalija.
+                <br>
+                Najekonomičnija opcija je poručiti URBAN POOL sa kompletom opremom: pumpom i filterom, kućištem za opremu, elektrokomandnim ormanom i toplotnom pompom za grejanje bazenske vode.
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row offset=0, width=12 %}
+          {% dnd_module
+            path='../modules/image-gallery-slider-CTA',
+            images=[
+              {
+                "image": {
+                "size_type": "auto",
+                "src": "https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/urban4x3.5_m.jpg",
+                "alt": "URBAN POOL 4,20m X 3,50m X 1,33m",
+                "loading": "lazy",
+                "width": 600,
+                "height": 350,
+                "max_width": 600,
+                "max_height": 350
+                },
+                "show_title": true,
+                "image_title": "URBAN POOL 4,20m X 3,50m X 1,33m",
+                "show_link": true,
+                "link_field": {
+                "url": {
+                  "content_id": null,
+                  "type": "EXTERNAL",
+                  "href": "https://google.com"
+                },
+                "open_in_new_tab": true,
+                "no_follow": false
+                },
+                "link_label": "Preuzmite brošuru"
+              },
+              {
+                "image": {
+                "size_type": "auto",
+                "src": "https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/urbanxl_m.jpeg",
+                "alt": "URBAN POOL 6,00m X 2,50m X 1,33m",
+                "loading": "lazy",
+                "width": 600,
+                "height": 350,
+                "max_width": 600,
+                "max_height": 350
+                },
+                "show_title": true,
+                "image_title": "URBAN POOL 6,00m X 2,50m X 1,33m",
+                "show_link": true,
+                "link_field": {
+                "url": {
+                  "content_id": null,
+                  "type": "EXTERNAL",
+                  "href": "https://google.com"
+                },
+                "open_in_new_tab": true,
+                "no_follow": false
+                },
+                "link_label": "Preuzmite brošuru"
+              },
+              {
+                "image": {
+                "size_type": "auto",
+                "src": "https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/urban_m1.jpeg",
+                "alt": "URBAN POOL XL 6,50m X 3,50m X 1,33m",
+                "loading": "lazy",
+                "width": 600,
+                "height": 350,
+                "max_width": 600,
+                "max_height": 350
+                },
+                "show_title": true,
+                "image_title": "URBAN POOL XL 6,50m X 3,50m X 1,33m",
+                "show_link": true,
+                "link_field": {
+                "url": {
+                  "content_id": null,
+                  "type": "EXTERNAL",
+                  "href": "https://google.com"
+                },
+                "open_in_new_tab": true,
+                "no_follow": false
+                },
+                "link_label": "Preuzmite brošuru"
+              }
+            ]
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '40px',
+        'left': '40px',
+        'right': '40px'
+      }
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <h3 class="h4 text-left md:text-center">AQUACOMET kompozitni keramički bazeni</h3>
+              <p>
+                Kada su se pojavili, ovi bazeni su bili potpuni novitet u bazenskoj industriji. Izrađeni su u skladu sa najboljim evropskim estetskim tradicijama, uz poštovanje strogo kontrolisane proizvođačke procedure.
+                <br>
+                Proizvedeni su u komadu, od mešavine fiberglasa, poliestera i vinila sa keramičkim jezgrom u strukturi za dodazno ojačanje. Slični su bazenima od poliestera, ali predstavljaju tehnološku
+                nadogradnju i korak napred u odnosu na njih.
+                <br>
+                Vrhunski kvalitet AQUACOMET bazena proizlazi iz njihove slojevite konstrukcije (nanošenje različitih, ali kompatibilnih materijala u slojevima), koji svojim tehničkim osobinama osiguravaju
+                savršen izgled koji se zadržava godinama. Otporni su na agresivna hemijska sredstva i atmosferske uticaje i imaju izrazitu statičku i strukturalnu čvrstinu. Boja koja ima 3D efekat, dobijena
+                nanošenjem premaza u slojevima po patentiranoj tehnologiji, daje vodi veličanstven odsjaj.
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}
+          {% module_attribute 'html' %}
+            <div class="flex flex-col lg:flex-row pt-4 w-full items-center gap-1 lg:gap-[50px]">
+              <img class="object-contain object-center h-[200px] sm:h-[250px] md:h-[280px] lg:h-[360px]" src="https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/slojevi.png" width="730" height="300" loading="lazy" alt="Slojevi gotovog bazena">
+              <p>
+                Ovi kompozitni bazeni se transportuju do pripremljenog mesta za ugradnju (iskopa) na specijalnom vozilu . Nakon toga se dizalicom spuštaju u iskop i
+                paralelno s punjenjem vode zatrpavaju sa spoljašnje strane. Gotovo istovremeno se izvodi montaža bazenske tehnike i instalacija, pa je bazen u roku od
+                nekoliko dana moguće osposobiti za korišćenje.
+                Prednosti:
+                • brza i jednostavna ugradnja
+                • vrhunski kvalitet i dugotrajnost bazena
+                • jednostavno održavanje
+                • ujednačen, skladan i lep izgled – 3D efekt
+                • velik izbor modela
+              </p>
+            </div>
+          {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'custom_classes': 'px-4 py-4',
+        'title': 'Erato 800',
+        'description': '
+          Erato 800 - bazenska školjka sa keramičkim jezgrom u strukturi, za dodatno
+          ojačanje.
+          <br>
+          Pravougaonog je oblika, elegantnih linija,sa diskretnim stepenicama sa obe strane za silazak u bazen, i zaobljenom klupom za sedenje, tako skoro cela dužina bazena može da se koristi za plivanje.
+          <br>
+          <br>
+          *dimenzija 8,00 m x 3,80 m x 1,50 m (dubina vode je 1,35-1,40m)
+          <br>
+          *Ivica bazena: 10 cm/širina/ x 4 cm /visina/
+        ',
+        'h_tag_choice': 'p',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Gotovi%20Bazeni/erato%20800.jpeg",
+          "alt": "Gotov bazen - BWT Erato 800",
+          "size_type": "auto",
+          "width": 725,
+          "height": 300,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 300
+        }
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/image-w-text-gradient.html',
+      context={
+        'title': 'Zaštita i sigurnost',
+        'description': '
+          Prekrivač za bazen štiti vodu od prašine, lišća, insekata i drugih nečistoća, održava idealnu temperaturu, te smanjuje mogućnost razvoja algi. Takođe, ključan je za sigurnost dece i kućnih ljubimaca. Istražite našu široku ponudu koja uključuje različite vrste bazenskih pokrivača, uključujući bazenske kupole i pokretne konstrukcije koje omogućavaju hodanje po njima.
+          <br>
+          <small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>  
+        ',
+        'h_tag_choice': 'h4',
+        'link_label': 'Pošaljite upit',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "/kontakt",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'image_field': {
+          "src": 'https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Pokrivac%20za%20bazen.jpeg',
+          "alt": "pokrivac za bazen",
+          "size_type": "auto",
+          "width": 725,
+          "height": 360,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 360
+        },
+        'background_color': '#F7F7FD',
+        'reverse_content_direction': true
+      }
+    %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'custom_classes': 'px-4 py-4',
+        'title': 'BWT bazenska oprema',
+        'description': '
+          Već dugi niz godina A&T SISTEM vodi uspešnu saradnju sa BWT POOL PRODUCTS, prestižnim proizvođačem opreme za bazene koji garantuje premium kvalitet proizvoda i hidraulički optimizovana rešenja.
+        ',
+        'h_tag_choice': 'h4',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://shop.atsistem.rs/sr/collections/all?sort_by=title-ascending&filter.p.vendor=BWT+POOL+PRODUCTS",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'image_field': {
+          "src": 'https://atsistem.rs/hubfs/Sadrzaj%20Usluge/bwt_m11.jpg',
+          "alt": "BWT Pool Products",
+          "width": 725,
+          "height": 300,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 300
+        }
+      }
+    %}
+
+  {% end_dnd_area %}
+{% endblock body %}
