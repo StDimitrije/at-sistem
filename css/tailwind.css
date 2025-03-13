@@ -42,7 +42,7 @@
     @apply text-base lg:text-h6;
   }
 
-  p {
+  p, ul {
     @apply font-sans text-xs font-light leading-snug lg:text-p;
   }
 
@@ -63,7 +63,11 @@
   button,
   .button,
   .hs-button {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white bg-pink text-xs w-fit;
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink;
+  }
+
+  .button-secondary {
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-grey text-xs w-fit bg-white;
   }
 
   button:hover,
@@ -72,7 +76,13 @@
   .button:focus,
   button:active,
   .button:active {
-    @apply bg-pinkDark
+    @apply bg-pinkDark;
+  }
+
+  .button-secondary:hover,
+  .button-secondary:focus,
+  .button-secondary:active {
+    @apply bg-[#f8f8f8];
   }
 
   .menu__link {
