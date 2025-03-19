@@ -1,5 +1,16 @@
 [
  {
+  "default": false,
+  "display": "toggle",
+  "display_width": null,
+  "id": "ef3d58ed-a565-6e37-f939-efb766b2c5cf",
+  "label": "Reverse Content Direction",
+  "locked": false,
+  "name": "reverse_content_direction",
+  "required": false,
+  "type": "boolean"
+ },
+ {
   "choices": [
    [
     "h1",
@@ -81,7 +92,7 @@
  },
  {
   "allow_new_line": false,
-  "default": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  "default": "Lorem ipsu dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
   "display_width": null,
   "id": "693fc802-5094-36fc-db09-7e5409c918aa",
   "label": "Description",
@@ -115,9 +126,6 @@
   "type": "image"
  },
  {
-  "type": "choice",
-  "id": "564d553d-84ae-7d46-738f-c932209a4748",
-  "display": "select",
   "choices": [
    [
     "cover",
@@ -128,9 +136,18 @@
     "Contain"
    ]
   ],
+  "default": "cover",
+  "display": "select",
+  "display_width": null,
+  "id": "564d553d-84ae-7d46-738f-c932209a4748",
   "label": "Image Fit",
+  "locked": false,
+  "multiple": false,
   "name": "image_fit",
-  "default": "cover"
+  "preset": null,
+  "reordering_enabled": true,
+  "required": false,
+  "type": "choice"
  },
  {
   "allow_new_line": false,
@@ -172,14 +189,54 @@
   "type": "link"
  },
  {
+  "type": "boolean",
+  "id": "21dbbe9a-c5ff-4dca-a898-24f430f2a9b7",
   "default": false,
-  "display": "toggle",
-  "display_width": null,
-  "id": "ef3d58ed-a565-6e37-f939-efb766b2c5cf",
-  "label": "Reverse Content Direction",
-  "locked": false,
-  "name": "reverse_content_direction",
-  "required": false,
-  "type": "boolean"
+  "display": "checkbox",
+  "label": "Show Secondary Link",
+  "name": "show_secondary_link"
+ },
+ {
+  "type": "text",
+  "id": "a0dbf433-a4f0-634f-1996-e134376240a4",
+  "validation_regex": "",
+  "label": "Secondary Link Label",
+  "name": "secondary_link_label",
+  "default": "Secondary Link",
+  "visibility": {
+   "operator": "EQUAL",
+   "controlling_field_path": "show_secondary_link",
+   "controlling_value_regex": "true"
+  }
+ },
+ {
+  "type": "link",
+  "id": "00006afe-3420-731c-9679-2222f3e7583b",
+  "default": {
+   "url": {
+    "content_id": null,
+    "type": "EXTERNAL",
+    "href": ""
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  },
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT",
+   "FILE",
+   "EMAIL_ADDRESS",
+   "BLOG",
+   "CALL_TO_ACTION",
+   "PHONE_NUMBER",
+   "PAYMENT"
+  ],
+  "label": "Secondary Link",
+  "name": "secondary_link",
+  "visibility": {
+   "operator": "EQUAL",
+   "controlling_field_path": "show_secondary_link",
+   "controlling_value_regex": "true"
+  }
  }
 ]

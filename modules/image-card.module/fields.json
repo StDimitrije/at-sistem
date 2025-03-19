@@ -57,6 +57,17 @@
  {
   "children": [
    {
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "c1814a45-ffaa-4b50-0130-04eaac9fc384",
+    "label": "Premium Product",
+    "locked": false,
+    "name": "premium_product",
+    "required": false,
+    "type": "boolean"
+   },
+   {
     "default": {
      "size_type": "auto",
      "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
@@ -142,19 +153,60 @@
     "validation_regex": ""
    },
    {
+    "type": "boolean",
+    "id": "14601def-3ca6-1051-06b5-8a6dca5f326a",
     "default": false,
     "display": "checkbox",
-    "display_width": null,
-    "id": "c1814a45-ffaa-4b50-0130-04eaac9fc384",
-    "label": "Premium Product",
-    "locked": false,
-    "name": "premium_product",
-    "required": false,
-    "type": "boolean"
+    "label": "Show Secondary Link",
+    "name": "show_secondary_link"
+   },
+   {
+    "type": "link",
+    "id": "53aca7ef-c386-b4f4-ba04-1b2023f648da",
+    "default": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS",
+     "BLOG",
+     "CALL_TO_ACTION",
+     "PHONE_NUMBER",
+     "PAYMENT"
+    ],
+    "label": "Secondary Link",
+    "name": "secondary_link",
+    "visibility": {
+     "operator": "EQUAL",
+     "controlling_field_path": "cards.show_secondary_link",
+     "controlling_value_regex": "true"
+    }
+   },
+   {
+    "type": "text",
+    "id": "88127e74-5788-d91d-70ed-03291fc33c77",
+    "validation_regex": "",
+    "label": "Secondary Link Label",
+    "name": "secondary_link_label",
+    "default": "Secondary Link",
+    "visibility": {
+     "operator": "EQUAL",
+     "controlling_field_path": "cards.show_secondary_link",
+     "controlling_value_regex": "true"
+    }
    }
   ],
   "default": [
    {
+    "premium_product": false,
     "image_field": {
      "size_type": "auto",
      "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
@@ -177,9 +229,20 @@
      "no_follow": false
     },
     "link_label": "View More",
-    "premium_product": false
+    "show_secondary_link": false,
+    "secondary_link": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "secondary_link_label": "Secondary Link"
    },
    {
+    "premium_product": false,
     "image_field": {
      "size_type": "auto",
      "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
@@ -202,7 +265,17 @@
      "no_follow": false
     },
     "link_label": "View More",
-    "premium_product": false
+    "show_secondary_link": false,
+    "secondary_link": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "secondary_link_label": "Secondary Link"
    }
   ],
   "display_width": null,

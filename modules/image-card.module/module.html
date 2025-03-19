@@ -29,14 +29,21 @@
       <div
         class="p-2 sm:p-3 gap-2 sm:gap-3 bg-white flex flex-col flex-1 justify-between">
         <p>{{ card.description }}</p>
-        {% if card.link_field.url.href != '' %}
-        <a href="{{ card.link_field.url.href }}" {{ 'target="_blank"' if card.link_field.open_in_new_tab==true }}
-          class="button border-2 border-pink hover:bg-pinkDark hover:text-white hover:border-pinkDark transition-all bg-transparent text-grey">
-          {{card.link_label}}
-        </a>
-        {% endif %}
+        <div class="flex justify-between gap-1 flex-col sm:flex-row w-full items-start sm:items-center">
+          {% if card.link_field.url.href != '' %}
+            <a href="{{ card.link_field.url.href }}" {{ 'target="_blank"' if card.link_field.open_in_new_tab==true }}
+              class="button">
+              {{card.link_label}}
+            </a>
+          {% endif %}
+          {% if card.show_secondary_link && card.secondary_link.url.href != '' %}
+            <a href="{{ card.secondary_link.url.href }}" {{ 'target="_blank"' if card.secondary_link.open_in_new_tab }}
+              class="button-tertiary">
+              {{ card.secondary_link_label }}
+            </a>
+          {% endif %}
+        </div>
       </div>
-      
     </div>
     {% endfor %}
   </div>

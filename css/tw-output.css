@@ -737,10 +737,12 @@ p, ul {
 }
 
 button,
-  .button,
-  .hs-button {
+  .button {
   width: -moz-fit-content;
   width: fit-content;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(215 180 243 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(215 180 243 / var(--tw-bg-opacity, 1));
   padding-left: 25px;
@@ -755,11 +757,23 @@ button,
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+button:hover,
+  .button:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(197 152 234 / var(--tw-border-opacity, 1));
 }
 
 .button-secondary {
   width: -moz-fit-content;
   width: fit-content;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   padding-left: 25px;
@@ -774,6 +788,34 @@ button,
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
   color: rgb(55 55 56 / var(--tw-text-opacity, 1));
+}
+
+.button-tertiary {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(215 180 243 / var(--tw-border-opacity, 1));
+  background-color: transparent;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(80 80 80 / var(--tw-text-opacity, 1));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.button-tertiary:hover {
+  background-color: rgb(215 180 243 / 0.3);
 }
 
 button:hover,
@@ -942,12 +984,12 @@ button:hover,
   position: sticky;
 }
 
-.-left-\[35px\] {
-  left: -35px;
+.\!-left-\[35px\] {
+  left: -35px !important;
 }
 
-.-right-\[35px\] {
-  right: -35px;
+.\!-right-\[35px\] {
+  right: -35px !important;
 }
 
 .-top-\[65px\] {
@@ -1022,12 +1064,8 @@ button:hover,
   top: 100%;
 }
 
-.\!-left-\[35px\] {
-  left: -35px !important;
-}
-
-.\!-right-\[35px\] {
-  right: -35px !important;
+.\!z-\[101\] {
+  z-index: 101 !important;
 }
 
 .z-0 {
@@ -1046,16 +1084,12 @@ button:hover,
   z-index: 40;
 }
 
-.z-\[2\] {
-  z-index: 2;
-}
-
-.\!z-\[101\] {
-  z-index: 101 !important;
-}
-
 .z-\[100\] {
   z-index: 100;
+}
+
+.z-\[2\] {
+  z-index: 2;
 }
 
 .z-\[99\] {
@@ -1212,12 +1246,12 @@ button:hover,
   display: block;
 }
 
-.flex {
-  display: flex;
-}
-
 .\!flex {
   display: flex !important;
+}
+
+.flex {
+  display: flex;
 }
 
 .grid {
@@ -1239,6 +1273,10 @@ button:hover,
 .size-full {
   width: 100%;
   height: 100%;
+}
+
+.\!h-\[400px\] {
+  height: 400px !important;
 }
 
 .h-0\.5 {
@@ -1281,10 +1319,6 @@ button:hover,
   height: 300px;
 }
 
-.h-\[400px\] {
-  height: 400px;
-}
-
 .h-\[6px\] {
   height: 6px;
 }
@@ -1317,10 +1351,6 @@ button:hover,
 
 .h-screen {
   height: 100vh;
-}
-
-.\!h-\[400px\] {
-  height: 400px !important;
 }
 
 .max-h-\[200px\] {
@@ -1629,12 +1659,12 @@ button:hover,
   gap: 80px;
 }
 
-.gap-\[5px\] {
-  gap: 5px;
-}
-
 .gap-\[15px\] {
   gap: 15px;
+}
+
+.gap-\[5px\] {
+  gap: 5px;
 }
 
 .self-center {
@@ -1661,6 +1691,10 @@ button:hover,
   white-space: nowrap;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-\[100px\] {
   border-radius: 100px;
 }
@@ -1681,14 +1715,6 @@ button:hover,
   border-radius: 0px;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-b-\[6px\] {
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -1703,11 +1729,15 @@ button:hover,
   border-width: 1px;
 }
 
-.border-2 {
-  border-width: 2px;
+.border-0 {
+  border-width: 0px;
 }
 
 .border-b {
+  border-bottom-width: 1px;
+}
+
+.border-b-\[1px\] {
   border-bottom-width: 1px;
 }
 
@@ -1719,17 +1749,8 @@ button:hover,
   border-top-width: 3px;
 }
 
-.border-b-\[1px\] {
-  border-bottom-width: 1px;
-}
-
 .border-none {
   border-style: none;
-}
-
-.border-pink {
-  --tw-border-opacity: 1;
-  border-color: rgb(215 180 243 / var(--tw-border-opacity, 1));
 }
 
 .border-white {
@@ -1820,21 +1841,9 @@ button:hover,
   background-color: rgb(215 180 243 / .85);
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-purpleGradient {
-  background-image: linear-gradient(47.66deg, #A5C3FA -5.18%, #D1A1F7 102.55%);
-}
-
-.bg-textBaseGradient {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.45) 70.25%);
 }
 
 .bg-gradient-to-t {
@@ -1843,6 +1852,14 @@ button:hover,
 
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-purpleGradient {
+  background-image: linear-gradient(47.66deg, #A5C3FA -5.18%, #D1A1F7 102.55%);
+}
+
+.bg-textBaseGradient {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.45) 70.25%);
 }
 
 .from-\[\#6E43FF\] {
@@ -1898,10 +1915,6 @@ button:hover,
 
 .p-0 {
   padding: 0px;
-}
-
-.p-0\.5 {
-  padding: 5px;
 }
 
 .p-1 {
@@ -2023,16 +2036,6 @@ button:hover,
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px;
-}
-
-.py-1 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.px-0\.5 {
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 .pb-1 {
@@ -2217,6 +2220,10 @@ button:hover,
   font-style: italic;
 }
 
+.\!leading-snug {
+  line-height: 1.375 !important;
+}
+
 .leading-1 {
   line-height: 1.142;
 }
@@ -2239,10 +2246,6 @@ button:hover,
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.\!leading-snug {
-  line-height: 1.375 !important;
 }
 
 .tracking-\[2\.8px\] {
@@ -2446,11 +2449,6 @@ button:hover,
   cursor: pointer;
 }
 
-.hover\:border-pinkDark:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(197 152 234 / var(--tw-border-opacity, 1));
-}
-
 .hover\:bg-\[\#b7babb\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(183 186 187 / var(--tw-bg-opacity, 1));
@@ -2459,11 +2457,6 @@ button:hover,
 .hover\:bg-blueDark:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(157 188 244 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-pinkDark:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(197 152 234 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:stroke-primary:hover {
@@ -2478,11 +2471,6 @@ button:hover,
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(110 67 255 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
@@ -2536,6 +2524,10 @@ button:hover,
 
   .sm\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .sm\:mt-2 {
+    margin-top: 20px;
   }
 
   .sm\:h-\[250px\] {
@@ -2717,12 +2709,12 @@ button:hover,
     margin-right: 50px;
   }
 
-  .lg\:block {
-    display: block;
-  }
-
   .lg\:\!block {
     display: block !important;
+  }
+
+  .lg\:block {
+    display: block;
   }
 
   .lg\:flex {
@@ -2839,16 +2831,12 @@ button:hover,
     gap: 50px;
   }
 
-  .lg\:rounded-\[6px\] {
-    border-radius: 6px;
-  }
-
-  .lg\:rounded-sm {
-    border-radius: 0.125rem;
-  }
-
   .lg\:rounded {
     border-radius: 0.25rem;
+  }
+
+  .lg\:rounded-\[6px\] {
+    border-radius: 6px;
   }
 
   .lg\:stroke-grey {

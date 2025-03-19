@@ -744,6 +744,22 @@
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
+        {% dnd_row 
+          margin={
+            'top':'20px'
+          }
+        %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <div class="flex">
+                <a class="button" href="https://shop.atsistem.rs/sr/collections/bazenski-pokrivaci">Pogledajte ponudu</a>
+              </div>
+            ',
+            horizontal_alignment='CENTER'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
 
@@ -771,16 +787,27 @@
               <br>
               Ravni bočni profili omogućavaju elegantnu integraciju sa okruženjem.
             ',
+            "link_label": "Pogledajte ponudu",
             "link_field": {
-            "url": {
-              "content_id": null,
-              "type": "EXTERNAL",
-              "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Horizon_EN.pdf"
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "https://shop.atsistem.rs/sr/products/bazenska-kupola-horizon"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
             },
-            "open_in_new_tab": true,
-            "no_follow": false
+            "show_secondary_link": true,
+            "secondary_link_label": "Preuzmite brošuru",
+            "secondary_link": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/Horizon_EN.pdf"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
             },
-            "link_label": "Preuzmite brošuru",
             "premium_product": false
           },
           {
@@ -800,7 +827,19 @@
               <br>
               Uz sav komfor koji pruža, odajući utisak zatvorenog bazenskog prostora, HARMONIE je ipak pokretna kupola, tako da u trenu otvara bazen i "nestaje" u prostoru.
             ',
+            "link_label": "Pogledajte ponudu",
             "link_field": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "https://shop.atsistem.rs/sr/products/bazenska-kupola-harmonie"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            },
+            "show_secondary_link": true,
+            "secondary_link_label": "Preuzmite brošuru",
+            "secondary_link": {
               "url": {
                 "content_id": null,
                 "type": "EXTERNAL",
@@ -809,7 +848,6 @@
               "open_in_new_tab": true,
               "no_follow": false
             },
-            "link_label": "Preuzmite brošuru",
             "premium_product": false
           }
         ]

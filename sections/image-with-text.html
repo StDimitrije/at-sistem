@@ -44,6 +44,19 @@
             "no_follow": false
           }
         }},
+        show_secondary_link={{ context.show_secondary_link || false }}
+        secondary_link_label={{ context.secondary_link_label || 'Link Label' }},
+        secondary_link={{ context.secondary_link || 
+          {
+            "url": {
+              "type": "EXTERNAL",
+              "href": "https://www.google.com/",
+              "content_id": null
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          }
+        }},
         premium_product={{ context.premium_product || false }}
       %}
       {% end_dnd_module %}

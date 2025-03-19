@@ -61,14 +61,21 @@
 }
 
 @layer components {
+.hs-button {
+  @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink transition-all;;
+}
+
   button,
-  .button,
-  .hs-button {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink;
+  .button {
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink border-2 border-pink hover:border-pinkDark transition-all;
   }
 
   .button-secondary {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-grey text-xs w-fit bg-white;
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-grey text-xs w-fit bg-white border-2 border-white;
+  }
+
+  .button-tertiary {
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-greyLight text-xs w-fit bg-transparent border-2 border-pink hover:bg-pink/30 transition-all;
   }
 
   button:hover,
