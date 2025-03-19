@@ -1,21 +1,49 @@
 {% macro menu_items() %}
 
-  {% set menu = menu(module.menu, 'site_root').children %}
+{% set menu = menu(module.menu, 'site_root').children %}
 
-  {% macro render_link_item(link) %}
-    <li class="mb-2">
-      <a class="footer-menu-link" href="{{ link.url }}" {{ 'aria-haspopup="true" aria-expanded="false"' if link.children && depth < module.max_levels }} {{ 'aria-current="page"' if link.activeNode }} {{ 'target="_blank" rel="noopener"' if link.linkTarget }}>{{ link.label }}</a>
-    </li>
-  {% endmacro %}
+{% macro render_link_item(link) %}
 
-  {% for link in menu %}
-    {{ render_link_item(link) }}
-  {% endfor %}
+  <li class="flex flex-col w-fit h-fit {{ 'footer_menu__item--has-submenu' if link.children }}">
+    {% if link.children == [] %}
+      <a class="footer_menu__link" href="{{ link.url }}" {{ 'aria-haspopup="true" aria-expanded="false"' if link.children &&
+        depth < module.max_levels }} {{ 'aria-current="page"' if link.activeNode }} {{ 'target="_blank" rel="noopener"' if
+        link.linkTarget }}>{{ link.label }}</a>
+    {% else %}
+      <div class="flex footer_menu__link justify-center lg:justify-start items-center">
+        <span class="cursor-pointer ml-1 lg:ml-0">{{ link.label }}</span>
+        <span class="
+              menu__child-toggle-icon
+              flex items-center justify-center 
+              ml-0.5
+              ">
+          <svg class="w-[12px] h-[6px]" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 11.414 7.121">
+            <g id="icon-small-arrow" transform="translate(10.707 0.707) rotate(90)">
+              <path class="stroke-white" id="icon-small-arrow-2" data-name="icon-small-arrow" d="M119.62,6l5,5-5,5"
+                transform="translate(-119.62 -6)" fill="none" stroke="white" stroke-width="2" />
+            </g>
+          </svg>
+        </span>
+      </div>
+      <ul
+        class="footer_menu__submenu list-none flex-col hidden py-[15px] gap-[15px] border-b-[1px] border-b-white items-center lg:items-start">
+        {% for sublink in link.children %}
+        {{ render_link_item(sublink) }}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+
+{% endmacro %}
+
+{% for link in menu %}
+{{ render_link_item(link) }}
+{% endfor %}
 
 {% endmacro %}
 
 <nav class="footer-menu" aria-label="Main menu">
-  <ul class="no-list">
+  <ul class="no-list grid grid-cols-2 justify-items-center lg:justify-items-start gap-3">
     {{ menu_items() }}
   </ul>
 </nav>

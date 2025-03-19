@@ -12,7 +12,7 @@
   "dependencies": {
     "@hubspot/webpack-cms-plugins": "^3.0.11",
     "copy-webpack-plugin": "^10.2.4",
-    "tailwindcss": "^3.0.24",
+    "tailwindcss": "^3.4.17",
     "webpack": "^5.70.0"
   }
 }
