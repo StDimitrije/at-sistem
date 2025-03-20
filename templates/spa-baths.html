@@ -1,0 +1,277 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Spa Baths
+  screenshotPath: ../images/template-previews/spa-baths.jpg
+ -->
+ 
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+	{% dnd_area 'dnd_area'
+	  label='Main section',
+	  class='body-container body-container--home'
+	%}
+
+	  {% include_dnd_partial
+	    path='../sections/header-2.html',
+	    context={
+			  'custom_section_classes': 'px-4 pt-[140px] pb-4 text-center',
+	      'title': '<h1>Spa kade</h1>',
+        'subtitle': ' 
+          <p class="font-normal lg:text-base">
+            Umirujući efekat tople vode i terapeutsko dejstvo masaže mogu značajno pomoći u ublažavanju i otklanjanju napetosti i stresa. Prilikom kupovine spa kade važno je odlučiti se za pouzdan brend i odabrati model koji dimenzijama i opremljenošću odgovara raspoloživom prostoru i potrebama. 
+          </p>
+          <a class="button-secondary flex justify-self-center mt-2" href="/">Pogledajte kompletnu ponudu</a>
+        '
+	    }
+	  %}
+
+    {% dnd_section 
+      padding={
+        'top': 40,
+        'bottom': 40,
+        'left': 40,
+        'right': 40
+      }
+    %}
+      {% dnd_column offset=0, width=12 %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}
+            {% module_attribute 'html' %}
+                <h2 class="h4 font-bold">Hidromasažne kade za svaki privatni i javni prostor</h2>
+                <p class="mb-1">
+                  Nudimo odličan asortiman vodećeg francuskog brenda POSEIDON SPA, koji uključuje raznovrstan izbor ergonomskih,
+                  izdržljivih i sjajno opremljenih modela, predviđenih za spoljašnju ili unutrašnju instalaciju. Ove hidraulične kade mogu
+                  primiti od dve do sedam osoba, i opremljene su komfornim mestima za sedenje i ležanje, različličitim masažnim mlaznicama
+                  i efikasnim sistemom za dezinfekciju.
+                </p>
+                <p class="mb-1">
+                  U zavisnosti od izabranog modela možete uživati u dodatnim efektima koji će poboljšati vašu relaksaciju i raspoloženje.
+                  AROMA TERAPIJA je terapija mirisnim aromama biljaka. Esencijalna ulja stimulišu autonomni nervni sistem, redukuju stres,
+                  anksioznost, i poboljšavaju san.
+                </p>
+                <p class="mb-1">
+                  HROMOTERAPIJA je terapija bojama koje emituju LED spotovi postavljeni u mlaznicama, skimeru, slapu, ili držačima čaša.
+                  Cela kada je okupana bojama koje utiču na raspoloženje i u kombinaciji sa masažom daju inzvanredan efekat na relaksaciju
+                  celog tela. Čak je i spoljni kabinet kade diskretno osvetljen, što daje posebnu notu elegancije.
+                </p>
+              {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+		{% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
+          "alt": "pexels-max-vakhtbovych-7587466 1",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain',
+        'title': 'Hidromasažna spa kada Rhea',
+        'description': 'Rhea hidromasažna kada pripada seriji Classic, manjih je dimenzija (200 X 135 X 80 cm) i predviđena je za tri osobe. Predstavlja odličan izbor kada je reč o odnosu cene i kvaliteta, jer poseduje sve sjajne tehničke karakteristike Poseidon spa kada, uključujući vrhunsku hidromasažu, po veoma privlačnoj ceni.',
+        'h_tag_choice': 'p',
+        'link_label': 'Više o modelu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://www.google.com/",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+		%}
+
+    {% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
+          "alt": "pexels-max-vakhtbovych-7587466 1",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain',
+        'title': 'Hidromasažna spa kada Cronos',
+        'description': 'Cronos kada iz osnovnog asortimana Classic ima tri sedeća i dva ležeća mesta. Ova robusna spa kada idealna je za unutrašnju ili spoljašnju upotrebu. Ima 34 hidromasažne mlaznice, a dimenzije su: 208 x 208 x 90 cm.',
+        'h_tag_choice': 'p',
+        'link_label': 'Više o modelu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://www.google.com/",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': true
+      }
+		%}
+
+    {% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
+          "alt": "pexels-max-vakhtbovych-7587466 1",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain',
+        'title': 'Hidromasažna spa kada Aphrodite',
+        'description': 'Aphrodite je model serije Sublime, koja se odlikuje rafiniranim dizajnom i izuzetnim terapeutskim performansama. Predviđena je za šest osoba i idealna je za one koji žele momente relaksacije sa prijateljima, uživajući uz osvežavajuće piće. Ima pet standardnih mesta za sedenje, dva komforna  ugaona sedišta i ležeće mesto, u kojima je omogućena raznovrsna i efektna masaža.',
+        'h_tag_choice': 'p',
+        'link_label': 'Više o modelu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://www.google.com/",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+		%}
+
+    {% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
+          "alt": "pexels-max-vakhtbovych-7587466 1",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain',
+        'title': 'Hidromasažna spa kada Orion',
+        'description': 'Hidromasažna kada Orion je vrhunski model sa 5 sedišta koji ima dva ležeća mesta, dva sedišta i ugaono sedište.  Odlikuju ga elegantne linije i dimenzije koje omogućavaju udobnost sedenja bez premca. Orion je pravi dragulj tehnologije koja nudi izuzetan doživljaj masaže, tako da prosto nećete poželeti da izađete iz kade.',
+        'h_tag_choice': 'p',
+        'link_label': 'Više o modelu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://www.google.com/",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': true
+      }
+		%}
+
+    {% include_dnd_partial
+			path='../sections/image-w-text-gradient.html',
+      context={
+        'image_field': {
+          "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pexels-max-vakhtbovych-7587466%201.jpg",
+          "alt": "pexels-max-vakhtbovych-7587466 1",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain',
+        'title': 'Swim Spa Neptune',
+        'description': 'Ovaj model je veličanstvena kombinacija hidromasažne kade i malog bazena sa tri  moćna "river džeta", za strujanje vode.  Neptun je kao stvoren za sportske entuzijaste. Ima dubinu koja je pogodna za plivanje,  a možete se baviti vodenim aktivnostima i izvoditi intenzivne vežbe. Neptune ima dva mesta za ležanje i može da primi do 5 osoba.',
+        'h_tag_choice': 'p',
+        'link_label': 'Više o modelu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://www.google.com/",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+		%}
+
+    {% dnd_section 
+      padding={
+        'top': 40,
+        'bottom': 40,
+        'left': 40,
+        'right': 40
+      },
+      background_color = '#F7F7FD'
+    %}
+      {% dnd_column offset=0, width=12 %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}
+            {% module_attribute 'html' %}
+              <div class="flex items-center flex-col">
+                <img src="https://atsistem.rs/hs-fs/hubfs/Poseidon%20logo-1.jpg?width=936&height=394&name=Poseidon%20logo-1.jpg" alt="Poseidon Spa" loading="lazy" width="470" height="200" >
+                <p class="mb-1 mt-2 lg:text-xl">
+                  POSÉIDON SPA - LE LUXE À LA FRANÇAISE
+                </p>
+                <p class="mb-1">
+                  Dizajnirane da pruže savršen komfor i omoguće neuporedivo iskustvo masaže, zahvaljujući mnogim, potpuno inovativnim rešenjima.
+                </p>
+                <a class="button-secondary flex justify-self-center mt-2" href="/">Preuzmite brošuru</a>
+              </div>    
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://atsistem.rs/hs-fs/hubfs/aqua/aqua%20novo.jpg?width=720&height=1400&name=aqua%20novo.jpg",
+          "alt": "Aqua Perfect ",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "eager",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain',
+        'title': 'Kako održavati kvalitet vode u spa kadi?',
+        'description': 'AQUA PERFECT je 100% biorazgradivo sredstvo koje održava vodu u perfektnom stanju, a uz to sprečava nastanak kamenca. Zadovoljni korisnici, koji godinama upotrebljavaju ovaj proizvod, najbolja su garancija da je ovaj holandski patent najbolje sredstvo za održavanje kvaliteta vode koji se može naći trenutno na tržištu.',
+        'h_tag_choice': 'h3',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://shop.atsistem.rs/sr/products/aquaperfect-2-0",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+		%}
+
+	{% end_dnd_area %}
+{% endblock body %}

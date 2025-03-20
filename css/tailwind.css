@@ -61,9 +61,9 @@
 }
 
 @layer components {
-.hs-button {
-  @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink transition-all;;
-}
+  .hs-button {
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink transition-all;;
+  }
 
   button,
   .button {
