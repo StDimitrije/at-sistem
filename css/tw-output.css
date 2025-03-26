@@ -2008,11 +2008,6 @@ button:hover,
   padding-bottom: 80px;
 }
 
-.py-9 {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
 .py-\[130px\] {
   padding-top: 130px;
   padding-bottom: 130px;
@@ -2070,8 +2065,8 @@ button:hover,
   padding-bottom: 310px;
 }
 
-.pl-5 {
-  padding-left: 50px;
+.pl-2 {
+  padding-left: 20px;
 }
 
 .pt-1 {
@@ -2631,6 +2626,10 @@ button:hover,
     padding-bottom: 370px;
   }
 
+  .md\:pl-4 {
+    padding-left: 40px;
+  }
+
   .md\:pt-\[125px\] {
     padding-top: 125px;
   }
@@ -2861,6 +2860,10 @@ button:hover,
     padding-bottom: 90px;
   }
 
+  .lg\:pl-5 {
+    padding-left: 50px;
+  }
+
   .lg\:text-left {
     text-align: left;
   }
@@ -2940,10 +2943,6 @@ button:hover,
   .xl\:columns-4 {
     -moz-columns: 4;
          columns: 4;
-  }
-
-  .xl\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .xl\:grid-cols-3 {

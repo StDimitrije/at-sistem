@@ -7,7 +7,7 @@
 -->
 
 {% dnd_section
-	class="px-4 py-9",
+	class="px-4 py-5",
 	background_image={
 		'backgroundPosition': 'MIDDLE_CENTER',
     'backgroundSize': 'cover',
@@ -18,6 +18,123 @@
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='../modules/featured-services',
+				h_tag_choice={{ context.h_tag_choice || 'h3' }},
+				title={{ context.title || 'Featured Services' }},
+				description={{ context.description || 'Contrary to popular belief, Lorem Ipsum is not simplyrandom text. If you are going to use a passage of Lorem Ipsum, you need to be sure there.' }},
+				link_label={{ context.link_label || 'Link Label' }},
+				link_field={{ context.link_field || {
+					"url": {
+						"content_id": null,
+						"type": "EXTERNAL",
+						"href": ""
+					},
+					"open_in_new_tab": false,
+					"no_follow": false
+				} }},
+				cards={{ context.cards || [
+					{
+						"card_title": "Projektovanje",
+						"card_color": {
+						"color": "#B8D0FC",
+						"opacity": 100
+						},
+						"image_field": {
+						"size_type": "auto",
+						"src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/planning.png",
+						"alt": "planning",
+						"loading": "lazy",
+						"width": 64,
+						"height": 64,
+						"max_width": 64,
+						"max_height": 64
+						}
+					},
+					{
+						"card_title": "Izgradnja",
+						"card_color": {
+						"color": "#D7B4F3",
+						"opacity": 100
+						},
+						"image_field": {
+						"size_type": "auto",
+						"src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/construction.png",
+						"alt": "construction",
+						"loading": "lazy",
+						"width": 64,
+						"height": 64,
+						"max_width": 64,
+						"max_height": 64
+						}
+					},
+					{
+						"card_title": "Montaža",
+						"card_color": {
+						"color": "#B8D0FC",
+						"opacity": 100
+						},
+						"image_field": {
+						"size_type": "auto",
+						"src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/assembly.png",
+						"alt": "assembly",
+						"loading": "lazy",
+						"width": 64,
+						"height": 64,
+						"max_width": 64,
+						"max_height": 64
+						}
+					},
+					{
+						"card_title": "Servis",
+						"card_color": {
+						"color": "#D7B4F3",
+						"opacity": 100
+						},
+						"image_field": {
+						"size_type": "auto",
+						"src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/service.png",
+						"alt": "service",
+						"loading": "lazy",
+						"width": 64,
+						"height": 64,
+						"max_width": 64,
+						"max_height": 64
+						}
+					},
+					{
+						"card_title": "Prodaja",
+						"card_color": {
+						"color": "#B8D0FC",
+						"opacity": 100
+						},
+						"image_field": {
+						"size_type": "auto",
+						"src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/shop.png",
+						"alt": "sales",
+						"loading": "lazy",
+						"width": 64,
+						"height": 64,
+						"max_width": 64,
+						"max_height": 64
+						}
+					},
+					{
+						"card_title": "Tehnička Podrška",
+						"card_color": {
+						"color": "#D7B4F3",
+						"opacity": 100
+						},
+						"image_field": {
+						"size_type": "auto",
+						"src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/icons/tech-support.png",
+						"alt": "tech-support",
+						"loading": "lazy",
+						"width": 64,
+						"height": 64,
+						"max_width": 64,
+						"max_height": 64
+						}
+					}
+				] }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}

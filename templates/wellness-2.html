@@ -1,0 +1,289 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Wellness 2
+  screenshotPath: ../images/template-previews/wellness.jpg
+ -->
+ 
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+	{% dnd_area 'dnd_area'
+	  label='Main section',
+	  class='body-container body-container--home'
+	%}
+
+	  {% include_dnd_partial
+	    path='../sections/hero-2.html',
+	    context={
+        'backgroundImage': 'https://atsistem.rs/hs-fs/hubfs/Lady%20in%20Spa.jpg?width=2000&height=888.1944444444443',
+			  'html': '
+          <h1 class="hero-title">Oprema za wellness</h1>
+          <p class="hero-subtitle">
+            Umirujući efekat tople vode i terapeutsko dejstvo masaže mogu značajno pomoći u ublažavanju i otklanjanju napetosti i stresa. 
+            Prilikom kupovine spa kade važno je odlučiti se za pouzdan brend i odabrati model koji dimenzijama i opremljenošću odgovara raspoloživom prostoru i potrebama.</p>
+          <a class="button-secondary flex mt-2" href="/kontakt">Kontaktirajte nas</a>
+        '
+	    }
+	  %}
+
+    {% dnd_section 
+      padding={
+        'top': 40,
+        'bottom': 40,
+        'left': 40,
+        'right': 40
+      }
+    %}
+      {% dnd_column offset=0, width=12 %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}
+            {% module_attribute 'html' %}
+                <h2 class="h4 font-bold">Oprema za wellness centre vrhunskog kvaliteta</h2>
+                <p class="mb-1">
+                  Nudimo odličan asortiman vodećeg francuskog brenda POSEIDON SPA, koji uključuje raznovrstan izbor ergonomskih,
+                  izdržljivih i sjajno opremljenih modela, predviđenih za spoljašnju ili unutrašnju instalaciju. Ove hidraulične kade mogu
+                  primiti od dve do sedam osoba, i opremljene su komfornim mestima za sedenje i ležanje, različličitim masažnim mlaznicama
+                  i efikasnim sistemom za dezinfekciju. Uživajte u <a class="underline" href="https://shop.atsistem.rs/sr/collections/komercijalne-spa-kade">hidromasažnim kadama za javni prostor</a> i svaki dom i efektima koji poboljšavaju relaksaciju i raspoloženje.
+                </p>
+                <p class="mb-1">
+                  AROMA TERAPIJA je terapija mirisnim aromama biljaka. Esencijalna ulja stimulišu autonomni nervni sistem, redukuju stres,
+                  anksioznost, i poboljšavaju san.
+                </p>
+                <p class="mb-1">
+                  HROMOTERAPIJA je terapija bojama koje emituju LED spotovi postavljeni u mlaznicama, skimeru, slapu, ili držačima čaša.
+                  Cela kada je okupana bojama koje utiču na raspoloženje i u kombinaciji sa masažom daju inzvanredan efekat na relaksaciju
+                  celog tela. Čak je i spoljni kabinet kade diskretno osvetljen, što daje posebnu notu elegancije.
+                </p>
+              {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+		{% include_dnd_partial
+			path='../sections/image-cards.html',
+      context={
+        'backgroundColor': '#fff',
+        'show_decorators': true,
+        'h_tag_choice': 'h3',
+        'cards': [
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "premium_product": false,
+            "title": "Saune",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.",
+            "link_field": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            },
+            "link_label": "Pogledajte ponudu"
+          },
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "premium_product": false,
+            "title": "Parna kupatila",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.",
+            "link_field": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            },
+            "link_label": "Pogledajte ponudu"
+          }
+        ]
+      }
+		%}
+
+		{% include_dnd_partial
+			path='../sections/image-cards.html',
+      context={
+        'show_decorators': false,
+        'h_tag_choice': 'h3',
+        'cards': [
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "premium_product": false,
+            "title": "Slana soba",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.",
+            "link_field": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            },
+            "link_label": "Pogledajte ponudu"
+          },
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/salt-room.png",
+            "alt": "salt-room",
+            "loading": "lazy",
+            "width": 600,
+            "height": 416,
+            "max_width": 600,
+            "max_height": 416
+            },
+            "premium_product": false,
+            "title": "Grejanje i odvlaživanje",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.",
+            "link_field": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "https://shop.atsistem.rs/sr/collections/grejanje-i-odvlazivanje"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            },
+            "link_label": "Pogledajte ponudu"
+          }
+        ]
+      }
+		%}
+
+    {% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Oprema/stakleni%20mozaik.jpg",
+          "alt": "Tople klupe",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'cover',
+        'title': 'Tople klupe',
+        'description': 'Contrary to popular belief, Lorem Ipsum is not simplyrandom text. If you are going to use a passage of Lorem Ipsum, you need to be sure there.',
+        'h_tag_choice': 'h3',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://shop.atsistem.rs/sr/collections/bazensko-okruzenje?sort_by=best-selling&filter.p.product_type=Le%C5%BEaljka",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': true
+      }
+		%}
+
+    {% include_dnd_partial
+      path='../sections/image-w-text-gradient.html',
+      context={
+        'h_tag_choice': 'h3',
+        'title': 'BWT komercijalne spa kade',
+        'description': 'Ekspert u proizvodnji opreme za rezidencijalne i javne bazene, koji svoje dugogodišnje znanje, iskustvo i kvalitet stavlja našim klijentima na raspolaganje, kada se radi o specifičnim sistemskim rešenjima, uz maksimalnu hidrauličku optimizaciju.',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://shop.atsistem.rs/sr/collections/komercijalne-spa-kade",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': false,
+        'image_field': {
+          "src": 'https://atsistem.rs/hs-fs/hubfs/Sadrzaj%20Usluge/bwt_m11.jpg',
+          "alt": "BWT Pool Products",
+          "size_type": "auto",
+          "width": 725,
+          "height": 360,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 360
+        },
+        'image_fit': 'contain',
+      }
+    %}
+
+    {% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Oprema/stakleni%20mozaik.jpg",
+          "alt": "Stakleni mozaik",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'cover',
+        'title': 'Stakleni mozaik',
+        'description': 'Contrary to popular belief, Lorem Ipsum is not simplyrandom text. If you are going to use a passage of Lorem Ipsum, you need to be sure there.',
+        'h_tag_choice': 'h3',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://shop.atsistem.rs/sr/collections/stakleni-mozaik",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': true
+      }
+		%}
+
+		{% include_dnd_partial
+			path='../sections/featured-services.html',
+      context={
+        'h_tag_choice': 'h3',
+        'title': 'Usluge izgradnje wellness centara',
+        'description': 'Contrary to popular belief, Lorem Ipsum is not simplyrandom text. If you are going to use a passage of Lorem Ipsum, you need to be sure there.',
+      }
+		%}
+
+
+	{% end_dnd_area %}
+{% endblock body %}
