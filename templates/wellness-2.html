@@ -2,7 +2,7 @@
   templateType: page
   isAvailableForNewContent: true
   label: Wellness 2
-  screenshotPath: ../images/template-previews/wellness.jpg
+  screenshotPath: ../images/template-previews/wellness-2.jpg
  -->
  
 {% extends "./layouts/base.html" %}
@@ -20,7 +20,7 @@
 			  'html': '
           <h1 class="hero-title">Oprema za wellness</h1>
           <p class="hero-subtitle">
-            Na osnovu dugogodišnjeg iskustva u kreiranju različitih spa sadržaja, opredelili smo se za saradnju sa pouzdanim proizvođačima, ekspertima za kreiranje specifičnih i funkcionalnih tehničkih rešenja.
+            Znajući koliko je modernom čoveku važno da se odmori i opusti, kreirali smo ponudu opreme za wellness i spa centre koja obuhvata pažljivo birane komade renomiranih proizvođača, ali i <a href="#usluge" class="underline" onclick="scrollToHeading(event)">kompletnu uslugu</a> projektovanja, ugradnje i održavanja.
           </p>
           <a class="button-secondary flex mt-2" href="/kontakt">Kontaktirajte nas</a>
         '
@@ -48,6 +48,9 @@
                 </p>
                 <p class="mb-1">
                   A&T SISTEM izrađuje spa sadržaje za privatnu i komercijalnu upotrebu, tako da su među našim klijentima brojni hoteli, resorti, wellness i spa centri, ali ponekad i privatna lica koja žele da stvore sopstvene oaze za relaksaciju i uživanje.
+                </p>
+                <p class="mb-1">
+                  Na osnovu dugogodišnjeg iskustva u kreiranju različitih spa sadržaja, opredelili smo se za saradnju sa pouzdanim proizvođačima, ekspertima za kreiranje specifičnih i funkcionalnih tehničkih rešenja.
                 </p>
               {% end_module_attribute %}
           {% end_dnd_module %}
@@ -80,12 +83,12 @@
               "url": {
                 "content_id": null,
                 "type": "EXTERNAL",
-                "href": "https://shop.atsistem.rs/sr/collections/saune"
+                "href": "/kontakt"
               },
               "open_in_new_tab": false,
               "no_follow": false
             },
-            "link_label": "Pogledajte ponudu"
+            "link_label": "Pošaljite upit"
           },
           {
             "image_field": {
@@ -114,12 +117,12 @@
               "url": {
                 "content_id": null,
                 "type": "EXTERNAL",
-                "href": "/"
+                "href": "/kontakt"
               },
               "open_in_new_tab": false,
               "no_follow": false
             },
-            "link_label": "Pogledajte ponudu"
+            "link_label": "Pošaljite upit"
           }
         ]
       }
@@ -151,12 +154,12 @@
               "url": {
                 "content_id": null,
                 "type": "EXTERNAL",
-                "href": "/"
+                "href": "/kontakt"
               },
               "open_in_new_tab": false,
               "no_follow": false
             },
-            "link_label": "Pogledajte ponudu"
+            "link_label": "Pošaljite upit"
           },
           {
             "image_field": {
@@ -176,12 +179,12 @@
               "url": {
                 "content_id": null,
                 "type": "EXTERNAL",
-                "href": "/"
+                "href": "/kontakt"
               },
               "open_in_new_tab": false,
               "no_follow": false
             },
-            "link_label": "Pogledajte ponudu"
+            "link_label": "Pošaljite upit"
           }
         ]
       }
@@ -294,6 +297,7 @@
 		{% include_dnd_partial
 			path='../sections/featured-services.html',
       context={
+        'heading_id': 'usluge',
         'h_tag_choice': 'h3',
         'title': 'Usluge izgradnje wellness centara',
         'description': 'Naš tim je na raspolaganju da vaše ideje pretvori u stvarnost. Nakon usvajanja kvalitetnog idejnog rešenja, projektovanje, izgradnja, opremanje i puštanje spa sadržaja u rad su naša briga. Uvek ostajemo na raspolaganju kao tehnička podrška, za održavanje i servis.',

@@ -209,4 +209,13 @@ window.checkHeadForSwiper = () => {
     }
   }
   return bool;
-}
+};
+
+window.scrollToHeading = (event) => {
+  event.preventDefault();
+  const element = document.querySelector(event.target.hash);
+  element && window.scrollTo({
+    top: element.getBoundingClientRect().top + window.scrollY - 80 - 50, // 80px is the offset for the header height, 50px is the offset for section padding
+    behavior: 'smooth'
+  });
+};

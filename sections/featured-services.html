@@ -18,6 +18,7 @@
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
 				path='../modules/featured-services',
+				heading_id={{ context.heading_id || '' }},
 				h_tag_choice={{ context.h_tag_choice || 'h3' }},
 				title={{ context.title || 'Featured Services' }},
 				description={{ context.description || 'Contrary to popular belief, Lorem Ipsum is not simplyrandom text. If you are going to use a passage of Lorem Ipsum, you need to be sure there.' }},

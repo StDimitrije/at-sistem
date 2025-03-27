@@ -1,8 +1,5 @@
 [
  {
-  "type": "choice",
-  "id": "0c5b4b36-24bf-e186-4a27-5c0f55406136",
-  "display": "select",
   "choices": [
    [
     "h1",
@@ -33,9 +30,25 @@
     "p"
    ]
   ],
+  "default": "h3",
+  "display": "select",
+  "display_width": null,
+  "id": "0c5b4b36-24bf-e186-4a27-5c0f55406136",
   "label": "H-tag Choice",
+  "locked": false,
+  "multiple": false,
   "name": "h_tag_choice",
-  "default": "h3"
+  "preset": null,
+  "reordering_enabled": true,
+  "required": false,
+  "type": "choice"
+ },
+ {
+  "type": "text",
+  "id": "059e5569-5667-6a65-0e75-5869a3e9b7c2",
+  "validation_regex": "",
+  "label": "Heading id",
+  "name": "heading_id"
  },
  {
   "allow_new_line": false,
