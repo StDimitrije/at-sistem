@@ -14,17 +14,21 @@
     <div class="flex flex-col w-full">
       {% if module.premium_product %}
       <div class="w-full flex justify-between mb-1" id="{{ module.heading_id }}">
-        <{{ module.h_tag_choice }} class="text-lg font-bold lg:text-3xl">
-          {{ module.title }}
-        </{{ module.h_tag_choice }}>
+        {% if module.title != '' %}
+          <{{ module.h_tag_choice }} class="text-lg font-bold lg:text-3xl">
+            {{ module.title }}
+          </{{ module.h_tag_choice }}>
+        {% endif %}
         <p
           class="text-xl bg-purpleGradient text-center px-5 text-white tracking-wider leading-2 hidden lg:flex items-center">
           Premium</p>
       </div>
       {% else %}
-      <{{ module.h_tag_choice }} class="text-lg font-bold lg:text-3xl mb-1" id="{{ module.heading_id }}">
-        {{ module.title }}
-      </{{ module.h_tag_choice }}>
+        {% if module.title != ''  %}
+          <{{ module.h_tag_choice }} class="text-lg font-bold lg:text-3xl mb-1" id="{{ module.heading_id }}">
+            {{ module.title }}
+          </{{ module.h_tag_choice }}>
+        {% endif %}
       {% endif %}
       <p class="text-xs leading-5 lg:text-p">{{ module.description }}</p>
       <div class="flex justify-between gap-1 flex-col sm:flex-row w-full items-start sm:items-center">
