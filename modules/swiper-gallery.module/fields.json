@@ -1,18 +1,5 @@
 [
  {
-  "allow_new_line": false,
-  "default": "Title",
-  "display_width": null,
-  "id": "feb1a47b-eb0b-23a6-92bf-e55575c416d2",
-  "label": "Title",
-  "locked": false,
-  "name": "title",
-  "required": false,
-  "show_emoji_picker": false,
-  "type": "text",
-  "validation_regex": ""
- },
- {
   "children": [
    {
     "default": {
@@ -35,136 +22,44 @@
     "responsive": true,
     "show_loading": false,
     "type": "image"
-   },
-   {
-    "type": "boolean",
-    "id": "88399313-7b82-3f0a-e816-31685fd2e273",
-    "default": false,
-    "display": "checkbox",
-    "label": "Link Image",
-    "name": "link_image"
-   },
-   {
-    "default": {
-     "url": {
-      "content_id": null,
-      "type": "EXTERNAL",
-      "href": ""
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
-    "display_width": null,
-    "id": "ab7415bd-f53d-3997-a305-32f929ad251d",
-    "label": "Image Link",
-    "locked": false,
-    "name": "image_link",
-    "required": false,
-    "show_advanced_rel_options": false,
-    "supported_types": [
-     "EXTERNAL",
-     "CONTENT",
-     "FILE",
-     "EMAIL_ADDRESS",
-     "BLOG",
-     "CALL_TO_ACTION"
-    ],
-    "type": "link",
-    "visibility": {
-     "operator": "EQUAL",
-     "controlling_field_path": "image_group.link_image",
-     "controlling_value_regex": "true"
-    }
    }
   ],
   "default": [
    {
     "image_field": {
      "size_type": "auto",
-     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "src": "https://atsistem.rs/hubfs/Partneri/BWT%20POOL%20PRODUCTS.png",
      "alt": "imageedit_31_2841620365-1",
      "loading": "lazy",
-     "width": 222,
+     "width": 200,
      "height": 77,
-     "max_width": 222,
+     "max_width": 200,
      "max_height": 77
-    },
-    "image_link": {
-     "url": {
-      "content_id": null,
-      "type": "EXTERNAL",
-      "href": ""
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
-    "boolean_field": false
+    }
    },
    {
     "image_field": {
      "size_type": "auto",
-     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "src": "https://atsistem.rs/hubfs/Partneri/Bio-Uv%20group.jpg",
      "alt": "imageedit_31_2841620365-1",
      "loading": "lazy",
-     "width": 222,
+     "width": 200,
      "height": 77,
-     "max_width": 222,
+     "max_width": 200,
      "max_height": 77
-    },
-    "image_link": {
-     "url": {
-      "content_id": null,
-      "type": "EXTERNAL",
-      "href": ""
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
-    "boolean_field": false
+    }
    },
    {
     "image_field": {
      "size_type": "auto",
-     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
+     "src": "https://atsistem.rs/hubfs/Partneri/SPECK.jpg",
      "alt": "imageedit_31_2841620365-1",
      "loading": "lazy",
-     "width": 222,
+     "width": 200,
      "height": 77,
-     "max_width": 222,
+     "max_width": 200,
      "max_height": 77
-    },
-    "image_link": {
-     "url": {
-      "content_id": null,
-      "type": "EXTERNAL",
-      "href": ""
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
-    "boolean_field": false
-   },
-   {
-    "image_field": {
-     "size_type": "auto",
-     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/imageedit_31_2841620365-1.png",
-     "alt": "imageedit_31_2841620365-1",
-     "loading": "lazy",
-     "width": 222,
-     "height": 77,
-     "max_width": 222,
-     "max_height": 77
-    },
-    "image_link": {
-     "url": {
-      "content_id": null,
-      "type": "EXTERNAL",
-      "href": ""
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
-    "boolean_field": false
+    }
    }
   ],
   "display_width": null,
@@ -175,7 +70,7 @@
   "locked": false,
   "name": "image_group",
   "occurrence": {
-   "default": 4,
+   "default": 3,
    "min": 1
   },
   "required": false,

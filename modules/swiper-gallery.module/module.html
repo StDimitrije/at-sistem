@@ -1,11 +1,11 @@
-<div class="relative block m-[0_auto] pt-5 pb-6 px-4
+<div class="relative block m-[0_auto] pb-2 px-4
 {{ 'bg-pink/[.08]' if module.variant == 'false' }}
 ">
   {% if module.variant == 'true' %}
-  <img src='{{ get_asset_url("../../images/icons/large-dots.svg") }}'
-    class="absolute right-0 top-[-75px] block max-w-[170px]" loading="lazy">
   <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
-    class="absolute left-[-65px] bottom-[-85px] block" loading="lazy">
+    class="absolute -right-2 top-[-145px] max-w-[170px] hidden xl:block" loading="lazy">
+  <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
+    class="absolute left-[-65px] bottom-[-105px] hidden xl:block" loading="lazy">
   {% endif %}
   {% if module.variant == 'false' %}
   <img src='{{ get_asset_url("../../images/icons/large-dots.svg") }}'
@@ -13,26 +13,16 @@
   <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
     class="absolute left-[-65px] bottom-[-85px] block" loading="lazy">
   {% endif %}
-  <h3 class="mb-5">{{ module.title }}</h3>
   <div class="swiper-gallery-{{name}} swiper max-w-[1000px]">
     <div class="flex items-center swiper-wrapper">
       {% for item in module.image_group %}
-        {% if item.link_image == true %}
-          <a href="{{item.image_link.url.href}}" class="swiper-slide max-w-[200px] sm:max-w-15">
-            <img class="w-full h-full object-center object-cover max-w-[200px] sm:max-w-15" src="{{ item.image_field.src }}" width="200px" loading="lazy"
-              alt="{{ item.image_field.alt }}">
-          </a>
-          {% else %}
-          <div class="swiper-slide max-w-[200px] sm:max-w-15">
-            <img class="w-full h-full object-center object-cover max-w-[200px] sm:max-w-15" src="{{ item.image_field.src }}" width="200px" loading="lazy"
-              alt="{{ item.image_field.alt }}">
-          </div>
-        {% endif %}
-     
+        <div class="swiper-slide max-w-[200px] sm:max-w-15">
+          <img class="w-full h-full object-center object-cover max-w-[200px] sm:max-w-[150px]" src="{{ item.image_field.src }}" width="200px" height="auto" loading="lazy"
+            alt="{{ item.image_field.alt }}">
+        </div>
       {% endfor %}
     </div>
   </div>
-  {# <div class="swiper-gallery-pagination-container swiper-pagination-{{ name }} flex justify-center relative mt-4 bottom-0 w-full h-[20px]"></div> #}
 
   {% if module.show_button == true %}
   <div class="flex justify-center w-full">

@@ -16,22 +16,503 @@
 	%}
 
 	  {% include_dnd_partial
-	    path='../sections/hero.html',
+	    path='../sections/hero-2.html',
+	    context={
+        'backgroundImage': 'https://atsistem.rs/hubfs/raw_assets/public/at-sistem-theme/images/at-sistem-hero-image.jpeg?name=at-sistem-hero-image.jpeg',
+			  'html': '
+          <h1 class="hero-title">A&T Sistem</h1>
+          <p class="hero-subtitle">
+            Vaš proveren partner za projektovanje i izgradnju bazena, fontana, spa i welness centara, prodaju i ugradnju opreme za bazene.
+          </p>
+          <a class="button-secondary flex mt-2" href="https://shop.atsistem.rs/sr/collections/all">Pogledajte ponudu</a>
+        '
+	    }
 	  %}
-	  {% include_dnd_partial
-	    path='../sections/banner.html',
-	  %}
+
 	  {% include_dnd_partial
 	    path='../sections/categories.html',
+			context={
+				'title': '<h2 class="mb-3">Usluge i oprema za bazene, wellnes i spa centre</h2>'
+			}
 	  %}
+
 	  {% include_dnd_partial
 	    path='../sections/swiper-gallery.html',
+			context={
+				'title': '<h3 class="h2 mb-2 px-4">Naši partneri</h3>',
+				'image_group': [
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/BWT%20POOL%20PRODUCTS.png",
+            "alt": "bwt pool products",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/Bio-Uv%20group.jpg",
+            "alt": "bio uv group",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+          {
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/SPECK.jpg",
+            "alt": "speck pumpen",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/Aquacomet.jpg",
+            "alt": "aquacomet",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/EP%20LOGO.jpeg",
+            "alt": "endless pools",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/Poseidon%20header.jpg",
+            "alt": "poseidon spa",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/mosavit.jpeg",
+            "alt": "mosavit mosaico",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/ARKEMA%20DESIGN.jpeg",
+            "alt": "arkema design",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/FILTRINOV.jpg",
+            "alt": "filtrinov",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/KERAKOLL.jpg",
+            "alt": "kerakoll",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/logo-grando-pool-covers.png",
+            "alt": "grando pool covers",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/technopool%20logo.png",
+            "alt": "technopool",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/WDT-Logo-.jpg",
+            "alt": "wdt",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/ACQUA%20SOURCE1.jpeg",
+            "alt": "acqua source",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/Chemoform.jpg",
+            "alt": "Chemoform",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/logotype%20pahlen.jpeg",
+            "alt": "pahlen",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          },
+					{
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Partneri/Peraqua_Logo_.jpg",
+            "alt": "peraqua",
+            "loading": "lazy",
+            "width": 200,
+            "height": 77,
+            "max_width": 200,
+            "max_height": 77
+            }
+          }
+        ],
+				'variant': true
+			}
 	  %}
+
+		{% include_dnd_partial
+      path='../sections/image-w-text-gradient.html',
+      context={
+        'title': 'BWT – Pouzdani partner A&T Sistema',
+        'description': '
+          	Tekst od 1-2 rečenice koji pominje sve tipove BWT proizvoda koje nudite
+          ',
+        'h_tag_choice': 'h3',
+        'link_label': 'Više o brendu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/BWT%20Pearl%20Protect.pdf",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/bwt_m11.jpg",
+          "alt": "BWT Pool Products",
+          "size_type": "auto",
+          "width": 760,
+          "height": 300,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+				'image_fit': 'cover'
+      }
+    %}
+
+		{% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'title': 'Pokrivači za bazene – zaštita i bezbednost',
+        'description': '
+          	Kratak opis proizvoda, 1-2 rečenice
+          ',
+        'h_tag_choice': 'h3',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "/bazeni/pokrivaci-za-bazene",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hs-fs/hubfs/Sadrzaj%20Usluge/Pokrivac%20za%20bazen.jpeg",
+          "alt": "Pokrivac za bazen",
+          "size_type": "auto",
+          "width": 760,
+          "height": 300,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+				'image_fit': 'cover',
+				'reverse_content_direction': true
+      }
+    %}
+
 	  {% include_dnd_partial
 	    path='../sections/featured-services.html',
+			context={
+				'title': 'Naše usluge',
+				'description': 'Naš stručni tim obezbeđuje kompletnu tehničku podršku i servis u svakoj fazi izgradnje bazena i najkvalitetnije opreme za bazene, izgradnje fontana, ugradnji spa kada.'
+			}
 	  %}
+
+		{% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'title': 'Pokrivači za bazene – zaštita i bezbednost',
+        'description': '
+          	Kratak opis proizvoda, 1-2 rečenice
+          ',
+        'h_tag_choice': 'h3',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "/bazeni/pokrivaci-za-bazene",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hs-fs/hubfs/Sadrzaj%20Usluge/Pokrivac%20za%20bazen.jpeg",
+          "alt": "Pokrivac za bazen",
+          "size_type": "auto",
+          "width": 760,
+          "height": 300,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+				'image_fit': 'cover'
+      }
+    %}
+
+		{% include_dnd_partial
+			path='../sections/image-with-text.html',
+      context={
+        'image_field': {
+          "src": "https://shop.atsistem.rs/cdn/shop/files/ORION.png?v=1742388040",
+          "alt": "Hidromasažna spa kada Orion",
+          "size_type": "auto",
+          "width": 725,
+          "height": 500,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+        'image_fit': 'contain',
+        'title': 'Hidromasažna spa kada Orion',
+        'description': 'Hidromasažna kada Orion je vrhunski model sa 5 sedišta koji ima dva ležeća mesta, dva sedišta i ugaono sedište.  Odlikuju ga elegantne linije i dimenzije koje omogućavaju udobnost sedenja bez premca. Orion je pravi dragulj tehnologije koja nudi izuzetan doživljaj masaže, tako da prosto nećete poželeti da izađete iz kade.',
+        'h_tag_choice': 'p',
+        'link_label': 'Pogledajte ponudu',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "/spa-kade",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'reverse_content_direction': true
+      }
+		%}
+
 	  {% include_dnd_partial
-	    path='../sections/image-gallery.html',
+	    path='../sections/image-gallery-slider.html',
+			context={
+				'title': '<h3 class="h2">Galerija<h3>',
+				'images': [
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.16.1.jpeg",
+						"alt": "bazen 16.1",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.17.1.jpeg",
+						"alt": "bazen 17.1",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.14.1.jpeg",
+						"alt": "bazen 14.1",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Spa/wellness.jpg",
+						"alt": "wellness",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Spa/img.s8.jpg",
+						"alt": "img.s8",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.2.jpg",
+						"alt": "img.2",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.4.jpg",
+						"alt": "img.4",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.23.jpg",
+						"alt": "img.23",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.12.1.jpeg",
+						"alt": "img.12.1",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					},
+					{
+						"image": {
+						"size_type": "auto",
+						"src": "https://atsistem.rs/hs-fs/hubfs/Galerija%20Pocetna%20Slider/Bazeni/img.25.jpg",
+						"alt": "img.25",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					}
+				]
+			}
 	  %}
 
 	{% end_dnd_area %}

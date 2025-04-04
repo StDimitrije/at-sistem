@@ -24,7 +24,21 @@
 		{% end_dnd_row %}
 		{% dnd_row offset=0, width=12 %}
 			{% dnd_module
-				path='../modules/image-gallery'
+				path='../modules/image-gallery',
+				images={{ context.images || [
+					{
+						"image_field": {
+						"size_type": "auto",
+						"src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Galerija%20Pocetna/img.12.jpg",
+						"alt": "img.12",
+						"loading": "lazy",
+						"width": 600,
+						"height": 400,
+						"max_width": 600,
+						"max_height": 400
+						}
+					}
+				] }}
 			%}
 			{% end_dnd_module %}
 		{% end_dnd_row %}

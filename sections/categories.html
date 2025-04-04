@@ -6,11 +6,106 @@
   description: "Cover photo promo section without a title and a button"
 -->
 
-{% dnd_section class="py-0 px-0" %}
+{% dnd_section class="py-4 px-4" %}
 	{% dnd_column offset=0, width=12 %}
     {% dnd_row offset=0, width=12 %}
       {% dnd_module
-        path='../modules/categories'
+        path='@hubspot/rich_text',
+        html={{ context.title || '<h2>Kategorije</h2>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row offset=0, width=12 %}
+      {% dnd_module
+        path='../modules/categories',
+        card_1 = {{ context.card_1 || {
+          "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/IMG-a8c1942d303b6bb8ce9afb142d3d3a10-V.jpg",
+            "alt": "a&t sistem bazeni",
+            "loading": "lazy",
+            "width": 250,
+            "height": 250,
+            "max_width": 250,
+            "max_height": 250
+          },
+          "title": "Bazeni",
+          "link_field": {
+            "url": {
+            "type": "EXTERNAL",
+            "href": "/bazeni/usluge",
+            "content_id": null
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          }
+        } }},
+        card_2 = {{ context.card_2 || {
+          "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/relax.jpg",
+            "alt": "a&t sistem wellness",
+            "loading": "lazy",
+            "width": 250,
+            "height": 250,
+            "max_width": 250,
+            "max_height": 250
+          },
+          "title": "Wellness",
+          "link_field": {
+            "url": {
+            "type": "EXTERNAL",
+            "href": "/wellness",
+            "content_id": null
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          }
+        } }},
+        card_3 = {{ context.card_3 || {
+          "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/ea69577cbb5551990d1199bba03ae8e2.jpeg",
+            "alt": "a&t sistem fontane",
+            "loading": "lazy",
+            "width": 250,
+            "height": 250,
+            "max_width": 250,
+            "max_height": 250
+          },
+          "title": "Fontane",
+          "link_field": {
+            "url": {
+            "type": "EXTERNAL",
+            "href": "/fontane",
+            "content_id": null
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          }
+        } }},
+        card_4 = {{ context.card_4 || {
+          "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/img.spa-15.jpg",
+            "alt": "a&t sistem spa kade",
+            "loading": "lazy",
+            "width": 250,
+            "height": 250,
+            "max_width": 250,
+            "max_height": 250
+          },
+          "title": "Spa kade",
+          "link_field": {
+            "url": {
+            "type": "EXTERNAL",
+            "href": "/spa-kade",
+            "content_id": null
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          }
+        } }}
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

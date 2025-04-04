@@ -992,6 +992,10 @@ button:hover,
   right: -35px !important;
 }
 
+.-right-2 {
+  right: -20px;
+}
+
 .-top-\[65px\] {
   top: -65px;
 }
@@ -1002,6 +1006,10 @@ button:hover,
 
 .bottom-1 {
   bottom: 10px;
+}
+
+.bottom-\[-105px\] {
+  bottom: -105px;
 }
 
 .bottom-\[-85px\] {
@@ -1046,6 +1054,10 @@ button:hover,
 
 .top-8 {
   top: 80px;
+}
+
+.top-\[-145px\] {
+  top: -145px;
 }
 
 .top-\[-75px\] {
@@ -1297,10 +1309,6 @@ button:hover,
 
 .h-\[200px\] {
   height: 200px;
-}
-
-.h-\[20px\] {
-  height: 20px;
 }
 
 .h-\[220px\] {
@@ -1604,10 +1612,6 @@ button:hover,
 
 .items-baseline {
   align-items: baseline;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1928,11 +1932,6 @@ button:hover,
   padding: 40px;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .px-1 {
   padding-left: 10px;
   padding-right: 10px;
@@ -1961,11 +1960,6 @@ button:hover,
 .px-\[25px\] {
   padding-left: 25px;
   padding-right: 25px;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 .py-0\.5 {
@@ -2003,11 +1997,6 @@ button:hover,
   padding-bottom: 80px;
 }
 
-.py-\[130px\] {
-  padding-top: 130px;
-  padding-bottom: 130px;
-}
-
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -2016,6 +2005,11 @@ button:hover,
 .py-\[180px\] {
   padding-top: 180px;
   padding-bottom: 180px;
+}
+
+.py-\[25px\] {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .py-\[3px\] {
@@ -2082,10 +2076,6 @@ button:hover,
 
 .pt-4 {
   padding-top: 40px;
-}
-
-.pt-5 {
-  padding-top: 50px;
 }
 
 .pt-6 {
@@ -2540,6 +2530,10 @@ button:hover,
     max-width: 150px;
   }
 
+  .sm\:max-w-\[150px\] {
+    max-width: 150px;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2805,6 +2799,10 @@ button:hover,
     justify-content: flex-start;
   }
 
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
   .lg\:justify-items-start {
     justify-items: start;
   }
@@ -2921,6 +2919,10 @@ button:hover,
 @media (min-width: 1280px) {
   .xl\:col-span-1 {
     grid-column: span 1 / span 1;
+  }
+
+  .xl\:block {
+    display: block;
   }
 
   .xl\:flex {
