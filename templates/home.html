@@ -44,7 +44,7 @@
           {
             "image_field": {
             "size_type": "auto",
-            "src": "https://atsistem.rs/hubfs/Partneri/BWT%20POOL%20PRODUCTS.png",
+            "src": "https://atsistem.rs/hubfs/Partneri/BWT_Pool_Products_2024.jpg",
             "alt": "bwt pool products",
             "loading": "lazy",
             "width": 200,
@@ -256,6 +256,7 @@
         'title': 'BWT – Pouzdani partner A&T Sistema',
         'description': '
           	Tekst od 1-2 rečenice koji pominje sve tipove BWT proizvoda koje nudite
+            <br><small>©photo creadit : BWT POOL PRODUCTS</small>
           ',
         'h_tag_choice': 'h3',
         'link_label': 'Više o brendu',
@@ -288,6 +289,7 @@
         'title': 'Pokrivači za bazene – zaštita i bezbednost',
         'description': '
           	Kratak opis proizvoda, 1-2 rečenice
+            <br><small>©photo creadit : BWT POOL PRODUCTS</small>
           ',
         'h_tag_choice': 'h3',
         'link_label': 'Pogledajte ponudu',
@@ -318,42 +320,11 @@
 	  {% include_dnd_partial
 	    path='../sections/featured-services.html',
 			context={
+        'h_tag_choice': 'h2',
 				'title': 'Naše usluge',
 				'description': 'Naš stručni tim obezbeđuje kompletnu tehničku podršku i servis u svakoj fazi izgradnje bazena i najkvalitetnije opreme za bazene, izgradnje fontana, ugradnji spa kada.'
 			}
 	  %}
-
-		{% include_dnd_partial
-      path='../sections/image-with-text.html',
-      context={
-        'title': 'Pokrivači za bazene – zaštita i bezbednost',
-        'description': '
-          	Kratak opis proizvoda, 1-2 rečenice
-          ',
-        'h_tag_choice': 'h3',
-        'link_label': 'Pogledajte ponudu',
-        'link': {
-          "url": {
-            "type": "EXTERNAL",
-            "href": "/bazeni/pokrivaci-za-bazene",
-            "content_id": null
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        },
-        'image_field': {
-          "src": "https://atsistem.rs/hs-fs/hubfs/Sadrzaj%20Usluge/Pokrivac%20za%20bazen.jpeg",
-          "alt": "Pokrivac za bazen",
-          "size_type": "auto",
-          "width": 760,
-          "height": 300,
-          "loading": "lazy",
-          "max_width": 725,
-          "max_height": 500
-        },
-				'image_fit': 'cover'
-      }
-    %}
 
 		{% include_dnd_partial
 			path='../sections/image-with-text.html',
@@ -369,9 +340,9 @@
           "max_height": 500
         },
         'image_fit': 'contain',
-        'title': 'Hidromasažna spa kada Orion',
-        'description': 'Hidromasažna kada Orion je vrhunski model sa 5 sedišta koji ima dva ležeća mesta, dva sedišta i ugaono sedište.  Odlikuju ga elegantne linije i dimenzije koje omogućavaju udobnost sedenja bez premca. Orion je pravi dragulj tehnologije koja nudi izuzetan doživljaj masaže, tako da prosto nećete poželeti da izađete iz kade.',
-        'h_tag_choice': 'p',
+        'title': 'Spa kade – vrhunski kvalitet za vrhunsku relaksaciju',
+        'description': 'Kratak opis proizvoda, 1-2 rečenice',
+        'h_tag_choice': 'h3',
         'link_label': 'Pogledajte ponudu',
         'link': {
           "url": {
@@ -385,6 +356,75 @@
         'reverse_content_direction': true
       }
 		%}
+
+    {% dnd_section 
+      padding={
+        'top': '40px',
+        'bottom': '40px',
+        'left': '40px',
+        'right': '40px'
+      }
+    %}
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            html='
+              <h2 class="h3 bazenske-kupole">Oprema i održavanje bazena i wellness centara</h2>
+              <p>
+                2-3 rečenice teksta o opremi za bazene sa rečenicom koja pominje kompletnu ponudu opreme za bazene i ima upadljivi link ka šopu.
+              </p>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row 
+          margin={
+            'top':'40px'
+          }
+        %}
+          {% dnd_module
+            path='../modules/simple-cards',
+            cards=[
+              {
+                "content": '
+                  <div class="flex flex-col justify-between h-full">
+                    <div>
+                      <h3 class="h6 font-bold mb-1">Toplotne pumpe</h3>
+                      <p>Kratak tekst (1-2 rečenice) koji ističe proizvod(e)</p>
+                    </div>
+                    <a class="button flex mt-1">Pogledajte ponudu</a>
+                  </div>
+                '
+              },
+              {
+                "content": '
+                  <div class="flex flex-col justify-between h-full">
+                    <div>
+                      <h3 class="h6 font-bold mb-1">Bežični roboti</h3>
+                      <p>Kratak tekst (1-2 rečenice) koji ističe proizvod(e)</p>
+                    </div>
+                    <a class="button flex mt-1">Pogledajte ponudu</a>
+                  </div>
+                '
+              },
+              {
+                "content": '
+                  <div class="flex flex-col justify-between h-full">
+                    <div>
+                      <h3 class="h6 font-bold mb-1">Automatski hemijski tretman</h3>
+                      <p>Kratak tekst (1-2 rečenice) koji ističe proizvod(e)</p>
+                    </div>
+                    <a class="button flex mt-1">Pogledajte ponudu</a>
+                  </div>
+                '
+              }
+            ]
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
 
 	  {% include_dnd_partial
 	    path='../sections/image-gallery-slider.html',
