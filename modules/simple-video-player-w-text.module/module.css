@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1139px){
+@media (max-width: 1024px){
   .simple-video-player-modal-content {
     width: calc(100vw - 100px);
   }

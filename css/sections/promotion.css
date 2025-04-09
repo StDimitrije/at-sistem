@@ -10,7 +10,7 @@
   width: 50%;
 }
 
-@media (max-width: 1139px) {
+@media (max-width: 1024px) {
   .promotion-section .row-fluid .span6 {
     width: 100%;
   }

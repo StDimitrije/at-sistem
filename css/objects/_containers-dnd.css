@@ -5,7 +5,6 @@
 
 @media screen and (min-width: 1380px) {
   .content-wrapper {
-    /* padding: 0; */
     padding: 0 var(--content-px);
   }
 }
@@ -14,11 +13,7 @@
   margin: 0 auto;
 }
 
-/* .dnd-section .dnd-column {
-  padding: 0 1rem;
-} */
-
-@media (max-width: 1139px) {
+@media (max-width: 1024px) {
   .dnd-section .dnd-column {
     padding: 0;
   }

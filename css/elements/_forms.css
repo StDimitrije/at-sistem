@@ -233,6 +233,29 @@ form input[type=submit]:hover {
   background-color: #ACC8FB;
 }
 
+.hbspt-form input[type=submit].hs-button {
+  /* all: unset !important; */
+  padding: 10px 25px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) /* #ffffff */;
+  font-size: 14px;
+  line-height: 1rem;
+  width: fit-content;
+  background-color:  rgb(215 180 243 / var(--tw-bg-opacity, 1));
+  border-color: rgb(215 180 243 / var(--tw-bg-opacity, 1));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hbspt-form input[type=submit].hs-button:hover {
+  background-color: rgb(197 152 234 / var(--tw-border-opacity, 1));
+  border-color: rgb(197 152 234 / var(--tw-border-opacity, 1))
+}
+
 /* Captcha */
 
 .grecaptcha-badge {
