@@ -49,18 +49,27 @@
       context={
         'title': 'BWT - Pouzdan Partner',
         'description': 'A&T SISTEM je Vas pouzdan partner u projektovanju i izgradnji bazena dugi niz godina, a nasa saradnja sa BWI POOL PRODUCTS, renomiranim proizvodacem bazenske opreme garantuje vrhunski kvalitet uredaja, hidraulicki optimizovana resenja lum Iskusnin struchjaka na raspolaganju.<br><small class="mt-0.5">©photo creadit : BWT POOL PRODUCTS</small>',
-        'link_label': 'Više o brendu',
+        'link_label': 'Pogledajte ponudu',
+				'link': {
+					"url": {
+						"type": "EXTERNAL",
+						"href": "https://shop.atsistem.rs/sr/collections/all?sort_by=title-ascending&filter.p.vendor=BWT+POOL+PRODUCTS",
+						"content_id": null
+					},
+					"open_in_new_tab": false,
+					"no_follow": false
+				},
         'reverse_content_direction': true,
 				'image_field': {
-            "src": 'https://atsistem.rs/hubfs/Sadrzaj%20Usluge/BWT%20Pool%20Products-1.jpg',
-            "alt": "BWT Pool Products",
-            "size_type": "auto",
-            "width": 725,
-            "height": 360,
-            "loading": "lazy",
-            "max_width": 725,
-            "max_height": 360
-          }
+					"src": 'https://atsistem.rs/hs-fs/hubfs/Sadrzaj%20Usluge/bwt_m11.jpg?noresize',
+					"alt": "BWT Pool Products",
+					"size_type": "auto",
+					"width": 725,
+					"height": 360,
+					"loading": "lazy",
+					"max_width": 725,
+					"max_height": 360
+				}
       }
     %}
 
@@ -69,18 +78,27 @@
 			context={
 				'title': 'Pokrivač za bazen',
 				'description': "Prekrivač za bazen štiti od prašine, lišća, insekata i nečistoće, zadržava željenu temperaturu vode, i smanjuje mogućnost stvaranja algi, a ima naročito važnu ulogu za bezbednost dece i kućnih ljubimaca. Otkrijete našu fantastičnu ponudu koja obuhvata sve tipove bazenskih pokrivača, uključujući i bazenske kupole i pokretne konstrukcije po kojima može da se hoda.",
-				'link_label': 'Opširnije',
+				'link_label': 'Pogledajte ponudu',
+				'link': {
+					"url": {
+						"type": "EXTERNAL",
+						"href": "/bazeni/pokrivaci-za-bazene",
+						"content_id": null
+					},
+					"open_in_new_tab": false,
+					"no_follow": false
+				},
 				'h_tag_choice': 'h3',
 				'image_field': {
-            "src": 'https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Pokrivac%20za%20bazen.jpeg',
-            "alt": "Pokrivac za bazen",
-            "size_type": "auto",
-            "width": 725,
-            "height": 360,
-            "loading": "lazy",
-            "max_width": 725,
-            "max_height": 360
-          }
+					"src": 'https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Pokrivac%20za%20bazen.jpeg?noresize',
+					"alt": "Pokrivac za bazen",
+					"size_type": "auto",
+					"width": 725,
+					"height": 360,
+					"loading": "lazy",
+					"max_width": 725,
+					"max_height": 360
+				}
 			}
 	  %}
 
@@ -89,11 +107,20 @@
 			context={
 				'title': 'Drveni Bazeni',
 				'description': "Drveni bazeni BWT su osmišljeni i dizajnirani tako da se uklope u prirodni ambijent, i da vlasnicima pruže sav komfor i sigurnost, uz racionalnu potrošnju energije. Proizvedeni su u Francuskoj, u strogo kontrolisanim uslovima.",
-				'link_label': 'Opširnije',
+				'link_label': 'Pogledajte ponudu',
+				'link': {
+					"url": {
+						"type": "EXTERNAL",
+						"href": "/bazeni/gotovi-bazeni",
+						"content_id": null
+					},
+					"open_in_new_tab": false,
+					"no_follow": false
+				},
 				'h_tag_choice': 'h3',
 				'reverse_content_direction': true,
 				'image_field': {
-            "src": 'https://atsistem.rs/hubfs/Usluge%20Sadrzaj/wooden%20pool.jpg',
+            "src": 'https://atsistem.rs/hubfs/Usluge%20Sadrzaj/wooden%20pool.jpg?noresize',
             "alt": "Drveni bazeni",
             "size_type": "auto",
             "width": 725,
@@ -104,6 +131,52 @@
           }
 			}
 	  %}
+
+		{% dnd_section
+			padding={
+				'default': {
+					'top': '40px',
+					'bottom': '40px',
+					'left': '40px',
+					'right': '40px'
+				}	
+			},
+			background_color = "#F7F7FD"
+		%}
+			{% dnd_column offset=0, width=12 %}
+				{% dnd_row 
+				margin={
+						'bottom': '30px'
+					}
+				%}
+					{% dnd_module
+						path='@hubspot/rich_text'
+					%}
+						{% module_attribute 'html' %}
+							<h2>Zašto su betonski bazeni izbor broj 1</h2>
+							<p class="mb-1">Bez obzira da li želite klasični pravougaoni bazen ili specifični oblik koji se savršeno uklapa u vaš pejzaž, beton je pravi izbor.</p>
+							<p class="mb-1">Jedna od najznačajnijih prednosti izgradnje bazena je mogućnost prilagođavanja. Za razliku od <a class="underline" href="/bazeni/gotovi-bazeni">gotovih bazena</a>, koji imaju unapred definisane oblike i dimenzije, betonski bazeni pružaju mogućnost neograničenog izbora.</p>
+							<p>Visokokvalitetni betonski bazen, izgrađen prema projektu, uz poštovanje svih važećih standarda, sa kvalitetnom bazenskom oblogom, kao što je stakleni mozaik ili bazenska pločica, trajaće duže i biti izdržljiviji od bilo kog drugog, a ulaganje je isplativo i značajno povećava vrednost vaše imovine.</p>
+							<h3 class="h4 text-left lg:text-center mt-3">Energetska efikasnost koja smanjuje troškove održavanja</h3>
+							<p class="mb-1">Savremeni betonski bazeni mogu biti opremljeni energetski efikasnim tehnologijama koje minimiziraju troškove vode i grejanja. Funkcije kao što su <a class="underline" href="/bazeni/pokrivaci-za-bazene">automatizovani pokrivači za bazene</a>, <a class="underline" href="/bazeni/oprema">energetski efikasne pumpe</a> i <a class="underline" href="/bazeni/oprema">LED osvetljenje</a> mogu smanjiti ukupnu potrošnju energije vašeg bazena.</p>
+							<p>Naša saradnja sa vrhunskim proizvođačima bazenske opreme obezbeđuje nam pristup najnovijim tehnološkim rešenjima, koja su usmerena na uštedu energije i očuvanje životne sredine, što uključuje i smanjenje ukupnih troškova.</p>
+							<h3 class="h4 text-left lg:text-center mt-3">Proces izgradnje bazena</h3>
+							<p class="mb-1">Proces izgradnje betonskog bazena započinje izradom idejnog rešenja i definisanjem projektnog zadatka. To je trenutak kada treba pažljivo da razmotrite sve detalje vezane za poziciju i tehničke prostorije, oblik i veličinu, dodatne elemente, kao što su klupe ili stepenice, i takođe izaberete adekvatnu opremu, na primer za grejanje, tretman bazenske vode, pokrivanje, ili masažu.</p>
+							<p class="mb-1">Kroz sve te odluke, u skladu sa vašim željama i potrebama, vodi vas naš iskusan tim, kome možete prepustiti sve dalje radove, od izrade projekta do puštanja u rad čim se usvoji konačno rešenje.</p>
+							<p>Vaše ushićenje kada se prvi put okupate u sopstvenom bazenu za nas je nemerljivo zadovoljstvo i podsticaj za dalji rad i usavršavanje.</p>
+						{% end_module_attribute %}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+				{% dnd_row 
+				%}
+					{% dnd_module
+						path='../modules/image-collage'
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
 
 		{% include_dnd_partial
 	    path='../sections/image-gallery-slider.html',

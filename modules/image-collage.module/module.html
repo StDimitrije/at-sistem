@@ -1,0 +1,133 @@
+{% set firstImage = module.images|first %}
+
+<div class="grid grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-1 w-full h-[80svh] lg:max-h-[85svh]">
+  <div class="main-swiper-{{name}} swiper col-span-2 row-span-2 !ml-0 !w-full">
+    <div class="swiper-wrapper">
+      {% for image in module.images %}
+      <div class="swiper-slide">
+        <img class="object-cover object-center h-full w-full" src="{{ image.src }}" alt="{{ image.alt }}"
+          width="{{ image.width }}" height="{{ image.height }}" loading="{{ image.loading }}">
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Navigation -->
+    <div class="swiper-button-next swiper-button-next-{{name}}" />
+    <div class="swiper-button-prev swiper-button-prev-{{name}}" />
+  </div>
+  <div class="thumbs-vertical swiper row-span-2 !ml-0 !hidden lg:!block">
+    <div class="swiper-wrapper">
+      {% for image in module.images[1:3] %}
+      <div class="swiper-slide cursor-pointer">
+        <img class="object-cover object-center h-full w-full" src="{{ image.src }}" alt="{{ image.alt }}"
+          width="{{ image.width }}" height="{{ image.height }}" loading="{{ image.loading }}">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="thumbs-horizontal swiper col-span-2 row-span-1 lg:col-span-3 !ml-0 !w-full">
+    <div class="swiper-wrapper">
+      {% for image in module.images[1:] %}
+      <div class="swiper-slide cursor-pointer">
+        <img class="object-cover object-center h-full w-full" src="{{ image.src }}" alt="{{ image.alt }}"
+          width="{{ image.width }}" height="{{ image.height }}" loading="{{ image.loading }}">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% require_js %}
+<script>
+
+  if (!checkHeadForSwiper()) {
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+    document.head.appendChild(link);
+  }
+
+  window.addEventListener('load', () => {
+
+    const thumbVertical = new Swiper(".thumbs-vertical", {
+      spaceBetween: 10,
+      slidesPerView: 2,
+      direction: "vertical",
+      freeMode: true,
+      watchSlidesProgress: true,
+      allowTouchMove: true
+    });
+
+    const thumbHorizontal = new Swiper(".thumbs-horizontal", {
+      spaceBetween: 10,
+      slidesPerView: 2,
+      direction: "horizontal",
+      freeMode: true,
+      watchSlidesProgress: true,
+      allowTouchMove: true,
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+    const mainSwiper = new Swiper(".main-swiper-{{name}}", {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next-{{name}}",
+        prevEl: ".swiper-button-prev-{{name}}",
+      },
+      on: {
+        slideChange: function () {
+          updateThumbs(this.activeIndex, thumbHorizontal, thumbVertical);
+        },
+      },
+    });
+
+    // Click listeners for thumbs
+    document.querySelectorAll(".thumbs-vertical .swiper-slide").forEach((slide, index) => {
+      slide.addEventListener("click", () => {
+        mainSwiper.slideTo(index + 1);
+      });
+    });
+    document.querySelectorAll(".thumbs-horizontal .swiper-slide").forEach((slide, index) => {
+      slide.addEventListener("click", () => {
+        mainSwiper.slideTo(index + 1);
+      });
+    });
+
+  });
+
+  const updateThumbs = (index, thumbHorizontal, thumbVertical) => {
+    // Remove active class
+    document
+      .querySelectorAll(".thumbs-horizontal .swiper-slide, .thumbs-vertical .swiper-slide")
+      .forEach((slide) => slide.classList.remove("swiper-slide-thumb-active"));
+
+    if (window.innerWidth >= 1024) {
+      if (index >= 3) {
+        const horizontalSlide = document.querySelector(`.thumbs-horizontal .swiper-slide:nth-child(${index})`);
+        if (horizontalSlide) horizontalSlide.classList.add("swiper-slide-thumb-active");
+        // thumbHorizontal.slideTo(index);
+      }
+      if (index <= 2 && index >= 1) {
+        const verticalSlide = document.querySelector(`.thumbs-vertical .swiper-slide:nth-child(${index})`);
+        if (verticalSlide) verticalSlide.classList.add("swiper-slide-thumb-active");
+        // thumbVertical.slideTo(index);
+      }
+    } else {
+      const horizontalSlide = document.querySelector(`.thumbs-horizontal .swiper-slide:nth-child(${index})`);
+      if (horizontalSlide) horizontalSlide.classList.add("swiper-slide-thumb-active");
+      // thumbHorizontal.slideTo(index);
+    }
+  }
+
+</script>
+{% end_require_js %}

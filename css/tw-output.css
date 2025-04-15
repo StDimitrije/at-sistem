@@ -1112,6 +1112,22 @@ button:hover,
   grid-column: span 3 / span 3;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -1250,6 +1266,14 @@ button:hover,
   margin-top: auto;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
+.\!ml-0 {
+  margin-left: 0px !important;
+}
+
 .block {
   display: block;
 }
@@ -1264,6 +1288,10 @@ button:hover,
 
 .grid {
   display: grid;
+}
+
+.\!grid {
+  display: grid !important;
 }
 
 .contents {
@@ -1352,6 +1380,10 @@ button:hover,
   height: 100vh;
 }
 
+.h-\[80svh\] {
+  height: 80svh;
+}
+
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -1366,6 +1398,34 @@ button:hover,
 
 .max-h-\[70\%\] {
   max-height: 70%;
+}
+
+.max-h-\[33\%\] {
+  max-height: 33%;
+}
+
+.max-h-\[50\%\] {
+  max-height: 50%;
+}
+
+.max-h-\[650px\] {
+  max-height: 650px;
+}
+
+.max-h-svh {
+  max-height: 100svh;
+}
+
+.max-h-\[90svh\] {
+  max-height: 90svh;
+}
+
+.max-h-\[80svh\] {
+  max-height: 80svh;
+}
+
+.max-h-\[85svh\] {
+  max-height: 85svh;
 }
 
 .min-h-\[100svh\] {
@@ -1438,6 +1498,10 @@ button:hover,
   width: 100vw;
 }
 
+.\!w-full {
+  width: 100% !important;
+}
+
 .min-w-\[260px\] {
   min-width: 260px;
 }
@@ -1492,6 +1556,10 @@ button:hover,
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-\[33\%\] {
+  max-width: 33%;
 }
 
 .flex-1 {
@@ -1576,6 +1644,18 @@ button:hover,
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2669,6 +2749,18 @@ button:hover,
     top: 0px;
   }
 
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+
   .lg\:m-0 {
     margin: 0px;
   }
@@ -2725,6 +2817,10 @@ button:hover,
     height: 6px;
   }
 
+  .lg\:max-h-\[85svh\] {
+    max-height: 85svh;
+  }
+
   .lg\:min-h-\[80svh\] {
     min-height: 80svh;
   }
@@ -2773,6 +2869,10 @@ button:hover,
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -2855,6 +2955,10 @@ button:hover,
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 
   .lg\:text-2xl {

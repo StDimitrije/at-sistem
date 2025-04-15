@@ -1,0 +1,81 @@
+[
+ {
+  "default": [
+   {
+    "size_type": "auto",
+    "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Izgradnja%20Bazena%20Faze/13.jpg?noresize",
+    "alt": "Izgradnja bazena faza 6",
+    "loading": "lazy",
+    "width": 900,
+    "height": 500,
+    "max_width": 1600,
+    "max_height": 691
+   },
+   {
+    "size_type": "auto",
+    "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Izgradnja%20Bazena%20Faze/6.jpeg?noresize",
+    "alt": "Izgradnja bazena faza 5",
+    "loading": "lazy",
+    "width": 900,
+    "height": 500,
+    "max_width": 1600,
+    "max_height": 691
+   },
+   {
+    "size_type": "auto",
+    "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Izgradnja%20Bazena%20Faze/7.jpeg?noresize",
+    "alt": "Izgradnja bazena faza 4",
+    "loading": "lazy",
+    "width": 900,
+    "height": 500,
+    "max_width": 1600,
+    "max_height": 691
+   },
+   {
+    "size_type": "auto",
+    "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Izgradnja%20Bazena%20Faze/8.jpeg?noresize",
+    "alt": "Izgradnja bazena faza 3",
+    "loading": "lazy",
+    "width": 900,
+    "height": 500,
+    "max_width": 1600,
+    "max_height": 691
+   },
+   {
+    "size_type": "auto",
+    "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Izgradnja%20Bazena%20Faze/10.jpeg?noresize",
+    "alt": "Izgradnja bazena faza 2",
+    "loading": "lazy",
+    "width": 900,
+    "height": 500,
+    "max_width": 1600,
+    "max_height": 691
+   },
+   {
+    "size_type": "auto",
+    "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Izgradnja%20Bazena%20Faze/12.jpeg?noresize",
+    "alt": "Izgradnja bazena faza 1",
+    "loading": "lazy",
+    "width": 900,
+    "height": 500,
+    "max_width": 1000,
+    "max_height": 691
+   }
+  ],
+  "display_width": null,
+  "id": "d268989e-2aae-a5c3-fd34-11b4775c6dfd",
+  "label": "Images",
+  "locked": false,
+  "name": "images",
+  "occurrence": {
+   "default": 6,
+   "max": 12,
+   "min": 6
+  },
+  "required": false,
+  "resizable": true,
+  "responsive": true,
+  "show_loading": false,
+  "type": "image"
+ }
+]

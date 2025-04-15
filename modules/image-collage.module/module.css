@@ -1,0 +1,15 @@
+.thumbs-vertical .swiper-slide-thumb-active,
+.thumbs-horizontal .swiper-slide-thumb-active {
+  border: 2px solid #000;
+}
+
+/* Select Only The First Three */
+.thumbs-horizontal .swiper-slide:nth-child(-n+2) {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .thumbs-horizontal .swiper-slide:nth-child(-n+2) {
+    display: block;
+  }
+}
