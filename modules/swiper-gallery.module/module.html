@@ -1,18 +1,6 @@
-<div class="relative block m-[0_auto] pb-2 px-4
+<div class="relative block m-[0_auto] px-4
 {{ 'bg-pink/[.08]' if module.variant == 'false' }}
 ">
-  {% if module.variant == 'true' %}
-  <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
-    class="absolute -right-2 top-[-145px] max-w-[170px] hidden xl:block" loading="lazy">
-  <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
-    class="absolute left-[-65px] bottom-[-105px] hidden xl:block" loading="lazy">
-  {% endif %}
-  {% if module.variant == 'false' %}
-  <img src='{{ get_asset_url("../../images/icons/large-dots.svg") }}'
-    class="absolute right-0 top-[-75px] block max-w-[170px]" loading="lazy">
-  <img src='{{ get_asset_url("../../images/icons/small-dots.svg") }}'
-    class="absolute left-[-65px] bottom-[-85px] block" loading="lazy">
-  {% endif %}
   <div class="swiper-gallery-{{name}} swiper max-w-[1000px]">
     <div class="flex items-center swiper-wrapper">
       {% for item in module.image_group %}

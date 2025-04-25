@@ -1108,24 +1108,20 @@ button:hover,
   z-index: 99;
 }
 
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
-.row-span-2 {
-  grid-row: span 2 / span 2;
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 
 .row-span-1 {
   grid-row: span 1 / span 1;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
 }
 
 .m-0 {
@@ -1148,6 +1144,10 @@ button:hover,
 .my-2 {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.\!ml-0 {
+  margin-left: 0px !important;
 }
 
 .-mb-0\.5 {
@@ -1266,14 +1266,6 @@ button:hover,
   margin-top: auto;
 }
 
-.ml-0 {
-  margin-left: 0px;
-}
-
-.\!ml-0 {
-  margin-left: 0px !important;
-}
-
 .block {
   display: block;
 }
@@ -1288,10 +1280,6 @@ button:hover,
 
 .grid {
   display: grid;
-}
-
-.\!grid {
-  display: grid !important;
 }
 
 .contents {
@@ -1355,6 +1343,10 @@ button:hover,
   height: 6px;
 }
 
+.h-\[80svh\] {
+  height: 80svh;
+}
+
 .h-\[auto\] {
   height: auto;
 }
@@ -1380,10 +1372,6 @@ button:hover,
   height: 100vh;
 }
 
-.h-\[80svh\] {
-  height: 80svh;
-}
-
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -1398,34 +1386,6 @@ button:hover,
 
 .max-h-\[70\%\] {
   max-height: 70%;
-}
-
-.max-h-\[33\%\] {
-  max-height: 33%;
-}
-
-.max-h-\[50\%\] {
-  max-height: 50%;
-}
-
-.max-h-\[650px\] {
-  max-height: 650px;
-}
-
-.max-h-svh {
-  max-height: 100svh;
-}
-
-.max-h-\[90svh\] {
-  max-height: 90svh;
-}
-
-.max-h-\[80svh\] {
-  max-height: 80svh;
-}
-
-.max-h-\[85svh\] {
-  max-height: 85svh;
 }
 
 .min-h-\[100svh\] {
@@ -1446,6 +1406,10 @@ button:hover,
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.\!w-full {
+  width: 100% !important;
 }
 
 .w-1\/12 {
@@ -1496,10 +1460,6 @@ button:hover,
 
 .w-screen {
   width: 100vw;
-}
-
-.\!w-full {
-  width: 100% !important;
 }
 
 .min-w-\[260px\] {
@@ -1556,10 +1516,6 @@ button:hover,
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-\[33\%\] {
-  max-width: 33%;
 }
 
 .flex-1 {
@@ -1646,16 +1602,8 @@ button:hover,
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-rows-3 {
   grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2622,6 +2570,10 @@ button:hover,
     gap: 30px;
   }
 
+  .sm\:justify-self-center {
+    justify-self: center;
+  }
+
   .sm\:p-3 {
     padding: 30px;
   }
@@ -2749,16 +2701,8 @@ button:hover,
     top: 0px;
   }
 
-  .lg\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
   .lg\:col-span-3 {
     grid-column: span 3 / span 3;
-  }
-
-  .lg\:row-span-2 {
-    grid-row: span 2 / span 2;
   }
 
   .lg\:m-0 {
@@ -2871,10 +2815,6 @@ button:hover,
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lg\:grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-  }
-
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2917,6 +2857,10 @@ button:hover,
 
   .lg\:gap-\[50px\] {
     gap: 50px;
+  }
+
+  .lg\:gap-7 {
+    gap: 70px;
   }
 
   .lg\:rounded {

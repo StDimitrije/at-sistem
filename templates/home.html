@@ -32,7 +32,12 @@
 	  {% include_dnd_partial
 	    path='../sections/categories.html',
 			context={
-				'title': '<h2 class="mb-3">Usluge i oprema za bazene, wellnes i spa centre</h2>'
+				'title': '
+          <h2 class="">Usluge i oprema za bazene, wellnes i spa centre</h2>
+          <p class="mb-1">Izgradnja betonskih bazena je naša specijalnost. Naše dugogodišnje iskustvo, stalna edukacija, izbor pouzdanih brendova i praćenje novih tehnologija, garancija su kvalitetne usluge.</p>
+          <a class="button flex sm:justify-self-center mb-3" href="/bazeni/usluge">Saznajte više</a>
+          ',
+          'custom_classes': 'bg-lightGrey'
 			}
 	  %}
 
@@ -245,8 +250,7 @@
             "max_height": 77
             }
           }
-        ],
-				'variant': true
+        ]
 			}
 	  %}
 
@@ -255,7 +259,7 @@
       context={
         'title': 'BWT – Pouzdani partner A&T Sistema',
         'description': '
-          	Tekst od 1-2 rečenice koji pominje sve tipove BWT proizvoda koje nudite
+          	BWT POOL PRODUCTS je vodeći francuski i svetski proizvođač bazenske opreme koji ima jak inženjerski kadar, moćan softverski sistem, najsavremenije pogone i laboratorije i posvećen tim zaposlenih. U našoj ponudi su BWT ugradni elementi od abs-a i inox-a, uređaji za tretman vode, bazenski pokrivači, toplotne pumpe, roboti za čišćenje bazena, komercijalne spa kade, oprema za filtraciju i još mnogo toga.
             <br><small>©photo creadit : BWT POOL PRODUCTS</small>
           ',
         'h_tag_choice': 'h3',
@@ -288,7 +292,7 @@
       context={
         'title': 'Pokrivači za bazene – zaštita i bezbednost',
         'description': '
-          	Kratak opis proizvoda, 1-2 rečenice
+          	Vaše je da odlučite kakav tip bazenskog pokrivača želite: letnji ili zimski, univerzalni, automatski nadgradni ili automatski potopljeni, itd. Veliki izbor kvalitetnih bazenskih pokrivača BWT POOL PRODUCTS, koji se izrađuju po narudžbini u Francuskoj, dostupan je već godinama, na našem tržištu, zahvaljujući A&T SISTEM-u.
             <br><small>©photo creadit : BWT POOL PRODUCTS</small>
           ',
         'h_tag_choice': 'h3',
@@ -341,7 +345,7 @@
         },
         'image_fit': 'contain',
         'title': 'Spa kade – vrhunski kvalitet za vrhunsku relaksaciju',
-        'description': 'Kratak opis proizvoda, 1-2 rečenice',
+        'description': 'Naše spa kade su tako dizajnirane i opremljene da i najzahtevniji korisnici mogu da pronađu model za sebe. Mogu da prime od dve do sedam osoba, imaju izrazito kvalitetna tehnička rešenja i sve komponente su izrađene od najkvalitetnijih materijala.',
         'h_tag_choice': 'h3',
         'link_label': 'Pogledajte ponudu',
         'link': {
@@ -391,9 +395,9 @@
                   <div class="flex flex-col justify-between h-full">
                     <div>
                       <h3 class="h6 font-bold mb-1">Toplotne pumpe</h3>
-                      <p>Kratak tekst (1-2 rečenice) koji ističe proizvod(e)</p>
+                      <p>Toplotne pumpe vazduh-voda, sa naprednom inverter tehnologijom, produžiće sezonu kupanja i ostvarićete značajne uštede u potrošnji energije.</p>
                     </div>
-                    <a class="button flex mt-1">Pogledajte ponudu</a>
+                    <a class="button flex mt-1" href="https://shop.atsistem.rs/sr/collections/grejanje-i-odvlazivanje?sort_by=best-selling&filter.p.product_type=Toplotne+pumpe">Pogledajte ponudu</a>
                   </div>
                 '
               },
@@ -402,9 +406,9 @@
                   <div class="flex flex-col justify-between h-full">
                     <div>
                       <h3 class="h6 font-bold mb-1">Bežični roboti</h3>
-                      <p>Kratak tekst (1-2 rečenice) koji ističe proizvod(e)</p>
+                      <p>Čišćenje bazena može postati igra, uz najnoviju generaciju BWT bežičnih robota, koji čiste sve vrste bazenskih obloga, pod, zidove, i vodenu liniju.</p>
                     </div>
-                    <a class="button flex mt-1">Pogledajte ponudu</a>
+                    <a class="button flex mt-1" href="https://shop.atsistem.rs/sr/collections/oprema-za-odrzavanje-bazena?sort_by=best-selling&filter.p.product_type=Roboti">Pogledajte ponudu</a>
                   </div>
                 '
               },
@@ -413,9 +417,9 @@
                   <div class="flex flex-col justify-between h-full">
                     <div>
                       <h3 class="h6 font-bold mb-1">Automatski hemijski tretman</h3>
-                      <p>Kratak tekst (1-2 rečenice) koji ističe proizvod(e)</p>
+                      <p>Uređaji za automatski hemijski tretman omogućiće vam bezbrižno uživanje u kristalno čistoj vodi, jer su podešeni tako da automatski kontrolišu i mere parametre u bazenskoj vodi i doziraju hemijska sredstva po potrebi.</p>
                     </div>
-                    <a class="button flex mt-1">Pogledajte ponudu</a>
+                    <a class="button flex mt-1" href="https://shop.atsistem.rs/sr/collections/tretman-bazenske-vode?sort_by=best-selling&filter.p.product_type=Automatski+hemijski+tretman">Pogledajte ponudu</a>
                   </div>
                 '
               }
