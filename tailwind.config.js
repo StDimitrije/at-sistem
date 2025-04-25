@@ -14,7 +14,8 @@ module.exports = {
         greyLight: '#505050',
         blue: '#B8D0FC',
         blueDark: '#9dbcf4',
-        lightGrey: '#F7F7FD'
+        lightGrey: '#F7F7FD',
+        darkPurple: '#4d3f9a'
       },
       fontFamily: {
         sans: [ 'Poppins', ...defaultTheme.fontFamily.sans]

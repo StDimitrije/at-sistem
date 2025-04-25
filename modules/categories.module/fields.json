@@ -13,102 +13,6 @@
      "max_height": 358
     },
     "display_width": null,
-    "id": "fd4f5efe-d064-cae7-e48d-cf73278f7664",
-    "label": "Image",
-    "locked": false,
-    "name": "image_field",
-    "required": false,
-    "resizable": true,
-    "responsive": true,
-    "show_loading": false,
-    "type": "image"
-   },
-   {
-    "allow_new_line": false,
-    "default": "Title 1",
-    "display_width": null,
-    "id": "e25985f1-c178-7690-bc88-858742c7493f",
-    "label": "Title",
-    "locked": false,
-    "name": "title",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-   },
-   {
-    "default": {
-     "url": {
-      "type": "EXTERNAL",
-      "href": "https://google.com",
-      "content_id": null
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    },
-    "display_width": null,
-    "id": "c0421797-e4dd-bf0d-73e6-eb9f012da2f0",
-    "label": "Link",
-    "locked": false,
-    "name": "link_field",
-    "required": false,
-    "show_advanced_rel_options": false,
-    "supported_types": [
-     "EXTERNAL",
-     "CONTENT",
-     "FILE",
-     "EMAIL_ADDRESS",
-     "BLOG"
-    ],
-    "type": "link"
-   }
-  ],
-  "default": {
-   "image_field": {
-    "size_type": "auto",
-    "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
-    "alt": "pools-card",
-    "loading": "lazy",
-    "width": 401,
-    "height": 358,
-    "max_width": 401,
-    "max_height": 358
-   },
-   "title": "Title 1",
-   "link_field": {
-    "url": {
-     "type": "EXTERNAL",
-     "href": "https://google.com",
-     "content_id": null
-    },
-    "open_in_new_tab": false,
-    "no_follow": false
-   }
-  },
-  "display_width": null,
-  "expanded": false,
-  "id": "8615ba3d-7e42-426f-0381-1a188e1be6d6",
-  "label": "Card 1",
-  "locked": false,
-  "name": "card_1",
-  "required": false,
-  "tab": "CONTENT",
-  "type": "group"
- },
- {
-  "children": [
-   {
-    "default": {
-     "size_type": "auto",
-     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/pools-card.jpg",
-     "alt": "pools-card",
-     "loading": "lazy",
-     "width": 401,
-     "height": 358,
-     "max_width": 401,
-     "max_height": 358
-    },
-    "display_width": null,
     "id": "521e2365-0e60-dffc-a517-08af0f4e8a0c",
     "label": "Image",
     "locked": false,
@@ -184,9 +88,9 @@
   "display_width": null,
   "expanded": false,
   "id": "ea83f598-448b-d6bf-3951-00cb20772395",
-  "label": "Card 2",
+  "label": "Card 1",
   "locked": false,
-  "name": "card_2",
+  "name": "card_1",
   "required": false,
   "tab": "CONTENT",
   "type": "group"
@@ -280,9 +184,9 @@
   "display_width": null,
   "expanded": false,
   "id": "b98bad36-9777-3b11-965c-b273fca1b2f7",
-  "label": "Card 3",
+  "label": "Card 2",
   "locked": false,
-  "name": "card_3",
+  "name": "card_2",
   "required": false,
   "tab": "CONTENT",
   "type": "group"
@@ -376,9 +280,9 @@
   "display_width": null,
   "expanded": false,
   "id": "d0def7b6-c365-affc-7b08-b05106c51183",
-  "label": "Card 4",
+  "label": "Card 3",
   "locked": false,
-  "name": "card_4",
+  "name": "card_3",
   "required": false,
   "tab": "CONTENT",
   "type": "group"

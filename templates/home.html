@@ -29,17 +29,64 @@
 	    }
 	  %}
 
-	  {% include_dnd_partial
-	    path='../sections/categories.html',
-			context={
-				'title': '
-          <h2 class="">Usluge i oprema za bazene, wellnes i spa centre</h2>
-          <p class="mb-1">Izgradnja betonskih bazena je naša specijalnost. Naše dugogodišnje iskustvo, stalna edukacija, izbor pouzdanih brendova i praćenje novih tehnologija, garancija su kvalitetne usluge.</p>
-          <a class="button flex sm:justify-self-center mb-3" href="/bazeni/usluge">Saznajte više</a>
+    {% dnd_section 
+      padding={
+        'top': 40,
+        'bottom': 0,
+        'left': 40,
+        'right': 40
+      }
+    %}
+      {% dnd_column offset=0, width=12 %}
+        {% dnd_row %}
+          {% dnd_module 
+            path="@hubspot/rich_text",
+            html='
+              <h2 class="mb-0">Usluge i oprema za bazene, wellnes i spa centre</h2>
+            '
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/image-with-text.html',
+      context={
+        'custom_classes': 'px-4 pt-3 pb-0',
+        'title': 'Za dobar bazen važan je DOBAR IZBOR',
+        'description': '
+          	Izgradnja betonskih bazena je naša specijalnost. Naše dugogodišnje iskustvo, stalna edukacija, izbor pouzdanih brendova i praćenje novih tehnologija, garancija su kvalitetne usluge.
           ',
-          'custom_classes': 'bg-lightGrey'
-			}
-	  %}
+        'h_tag_choice': 'h3',
+        'link_label': 'Poverite posao profesionalcima',
+        'link': {
+          "url": {
+            "type": "EXTERNAL",
+            "href": "/bazeni/usluge",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        'image_field': {
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/ambiental_m5.jpeg?noresize",
+          "alt": "Izgradnja bazena",
+          "size_type": "auto",
+          "width": 760,
+          "height": 300,
+          "loading": "lazy",
+          "max_width": 725,
+          "max_height": 500
+        },
+				'image_fit': 'cover',
+				'reverse_content_direction': false
+      }
+    %}
+
+	  {% include_dnd_partial 
+      path='../sections/categories.html'  
+    %}
 
 	  {% include_dnd_partial
 	    path='../sections/swiper-gallery.html',
@@ -259,7 +306,7 @@
       context={
         'title': 'BWT – Pouzdani partner A&T Sistema',
         'description': '
-          	BWT POOL PRODUCTS je vodeći francuski i svetski proizvođač bazenske opreme koji ima jak inženjerski kadar, moćan softverski sistem, najsavremenije pogone i laboratorije i posvećen tim zaposlenih. U našoj ponudi su BWT ugradni elementi od abs-a i inox-a, uređaji za tretman vode, bazenski pokrivači, toplotne pumpe, roboti za čišćenje bazena, komercijalne spa kade, oprema za filtraciju i još mnogo toga.
+          	BWT POOL PRODUCTS je vodeći francuski i svetski proizvođač <a href="/bazeni/oprema" class="font-bold text-darkPurple">bazenske opreme</a> koji ima jak inženjerski kadar, moćan softverski sistem, najsavremenije pogone i laboratorije i posvećen tim zaposlenih. U našoj ponudi su BWT ugradni elementi od abs-a i inox-a, <a class="text-darkPurple font-bold" href="https://shop.atsistem.rs/sr/collections/bwt-pool-products">uređaji za tretman vode, bazenski pokrivači, toplotne pumpe, roboti za čišćenje bazena, komercijalne spa kade, oprema za filtraciju</a> i još mnogo toga.
             <br><small>©photo creadit : BWT POOL PRODUCTS</small>
           ',
         'h_tag_choice': 'h3',
@@ -267,7 +314,7 @@
         'link': {
           "url": {
             "type": "EXTERNAL",
-            "href": "https://atsistem.rs/hubfs/Brosure%20-%20Pokrivaci/BWT%20Pearl%20Protect.pdf",
+            "href": "https://shop.atsistem.rs/sr/collections/bwt-pool-products",
             "content_id": null
           },
           "open_in_new_tab": false,
@@ -290,7 +337,7 @@
 		{% include_dnd_partial
       path='../sections/image-with-text.html',
       context={
-        'title': 'Pokrivači za bazene – zaštita i bezbednost',
+        'title': 'Pokrivači za bazene koji traju',
         'description': '
           	Vaše je da odlučite kakav tip bazenskog pokrivača želite: letnji ili zimski, univerzalni, automatski nadgradni ili automatski potopljeni, itd. Veliki izbor kvalitetnih bazenskih pokrivača BWT POOL PRODUCTS, koji se izrađuju po narudžbini u Francuskoj, dostupan je već godinama, na našem tržištu, zahvaljujući A&T SISTEM-u.
             <br><small>©photo creadit : BWT POOL PRODUCTS</small>
@@ -307,7 +354,7 @@
           "no_follow": false
         },
         'image_field': {
-          "src": "https://atsistem.rs/hs-fs/hubfs/Sadrzaj%20Usluge/Pokrivac%20za%20bazen.jpeg?noresize",
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/coverdeck_m.jpg?noresize",
           "alt": "Pokrivac za bazen",
           "size_type": "auto",
           "width": 760,
@@ -334,8 +381,8 @@
 			path='../sections/image-with-text.html',
       context={
         'image_field': {
-          "src": "https://shop.atsistem.rs/cdn/shop/files/ORION.png?v=1742388040",
-          "alt": "Hidromasažna spa kada Orion",
+          "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/spa-kada.jpg?noresize",
+          "alt": "Spa kade",
           "size_type": "auto",
           "width": 725,
           "height": 500,
@@ -343,8 +390,8 @@
           "max_width": 725,
           "max_height": 500
         },
-        'image_fit': 'contain',
-        'title': 'Spa kade – vrhunski kvalitet za vrhunsku relaksaciju',
+        'image_fit': 'cover',
+        'title': 'Spa kade – luksuzan francuski dizajn',
         'description': 'Naše spa kade su tako dizajnirane i opremljene da i najzahtevniji korisnici mogu da pronađu model za sebe. Mogu da prime od dve do sedam osoba, imaju izrazito kvalitetna tehnička rešenja i sve komponente su izrađene od najkvalitetnijih materijala.',
         'h_tag_choice': 'h3',
         'link_label': 'Pogledajte ponudu',
@@ -357,14 +404,14 @@
           "open_in_new_tab": false,
           "no_follow": false
         },
-        'reverse_content_direction': true
+        'reverse_content_direction': false
       }
 		%}
 
     {% dnd_section 
       padding={
         'top': '40px',
-        'bottom': '40px',
+        'bottom': '0',
         'left': '40px',
         'right': '40px'
       }
@@ -382,53 +429,138 @@
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
-        {% dnd_row 
-          margin={
-            'top':'40px'
-          }
-        %}
-          {% dnd_module
-            path='../modules/simple-cards',
-            cards=[
-              {
-                "content": '
-                  <div class="flex flex-col justify-between h-full">
-                    <div>
-                      <h3 class="h6 font-bold mb-1">Toplotne pumpe</h3>
-                      <p>Toplotne pumpe vazduh-voda, sa naprednom inverter tehnologijom, produžiće sezonu kupanja i ostvarićete značajne uštede u potrošnji energije.</p>
-                    </div>
-                    <a class="button flex mt-1" href="https://shop.atsistem.rs/sr/collections/grejanje-i-odvlazivanje?sort_by=best-selling&filter.p.product_type=Toplotne+pumpe">Pogledajte ponudu</a>
-                  </div>
-                '
-              },
-              {
-                "content": '
-                  <div class="flex flex-col justify-between h-full">
-                    <div>
-                      <h3 class="h6 font-bold mb-1">Bežični roboti</h3>
-                      <p>Čišćenje bazena može postati igra, uz najnoviju generaciju BWT bežičnih robota, koji čiste sve vrste bazenskih obloga, pod, zidove, i vodenu liniju.</p>
-                    </div>
-                    <a class="button flex mt-1" href="https://shop.atsistem.rs/sr/collections/oprema-za-odrzavanje-bazena?sort_by=best-selling&filter.p.product_type=Roboti">Pogledajte ponudu</a>
-                  </div>
-                '
-              },
-              {
-                "content": '
-                  <div class="flex flex-col justify-between h-full">
-                    <div>
-                      <h3 class="h6 font-bold mb-1">Automatski hemijski tretman</h3>
-                      <p>Uređaji za automatski hemijski tretman omogućiće vam bezbrižno uživanje u kristalno čistoj vodi, jer su podešeni tako da automatski kontrolišu i mere parametre u bazenskoj vodi i doziraju hemijska sredstva po potrebi.</p>
-                    </div>
-                    <a class="button flex mt-1" href="https://shop.atsistem.rs/sr/collections/tretman-bazenske-vode?sort_by=best-selling&filter.p.product_type=Automatski+hemijski+tretman">Pogledajte ponudu</a>
-                  </div>
-                '
-              }
-            ]
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
+
+    {% include_dnd_partial
+      path='../sections/products-grid.html',
+      context={
+        'show_image': true,
+        'cards':[
+          {
+            "collection": "Toplotne pumpe",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/toplotne-pumpe.jpg?noresize",
+            "alt": "Toplotne pumpe",
+            "loading": "lazy",
+            },
+            "description_type": "paragraph",
+            "list": [
+              "Turbo Džetovi",
+              "Slapovi",
+              "Topovi",
+              "Hidromasaže",
+              "Aeromasaže",
+              "Vodene Igre",
+              "Tobogani"
+            ],
+            "link_group": {
+            "link_label": "Pogledajte ponudu",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://shop.atsistem.rs/sr/collections/grejanje-i-odvlazivanje?sort_by=best-selling&filter.p.product_type=Toplotne+pumpe",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+            },
+            "description": "Toplotne pumpe vazduh-voda, sa naprednom inverter tehnologijom, produžiće sezonu kupanja i ostvarićete značajne uštede u potrošnji energije."
+          },
+          {
+            "collection": "Bežični roboti",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Oprema/ciscenje.jpg?noresize",
+            "alt": "Bežični roboti",
+            "loading": "lazy",
+            },
+            "description_type": "paragraph",
+            "list": [
+              "Merdevine i Rukohvati",
+              "Stepenište",
+              "Ležaljke",
+              "Stočići i Stolice",
+              "Suncobrani",
+              "Solarni Tuševi"
+            ],
+            "link_group": {
+            "link_label": "Pogledajte ponudu",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://shop.atsistem.rs/sr/collections/oprema-za-odrzavanje-bazena?sort_by=best-selling&filter.p.product_type=Roboti",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+            },
+            "description": "Čišćenje bazena može postati igra, uz najnoviju generaciju BWT bežičnih robota, koji čiste sve vrste bazenskih obloga, pod, zidove, i vodenu liniju."
+          },
+          {
+            "collection": "Automatski hemijski tretman",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Oprema/bwtmanagerconnectduoph-orp_c797683c-bc15-4ef8-8d6a-8273c5f20bfd.jpeg?noresize",
+            "alt": "Automatski hemijski tretman",
+            "loading": "lazy",
+            },
+            "description_type": "paragraph",
+            "list": [
+              "Tečni PH Korektor - Minus",
+              "Tečni Dezinficijens - Hlor",
+              "Hlor - Granulat",
+              "PH Minus - Granulat",
+              "Tablete - Multi",
+              "Algicid",
+              "Flokulant"
+            ],
+            "link_group": {
+            "link_label": "Pogledajte ponudu",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://shop.atsistem.rs/sr/collections/tretman-bazenske-vode?sort_by=best-selling&filter.p.product_type=Automatski+hemijski+tretman",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+            },
+            "description": "Uređaji za automatski hemijski tretman omogućiće vam bezbrižno uživanje u kristalno čistoj vodi, jer su podešeni tako da automatski kontrolišu i mere parametre u bazenskoj vodi i doziraju hemijska sredstva po potrebi."
+          },
+          {
+            "collection": "BioUV Lampe",
+            "image_field": {
+            "size_type": "auto",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Oprema/stakleni%20mozaik.jpg",
+            "alt": "BioUV Lampe",
+            "loading": "lazy",
+            },
+            "description_type": "paragraph",
+            "list": [
+              "List Item 1"
+            ],
+            "link_group": {
+            "link_label": "Pogledajte ponudu",
+            "link": {
+              "url": {
+              "content_id": null,
+              "href": "https://shop.atsistem.rs/sr/collections/stakleni-mozaik/",
+              "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+            },
+            "description": "Završni pečat vašem bazenu daće stakleni mozaik koji se pod vodom i na suncu, presijava u bezbroj neuhvatljivih nijansi. Mat, sjajan, sedefast, luminescentan, izbor je veliki, a kvalitet vrhunski. Jer to je MOSAVIT® stakleni mozaik, dizajniran da odgovori svim zahtevima."
+          }
+        ]
+      }
+    %}
 
 	  {% include_dnd_partial
 	    path='../sections/image-gallery-slider.html',

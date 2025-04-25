@@ -58,6 +58,10 @@
   .hero-subtitle {
     @apply text-sm md:text-base lg:text-lg font-normal;
   }
+
+  .hs_cos_wrapper_type_rich_text a {
+    @apply font-bold text-darkPurple;
+  }
 }
 
 @layer components {
