@@ -10,6 +10,11 @@
   background-color: #B8D0FC !important;
 }
 
+.featured-services .swiper-button-next,
+.featured-services .swiper-button-prev {
+  color: #fff !important;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #B8D0FC !important;
