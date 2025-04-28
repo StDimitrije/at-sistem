@@ -1,0 +1,283 @@
+[
+ {
+  "children": [
+   {
+    "default": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hubfs/26015966/Sadrzaj%20Usluge/JOLLY%20PLUS%20TOPLINE%20-%20GARDEN%2002%20DEF..jpeg",
+     "alt": "JOLLY PLUS TOPLINE - GARDEN 02 DEF.",
+     "loading": "lazy",
+     "width": 1600,
+     "height": 1200,
+     "max_width": 1600,
+     "max_height": 1200
+    },
+    "display_width": null,
+    "id": "48d3f4ec-f84b-e2ba-281a-8399f9160125",
+    "label": "Image",
+    "locked": false,
+    "name": "image_field",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+   },
+   {
+    "type": "choice",
+    "id": "0ab9441a-f2c5-de2e-7833-d2177247e8b6",
+    "display": "select",
+    "choices": [
+     [
+      "h1",
+      "H1"
+     ],
+     [
+      "h2",
+      "H2"
+     ],
+     [
+      "h3",
+      "H3"
+     ],
+     [
+      "h4",
+      "H4"
+     ],
+     [
+      "h5",
+      "H5"
+     ],
+     [
+      "h6",
+      "H6"
+     ],
+     [
+      "p",
+      "P"
+     ]
+    ],
+    "label": "H Tag Choice",
+    "name": "h_tag_choice",
+    "default": "p"
+   },
+   {
+    "allow_new_line": false,
+    "default": "Title",
+    "display_width": null,
+    "id": "25ba3357-857e-1d62-7586-174f5fb45f1e",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "allow_new_line": false,
+    "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "display_width": null,
+    "id": "6f532898-19aa-edd2-b401-34739b8568be",
+    "label": "Description",
+    "locked": false,
+    "name": "description",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+   },
+   {
+    "children": [
+     {
+      "allow_new_line": false,
+      "default": "Link Label",
+      "display_width": null,
+      "id": "6bddff43-b3f2-a3e0-831f-29c6e9b84320",
+      "label": "Link Label",
+      "locked": false,
+      "name": "link_label",
+      "required": false,
+      "show_emoji_picker": false,
+      "type": "text",
+      "validation_regex": ""
+     },
+     {
+      "default": {
+       "url": {
+        "content_id": null,
+        "href": "",
+        "type": "EXTERNAL"
+       },
+       "open_in_new_tab": false,
+       "no_follow": false
+      },
+      "display_width": null,
+      "id": "da38c688-7141-2a78-74a3-46225dea57a4",
+      "label": "Link",
+      "locked": false,
+      "name": "link_field",
+      "required": false,
+      "show_advanced_rel_options": false,
+      "supported_types": [
+       "EXTERNAL",
+       "CONTENT",
+       "FILE",
+       "EMAIL_ADDRESS",
+       "BLOG",
+       "CALL_TO_ACTION",
+       "PHONE_NUMBER"
+      ],
+      "type": "link"
+     }
+    ],
+    "default": {
+     "link_label": "Link Label",
+     "link_field": {
+      "url": {
+       "content_id": null,
+       "href": "",
+       "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     }
+    },
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "76479081-f1e7-1a64-7330-50c53c674880",
+    "label": "Link",
+    "locked": false,
+    "name": "link",
+    "required": false,
+    "tab": "CONTENT",
+    "type": "group"
+   }
+  ],
+  "default": [
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hubfs/Sadrzaj%20Usluge/Salon_Piscine_Global_Lyon_2022_%28193%29.jpeg",
+     "alt": "oprema za bazene",
+     "loading": "lazy",
+     "width": 1600,
+     "height": 1200,
+     "max_width": 1600,
+     "max_height": 1200
+    },
+    "title": "Oprema za bazene",
+    "description": "A&T ponuda osnovne opreme za bazen obuhvata sve ugradne elemente i tehničku opremu bez kojih bazen ne bi mogao da funkcioniše, a to su: hidraulična mreža, ugradni elementi za cirkulaciju, pumpno filterski blok, elektroupravljačke komponente, osnovna oprema za održavanje.",
+    "link": {
+     "link_label": "Saznajte više",
+     "link_field": {
+      "url": {
+       "content_id": null,
+       "href": "/bazeni/oprema",
+       "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     }
+    },
+    "h_tag_choice": "p"
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hs-fs/hubfs/Sadrzaj%20-%20Wellness/arkema.jpeg?length=1920&name=arkema.jpeg",
+     "alt": "Wellness",
+     "loading": "lazy",
+     "width": 1600,
+     "height": 1200,
+     "max_width": 1600,
+     "max_height": 1200
+    },
+    "title": "Wellness",
+    "description": "Znajući koliko je modernom čoveku važno da se odmori i opusti, kreirali smo ponudu opreme za wellness i spa centre koja obuhvata pažljivo birane komade renomiranih proizvođača, ali i kompletnu uslugu projektovanja, ugradnje i održavanja.",
+    "link": {
+     "link_label": "Saznajte više",
+     "link_field": {
+      "url": {
+       "content_id": null,
+       "href": "/wellness",
+       "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     }
+    },
+    "h_tag_choice": "p"
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://atsistem.rs/hs-fs/hubfs/Lady%20in%20Spa.jpg?length=1920&name=Lady%20in%20Spa.jpg",
+     "alt": "spa kade",
+     "loading": "lazy",
+     "width": 1600,
+     "height": 1200,
+     "max_width": 1600,
+     "max_height": 1200
+    },
+    "title": "Spa kade",
+    "description": "Umirujući efekat tople vode i terapeutsko dejstvo masaže mogu značajno pomoći u ublažavanju i otklanjanju napetosti i stresa. Prilikom kupovine spa kade važno je odlučiti se za pouzdan brend i odabrati model koji dimenzijama i opremljenošću odgovara raspoloživom prostoru i potrebama.",
+    "link": {
+     "link_label": "Saznajte više",
+     "link_field": {
+      "url": {
+       "content_id": null,
+       "href": "/spa-kade",
+       "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     }
+    },
+    "h_tag_choice": "p"
+   },
+   {
+    "image_field": {
+     "size_type": "auto",
+     "src": "https://26015966.fs1.hubspotusercontent-eu1.net/hub/26015966/hubfs/Sadrzaj%20Fontane/omonoia_1.jpeg?width=2000&height=1132.8125",
+     "alt": "Fontane",
+     "loading": "lazy",
+     "width": 1600,
+     "height": 1200,
+     "max_width": 1600,
+     "max_height": 1200
+    },
+    "title": "Fontane",
+    "description": "Pružamo usluge u svim fazama izrade fontane, od razrade idejnog rešenja i projekta do izvođenja svih radova, programiranja i puštanja fontanskog sistema u rad.",
+    "link": {
+     "link_label": "Saznajte više",
+     "link_field": {
+      "url": {
+       "content_id": null,
+       "href": "/fontane",
+       "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     }
+    },
+    "h_tag_choice": "p"
+   }
+  ],
+  "display_width": null,
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "id": "4e8f841a-ce67-89f4-c3be-15a524db227a",
+  "label": "Cards",
+  "locked": false,
+  "name": "cards",
+  "occurrence": {
+   "default": 4,
+   "min": 4
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+ }
+]
