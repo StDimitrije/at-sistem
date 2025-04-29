@@ -373,7 +373,17 @@
 			context={
         'h_tag_choice': 'h2',
 				'title': 'Naše usluge',
-				'description': 'Naš stručni tim obezbeđuje kompletnu tehničku podršku i servis u svakoj fazi izgradnje bazena i najkvalitetnije opreme za bazene, izgradnje fontana, ugradnji spa kada.'
+				'description': 'Naš stručni tim obezbeđuje kompletnu tehničku podršku i servis u svakoj fazi izgradnje bazena i najkvalitetnije opreme za bazene, izgradnje fontana, ugradnji spa kada.',
+        'link_label': 'Pogledajte sve usluge',
+        'link_field': {
+					"url": {
+						"content_id": null,
+						"type": "EXTERNAL",
+						"href": "/bazeni/usluge"
+					},
+					"open_in_new_tab": false,
+					"no_follow": false
+				}
 			}
 	  %}
 
@@ -533,10 +543,10 @@
             "description": "Uređaji za automatski hemijski tretman omogućiće vam bezbrižno uživanje u kristalno čistoj vodi, jer su podešeni tako da automatski kontrolišu i mere parametre u bazenskoj vodi i doziraju hemijska sredstva po potrebi."
           },
           {
-            "collection": "BioUV Lampe",
+            "collection": "Bio-UV Lampe",
             "image_field": {
             "size_type": "auto",
-            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Oprema/stakleni%20mozaik.jpg",
+            "src": "https://atsistem.rs/hubfs/Sadrzaj%20Pocetna/biouv.jpg",
             "alt": "BioUV Lampe",
             "loading": "lazy",
             },
@@ -549,14 +559,14 @@
             "link": {
               "url": {
               "content_id": null,
-              "href": "https://shop.atsistem.rs/sr/collections/stakleni-mozaik/",
+              "href": "https://shop.atsistem.rs/sr/collections/tretman-bazenske-vode?sort_by=best-selling&filter.p.product_type=UV+lampa",
               "type": "EXTERNAL"
               },
               "open_in_new_tab": false,
               "no_follow": false
             }
             },
-            "description": "Završni pečat vašem bazenu daće stakleni mozaik koji se pod vodom i na suncu, presijava u bezbroj neuhvatljivih nijansi. Mat, sjajan, sedefast, luminescentan, izbor je veliki, a kvalitet vrhunski. Jer to je MOSAVIT® stakleni mozaik, dizajniran da odgovori svim zahtevima."
+            "description": "UV-C zračenje visokog intenziteta neutrališe bakterije, viruse i druge primitivne organizme i sprečava njihovo ponovno stvaranje. Sa BIO UV lampom voda je efikasno i bezbedno dezinfikovana, čime se postiže njen odličan kvalitet, uz značajnu redukciju hemijskih sredstava."
           }
         ]
       }
@@ -689,10 +699,6 @@
 					}
 				]
 			}
-	  %}
-
-    {% include_dnd_partial
-	    path='../sections/pages-navigation-cards.html',
 	  %}
 
 	{% end_dnd_area %}

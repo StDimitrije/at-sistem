@@ -34,13 +34,13 @@
       <div class="flex justify-between gap-1 flex-col sm:flex-row w-full items-start sm:items-center">
         {% if module.link.url.href != '' %}
         <a href="{{ module.link.url.href }}" {{ 'target="_blank"' if module.link.open_in_new_tab }}
-          class="button mt-2">
+          class="button mt-2 text-center">
           {{ module.link_label }}
         </a>
         {% endif %}
         {% if module.show_secondary_link && module.secondary_link.url.href != '' %}
         <a href="{{ module.secondary_link.url.href }}" {{ 'target="_blank"' if module.secondary_link.open_in_new_tab }}
-          class="button-tertiary sm:mt-2">
+          class="button-tertiary sm:mt-2 text-center">
           {{ module.secondary_link_label }}
         </a>
         {% endif %}
