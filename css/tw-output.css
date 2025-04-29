@@ -749,6 +749,7 @@ button,
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
   font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
   line-height: 1rem;
@@ -780,6 +781,7 @@ button:hover,
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
   font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
   line-height: 1rem;
@@ -801,6 +803,7 @@ button:hover,
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
   font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
   line-height: 1rem;
@@ -2124,6 +2127,10 @@ button:hover,
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .align-middle {

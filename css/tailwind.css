@@ -67,15 +67,15 @@
 @layer components {
   button,
   .button {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink border-2 border-pink hover:border-pinkDark transition-all;
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-white text-xs w-fit bg-pink border-2 border-pink hover:border-pinkDark transition-all text-center;
   }
 
   .button-secondary {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-grey text-xs w-fit bg-white border-2 border-white;
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-grey text-xs w-fit bg-white border-2 border-white text-center;
   }
 
   .button-tertiary {
-    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-greyLight text-xs w-fit bg-transparent border-2 border-pink hover:bg-pink/30 transition-all;
+    @apply px-[25px] py-1 font-sans font-medium tracking-wide uppercase text-greyLight text-xs w-fit bg-transparent border-2 border-pink hover:bg-pink/30 transition-all text-center;
   }
 
   button:hover,
