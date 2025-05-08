@@ -24,9 +24,6 @@
   text-align: left !important;
 }
 
-.blog-post__meta {
-  margin-bottom: 1.4rem;
-}
 
 .blog-post__meta a {
   text-decoration: underline;
@@ -44,6 +41,7 @@
 
 .blog-post__tag-link {
   font-size: 0.875rem;
+  text-decoration: underline;
 }
 
 /* Blog related posts */

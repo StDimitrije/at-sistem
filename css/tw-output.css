@@ -1115,6 +1115,18 @@ button:hover,
   margin: auto;
 }
 
+.m-\[-0\.5px\] {
+  margin: -0.5px;
+}
+
+.-m-1 {
+  margin: -10px;
+}
+
+.-m-0\.5 {
+  margin: -5px;
+}
+
 .my-0\.5 {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1393,6 +1405,14 @@ button:hover,
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[400px\] {
+  min-height: 400px;
+}
+
+.min-h-\[300px\] {
+  min-height: 300px;
 }
 
 .\!w-full {
@@ -1908,6 +1928,14 @@ button:hover,
   stroke: #fff;
 }
 
+.stroke-grey {
+  stroke: #373738;
+}
+
+.stroke-\[\#b0c1d4\] {
+  stroke: #b0c1d4;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2037,6 +2065,11 @@ button:hover,
   padding-bottom: 8px;
 }
 
+.py-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2121,6 +2154,10 @@ button:hover,
   padding-top: 56.25%;
 }
 
+.pt-\[100px\] {
+  padding-top: 100px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2189,6 +2226,12 @@ button:hover,
 .text-xs {
   font-size: 14px;
   line-height: 1rem;
+}
+
+.text-p {
+  font-size: 16px;
+  line-height: 1.375;
+  font-weight: 300;
 }
 
 .font-bold {
@@ -2524,6 +2567,10 @@ button:hover,
 
 .group:hover .group-hover\:fill-darkPurple {
   fill: #4d3f9a;
+}
+
+.group:hover .group-hover\:underline {
+  text-decoration-line: underline;
 }
 
 @media (min-width: 640px) {

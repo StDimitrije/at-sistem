@@ -73,7 +73,7 @@
 </style>
 
 {% if contents.total_page_count > 1 %}
-  <nav aria-label="Pagination navigation" role="navigation" class="pagination font-ex mb-8">
+  <nav aria-label="Pagination navigation" role="navigation" class="pagination font-sans mb-8">
     {% set page_list = [-2, -1, 0, 1, 2] %}
     {% if contents.total_page_count - current_page_num == 1 %}
         {% set offset = -1 %}
@@ -91,10 +91,13 @@
 
     {% if module.show_first_and_last_links == true %}
       <a class="pagination__link pagination__link--first {{ 'pagination__link--disabled' if !last_page_num }}  flex flex-row items-center" {% if last_page_num %}href="{% if current_page_num == 2 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(1) }}{% endif %}"{% endif %}>
-        <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="19.092" height="41.874" viewBox="0 0 19.092 41.874">
-          <path id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#000" stroke-width="3"/>
+        <svg class="rotate-180 -m-0.5" xmlns="http://www.w3.org/2000/svg" width="19.092" height="30" viewBox="0 0 19.092 41.874">
+          <path class="{{ 'stroke-[#b0c1d4]' if !last_page_num else 'stroke-grey' }}" id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#373738" stroke-width="3"/>
         </svg>
-        <span class="pagination__link-text show-for-sr--mobile">{{ module.first_label }}</span>
+        <svg class="rotate-180 -m-0.5" xmlns="http://www.w3.org/2000/svg" width="19.092" height="30" viewBox="0 0 19.092 41.874">
+          <path class="{{ 'stroke-[#b0c1d4]' if !last_page_num else 'stroke-grey' }}" id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#373738" stroke-width="3"/>
+        </svg>
+        {# <span class="pagination__link-text show-for-sr--mobile">{{ module.first_label }}</span> #}
       </a>
     {% endif %}
 
@@ -102,32 +105,32 @@
 
     {% if module.show_previous_and_next_links == true %}
       <a class="pagination__link pagination__link--prev {{ 'pagination__link--disabled' if !last_page_num }}  flex flex-row items-center mr-5" {% if last_page_num %}href="{% if current_page_num == 2 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(last_page_num) }}{% endif %}"{% endif %}>
-        <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="19.092" height="41.874" viewBox="0 0 19.092 41.874">
-          <path id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#000" stroke-width="3"/>
+        <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="19.092" height="30" viewBox="0 0 19.092 41.874">
+          <path class="{{ 'stroke-[#b0c1d4]' if !last_page_num else 'stroke-grey' }}" id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#373738" stroke-width="3"/>
         </svg>
-
-        <span class="pagination__link-text show-for-sr--mobile">{{ module.previous_label }}</span>
+        {# <span class="pagination__link-text show-for-sr--mobile">{{ module.previous_label }}</span> #}
       </a>
     {% endif %}
 
     {# Numbered pagination #}
 
-    {% for page in page_list %}
-      {% set this_page = current_page_num + page + offset %}
-      {% if this_page > 0 and this_page <= contents.total_page_count %}
-        <a class="pagination__link pagination__link--number {{ 'pagination__link--active' if this_page == current_page_num }} text-bold text-lg" aria-label="Go to Page {{ this_page }}" {{ 'aria-current="true"' if this_page == current_page_num }} href="{% if this_page == 1 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(this_page) }}{% endif %}">{{ this_page }}</a>
-      {% endif %}
-    {% endfor %}
+    <div class="flex flex-row items-center">
+      {% for page in page_list %}
+        {% set this_page = current_page_num + page + offset %}
+        {% if this_page > 0 and this_page <= contents.total_page_count %}
+          <a class="pagination__link pagination__link--number {{ 'pagination__link--active' if this_page == current_page_num }} text-bold text-lg" aria-label="Go to Page {{ this_page }}" {{ 'aria-current="true"' if this_page == current_page_num }} href="{% if this_page == 1 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(this_page) }}{% endif %}">{{ this_page }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
 
     {# Next page link #}
 
     {% if module.show_previous_and_next_links == true %}
       <a class="pagination__link pagination__link--next {{ 'pagination-link--disabled' if !next_page_num }}  flex flex-row items-center ml-5"{% if next_page_num %} href="{{ blog_page_link(current_page_num + 1) }}"{% endif %}>
-        <span class="pagination__link-text show-for-sr--mobile">{{ module.next_label }}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="19.092" height="41.874" viewBox="0 0 19.092 41.874">
-          <path id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#000" stroke-width="3"/>
+        {# <span class="pagination__link-text show-for-sr--mobile">{{ module.next_label }}</span> #}
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.092" height="30" viewBox="0 0 19.092 41.874">
+          <path class="{{ 'stroke-[#b0c1d4]' if !next_page_num else 'stroke-grey' }}" id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#373738" stroke-width="3"/>
         </svg>
-
       </a>
     {% endif %}
 
@@ -135,11 +138,13 @@
 
     {% if module.show_first_and_last_links == true %}
       <a class="pagination__link pagination__link--last {{ 'pagination-link--disabled' if !next_page_num }}  flex flex-row items-center"{% if next_page_num %} href="{{ blog_page_link(contents.total_page_count) }}"{% endif %}>
-        <span class="pagination__link-text show-for-sr--mobile">{{ module.last_label }}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="19.092" height="41.874" viewBox="0 0 19.092 41.874">
-          <path id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#000" stroke-width="3"/>
+        {# <span class="pagination__link-text show-for-sr--mobile">{{ module.last_label }}</span> #}
+        <svg class="-m-0.5" xmlns="http://www.w3.org/2000/svg" width="19.092" height="30" viewBox="0 0 19.092 41.874">
+          <path class="{{ 'stroke-[#b0c1d4]' if !next_page_num else 'stroke-grey' }}" id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#373738" stroke-width="3"/>
         </svg>
-
+        <svg class="-m-0.5" xmlns="http://www.w3.org/2000/svg" width="19.092" height="30" viewBox="0 0 19.092 41.874">
+          <path class="{{ 'stroke-[#b0c1d4]' if !next_page_num else 'stroke-grey' }}" id="icon-drop-down" d="M0,0,20,16,40,0" transform="translate(1.171 40.937) rotate(-90)" fill="none" stroke="#373738" stroke-width="3"/>
+        </svg>
       </a>
     {% endif %}
 

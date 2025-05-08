@@ -1,7 +1,7 @@
 <!--
   templateType: blog_post
   isAvailableForNewContent: true
-  label: Tech in Motion - blog post
+  label: A&T Sistem - blog post
   screenshotPath: ../images/template-previews/blog-post.jpg
 -->
 {% set template_css = '../../css/templates/blog.css' %}
@@ -9,14 +9,15 @@
 
 {% block body %}
 <div class="body-container body-container--blog-post">
-  <div class="text-white px-4 pt-[120px] pb-5 min-h-[450px] flex flex-col justify-end bg-no-repeat bg-center bg-cover" 
-    style="background-image: url('{{get_asset_url('../images/secondary-header-dark.jpg')}}')">
+  <div
+    class="text-white px-4 pt-[120px] pb-4 min-h-[300px] flex flex-col justify-end bg-no-repeat bg-center bg-cover bg-purpleGradient">
     <div class="m-[0_auto] w-full max-w-[1260px]">
       <h1>{{ content.name }}</h1>
-      <div class="blog-post__meta font-sans text-medium text-xl">
-        <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+      <div class="blog-post__meta font-sans text-p">
+        {# <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
           {{ content.publish_date|datetimeformat('%b %e, %Y') }}
-        </time>
+        </time> #}
+        <span>Autor:</span>
         <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
           {{ content.blog_post_author.display_name }}
         </a>
@@ -30,93 +31,102 @@
   {# This macro is used to format each recent post card and gets passed to the related_blog_posts HubL tag below #}
 
   {% macro related_posts(post, count, total) %}
-    {% if count == 1 %}
-      <section class="blog-related-posts">
-        <div class="bg-white">
-          <p class="text-xl text-medium font-ex mb-2">Read On:</p>
-          <div class="grid gap-3 grid-cols-1 md:grid-cols-2 xl:flex xl:flex-col xl:gap-2">
-    {% endif %}
-            <article class="blog-related-posts__post bg-white drop-shadow-[0px_0px_40px_#00000014] rounded-b-[6px]" aria-label="Blog post summary: {{ post.name }}">
-              {% if post.featured_image %}
-                <a class="blog-related-posts__post-image-wrapper" href="{{ post.absolute_url }}" aria-label="{% if post.featured_image_alt_text %} Featured image: {{ post.featured_image_alt_text }} - {% endif %}Read full post: {{ post.name }}">
-                  <img class="blog-related-posts__image rounded-t-[6px] max-h-[200px] object-cover" width="360px" src="{{ post.featured_image }}" loading="lazy" alt="{{ post.featured_image_alt_text }}">
-                </a>
-              {% endif %}
-              <div class="blog-related-posts__content pt-1 px-[25px] pb-2 border-t-solid border-t-[#6E43FF] border-t-[3px]">
-                {% if post.publish_date %}
-                  <time class="blog-index__post-timestamp my-0.5 font-sans text-medium text-[#4A5B6E] text-2xs" datetime="{{ content.publish_date }}">
-                    {{ post.publish_date|datetimeformat("%B %e, %Y") }}
-                  </time>
-                {% endif %}
-                <h3 class="blog-related-posts__title mb-0.5">
-                  <a class="blog-related-posts__title-link" href="{{ post.absolute_url }}">{{ post.name }}</a>
-                </h3>
-                {% if post.blog_author %}
-                  <div class="blog-index__post-author mb-2">
-                    <a class="blog-index__post-author-name text-xs text-sans italic" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">Posted by {{ post.blog_author.display_name }}</a>
-                  </div>
-                {% endif %}
-                <div class="blog-index__post-summary text-xs">
-                  {{ post.post_summary|truncatehtml(120) }}
-                </div>
-                <a class="blog-index__post-button button mt-2 text-white bg-[#6E43FF] w-fit" href="{{ post.absolute_url }}">Read More</a>
-              </div>
-            </article>
-      {% if count == total %}
+  {% if count == 1 %}
+  <section class="blog-related-posts">
+    <p class="mb-2 h3">Slične teme:</p>
+    <div class="grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+      {% endif %}
+      <article class="blog-related-posts__post bg-white drop-shadow-[0px_0px_40px_#00000014]"
+        aria-label="Rezime bloga: {{ post.name }}">
+        <a href="{{ post.absolute_url }}" class="group cursor-pointer">
+          {% if post.featured_image %}
+          <div class="blog-related-posts__post-image-wrapper"
+            aria-label="{% if post.featured_image_alt_text %} Slika: {{ post.featured_image_alt_text }} - {% endif %}Pročitajte ceo tekst: {{ post.name }}">
+            <img class="blog-related-posts__image max-h-[200px] object-cover" width="360px"
+              src="{{ post.featured_image }}" loading="lazy" alt="{{ post.featured_image_alt_text }}">
           </div>
-        </div>
-      </section>
-    {% endif %}
+          {% endif %}
+          <div class="blog-related-posts__content pt-1 px-[25px] pb-2 border-t-solid border-t-[#6E43FF] border-t-[3px]">
+            <!-- {% if post.publish_date %}
+            <time class="blog-index__post-timestamp my-0.5 font-sans text-medium text-[#4A5B6E] text-2xs"
+              datetime="{{ content.publish_date }}">
+              {{ post.publish_date|datetimeformat("%B %e, %Y") }}
+            </time>
+            {% endif %} -->
+            <h3 class="blog-related-posts__title mb-0.5 font-sans text-medium text-black text-lg group-hover:underline">
+              {{ post.name }}
+            </h3>
+            <!-- {% if post.blog_author %}
+            <div class="blog-index__post-author mb-2">
+              <a class="blog-index__post-author-name text-xs text-sans italic"
+                href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">Autor: {{
+                post.blog_author.display_name }}</a>
+            </div>
+            {% endif %} -->
+            <div class="blog-index__post-summary text-xs">
+              {{ post.post_summary|truncatehtml(120) }}
+            </div>
+            <!-- <a class="blog-index__post-button button mt-2 text-white bg-[#6E43FF] w-fit"
+              href="{{ post.absolute_url }}">Read More</a> -->
+          </div>
+        </a>
+      </article>
+      {% if count == total %}
+    </div>
+  </section>
+  {% endif %}
   {% endmacro %}
 
-{# Blog post #}
+  {# Blog post #}
   <div class="px-4">
-
-  <div class="max-w-[1000px] py-5 blog-post">
-    <article>
-    {# <h1>{{ content.name }}</h1>
-      <div class="blog-post__meta">
-        <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
-          {{ content.blog_post_author.display_name }}
-        </a>
-        <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
-          {{ content.publish_date_localized }}
-        </time>
-      </div> #}
-      <div class="blog-post__body">
-        {{ content.post_body }}
+    <div class="max-w-[1200px] py-4 blog-post">
+      {% if content.tag_list %}
+      <div class="blog-post__tags flex gap-0.5 flex-row items-center">
+        {% icon
+        name='tag',
+        purpose='decorative',
+        style='SOLID'
+        %}
+        <div>
+          {% for tag in content.tag_list %}
+          <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
+          {% if not loop.last %},{% endif %}
+          {% endfor %}
+        </div>
       </div>
-      {% if group.allow_comments %}
+      {% endif %}
+      <article>
+        {# <h1>{{ content.name }}</h1>
+        <div class="blog-post__meta">
+          <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
+            {{ content.blog_post_author.display_name }}
+          </a>
+          <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+            {{ content.publish_date_localized }}
+          </time>
+        </div> #}
+        <div class="blog-post__body">
+          {{ content.post_body }}
+        </div>
+        {# {% if group.allow_comments %}
         <div class="w-full mt-10 ">
           <div class="blog-comments m-[0_auto]">
             {% module 'blog_comments'
-              path='@hubspot/blog_comments',
-              label="Blog comments"
+            path='@hubspot/blog_comments',
+            label="Blog comments"
             %}
           </div>
         </div>
-      {% endif %}
-      {# {% if content.tag_list %}
-          <div class="blog-post__tags">
-            {% icon
-              name='tag',
-              purpose='decorative',
-              style='SOLID'
-            %}
-            {% for tag in content.tag_list %}
-              <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
-            {% endfor %}
-          </div>
         {% endif %} #}
-    </article>
-   {# <div class="col-span-3 xl:col-span-1">
+      </article>
+      <div class="w-full">
         {% related_blog_posts
-         limit=3,
-         no_wrapper=True,
-         post_formatter="related_posts"
-       %}
-    </div> #}
+        limit=3,
+        no_wrapper=True,
+        post_formatter="related_posts"
+        %}
+      </div>
+    </div>
   </div>
-</div>
 </div>
 {% endblock body %}
