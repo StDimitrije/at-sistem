@@ -10,17 +10,17 @@
 {% block body %}
 <div class="body-container body-container--blog-post">
   <div
-    class="text-white px-4 pt-[120px] pb-4 min-h-[300px] flex flex-col justify-end bg-no-repeat bg-center bg-cover bg-purpleGradient">
+    class="text-white px-4 pt-[160px] pb-4 min-h-[300px] flex flex-col justify-end bg-no-repeat bg-center bg-cover bg-purpleGradient">
     <div class="m-[0_auto] w-full max-w-[1260px]">
       <h1>{{ content.name }}</h1>
       <div class="blog-post__meta font-sans text-p">
         {# <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
           {{ content.publish_date|datetimeformat('%b %e, %Y') }}
         </time> #}
-        <span>Autor:</span>
+        {# <span>Autor:</span>
         <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
           {{ content.blog_post_author.display_name }}
-        </a>
+        </a> #}
       </div>
     </div>
   </div>
@@ -81,7 +81,7 @@
   <div class="px-4">
     <div class="max-w-[1200px] py-4 blog-post">
       {% if content.tag_list %}
-      <div class="blog-post__tags flex gap-0.5 flex-row items-center">
+      <div class="blog-post__tags flex gap-0.5 flex-row items-center pb-3">
         {% icon
         name='tag',
         purpose='decorative',

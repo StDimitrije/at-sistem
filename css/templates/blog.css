@@ -5,14 +5,9 @@
   max-width: 1260px;
 }
 
-.blog-post__body * {
-  margin-top: 1em;
+/* .blog-post__body p {
   margin-bottom: 1em;
-}
-
-.blog-post__body p {
-  line-height: 1.65;
-}
+} */
 
 .blog-index__post {
   filter: drop-shadow(0 0 40px #00000014);
@@ -40,7 +35,7 @@
 }
 
 .blog-post__tag-link {
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
   text-decoration: underline;
 }
 

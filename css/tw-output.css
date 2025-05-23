@@ -576,6 +576,25 @@ h1,
   }
 }
 
+.blog-post__body * {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-family: Poppins, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 1024px) {
+  .blog-post__body * {
+    margin-bottom: 20px;
+  }
+}
+
+.blog-post__body a {
+  cursor: pointer;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(77 63 154 / var(--tw-text-opacity, 1));
+}
+
 h1,
   .h1 {
   font-size: 40px;
@@ -955,6 +974,11 @@ button:hover,
   font-weight: 500;
 }
 
+.blog-post__body ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
 .visible {
   visibility: visible;
 }
@@ -1091,16 +1115,16 @@ button:hover,
   grid-column: span 2 / span 2;
 }
 
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
 .row-span-1 {
   grid-row: span 1 / span 1;
 }
 
 .row-span-2 {
   grid-row: span 2 / span 2;
+}
+
+.-m-0\.5 {
+  margin: -5px;
 }
 
 .m-0 {
@@ -1113,18 +1137,6 @@ button:hover,
 
 .m-auto {
   margin: auto;
-}
-
-.m-\[-0\.5px\] {
-  margin: -0.5px;
-}
-
-.-m-1 {
-  margin: -10px;
-}
-
-.-m-0\.5 {
-  margin: -5px;
 }
 
 .my-0\.5 {
@@ -1243,10 +1255,6 @@ button:hover,
 
 .mt-5 {
   margin-top: 50px;
-}
-
-.mt-8 {
-  margin-top: 80px;
 }
 
 .mt-\[25px\] {
@@ -1395,8 +1403,8 @@ button:hover,
   min-height: 250px;
 }
 
-.min-h-\[450px\] {
-  min-height: 450px;
+.min-h-\[300px\] {
+  min-height: 300px;
 }
 
 .min-h-full {
@@ -1405,14 +1413,6 @@ button:hover,
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-\[400px\] {
-  min-height: 400px;
-}
-
-.min-h-\[300px\] {
-  min-height: 300px;
 }
 
 .\!w-full {
@@ -1741,16 +1741,6 @@ button:hover,
   border-radius: 0px;
 }
 
-.rounded-b-\[6px\] {
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-
-.rounded-t-\[6px\] {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-
 .border {
   border-width: 1px;
 }
@@ -1924,16 +1914,16 @@ button:hover,
   fill: #373738;
 }
 
-.stroke-white {
-  stroke: #fff;
+.stroke-\[\#b0c1d4\] {
+  stroke: #b0c1d4;
 }
 
 .stroke-grey {
   stroke: #373738;
 }
 
-.stroke-\[\#b0c1d4\] {
-  stroke: #b0c1d4;
+.stroke-white {
+  stroke: #fff;
 }
 
 .object-contain {
@@ -2065,11 +2055,6 @@ button:hover,
   padding-bottom: 8px;
 }
 
-.py-1 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2134,10 +2119,6 @@ button:hover,
   padding-top: 60px;
 }
 
-.pt-\[120px\] {
-  padding-top: 120px;
-}
-
 .pt-\[130px\] {
   padding-top: 130px;
 }
@@ -2146,16 +2127,16 @@ button:hover,
   padding-top: 140px;
 }
 
+.pt-\[160px\] {
+  padding-top: 160px;
+}
+
 .pt-\[230px\] {
   padding-top: 230px;
 }
 
 .pt-\[56\.25\%\] {
   padding-top: 56.25%;
-}
-
-.pt-\[100px\] {
-  padding-top: 100px;
 }
 
 .text-left {
@@ -2213,6 +2194,12 @@ button:hover,
   line-height: 1.4;
 }
 
+.text-p {
+  font-size: 16px;
+  line-height: 1.375;
+  font-weight: 300;
+}
+
 .text-sm {
   font-size: 16px;
   line-height: 1.25rem;
@@ -2226,12 +2213,6 @@ button:hover,
 .text-xs {
   font-size: 14px;
   line-height: 1rem;
-}
-
-.text-p {
-  font-size: 16px;
-  line-height: 1.375;
-  font-weight: 300;
 }
 
 .font-bold {
@@ -2514,11 +2495,6 @@ button:hover,
   stroke: #6e43ff;
 }
 
-.hover\:text-\[\#6E43FF\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(110 67 255 / var(--tw-text-opacity, 1));
-}
-
 .hover\:text-darkPurple:hover {
   --tw-text-opacity: 1;
   color: rgb(77 63 154 / var(--tw-text-opacity, 1));
@@ -2527,10 +2503,6 @@ button:hover,
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(110 67 255 / var(--tw-text-opacity, 1));
-}
-
-.hover\:underline:hover {
-  text-decoration-line: underline;
 }
 
 .group:hover .group-hover\:left-\[15px\] {
@@ -3017,14 +2989,6 @@ button:hover,
 }
 
 @media (min-width: 1280px) {
-  .xl\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
-  .xl\:flex {
-    display: flex;
-  }
-
   .xl\:min-h-\[90svh\] {
     min-height: 90svh;
   }
@@ -3054,16 +3018,8 @@ button:hover,
     flex-direction: row;
   }
 
-  .xl\:flex-col {
-    flex-direction: column;
-  }
-
   .xl\:gap-10 {
     gap: 100px;
-  }
-
-  .xl\:gap-2 {
-    gap: 20px;
   }
 
   .xl\:text-3xl {

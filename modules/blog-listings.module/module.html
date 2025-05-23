@@ -24,7 +24,7 @@
 
       {# Blog listing article #}
       <article class="blog-index__post blog-index__post--{{ list_type }}" aria-label="Rezime bloga: {{ content.name }}">
-        <a href="{{ content.absolute_url }}" class="flex flex-col h-full group cursor-pointer">
+        <div class="flex flex-col h-full">
           {# Featured image #}
           {% if content.featured_image and module.featured_image %}
             <div class="blog-index__post-image-wrapper blog-index__post-image-wrapper--{{ list_type }}" aria-label="{% if content.featured_image_alt_text %}Featured image: {{ content.featured_image_alt_text }} - {% endif %}Pročitajte ceo tekst: {{ content.name }}">
@@ -33,12 +33,8 @@
           {% endif %}
 
           {# Article content #}
-
-          <div class="blog-index__post-content  blog-index__post-content--{{ list_type }} flex flex-col justify-between h-full border-t-[3px] border-t-solid border-t-[#6E43FF] bg-white px-[25px] py-1">
-
-            <div>
+          <div class="blog-index__post-content  blog-index__post-content--{{ list_type }} flex flex-col justify-between h-full border-t-[3px] border-t-solid border-t-[#6E43FF] bg-white px-[25px] py-2">
               {# Publish date #}
-
                 {% if module.publish_date %}
                   <time class="blog-index__post-timestamp my-0.5 font-sans text-medium text-[#4A5B6E] text-2xs" datetime="{{ content.publish_date }}">
                     {{ content.publish_date|datetimeformat("%B %e, %Y") }}
@@ -46,13 +42,13 @@
                 {% endif %}
 
               {# Title #}
-
                 {% if module.title %}
-                  <h3 class="blog-index__post-title font-sans text-medium text-grey text-lg mb-0.5 group-hover:underline">{{ content.name }}</h3>
+                  <a class="group cursor-pointer" href="{{ content.absolute_url }}">
+                    <h3 class="blog-index__post-title font-sans text-medium text-grey text-lg mb-1 group-hover:underline">{{ content.name }}</h3>
+                  </a>
                 {% endif %}
 
               {# Author #}
-
                 {% if module.author and content.blog_author %}
                   <div class="blog-index__post-author mb-2">
                     {# {% if content.blog_author.avatar %}
@@ -63,23 +59,18 @@
                 {% endif %}
 
               {# Summary #}
-
                 {% if module.description %}
-                  <div class="blog-index__post-summary text-xs mb-2">
-                    {{ content.post_list_content|truncatehtml(120) }}
+                  <div class="blog-index__post-summary text-xs">
+                    {{ content.post_summary|truncatehtml(200) }}
                   </div>
                 {% endif %}
-            </div>
 
             {# Read more button #}
-
               {% if module.button %}
-                <div class="blog-index__post-button-wrapper group hover:text-[#6E43FF] text-black font-ex text-base">
-                  <a class="blog-index__post-button button text-white whitespace-nowrap bg-[#6E43FF]" href="{{ content.absolute_url }}">{{ module.button_text }}</a>
-                </div>
+                <a class="button flex mt-2" href="{{ content.absolute_url }}">{{ module.button_text }}</a>
               {% endif %}
           </div>
-        </a>
+        </div>
       </article>
     {% endfor %}
   </section>

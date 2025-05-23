@@ -13,6 +13,14 @@
     @apply m-0 mb-1 lg:mb-2 font-sans;
   }
 
+  .blog-post__body * {
+    @apply m-0 mb-1 lg:mb-2 font-sans;
+  }
+
+  .blog-post__body a {
+    @apply font-bold text-darkPurple cursor-pointer;
+  }
+
   h1,
   .h1 {
     @apply text-[40px] lg:text-h1;
@@ -118,6 +126,10 @@
 
   .footer_menu__link {
     @apply text-xs font-medium;
+  }
+
+  .blog-post__body ul {
+    @apply list-disc list-inside;
   }
 }
 
