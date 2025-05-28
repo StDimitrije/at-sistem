@@ -9,10 +9,10 @@
 
 {% block body %}
 <div class="body-container body-container--blog-post">
-  <div
-    class="text-white px-4 pt-[160px] pb-4 min-h-[300px] flex flex-col justify-end bg-no-repeat bg-center bg-cover bg-purpleGradient">
+  <div class="text-grey px-4 pt-[180px] pb-10 min-h-96 bg-no-repeat bg-top bg-cover"
+    style='background-image: url({{ get_asset_url("../images/vecteezy_abstract-colorful-decorative-stylish-modern-wave-design.jpeg") }})'>
     <div class="m-[0_auto] w-full max-w-[1260px]">
-      <h1>{{ content.name }}</h1>
+      <h1 class="m-0 font-medium">{{ content.name }}</h1>
       <div class="blog-post__meta font-sans text-p">
         {# <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
           {{ content.publish_date|datetimeformat('%b %e, %Y') }}
@@ -46,7 +46,8 @@
               src="{{ post.featured_image }}" loading="lazy" alt="{{ post.featured_image_alt_text }}">
           </div>
           {% endif %}
-          <div class="blog-related-posts__content pt-1 px-[25px] pb-2 border-t-solid border-t-[#6E43FF] border-t-[3px]">
+          <div class="h-[3px] bg-purpleGradient w-full" />
+          <div class="blog-related-posts__content pt-1 px-[25px] pb-2">
             <!-- {% if post.publish_date %}
             <time class="blog-index__post-timestamp my-0.5 font-sans text-medium text-[#4A5B6E] text-2xs"
               datetime="{{ content.publish_date }}">

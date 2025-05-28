@@ -3,7 +3,7 @@
 table {
   border-collapse: collapse;
   margin-bottom: 1.4rem;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
 }
 
 /* Table cells */
