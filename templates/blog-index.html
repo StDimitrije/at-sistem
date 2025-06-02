@@ -2,7 +2,7 @@
   templateType: blog_listing
   isAvailableForNewContent: true
   label: A&T Sistem - blog listing
-  screenshotPath: ../images/template-previews/blog-index.jpg
+  screenshotPath: ../images/template-previews/blog-listing.jpg
 -->
 {% set template_css = '../../css/templates/blog.css' %}
 {% extends './layouts/base.html' %}
@@ -16,10 +16,10 @@
   {# Hero banner #}
 
   {% include_dnd_partial
-    path='../sections/header-2.html',
+    path='../sections/header-3.html',
     context = {
       'title': '<h1>Blog</h1>',
-      'custom_section_classes': 'pt-[130px]'
+      'custom_section_classes': 'pt-[180px]'
     }
   %}
 
